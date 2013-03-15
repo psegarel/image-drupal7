@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the IS Views feature.
+ */
+
+include_once 'is_views.features.inc';

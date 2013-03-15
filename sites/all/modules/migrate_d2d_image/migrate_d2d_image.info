@@ -16,5 +16,6 @@ files[] = inc/gallery.inc
 files[] = inc/header.inc
 files[] = inc/image_detail.inc
 files[] = inc/news.inc
+files[] = inc/item.inc
 files[] = inc/product.inc
 files[] = inc/supplier.inc

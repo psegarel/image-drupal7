@@ -1,0 +1,280 @@
+/* This file will hold styles for the mobile version of your website (mobile first). */
+/* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
+@import "base";
+
+html, body	{	font-family: Tahoma, sans-serif;
+				font-size: 10pt;	
+				background: url('../media/white_wall.png');
+			}
+
+#zone-user-wrapper	{	position: relative;
+						@include gradientDark;
+						color: #fff;
+						padding: 1em 0 7em 0;
+						
+						a   {	color: #fff;
+							}
+					}
+
+#zone-branding-wrapper,
+#zone-menu-wrapper,
+#zone-postscript-wrapper		{	background: #3a64e9;	
+								}
+
+#zone-branding-wrapper	{	margin-bottom: 2em;	
+						}
+
+#zone-menu-wrapper		{	margin-top: -20px;
+							a 	{	text-decoration: none;
+								}	
+						}
+
+#zone-postscript-wrapper		{	padding: 4em 0 10em 0;	
+									border-top: 4px solid #ccc;
+									margin-top: 4em;
+								}
+								
+.region-user-second-inner			{	position: absolute;
+										right: 0;
+										z-index: 100;
+									}
+						
+
+
+
+h2.block-title 			{	font-family: 'Roboto', sans-serif;
+							font-weight: 300;
+							margin: 0 0 1em 0;
+							padding: 0 0 .5em 0;
+							border-bottom: 1px dotted #ccc;
+						}
+
+#zone-postscript-wrapper		{	h2.block-title 			{	font-size: 1em;
+																color: $brightgreen;
+																border-bottom: 1px solid $brightgreen;
+															}	
+									a	{	color: #fff;
+											font-size: .9em;
+											line-height: 160%;
+										}						
+								}
+h1.site-name,
+h2.site-name,
+h6.site-slogan			{	font-family: 'Roboto', sans-serif;
+							font-weight: 100;
+							text-align: right;
+						}
+						
+h1.site-name,
+h2.site-name			{	font-size: 4em;
+							text-transform: uppercase;
+							
+							a   { 	text-decoration: none;
+									color: #fff;
+								}
+						}
+						
+
+h2.block-title	{	font-size: 2em;
+					color: #777;
+				}				
+
+															
+.views-field-created	{	text-transform: uppercase;
+							font-family: "Roboto", sans-serif;
+							font-size: .9em;
+							padding: .2em 0 1em 0;
+							/* text-align: right; */
+							color: #555;
+						}
+						
+.views-field-view-node	{	margin: 0;
+							padding-bottom: 6em;
+							position: relative;
+							
+							button.read-more	{	margin: 2em 0;
+												}
+												
+							a   {	text-decoration: none;
+									font-family: 'Century Gothic', sans-serif;
+									font-weight: 300;
+									color: #fff;
+									text-transform: uppercase;
+									font-size: .8em;
+								}
+						}
+						
+#block-views-product-block,
+#block-views-product-block-1,
+#block-views-product-block-3	{	a   {	color: #777;
+											text-decoration: none;
+											font-family: 'Roboto', sans-serif;
+											font-weight: 400;
+										}
+										
+									.views-row 	{	margin-bottom: 4em;
+													height: 400px;
+												}
+												
+									.views-field-field-product-categories	{	@include lightborder;
+																				border-bottom-color: transparent;
+																				text-transform: uppercase;
+																				padding: 5px 0 2px 1em;
+																				background: #fff;
+																			}				
+										
+									.views-field-field-illustration	{	padding: 1em 0;
+																		@include lightborder;
+																		margin-bottom: 10px;
+																		/* @include single-box-shadow;  */
+																		background: #fff;
+																	}
+									.views-field-title,
+									.views-field-field-supplier		{	padding: 5px;
+																		a   {	font-family: "Roboto", sans-serif;
+																			}
+																		
+																	}
+																	
+									.views-field-field-country		{	padding: 5px;
+																	}
+																	
+									.views-field-title	a			{	color: #222;
+																		font-size: 1.1em;
+																		font-weight: 300;
+																	}
+																	
+									.views-field-field-country		{	text-transform: uppercase;
+																	}																
+								}
+
+#block-views-catchphrases-block	{	padding: 0 0 10em 0;
+									.views-field-body	p	{	font-weight: 100;
+																font-family: 'Roboto', sans-serif;
+																font-size: 3.5em;
+																line-height: 120%;
+																color: #fff;
+																padding: 2em 0 0 0;
+															}
+								}	
+
+
+#block-views-suppliers-block	{	.views-row	{	clear: both;
+													padding: 0 0 2em 0;
+													border-bottom: 1px solid #ccc;
+													margin-bottom: 1em;
+												}
+												
+									.views-field-field-logo img	{	@include lightborder;
+																	margin: 0 10px 10px 0;
+																}
+									
+									.views-field-field-country	a 	{	color: #fff;
+																		text-decoration: none;
+																		text-transform: uppercase;
+																		background: $imageblue;
+																		padding: 14px 10px 4px 10px;
+																		display: block;
+																		width: 60px;
+																		font-size: .7em;
+																		clear: both;
+																			
+																		&:hover	{	color: $brightgreen;
+																					background: #000;
+																				}
+																	}							
+																
+									.views-field-title	{	margin-bottom: 10px;
+									
+															a			{	color: #222;
+																			font-size: 1.1em;
+																			text-decoration: none;
+																			font-family: "Roboto", sans-serif;
+																			text-transform: uppercase;
+																			font-weight: 300;
+																			
+																			&:hover	{	text-decoration: underline;
+																					}
+																		}
+														}	
+														
+									.views-field-body	p 	{	font-family: "Tahoma", "Lucida Grande", sans-serif;
+																font-weight: 200;
+																font-size: .9em;
+																line-height: 130%;
+																color: #555;
+															}														
+								}
+
+
+#block-views-frontpage-news-block	{	margin: 2em 0 0 0;
+										.views-field-title	{	margin-bottom: 10px;
+															a			{	color: #222;
+																			font-size: 1.1em;
+																			text-decoration: none;
+																			font-family: "Roboto", sans-serif;
+																			text-transform: uppercase;
+																			font-weight: 300;
+																		}
+														}
+														
+										.views-field-body	p 	{	font-family: "Tahoma", "Lucida Grande", sans-serif;
+																font-weight: 200;
+																font-size: .9em;
+																line-height: 130%;
+																color: #555;
+															}					
+									}
+									
+
+#block-views-contact-block	{	float: right;
+								.views-row	{	margin-bottom: 2em;
+												.views-field-title	{	color: $imageblue;;
+																		font-family: "Roboto", sans-serif;
+																		text-transform: uppercase;
+																		margin-bottom: .5em;
+																	}
+														
+								.views-field-body	p 	{	font-family: "Tahoma", "Lucida Grande", sans-serif;
+														font-weight: 200;
+														font-size: .9em;
+														line-height: 130%;
+														color: #555;
+													}	
+													
+								.views-field-field-google-map	{	padding: 1em 0;
+								
+																	a 	{	color: #fff;
+																			text-decoration: none;
+																			text-transform: uppercase;
+																			background: $imageblue;
+																			padding: 14px 10px 4px 10px;
+																			display: block;
+																			font-size: .7em;
+																			clear: both;
+																				
+																			&:hover	{	color: $brightgreen;
+																						background: #000;
+																					}
+																		}
+																}					
+																	
+											}
+							}
+
+#block-search-form	{	float: right;
+						padding: 0 0 1em 0;
+					}
+					
+ul.language-switcher-locale-url	{	li  {	display: inline;
+											float: left;
+											margin-right: 20px;
+											
+											a   {	text-decoration: none;
+													font-weight: 100;
+													font-family: 'Roboto', sans-serif;
+												}
+										}
+								}											
+				
+																	

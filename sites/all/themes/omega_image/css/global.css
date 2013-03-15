@@ -1,2 +1,463 @@
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
+/* incase an inverted custom gradient isn't specified */
+/* line 177, ../../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/fancy-buttons-1.2.0/lib/stylesheets/_fancy-buttons.sass */
+.fancy-button-reset-base-class, button {
+  font-family: "Lucida Grande", Lucida, Arial, sans-serif;
+  background: url('/media/button_bg.png?1343141432') repeat-x bottom left;
+  margin: 0;
+  width: auto;
+  overflow: visible;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border-style: solid;
+  font-weight: bold;
+}
+/* line 165, ../../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/fancy-buttons-1.2.0/lib/stylesheets/_fancy-buttons.sass */
+.fancy-button-reset-base-class::-moz-focus-inner, button::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+/* line 168, ../../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/fancy-buttons-1.2.0/lib/stylesheets/_fancy-buttons.sass */
+.fancy-button-reset-base-class:focus, button:focus {
+  outline: none;
+}
+
+/* line 10, ../sass/_base.scss */
+button {
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  font-size: 9px;
+  line-height: 1.2em;
+  padding: 0.3em 1em;
+  border-width: 1px;
+  background-color: #2459ff;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d1dbfa), color-stop(10%, #7f9af1), color-stop(50%, #2c59e7), color-stop(50%, #1e4ee6), color-stop(100%, #4c72eb));
+  background-image: -webkit-linear-gradient(#d1dbfa, #7f9af1 10%, #2c59e7 50%, #1e4ee6 50%, #4c72eb);
+  background-image: -moz-linear-gradient(#d1dbfa, #7f9af1 10%, #2c59e7 50%, #1e4ee6 50%, #4c72eb);
+  background-image: -o-linear-gradient(#d1dbfa, #7f9af1 10%, #2c59e7 50%, #1e4ee6 50%, #4c72eb);
+  background-image: linear-gradient(#d1dbfa, #7f9af1 10%, #2c59e7 50%, #1e4ee6 50%, #4c72eb);
+  border-color: #163fc1;
+  text-shadow: #0027a3 0px 1px 1px;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.57059) 0 0 0.1em 1px inset;
+  -moz-box-shadow: rgba(255, 255, 255, 0.57059) 0 0 0.1em 1px inset;
+  box-shadow: rgba(255, 255, 255, 0.57059) 0 0 0.1em 1px inset;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+/* line 116, ../../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/fancy-buttons-1.2.0/lib/stylesheets/_fancy-buttons.sass */
+button, button:visited {
+  color: white;
+}
+/* line 31, ../../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/fancy-buttons-1.2.0/lib/stylesheets/_fancy-buttons.sass */
+button:hover, button:focus {
+  background-color: #154dff;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c4d0f8), color-stop(10%, #718fef), color-stop(50%, #1e4ee6), color-stop(50%, #1948dc), color-stop(100%, #3f68ea));
+  background-image: -webkit-linear-gradient(#c4d0f8, #718fef 10%, #1e4ee6 50%, #1948dc 50%, #3f68ea);
+  background-image: -moz-linear-gradient(#c4d0f8, #718fef 10%, #1e4ee6 50%, #1948dc 50%, #3f68ea);
+  background-image: -o-linear-gradient(#c4d0f8, #718fef 10%, #1e4ee6 50%, #1948dc 50%, #3f68ea);
+  background-image: linear-gradient(#c4d0f8, #718fef 10%, #1e4ee6 50%, #1948dc 50%, #3f68ea);
+  border-color: #143ab3;
+  text-shadow: #002494 0px 1px 1px;
+}
+/* line 116, ../../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/fancy-buttons-1.2.0/lib/stylesheets/_fancy-buttons.sass */
+button:hover, button:hover:visited, button:focus, button:focus:visited {
+  color: white;
+}
+/* line 36, ../../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/fancy-buttons-1.2.0/lib/stylesheets/_fancy-buttons.sass */
+button:active {
+  background-color: #0541ff;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1e4ee6), color-stop(30%, #2856e7), color-stop(50%, #1949e1), color-stop(50%, #1845d3), color-stop(100%, #436bea));
+  background-image: -webkit-linear-gradient(#1e4ee6, #2856e7 30%, #1949e1 50%, #1845d3 50%, #436bea);
+  background-image: -moz-linear-gradient(#1e4ee6, #2856e7 30%, #1949e1 50%, #1845d3 50%, #436bea);
+  background-image: -o-linear-gradient(#1e4ee6, #2856e7 30%, #1949e1 50%, #1845d3 50%, #436bea);
+  background-image: linear-gradient(#1e4ee6, #2856e7 30%, #1949e1 50%, #1845d3 50%, #436bea);
+  border-color: #1236a5;
+  text-shadow: #002085 0px -1px -1px;
+  -webkit-box-shadow: #163fc1 0 0.08em 0.2em 1px inset;
+  -moz-box-shadow: #163fc1 0 0.08em 0.2em 1px inset;
+  box-shadow: #163fc1 0 0.08em 0.2em 1px inset;
+}
+/* line 116, ../../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/fancy-buttons-1.2.0/lib/stylesheets/_fancy-buttons.sass */
+button:active, button:active:visited {
+  color: white;
+}
+
+/* line 5, ../sass/global.scss */
+html, body {
+  font-family: Tahoma, sans-serif;
+  font-size: 10pt;
+  background: url("../media/white_wall.png");
+}
+
+/* line 10, ../sass/global.scss */
+#zone-user-wrapper {
+  position: relative;
+  background-color: #222222;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#222222), to(black));
+  background-image: -webkit-linear-gradient(top, #222222, black);
+  background-image: -moz-linear-gradient(top, #222222, black);
+  background-image: -o-linear-gradient(top, #222222, black);
+  background-image: -ms-linear-gradient(top, #222222, black);
+  background-image: linear-gradient(top, #222222, black);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#222222', EndColorStr='#000000');
+  color: #fff;
+  padding: 1em 0 7em 0;
+}
+/* line 15, ../sass/global.scss */
+#zone-user-wrapper a {
+  color: #fff;
+}
+
+/* line 21, ../sass/global.scss */
+#zone-branding-wrapper,
+#zone-menu-wrapper,
+#zone-postscript-wrapper {
+  background: #3a64e9;
+}
+
+/* line 24, ../sass/global.scss */
+#zone-branding-wrapper {
+  margin-bottom: 2em;
+}
+
+/* line 27, ../sass/global.scss */
+#zone-menu-wrapper {
+  margin-top: -20px;
+}
+/* line 28, ../sass/global.scss */
+#zone-menu-wrapper a {
+  text-decoration: none;
+}
+
+/* line 32, ../sass/global.scss */
+#zone-postscript-wrapper {
+  padding: 4em 0 10em 0;
+  border-top: 4px solid #cccccc;
+  margin-top: 4em;
+}
+
+/* line 37, ../sass/global.scss */
+.region-user-second-inner {
+  position: absolute;
+  right: 0;
+  z-index: 100;
+}
+
+/* line 45, ../sass/global.scss */
+h2.block-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin: 0 0 1em 0;
+  padding: 0 0 0.5em 0;
+  border-bottom: 1px dotted #cccccc;
+}
+
+/* line 52, ../sass/global.scss */
+#zone-postscript-wrapper h2.block-title {
+  font-size: 1em;
+  color: #ceff00;
+  border-bottom: 1px solid #ceff00;
+}
+/* line 56, ../sass/global.scss */
+#zone-postscript-wrapper a {
+  color: #fff;
+  font-size: .9em;
+  line-height: 160%;
+}
+
+/* line 63, ../sass/global.scss */
+h1.site-name,
+h2.site-name,
+h6.site-slogan {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  text-align: right;
+}
+
+/* line 69, ../sass/global.scss */
+h1.site-name,
+h2.site-name {
+  font-size: 4em;
+  text-transform: uppercase;
+}
+/* line 72, ../sass/global.scss */
+h1.site-name a,
+h2.site-name a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* line 78, ../sass/global.scss */
+h2.block-title {
+  font-size: 2em;
+  color: #777;
+}
+
+/* line 83, ../sass/global.scss */
+.views-field-created {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: .9em;
+  padding: 0.2em 0 1em 0;
+  /* text-align: right; */
+  color: #555;
+}
+
+/* line 91, ../sass/global.scss */
+.views-field-view-node {
+  margin: 0;
+  padding-bottom: 6em;
+  position: relative;
+}
+/* line 95, ../sass/global.scss */
+.views-field-view-node button.read-more {
+  margin: 2em 0;
+}
+/* line 98, ../sass/global.scss */
+.views-field-view-node a {
+  text-decoration: none;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 300;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: .8em;
+}
+
+/* line 109, ../sass/global.scss */
+#block-views-product-block a,
+#block-views-product-block-1 a,
+#block-views-product-block-3 a {
+  color: #777;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+/* line 115, ../sass/global.scss */
+#block-views-product-block .views-row,
+#block-views-product-block-1 .views-row,
+#block-views-product-block-3 .views-row {
+  margin-bottom: 4em;
+  height: 400px;
+}
+/* line 119, ../sass/global.scss */
+#block-views-product-block .views-field-field-product-categories,
+#block-views-product-block-1 .views-field-field-product-categories,
+#block-views-product-block-3 .views-field-field-product-categories {
+  border: 1px solid #cccccc;
+  border-bottom-color: transparent;
+  text-transform: uppercase;
+  padding: 5px 0 2px 1em;
+  background: #fff;
+}
+/* line 126, ../sass/global.scss */
+#block-views-product-block .views-field-field-illustration,
+#block-views-product-block-1 .views-field-field-illustration,
+#block-views-product-block-3 .views-field-field-illustration {
+  padding: 1em 0;
+  border: 1px solid #cccccc;
+  margin-bottom: 10px;
+  /* @include single-box-shadow;  */
+  background: #fff;
+}
+/* line 133, ../sass/global.scss */
+#block-views-product-block .views-field-title,
+#block-views-product-block .views-field-field-supplier,
+#block-views-product-block-1 .views-field-title,
+#block-views-product-block-1 .views-field-field-supplier,
+#block-views-product-block-3 .views-field-title,
+#block-views-product-block-3 .views-field-field-supplier {
+  padding: 5px;
+}
+/* line 134, ../sass/global.scss */
+#block-views-product-block .views-field-title a,
+#block-views-product-block .views-field-field-supplier a,
+#block-views-product-block-1 .views-field-title a,
+#block-views-product-block-1 .views-field-field-supplier a,
+#block-views-product-block-3 .views-field-title a,
+#block-views-product-block-3 .views-field-field-supplier a {
+  font-family: "Roboto", sans-serif;
+}
+/* line 139, ../sass/global.scss */
+#block-views-product-block .views-field-field-country,
+#block-views-product-block-1 .views-field-field-country,
+#block-views-product-block-3 .views-field-field-country {
+  padding: 5px;
+}
+/* line 142, ../sass/global.scss */
+#block-views-product-block .views-field-title a,
+#block-views-product-block-1 .views-field-title a,
+#block-views-product-block-3 .views-field-title a {
+  color: #222;
+  font-size: 1.1em;
+  font-weight: 300;
+}
+/* line 147, ../sass/global.scss */
+#block-views-product-block .views-field-field-country,
+#block-views-product-block-1 .views-field-field-country,
+#block-views-product-block-3 .views-field-field-country {
+  text-transform: uppercase;
+}
+
+/* line 151, ../sass/global.scss */
+#block-views-catchphrases-block {
+  padding: 0 0 10em 0;
+}
+/* line 152, ../sass/global.scss */
+#block-views-catchphrases-block .views-field-body p {
+  font-weight: 100;
+  font-family: "Roboto", sans-serif;
+  font-size: 3.5em;
+  line-height: 120%;
+  color: #fff;
+  padding: 2em 0 0 0;
+}
+
+/* line 162, ../sass/global.scss */
+#block-views-suppliers-block .views-row {
+  clear: both;
+  padding: 0 0 2em 0;
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 1em;
+}
+/* line 168, ../sass/global.scss */
+#block-views-suppliers-block .views-field-field-logo img {
+  border: 1px solid #cccccc;
+  margin: 0 10px 10px 0;
+}
+/* line 172, ../sass/global.scss */
+#block-views-suppliers-block .views-field-field-country a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #3a64e9;
+  padding: 14px 10px 4px 10px;
+  display: block;
+  width: 60px;
+  font-size: .7em;
+  clear: both;
+}
+/* line 182, ../sass/global.scss */
+#block-views-suppliers-block .views-field-field-country a:hover {
+  color: #ceff00;
+  background: #000;
+}
+/* line 187, ../sass/global.scss */
+#block-views-suppliers-block .views-field-title {
+  margin-bottom: 10px;
+}
+/* line 189, ../sass/global.scss */
+#block-views-suppliers-block .views-field-title a {
+  color: #222;
+  font-size: 1.1em;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+/* line 196, ../sass/global.scss */
+#block-views-suppliers-block .views-field-title a:hover {
+  text-decoration: underline;
+}
+/* line 201, ../sass/global.scss */
+#block-views-suppliers-block .views-field-body p {
+  font-family: "Tahoma", "Lucida Grande", sans-serif;
+  font-weight: 200;
+  font-size: .9em;
+  line-height: 130%;
+  color: #555;
+}
+
+/* line 210, ../sass/global.scss */
+#block-views-frontpage-news-block {
+  margin: 2em 0 0 0;
+}
+/* line 211, ../sass/global.scss */
+#block-views-frontpage-news-block .views-field-title {
+  margin-bottom: 10px;
+}
+/* line 212, ../sass/global.scss */
+#block-views-frontpage-news-block .views-field-title a {
+  color: #222;
+  font-size: 1.1em;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+/* line 221, ../sass/global.scss */
+#block-views-frontpage-news-block .views-field-body p {
+  font-family: "Tahoma", "Lucida Grande", sans-serif;
+  font-weight: 200;
+  font-size: .9em;
+  line-height: 130%;
+  color: #555;
+}
+
+/* line 230, ../sass/global.scss */
+#block-views-contact-block {
+  float: right;
+}
+/* line 231, ../sass/global.scss */
+#block-views-contact-block .views-row {
+  margin-bottom: 2em;
+}
+/* line 232, ../sass/global.scss */
+#block-views-contact-block .views-row .views-field-title {
+  color: #3a64e9;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: .5em;
+}
+/* line 238, ../sass/global.scss */
+#block-views-contact-block .views-row .views-field-body p {
+  font-family: "Tahoma", "Lucida Grande", sans-serif;
+  font-weight: 200;
+  font-size: .9em;
+  line-height: 130%;
+  color: #555;
+}
+/* line 245, ../sass/global.scss */
+#block-views-contact-block .views-row .views-field-field-google-map {
+  padding: 1em 0;
+}
+/* line 247, ../sass/global.scss */
+#block-views-contact-block .views-row .views-field-field-google-map a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #3a64e9;
+  padding: 14px 10px 4px 10px;
+  display: block;
+  font-size: .7em;
+  clear: both;
+}
+/* line 256, ../sass/global.scss */
+#block-views-contact-block .views-row .views-field-field-google-map a:hover {
+  color: #ceff00;
+  background: #000;
+}
+
+/* line 265, ../sass/global.scss */
+#block-search-form {
+  float: right;
+  padding: 0 0 1em 0;
+}
+
+/* line 269, ../sass/global.scss */
+ul.language-switcher-locale-url li {
+  display: inline;
+  float: left;
+  margin-right: 20px;
+}
+/* line 273, ../sass/global.scss */
+ul.language-switcher-locale-url li a {
+  text-decoration: none;
+  font-weight: 100;
+  font-family: "Roboto", sans-serif;
+}

@@ -90,6 +90,12 @@ function migrate_d2d_image_register_migrations() {
       'source_vocabulary' => '9',  // D6 Vocabulary ID
       'destination_vocabulary' => 'products_categories',
     ),
+    array(
+      'description' => t('Migration of Supplier Name terms from Drupal 6'), 
+      'machine_name' => 'Supplier_Names',
+      'source_vocabulary' => '9',  // D6 Vocabulary ID
+      'destination_vocabulary' => 'supplier_names',
+    ),
   );
 
   // Again, we're using the migrate_d2d class directly.
@@ -117,7 +123,7 @@ function migrate_d2d_image_register_migrations() {
 	    'source_type' => 'catchphrase',
 	    'destination_type' => 'catchphrase',
 		'dependencies' => array('User'),
-	  ),
+	  ),	
 	  array(
 	    'class_name' => 'CountryMigration',
 	    'description' => t('Migration of Catchphrase nodes from Drupal 6'),
@@ -174,13 +180,37 @@ function migrate_d2d_image_register_migrations() {
 		'dependencies' => array('Files' , 'User'),
 	  ),
 	  array(
-	    'class_name' => 'ProductMigration',
-	    'description' => t('Migration of Product nodes from Drupal 6'),
-	    'machine_name' => 'Product',
-	    'source_type' => 'product',
+	    'class_name' => 'WineProductMigration',
+	    'description' => t('Migration of Wine nodes from Drupal 6'),
+	    'machine_name' => 'WineProduct',
+	    'source_type' => 'wine',
 	    'destination_type' => 'product',
-		'dependencies' => array('Files' , 'User', 'Products_Categories' , 'Features' ),
+		'dependencies' => array('Files' , 'User', 'Grape_Varieties' , 'Features', 'Country', 'Supplier' ),
 	  ),
+	  array(
+	    'class_name' => 'OliveOilProductMigration',
+	    'description' => t('Migration of OliveOil nodes from Drupal 6'),
+	    'machine_name' => 'OliveOil',
+	    'source_type' => 'olive_oil',
+	    'destination_type' => 'product',
+		'dependencies' => array('Files' , 'User', 'Products_Categories' , 'Features', 'Country', 'Supplier' ),
+	  ),
+		  array(
+		    'class_name' => 'WineItemMigration',
+		    'description' => t('Migration of Wine nodes from Drupal 6'),
+		    'machine_name' => 'WineItem',
+		    'source_type' => 'wine',
+		    'destination_type' => 'item',
+			'dependencies' => array('Files' , 'User', 'Grape_Varieties' , 'Features', 'Country', 'Supplier' ),
+		  ),
+		  array(
+		    'class_name' => 'OliveOilItemMigration',
+		    'description' => t('Migration of OliveOil nodes from Drupal 6'),
+		    'machine_name' => 'OliveOilItem',
+		    'source_type' => 'olive_oil',
+		    'destination_type' => 'item',
+			'dependencies' => array('Files' , 'User', 'Products_Categories' , 'Features', 'Country', 'Supplier' ),
+		  ),
 	  array(
 	    'class_name' => 'SupplierMigration',
 	    'description' => t('Migration of Supplier nodes from Drupal 6'),
