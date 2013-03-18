@@ -1,6 +1,7 @@
 name = IS Views
 core = 7.x
 package = Image Service
+php = 5.2.4
 dependencies[] = better_exposed_filters
 dependencies[] = is_layout
 dependencies[] = number
@@ -25,6 +26,7 @@ features[field][] = node-download_item-field_download
 features[field][] = node-news-body
 features[field][] = node-news-field_gallery_image
 features[field][] = node-news-field_introduction
+features[field][] = node-product-field_legacy_supplier
 features[field][] = node-supplier-body
 features[field][] = node-supplier-field_country
 features[field][] = node-supplier-field_illustration

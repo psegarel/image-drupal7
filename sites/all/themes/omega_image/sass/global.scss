@@ -10,7 +10,7 @@ html, body	{	font-family: Tahoma, sans-serif;
 #zone-user-wrapper	{	position: relative;
 						@include gradientDark;
 						color: #fff;
-						padding: 1em 0 7em 0;
+						padding: 1em 0 12em 0;
 						
 						a   {	color: #fff;
 							}
@@ -74,6 +74,8 @@ h2.site-name			{	font-size: 4em;
 								}
 						}
 						
+.logo-img	{	
+			}
 
 h2.block-title	{	font-size: 2em;
 					color: #777;
@@ -116,6 +118,7 @@ h2.block-title	{	font-size: 2em;
 													height: 400px;
 												}
 												
+									.views-field-term-node-tid-1,		
 									.views-field-field-product-categories	{	@include lightborder;
 																				border-bottom-color: transparent;
 																				text-transform: uppercase;
@@ -130,7 +133,8 @@ h2.block-title	{	font-size: 2em;
 																		background: #fff;
 																	}
 									.views-field-title,
-									.views-field-field-supplier		{	padding: 5px;
+									.views-field-field-supplier,
+									.views-field-term-node-tid		{	padding: 5px;
 																		a   {	font-family: "Roboto", sans-serif;
 																			}
 																		
@@ -207,6 +211,60 @@ h2.block-title	{	font-size: 2em;
 								}
 
 
+#block-views-suppliers-block-2	{	h3	{	font-family: "Roboto", sans-serif;
+											font-weight: 100;
+											font-size: 3em;
+											padding-bottom: .2em;
+											margin-bottom: 1em;
+										}
+										
+									.views-row	{	height: 500px;
+													background: #fff;
+													border: 1px solid #ccc;
+													margin-bottom: 1em;
+													
+													.views-field-field-illustration	{	padding: 20px;
+																					}
+													
+													.views-field-title,
+													.views-field-body	{	margin-left: 10px;
+																			padding-right: 10px;
+																		}
+													
+													.views-field-title	{	margin-bottom: 10px;
+									
+															a			{	color: #222;
+																			font-size: 1.1em;
+																			text-decoration: none;
+																			font-family: "Roboto", sans-serif;
+																			text-transform: uppercase;
+																			font-weight: 300;
+																			
+																			&:hover	{	text-decoration: underline;
+																					}
+																		}
+														}
+													
+														
+													.views-field-body	 	{	font-family: "Tahoma", "Lucida Grande", sans-serif;
+																				font-weight: 200;
+																				font-size: 1em;
+																				line-height: 160%;
+																				color: #555;
+																				margin: 20px 0 0 10px;
+																			}	
+													
+													.views-field-field-grape-varieties	{	text-transform: uppercase;
+																							border-bottom: 1px solid #ccc;
+																							padding: 6px 10px;
+																							
+																							a 	{ 	color: $imageblue;
+																									text-decoration: none;
+																								}
+																						}							
+												}		
+								}
+
 #block-views-frontpage-news-block	{	margin: 2em 0 0 0;
 										.views-field-title	{	margin-bottom: 10px;
 															a			{	color: #222;
@@ -265,6 +323,10 @@ h2.block-title	{	font-size: 2em;
 #block-search-form	{	float: right;
 						padding: 0 0 1em 0;
 					}
+
+ul.superfish-2	{	.sf-vertical, .sf-vertical li 	{	width: 30em;
+													}
+				}					
 					
 ul.language-switcher-locale-url	{	li  {	display: inline;
 											float: left;

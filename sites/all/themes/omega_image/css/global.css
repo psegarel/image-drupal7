@@ -107,7 +107,7 @@ html, body {
   background-image: linear-gradient(top, #222222, black);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#222222', EndColorStr='#000000');
   color: #fff;
-  padding: 1em 0 7em 0;
+  padding: 1em 0 12em 0;
 }
 /* line 15, ../sass/global.scss */
 #zone-user-wrapper a {
@@ -193,13 +193,13 @@ h2.site-name a {
   color: #fff;
 }
 
-/* line 78, ../sass/global.scss */
+/* line 80, ../sass/global.scss */
 h2.block-title {
   font-size: 2em;
   color: #777;
 }
 
-/* line 83, ../sass/global.scss */
+/* line 85, ../sass/global.scss */
 .views-field-created {
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
@@ -209,17 +209,17 @@ h2.block-title {
   color: #555;
 }
 
-/* line 91, ../sass/global.scss */
+/* line 93, ../sass/global.scss */
 .views-field-view-node {
   margin: 0;
   padding-bottom: 6em;
   position: relative;
 }
-/* line 95, ../sass/global.scss */
+/* line 97, ../sass/global.scss */
 .views-field-view-node button.read-more {
   margin: 2em 0;
 }
-/* line 98, ../sass/global.scss */
+/* line 100, ../sass/global.scss */
 .views-field-view-node a {
   text-decoration: none;
   font-family: "Century Gothic", sans-serif;
@@ -229,7 +229,7 @@ h2.block-title {
   font-size: .8em;
 }
 
-/* line 109, ../sass/global.scss */
+/* line 111, ../sass/global.scss */
 #block-views-product-block a,
 #block-views-product-block-1 a,
 #block-views-product-block-3 a {
@@ -238,16 +238,19 @@ h2.block-title {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
-/* line 115, ../sass/global.scss */
+/* line 117, ../sass/global.scss */
 #block-views-product-block .views-row,
 #block-views-product-block-1 .views-row,
 #block-views-product-block-3 .views-row {
   margin-bottom: 4em;
   height: 400px;
 }
-/* line 119, ../sass/global.scss */
+/* line 122, ../sass/global.scss */
+#block-views-product-block .views-field-term-node-tid-1,
 #block-views-product-block .views-field-field-product-categories,
+#block-views-product-block-1 .views-field-term-node-tid-1,
 #block-views-product-block-1 .views-field-field-product-categories,
+#block-views-product-block-3 .views-field-term-node-tid-1,
 #block-views-product-block-3 .views-field-field-product-categories {
   border: 1px solid #cccccc;
   border-bottom-color: transparent;
@@ -255,7 +258,7 @@ h2.block-title {
   padding: 5px 0 2px 1em;
   background: #fff;
 }
-/* line 126, ../sass/global.scss */
+/* line 129, ../sass/global.scss */
 #block-views-product-block .views-field-field-illustration,
 #block-views-product-block-1 .views-field-field-illustration,
 #block-views-product-block-3 .views-field-field-illustration {
@@ -265,31 +268,37 @@ h2.block-title {
   /* @include single-box-shadow;  */
   background: #fff;
 }
-/* line 133, ../sass/global.scss */
+/* line 137, ../sass/global.scss */
 #block-views-product-block .views-field-title,
 #block-views-product-block .views-field-field-supplier,
+#block-views-product-block .views-field-term-node-tid,
 #block-views-product-block-1 .views-field-title,
 #block-views-product-block-1 .views-field-field-supplier,
+#block-views-product-block-1 .views-field-term-node-tid,
 #block-views-product-block-3 .views-field-title,
-#block-views-product-block-3 .views-field-field-supplier {
+#block-views-product-block-3 .views-field-field-supplier,
+#block-views-product-block-3 .views-field-term-node-tid {
   padding: 5px;
 }
-/* line 134, ../sass/global.scss */
+/* line 138, ../sass/global.scss */
 #block-views-product-block .views-field-title a,
 #block-views-product-block .views-field-field-supplier a,
+#block-views-product-block .views-field-term-node-tid a,
 #block-views-product-block-1 .views-field-title a,
 #block-views-product-block-1 .views-field-field-supplier a,
+#block-views-product-block-1 .views-field-term-node-tid a,
 #block-views-product-block-3 .views-field-title a,
-#block-views-product-block-3 .views-field-field-supplier a {
+#block-views-product-block-3 .views-field-field-supplier a,
+#block-views-product-block-3 .views-field-term-node-tid a {
   font-family: "Roboto", sans-serif;
 }
-/* line 139, ../sass/global.scss */
+/* line 143, ../sass/global.scss */
 #block-views-product-block .views-field-field-country,
 #block-views-product-block-1 .views-field-field-country,
 #block-views-product-block-3 .views-field-field-country {
   padding: 5px;
 }
-/* line 142, ../sass/global.scss */
+/* line 146, ../sass/global.scss */
 #block-views-product-block .views-field-title a,
 #block-views-product-block-1 .views-field-title a,
 #block-views-product-block-3 .views-field-title a {
@@ -297,18 +306,18 @@ h2.block-title {
   font-size: 1.1em;
   font-weight: 300;
 }
-/* line 147, ../sass/global.scss */
+/* line 151, ../sass/global.scss */
 #block-views-product-block .views-field-field-country,
 #block-views-product-block-1 .views-field-field-country,
 #block-views-product-block-3 .views-field-field-country {
   text-transform: uppercase;
 }
 
-/* line 151, ../sass/global.scss */
+/* line 155, ../sass/global.scss */
 #block-views-catchphrases-block {
   padding: 0 0 10em 0;
 }
-/* line 152, ../sass/global.scss */
+/* line 156, ../sass/global.scss */
 #block-views-catchphrases-block .views-field-body p {
   font-weight: 100;
   font-family: "Roboto", sans-serif;
@@ -318,19 +327,19 @@ h2.block-title {
   padding: 2em 0 0 0;
 }
 
-/* line 162, ../sass/global.scss */
+/* line 166, ../sass/global.scss */
 #block-views-suppliers-block .views-row {
   clear: both;
   padding: 0 0 2em 0;
   border-bottom: 1px solid #cccccc;
   margin-bottom: 1em;
 }
-/* line 168, ../sass/global.scss */
+/* line 172, ../sass/global.scss */
 #block-views-suppliers-block .views-field-field-logo img {
   border: 1px solid #cccccc;
   margin: 0 10px 10px 0;
 }
-/* line 172, ../sass/global.scss */
+/* line 176, ../sass/global.scss */
 #block-views-suppliers-block .views-field-field-country a {
   color: #fff;
   text-decoration: none;
@@ -342,16 +351,16 @@ h2.block-title {
   font-size: .7em;
   clear: both;
 }
-/* line 182, ../sass/global.scss */
+/* line 186, ../sass/global.scss */
 #block-views-suppliers-block .views-field-field-country a:hover {
   color: #ceff00;
   background: #000;
 }
-/* line 187, ../sass/global.scss */
+/* line 191, ../sass/global.scss */
 #block-views-suppliers-block .views-field-title {
   margin-bottom: 10px;
 }
-/* line 189, ../sass/global.scss */
+/* line 193, ../sass/global.scss */
 #block-views-suppliers-block .views-field-title a {
   color: #222;
   font-size: 1.1em;
@@ -360,11 +369,11 @@ h2.block-title {
   text-transform: uppercase;
   font-weight: 300;
 }
-/* line 196, ../sass/global.scss */
+/* line 200, ../sass/global.scss */
 #block-views-suppliers-block .views-field-title a:hover {
   text-decoration: underline;
 }
-/* line 201, ../sass/global.scss */
+/* line 205, ../sass/global.scss */
 #block-views-suppliers-block .views-field-body p {
   font-family: "Tahoma", "Lucida Grande", sans-serif;
   font-weight: 200;
@@ -373,15 +382,78 @@ h2.block-title {
   color: #555;
 }
 
-/* line 210, ../sass/global.scss */
+/* line 214, ../sass/global.scss */
+#block-views-suppliers-block-2 h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 3em;
+  padding-bottom: .2em;
+  margin-bottom: 1em;
+}
+/* line 221, ../sass/global.scss */
+#block-views-suppliers-block-2 .views-row {
+  height: 500px;
+  background: #fff;
+  border: 1px solid #cccccc;
+  margin-bottom: 1em;
+}
+/* line 226, ../sass/global.scss */
+#block-views-suppliers-block-2 .views-row .views-field-field-illustration {
+  padding: 20px;
+}
+/* line 230, ../sass/global.scss */
+#block-views-suppliers-block-2 .views-row .views-field-title,
+#block-views-suppliers-block-2 .views-row .views-field-body {
+  margin-left: 10px;
+  padding-right: 10px;
+}
+/* line 234, ../sass/global.scss */
+#block-views-suppliers-block-2 .views-row .views-field-title {
+  margin-bottom: 10px;
+}
+/* line 236, ../sass/global.scss */
+#block-views-suppliers-block-2 .views-row .views-field-title a {
+  color: #222;
+  font-size: 1.1em;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+/* line 243, ../sass/global.scss */
+#block-views-suppliers-block-2 .views-row .views-field-title a:hover {
+  text-decoration: underline;
+}
+/* line 249, ../sass/global.scss */
+#block-views-suppliers-block-2 .views-row .views-field-body {
+  font-family: "Tahoma", "Lucida Grande", sans-serif;
+  font-weight: 200;
+  font-size: 1em;
+  line-height: 160%;
+  color: #555;
+  margin: 20px 0 0 10px;
+}
+/* line 257, ../sass/global.scss */
+#block-views-suppliers-block-2 .views-row .views-field-field-grape-varieties {
+  text-transform: uppercase;
+  border-bottom: 1px solid #cccccc;
+  padding: 6px 10px;
+}
+/* line 261, ../sass/global.scss */
+#block-views-suppliers-block-2 .views-row .views-field-field-grape-varieties a {
+  color: #3a64e9;
+  text-decoration: none;
+}
+
+/* line 268, ../sass/global.scss */
 #block-views-frontpage-news-block {
   margin: 2em 0 0 0;
 }
-/* line 211, ../sass/global.scss */
+/* line 269, ../sass/global.scss */
 #block-views-frontpage-news-block .views-field-title {
   margin-bottom: 10px;
 }
-/* line 212, ../sass/global.scss */
+/* line 270, ../sass/global.scss */
 #block-views-frontpage-news-block .views-field-title a {
   color: #222;
   font-size: 1.1em;
@@ -390,7 +462,7 @@ h2.block-title {
   text-transform: uppercase;
   font-weight: 300;
 }
-/* line 221, ../sass/global.scss */
+/* line 279, ../sass/global.scss */
 #block-views-frontpage-news-block .views-field-body p {
   font-family: "Tahoma", "Lucida Grande", sans-serif;
   font-weight: 200;
@@ -399,22 +471,22 @@ h2.block-title {
   color: #555;
 }
 
-/* line 230, ../sass/global.scss */
+/* line 288, ../sass/global.scss */
 #block-views-contact-block {
   float: right;
 }
-/* line 231, ../sass/global.scss */
+/* line 289, ../sass/global.scss */
 #block-views-contact-block .views-row {
   margin-bottom: 2em;
 }
-/* line 232, ../sass/global.scss */
+/* line 290, ../sass/global.scss */
 #block-views-contact-block .views-row .views-field-title {
   color: #3a64e9;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   margin-bottom: .5em;
 }
-/* line 238, ../sass/global.scss */
+/* line 296, ../sass/global.scss */
 #block-views-contact-block .views-row .views-field-body p {
   font-family: "Tahoma", "Lucida Grande", sans-serif;
   font-weight: 200;
@@ -422,11 +494,11 @@ h2.block-title {
   line-height: 130%;
   color: #555;
 }
-/* line 245, ../sass/global.scss */
+/* line 303, ../sass/global.scss */
 #block-views-contact-block .views-row .views-field-field-google-map {
   padding: 1em 0;
 }
-/* line 247, ../sass/global.scss */
+/* line 305, ../sass/global.scss */
 #block-views-contact-block .views-row .views-field-field-google-map a {
   color: #fff;
   text-decoration: none;
@@ -437,25 +509,30 @@ h2.block-title {
   font-size: .7em;
   clear: both;
 }
-/* line 256, ../sass/global.scss */
+/* line 314, ../sass/global.scss */
 #block-views-contact-block .views-row .views-field-field-google-map a:hover {
   color: #ceff00;
   background: #000;
 }
 
-/* line 265, ../sass/global.scss */
+/* line 323, ../sass/global.scss */
 #block-search-form {
   float: right;
   padding: 0 0 1em 0;
 }
 
-/* line 269, ../sass/global.scss */
+/* line 327, ../sass/global.scss */
+ul.superfish-2 .sf-vertical, ul.superfish-2 .sf-vertical li {
+  width: 30em;
+}
+
+/* line 331, ../sass/global.scss */
 ul.language-switcher-locale-url li {
   display: inline;
   float: left;
   margin-right: 20px;
 }
-/* line 273, ../sass/global.scss */
+/* line 335, ../sass/global.scss */
 ul.language-switcher-locale-url li a {
   text-decoration: none;
   font-weight: 100;

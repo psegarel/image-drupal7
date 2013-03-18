@@ -361,7 +361,7 @@ function is_views_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['row_class'] = 'grid-2 alpha';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Entity Reference: Referenced Entity */
+  /* Relationship: Broken/missing handler */
   $handler->display->display_options['relationships']['field_supplier_target_id']['id'] = 'field_supplier_target_id';
   $handler->display->display_options['relationships']['field_supplier_target_id']['table'] = 'field_data_field_supplier';
   $handler->display->display_options['relationships']['field_supplier_target_id']['field'] = 'field_supplier_target_id';
@@ -390,19 +390,12 @@ function is_views_views_default_views() {
   $handler->display->display_options['fields']['field_supplier']['field'] = 'field_supplier';
   $handler->display->display_options['fields']['field_supplier']['label'] = '';
   $handler->display->display_options['fields']['field_supplier']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_supplier']['click_sort_column'] = 'target_id';
+  $handler->display->display_options['fields']['field_supplier']['type'] = 'entityreference_label';
   $handler->display->display_options['fields']['field_supplier']['settings'] = array(
     'link' => 1,
   );
-  /* Field: Content: Country */
-  $handler->display->display_options['fields']['field_country']['id'] = 'field_country';
-  $handler->display->display_options['fields']['field_country']['table'] = 'field_data_field_country';
-  $handler->display->display_options['fields']['field_country']['field'] = 'field_country';
-  $handler->display->display_options['fields']['field_country']['relationship'] = 'field_supplier_target_id';
-  $handler->display->display_options['fields']['field_country']['label'] = '';
-  $handler->display->display_options['fields']['field_country']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_country']['settings'] = array(
-    'link' => 1,
-  );
+  $handler->display->display_options['fields']['field_supplier']['group_column'] = 'target_id';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -437,50 +430,6 @@ function is_views_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Product Categories */
-  $handler->display->display_options['fields']['field_product_categories']['id'] = 'field_product_categories';
-  $handler->display->display_options['fields']['field_product_categories']['table'] = 'field_data_field_product_categories';
-  $handler->display->display_options['fields']['field_product_categories']['field'] = 'field_product_categories';
-  $handler->display->display_options['fields']['field_product_categories']['label'] = '';
-  $handler->display->display_options['fields']['field_product_categories']['element_label_colon'] = FALSE;
-  /* Field: Content: Illustration */
-  $handler->display->display_options['fields']['field_illustration']['id'] = 'field_illustration';
-  $handler->display->display_options['fields']['field_illustration']['table'] = 'field_data_field_illustration';
-  $handler->display->display_options['fields']['field_illustration']['field'] = 'field_illustration';
-  $handler->display->display_options['fields']['field_illustration']['label'] = '';
-  $handler->display->display_options['fields']['field_illustration']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_illustration']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_illustration']['settings'] = array(
-    'image_style' => 'medium',
-    'image_link' => 'content',
-  );
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Supplier */
-  $handler->display->display_options['fields']['field_supplier']['id'] = 'field_supplier';
-  $handler->display->display_options['fields']['field_supplier']['table'] = 'field_data_field_supplier';
-  $handler->display->display_options['fields']['field_supplier']['field'] = 'field_supplier';
-  $handler->display->display_options['fields']['field_supplier']['label'] = '';
-  $handler->display->display_options['fields']['field_supplier']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_supplier']['settings'] = array(
-    'link' => 1,
-  );
-  /* Field: Content: Country */
-  $handler->display->display_options['fields']['field_country']['id'] = 'field_country';
-  $handler->display->display_options['fields']['field_country']['table'] = 'field_data_field_country';
-  $handler->display->display_options['fields']['field_country']['field'] = 'field_country';
-  $handler->display->display_options['fields']['field_country']['relationship'] = 'field_supplier_target_id';
-  $handler->display->display_options['fields']['field_country']['label'] = '';
-  $handler->display->display_options['fields']['field_country']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_country']['settings'] = array(
-    'link' => 1,
-  );
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Content: Product Categories (field_product_categories) */
   $handler->display->display_options['sorts']['field_product_categories_tid']['id'] = 'field_product_categories_tid';
@@ -526,19 +475,12 @@ function is_views_views_default_views() {
   $handler->display->display_options['fields']['field_supplier']['field'] = 'field_supplier';
   $handler->display->display_options['fields']['field_supplier']['label'] = '';
   $handler->display->display_options['fields']['field_supplier']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_supplier']['click_sort_column'] = 'target_id';
+  $handler->display->display_options['fields']['field_supplier']['type'] = 'entityreference_label';
   $handler->display->display_options['fields']['field_supplier']['settings'] = array(
     'link' => 1,
   );
-  /* Field: Content: Country */
-  $handler->display->display_options['fields']['field_country']['id'] = 'field_country';
-  $handler->display->display_options['fields']['field_country']['table'] = 'field_data_field_country';
-  $handler->display->display_options['fields']['field_country']['field'] = 'field_country';
-  $handler->display->display_options['fields']['field_country']['relationship'] = 'field_supplier_target_id';
-  $handler->display->display_options['fields']['field_country']['label'] = '';
-  $handler->display->display_options['fields']['field_country']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_country']['settings'] = array(
-    'link' => 1,
-  );
+  $handler->display->display_options['fields']['field_supplier']['group_column'] = 'target_id';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Content: Product Categories (field_product_categories) */
   $handler->display->display_options['sorts']['field_product_categories_tid']['id'] = 'field_product_categories_tid';
@@ -606,19 +548,12 @@ function is_views_views_default_views() {
   $handler->display->display_options['fields']['field_supplier']['field'] = 'field_supplier';
   $handler->display->display_options['fields']['field_supplier']['label'] = '';
   $handler->display->display_options['fields']['field_supplier']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_supplier']['click_sort_column'] = 'target_id';
+  $handler->display->display_options['fields']['field_supplier']['type'] = 'entityreference_label';
   $handler->display->display_options['fields']['field_supplier']['settings'] = array(
     'link' => 1,
   );
-  /* Field: Content: Country */
-  $handler->display->display_options['fields']['field_country']['id'] = 'field_country';
-  $handler->display->display_options['fields']['field_country']['table'] = 'field_data_field_country';
-  $handler->display->display_options['fields']['field_country']['field'] = 'field_country';
-  $handler->display->display_options['fields']['field_country']['relationship'] = 'field_supplier_target_id';
-  $handler->display->display_options['fields']['field_country']['label'] = '';
-  $handler->display->display_options['fields']['field_country']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_country']['settings'] = array(
-    'link' => 1,
-  );
+  $handler->display->display_options['fields']['field_supplier']['group_column'] = 'target_id';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Content: Country (field_country) */
   $handler->display->display_options['sorts']['field_country_target_id']['id'] = 'field_country_target_id';
@@ -626,7 +561,7 @@ function is_views_views_default_views() {
   $handler->display->display_options['sorts']['field_country_target_id']['field'] = 'field_country_target_id';
   $handler->display->display_options['sorts']['field_country_target_id']['relationship'] = 'field_supplier_target_id';
   $handler->display->display_options['sorts']['field_country_target_id']['order'] = 'DESC';
-  /* Sort criterion: Content: Supplier (field_supplier) */
+  /* Sort criterion: Broken/missing handler */
   $handler->display->display_options['sorts']['field_supplier_target_id']['id'] = 'field_supplier_target_id';
   $handler->display->display_options['sorts']['field_supplier_target_id']['table'] = 'field_data_field_supplier';
   $handler->display->display_options['sorts']['field_supplier_target_id']['field'] = 'field_supplier_target_id';
@@ -719,19 +654,12 @@ function is_views_views_default_views() {
   $handler->display->display_options['fields']['field_supplier']['field'] = 'field_supplier';
   $handler->display->display_options['fields']['field_supplier']['label'] = '';
   $handler->display->display_options['fields']['field_supplier']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_supplier']['click_sort_column'] = 'target_id';
+  $handler->display->display_options['fields']['field_supplier']['type'] = 'entityreference_label';
   $handler->display->display_options['fields']['field_supplier']['settings'] = array(
     'link' => 1,
   );
-  /* Field: Content: Country */
-  $handler->display->display_options['fields']['field_country']['id'] = 'field_country';
-  $handler->display->display_options['fields']['field_country']['table'] = 'field_data_field_country';
-  $handler->display->display_options['fields']['field_country']['field'] = 'field_country';
-  $handler->display->display_options['fields']['field_country']['relationship'] = 'field_supplier_target_id';
-  $handler->display->display_options['fields']['field_country']['label'] = '';
-  $handler->display->display_options['fields']['field_country']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_country']['settings'] = array(
-    'link' => 1,
-  );
+  $handler->display->display_options['fields']['field_supplier']['group_column'] = 'target_id';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
@@ -772,7 +700,7 @@ function is_views_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Field: Logo */
+  /* Field: Content: Logo */
   $handler->display->display_options['fields']['field_logo']['id'] = 'field_logo';
   $handler->display->display_options['fields']['field_logo']['table'] = 'field_data_field_logo';
   $handler->display->display_options['fields']['field_logo']['field'] = 'field_logo';
@@ -843,7 +771,7 @@ function is_views_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Field: Logo */
+  /* Field: Content: Logo */
   $handler->display->display_options['fields']['field_logo']['id'] = 'field_logo';
   $handler->display->display_options['fields']['field_logo']['table'] = 'field_data_field_logo';
   $handler->display->display_options['fields']['field_logo']['field'] = 'field_logo';
