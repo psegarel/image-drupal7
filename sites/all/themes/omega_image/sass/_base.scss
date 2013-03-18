@@ -6,9 +6,10 @@ $brightgreen: #ceff00;
 
 $default-box-shadow-color : #888;
 
-
-button	{	@include fancy-button(#3a64e9 , 9px, 1px , 1px );
+button	{	@include fancy-button(#444 , 10px, 1px , 1px );
 		}
+		
+		
 
 //Prefixes definition
 $webkit:true;
@@ -19,6 +20,15 @@ $ms:true;
 
 @mixin lightborder	{	border: 1px solid #ccc;
 					}
+
+
+@mixin small-body	 	{	font-family: "Tahoma", "Lucida Grande", sans-serif;
+							font-weight: 200;
+							font-size: 1em;
+							line-height: 160%;
+							color: #555;
+							margin: 20px 0 0 10px;
+						}
 
 //Gradient Mixin
 @mixin gradient($mode,$direction,$from,$to,$oldDirection:null){

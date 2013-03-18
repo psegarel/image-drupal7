@@ -10,7 +10,7 @@ html, body	{	font-family: Tahoma, sans-serif;
 #zone-user-wrapper	{	position: relative;
 						@include gradientDark;
 						color: #fff;
-						padding: 1em 0 12em 0;
+						padding: 1em 0 7em 0;
 						
 						a   {	color: #fff;
 							}
@@ -81,6 +81,18 @@ h2.block-title	{	font-size: 2em;
 					color: #777;
 				}				
 
+.views-field-field-country	{	text-transform: uppercase;
+								font-family: "Roboto", sans-serif;
+								font-size: 1em;
+								margin: 1em 0;
+								
+								
+								a    {	color: #555;
+										text-decoration: none;
+										&:hover	{	text-decoration: underline;
+												}
+									 }
+							}
 															
 .views-field-created	{	text-transform: uppercase;
 							font-family: "Roboto", sans-serif;
@@ -108,7 +120,20 @@ h2.block-title	{	font-size: 2em;
 						
 #block-views-product-block,
 #block-views-product-block-1,
-#block-views-product-block-3	{	a   {	color: #777;
+#block-views-product-block-3,
+#block-views-all-products-block-3	{	position: relative;
+									
+									.view-filters	{	.views-exposed-widget	{	margin: 0 2em 0 0;
+																					
+																					label,
+																					option	{ 	font-family: 'Roboto', sans-serif;
+																								margin-bottom: 5px;
+																								font-weight: 300;
+																							}
+																				}
+													}
+
+									a   {	color: #777;
 											text-decoration: none;
 											font-family: 'Roboto', sans-serif;
 											font-weight: 400;
@@ -211,6 +236,21 @@ h2.block-title	{	font-size: 2em;
 								}
 
 
+#block-views-suppliers-block-1	{	.views-field-description 	{	@include small-body;
+																	margin-top: 0;
+																}
+																
+									.views-field-field-logo	img	{	padding: 1em;
+																	border: 1px solid #ccc;
+																	float: left;
+																	margin-right: 20px;
+																}
+																	
+									.views-field-field-country	{	float: right;
+																}						
+																	
+								}
+								
 #block-views-suppliers-block-2	{	h3	{	font-family: "Roboto", sans-serif;
 											font-weight: 100;
 											font-size: 3em;
@@ -276,12 +316,9 @@ h2.block-title	{	font-size: 2em;
 																		}
 														}
 														
-										.views-field-body	p 	{	font-family: "Tahoma", "Lucida Grande", sans-serif;
-																font-weight: 200;
-																font-size: .9em;
-																line-height: 130%;
-																color: #555;
-															}					
+										.views-field-body	p,
+										.views-field-body	 	{	@include small-body;	
+																}					
 									}
 									
 
@@ -293,12 +330,9 @@ h2.block-title	{	font-size: 2em;
 																		margin-bottom: .5em;
 																	}
 														
-								.views-field-body	p 	{	font-family: "Tahoma", "Lucida Grande", sans-serif;
-														font-weight: 200;
-														font-size: .9em;
-														line-height: 130%;
-														color: #555;
-													}	
+								.views-field-body	p,
+								.views-field-body 		{	@include small-body;
+														}	
 													
 								.views-field-field-google-map	{	padding: 1em 0;
 								

@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * is_layout.delta.inc
+ * image_frontpage.delta.inc
  */
 
 /**
  * Implements hook_delta_default_templates().
  */
-function is_layout_delta_default_templates() {
+function image_frontpage_delta_default_templates() {
   $export = array();
 
   $delta = new stdClass();

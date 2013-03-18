@@ -1,0 +1,17 @@
+name = Image Frontpage
+core = 7.x
+package = Image service layout
+dependencies[] = context
+dependencies[] = ctools
+dependencies[] = delta
+dependencies[] = delta_blocks
+dependencies[] = locale
+dependencies[] = search
+dependencies[] = superfish
+dependencies[] = views
+features[context][] = homepage
+features[context][] = sitewide_context
+features[ctools][] = context:context:3
+features[ctools][] = delta:delta:3
+features[delta][] = homepage
+features[features_api][] = api:1

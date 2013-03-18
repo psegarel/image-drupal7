@@ -1,14 +1,39 @@
 <?php
 /**
  * @file
- * is_layout.features.taxonomy.inc
+ * image_frontpage_products.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function is_layout_taxonomy_default_vocabularies() {
+function image_frontpage_products_taxonomy_default_vocabularies() {
   return array(
+    'countries' => array(
+      'name' => 'Countries',
+      'machine_name' => 'countries',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'language' => 'und',
+      'i18n_mode' => '1',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'features' => array(
       'name' => 'Features',
       'machine_name' => 'features',
@@ -17,7 +42,7 @@ function is_layout_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => '0',
       'language' => 'und',
-      'i18n_mode' => '1',
+      'i18n_mode' => '4',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -42,7 +67,7 @@ function is_layout_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => '0',
       'language' => 'und',
-      'i18n_mode' => '1',
+      'i18n_mode' => '0',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -59,9 +84,9 @@ function is_layout_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'products_categories' => array(
+    'products' => array(
       'name' => 'Products',
-      'machine_name' => 'products_categories',
+      'machine_name' => 'products',
       'description' => '',
       'hierarchy' => '0',
       'module' => 'taxonomy',

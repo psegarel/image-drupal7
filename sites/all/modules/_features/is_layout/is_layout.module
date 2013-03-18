@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the IS Layout feature.
- */
-
-include_once 'is_layout.features.inc';
