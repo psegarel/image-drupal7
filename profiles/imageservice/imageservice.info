@@ -23,6 +23,7 @@ dependencies[] = dblog
 dependencies[] = search
 dependencies[] = shortcut
 #dependencies[] = toolbar
+dependencies[] = translation
 #dependencies[] = overlay
 dependencies[] = field_ui
 dependencies[] = file
@@ -57,7 +58,6 @@ dependencies[] = migrate_ui
 
 # FEATURES
 dependencies[] = features
-dependencies[] = uuid_features
 
 # FIELDS
 dependencies[] = entityreference
@@ -77,8 +77,12 @@ dependencies[] = i18n
 dependencies[] = i18n_block
 dependencies[] = i18n_contact
 dependencies[] = i18n_menu
-dependencies[] = i18n_string
+dependencies[] = i18n_node
 dependencies[] = i18n_select
+dependencies[] = i18n_string
+dependencies[] = i18n_sync
+dependencies[] = i18n_taxonomy
+dependencies[] = i18n_translation
 dependencies[] = i18nviews
 dependencies[] = languageicons
 
@@ -107,9 +111,6 @@ dependencies[] = delta_color
 dependencies[] = delta_blocks
 dependencies[] = omega_tools
 
-#UUID
-dependencies[] = uuid
-
 # VARIABLE
 dependencies[] = variable
 
@@ -117,5 +118,6 @@ dependencies[] = variable
 dependencies[] = better_exposed_filters
 dependencies[] = views
 dependencies[] = views_slideshow
+dependencies[] = views_slideshow_cycle
 dependencies[] = views_ui
 
