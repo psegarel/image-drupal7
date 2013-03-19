@@ -11,66 +11,6 @@ function image_taxonomy_terms_uuid_features_default_terms() {
   $terms = array();
 
   $terms[] = array(
-    'name' => 'Petit Verdot',
-    'description' => '',
-    'format' => 'plain_text',
-    'weight' => '0',
-    'uuid' => '00b9d1fb-8324-e964-49d8-e60f2197c07f',
-    'language' => 'und',
-    'i18n_tsid' => '0',
-    'vocabulary_machine_name' => 'grape_varieties',
-  );
-  $terms[] = array(
-    'name' => 'Carmenere',
-    'description' => '',
-    'format' => 'plain_text',
-    'weight' => '0',
-    'uuid' => '05f7a5dc-7aa9-72e4-75f6-7dbaf7f45c60',
-    'language' => 'und',
-    'i18n_tsid' => '0',
-    'vocabulary_machine_name' => 'grape_varieties',
-  );
-  $terms[] = array(
-    'name' => '销售',
-    'description' => '',
-    'format' => 'plain_text',
-    'weight' => '0',
-    'uuid' => '2bef6d52-8e36-d404-5115-ca364fa7b417',
-    'language' => 'en',
-    'i18n_tsid' => '0',
-    'vocabulary_machine_name' => 'features',
-  );
-  $terms[] = array(
-    'name' => 'Torrontes',
-    'description' => '',
-    'format' => 'plain_text',
-    'weight' => '0',
-    'uuid' => '2db00a6b-6b13-0744-3984-80c1cd3a2a9c',
-    'language' => 'und',
-    'i18n_tsid' => '0',
-    'vocabulary_machine_name' => 'grape_varieties',
-  );
-  $terms[] = array(
-    'name' => 'Syrah',
-    'description' => '',
-    'format' => 'plain_text',
-    'weight' => '0',
-    'uuid' => '2f6fe11a-a06b-8624-5d07-5180598cf9b7',
-    'language' => 'und',
-    'i18n_tsid' => '0',
-    'vocabulary_machine_name' => 'grape_varieties',
-  );
-  $terms[] = array(
-    'name' => 'Cabernet Franc',
-    'description' => '',
-    'format' => 'plain_text',
-    'weight' => '0',
-    'uuid' => '3552c068-54d2-22d4-6dcf-f6b62887ccf9',
-    'language' => 'und',
-    'i18n_tsid' => '0',
-    'vocabulary_machine_name' => 'grape_varieties',
-  );
-  $terms[] = array(
     'name' => 'Bodega Maurizio Lorca',
     'description' => 'Encouraged by the success with Enrige Foster, Maurizio Lorca started his own estate with the support of Mr. Foster. 
 
@@ -114,26 +54,6 @@ The goal is to produce inspired, unique wines of excellent quality.',
     ),
   );
   $terms[] = array(
-    'name' => 'Sauvignon',
-    'description' => '',
-    'format' => 'plain_text',
-    'weight' => '0',
-    'uuid' => '48617952-4a7b-2a84-b541-683287834210',
-    'language' => 'und',
-    'i18n_tsid' => '0',
-    'vocabulary_machine_name' => 'grape_varieties',
-  );
-  $terms[] = array(
-    'name' => 'Chardonnay',
-    'description' => '',
-    'format' => 'plain_text',
-    'weight' => '0',
-    'uuid' => '49dabd2d-1797-7c94-ad2b-bcc3fe3e772b',
-    'language' => 'und',
-    'i18n_tsid' => '0',
-    'vocabulary_machine_name' => 'grape_varieties',
-  );
-  $terms[] = array(
     'name' => 'Argentina',
     'description' => '',
     'format' => 'filtered_html',
@@ -144,16 +64,6 @@ The goal is to produce inspired, unique wines of excellent quality.',
     'vocabulary_machine_name' => 'countries',
   );
   $terms[] = array(
-    'name' => 'Merlot',
-    'description' => '',
-    'format' => 'plain_text',
-    'weight' => '0',
-    'uuid' => '7f464479-3da8-5154-8985-73dccf9db0ca',
-    'language' => 'und',
-    'i18n_tsid' => '0',
-    'vocabulary_machine_name' => 'grape_varieties',
-  );
-  $terms[] = array(
     'name' => 'Wine',
     'description' => '',
     'format' => 'filtered_html',
@@ -162,36 +72,6 @@ The goal is to produce inspired, unique wines of excellent quality.',
     'language' => 'und',
     'i18n_tsid' => '0',
     'vocabulary_machine_name' => 'products',
-  );
-  $terms[] = array(
-    'name' => 'Sale',
-    'description' => '',
-    'format' => 'plain_text',
-    'weight' => '0',
-    'uuid' => '84eecae6-aefa-0ec4-8999-3d2516ad6b93',
-    'language' => 'en',
-    'i18n_tsid' => '0',
-    'vocabulary_machine_name' => 'features',
-  );
-  $terms[] = array(
-    'name' => 'New',
-    'description' => '',
-    'format' => 'plain_text',
-    'weight' => '0',
-    'uuid' => '8f5945fc-90b8-a624-4127-13e709531c2c',
-    'language' => 'en',
-    'i18n_tsid' => '0',
-    'vocabulary_machine_name' => 'features',
-  );
-  $terms[] = array(
-    'name' => '新',
-    'description' => '',
-    'format' => 'plain_text',
-    'weight' => '0',
-    'uuid' => '92c50a7a-ac8e-f0b4-c9cd-1eb155bd4ca0',
-    'language' => 'en',
-    'i18n_tsid' => '0',
-    'vocabulary_machine_name' => 'features',
   );
   $terms[] = array(
     'name' => 'Junta Winery',
@@ -248,16 +128,6 @@ The goal is to produce inspired, unique wines of excellent quality.',
     'vocabulary_machine_name' => 'products',
   );
   $terms[] = array(
-    'name' => 'Blend',
-    'description' => '',
-    'format' => 'plain_text',
-    'weight' => '0',
-    'uuid' => 'a48db0ff-e946-2334-2178-7db258c55ab3',
-    'language' => 'und',
-    'i18n_tsid' => '0',
-    'vocabulary_machine_name' => 'grape_varieties',
-  );
-  $terms[] = array(
     'name' => 'Chile',
     'description' => '',
     'format' => 'filtered_html',
@@ -266,16 +136,6 @@ The goal is to produce inspired, unique wines of excellent quality.',
     'language' => 'und',
     'i18n_tsid' => '0',
     'vocabulary_machine_name' => 'countries',
-  );
-  $terms[] = array(
-    'name' => 'Malbec',
-    'description' => '',
-    'format' => 'plain_text',
-    'weight' => '0',
-    'uuid' => 'c99aebd5-df96-03c4-2967-f050c9cbd098',
-    'language' => 'und',
-    'i18n_tsid' => '0',
-    'vocabulary_machine_name' => 'grape_varieties',
   );
   $terms[] = array(
     'name' => 'Greenpath Food for Life',
@@ -364,16 +224,6 @@ Their winemaker, Mauricio Lorca, already produced several prize winning wines fo
         ),
       ),
     ),
-  );
-  $terms[] = array(
-    'name' => 'Cabernet',
-    'description' => '',
-    'format' => 'plain_text',
-    'weight' => '0',
-    'uuid' => 'f83c3109-3b58-3844-3947-da38263dbbbb',
-    'language' => 'und',
-    'i18n_tsid' => '0',
-    'vocabulary_machine_name' => 'grape_varieties',
   );
   return $terms;
 }
