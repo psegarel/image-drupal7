@@ -551,24 +551,25 @@ h2.block-title {
   line-height: 160%;
   color: #555;
   margin: 20px 0 0 10px;
+  margin-left: 0;
 }
 
-/* line 325, ../sass/global.scss */
+/* line 326, ../sass/global.scss */
 #block-views-contact-block {
   float: right;
 }
-/* line 326, ../sass/global.scss */
+/* line 327, ../sass/global.scss */
 #block-views-contact-block .views-row {
   margin-bottom: 2em;
 }
-/* line 327, ../sass/global.scss */
+/* line 328, ../sass/global.scss */
 #block-views-contact-block .views-row .views-field-title {
   color: #3a64e9;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   margin-bottom: .5em;
 }
-/* line 334, ../sass/global.scss */
+/* line 335, ../sass/global.scss */
 #block-views-contact-block .views-row .views-field-body p,
 #block-views-contact-block .views-row .views-field-body {
   font-family: "Tahoma", "Lucida Grande", sans-serif;
@@ -578,11 +579,11 @@ h2.block-title {
   color: #555;
   margin: 20px 0 0 10px;
 }
-/* line 337, ../sass/global.scss */
+/* line 338, ../sass/global.scss */
 #block-views-contact-block .views-row .views-field-field-google-map {
   padding: 1em 0;
 }
-/* line 339, ../sass/global.scss */
+/* line 340, ../sass/global.scss */
 #block-views-contact-block .views-row .views-field-field-google-map a {
   color: #fff;
   text-decoration: none;
@@ -593,30 +594,30 @@ h2.block-title {
   font-size: .7em;
   clear: both;
 }
-/* line 348, ../sass/global.scss */
+/* line 349, ../sass/global.scss */
 #block-views-contact-block .views-row .views-field-field-google-map a:hover {
   color: #ceff00;
   background: #000;
 }
 
-/* line 357, ../sass/global.scss */
+/* line 358, ../sass/global.scss */
 #block-search-form {
   float: right;
   padding: 0 0 1em 0;
 }
 
-/* line 361, ../sass/global.scss */
+/* line 362, ../sass/global.scss */
 ul.superfish-2 .sf-vertical, ul.superfish-2 .sf-vertical li {
   width: 30em;
 }
 
-/* line 365, ../sass/global.scss */
+/* line 366, ../sass/global.scss */
 ul.language-switcher-locale-url li {
   display: inline;
   float: left;
   margin-right: 20px;
 }
-/* line 369, ../sass/global.scss */
+/* line 370, ../sass/global.scss */
 ul.language-switcher-locale-url li a {
   text-decoration: none;
   font-weight: 100;

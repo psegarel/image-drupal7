@@ -317,7 +317,8 @@ h2.block-title	{	font-size: 2em;
 														}
 														
 										.views-field-body	p,
-										.views-field-body	 	{	@include small-body;	
+										.views-field-body	 	{	@include small-body;
+																	margin-left: 0;	
 																}					
 									}
 									
