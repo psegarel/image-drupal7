@@ -23,18 +23,18 @@ class SupplierMigration extends ImageNodeMigration
 		'field_country', 'field_illustration:language', 'field_illustration:alt', 'field_illustration:title'));		
 	}	
 	
-	public function prepare($node, stdClass $row) 
-	{
-		$suppliers = taxonomy_vocabulary_machine_name_load('suppliers');
-		$terms = taxonomy_get_tree($suppliers->vid);
-		
-		foreach($terms as $term)
-		{	
-			if($term->name == $row->title)
-			{
-				dsm($term);
-			}
-	
-		}	
-	}
+	// public function prepare($node, stdClass $row) 
+	// {
+	// 	$suppliers = taxonomy_vocabulary_machine_name_load('suppliers');
+	// 	$terms = taxonomy_get_tree($suppliers->vid);
+	// 	
+	// 	foreach($terms as $term)
+	// 	{	
+	// 		if($term->name == $row->title)
+	// 		{
+	// 			dsm($term);
+	// 		}
+	// 
+	// 	}	
+	// }
 }
