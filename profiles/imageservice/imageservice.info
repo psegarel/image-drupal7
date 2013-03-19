@@ -57,6 +57,7 @@ dependencies[] = migrate_ui
 
 # FEATURES
 dependencies[] = features
+dependencies[] = uuid_features
 
 # FIELDS
 dependencies[] = entityreference
@@ -105,6 +106,9 @@ dependencies[] = delta_ui
 dependencies[] = delta_color
 dependencies[] = delta_blocks
 dependencies[] = omega_tools
+
+#UUID
+dependencies[] = uuid
 
 # VARIABLE
 dependencies[] = variable
