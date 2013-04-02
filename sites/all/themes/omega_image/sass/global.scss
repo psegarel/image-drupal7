@@ -42,12 +42,7 @@ html, body	{	font-family: Tahoma, sans-serif;
 
 
 
-h2.block-title 			{	font-family: 'Roboto', sans-serif;
-							font-weight: 300;
-							margin: 0 0 1em 0;
-							padding: 0 0 .5em 0;
-							border-bottom: 1px dotted #ccc;
-						}
+
 
 #zone-postscript-wrapper		{	h2.block-title 			{	font-size: 1em;
 																color: $brightgreen;
@@ -77,9 +72,19 @@ h2.site-name			{	font-size: 4em;
 .logo-img	{	
 			}
 
-h2.block-title	{	font-size: 2em;
-					color: #777;
+h2.block-title	{	font-size: 1.4em;
+					color: #333;
+					/* font-family: 'Comfortaa', cursive; */
+					font-family: "Roboto", sans-serif;
+					font-weight: 300;
+					margin: 0 0 1em 0;
+					padding: .4em 0 .4em 1em;
+					border-bottom: 1px solid #eee;
+					/* text-align: right; */
+					/* border-bottom: 4px solid green; */
 				}				
+
+
 
 .views-field-field-country	{	text-transform: uppercase;
 								font-family: "Roboto", sans-serif;
@@ -141,6 +146,8 @@ h2.block-title	{	font-size: 2em;
 										
 									.views-row 	{	margin-bottom: 4em;
 													height: 400px;
+													margin-left: 20px;
+													margin-right: -14px;
 												}
 												
 									.views-field-term-node-tid-1,		
@@ -154,7 +161,6 @@ h2.block-title	{	font-size: 2em;
 									.views-field-field-illustration	{	padding: 1em 0;
 																		@include lightborder;
 																		margin-bottom: 10px;
-																		/* @include single-box-shadow;  */
 																		background: #fff;
 																	}
 									.views-field-title,
@@ -187,7 +193,34 @@ h2.block-title	{	font-size: 2em;
 															}
 								}	
 
-
+#block-views-product-block,
+#block-views-frontpage-news-block,
+#block-views-featured-product-block	{	margin-bottom: 4em;
+										background: #fff;
+										padding: 2em 0;
+									}
+									
+#block-views-featured-product-block	{	.views-field-title	{	a  	{	text-decoration: none;
+																		font-weight: 300;
+																		font-family: 'Roboto', sans-serif;
+																		font-size: 1.4em;
+																		line-height: 120%;
+																		color: #222;
+																	}
+															}
+															
+										.views-field-body p { 	padding: 1em 2em 1em 0;
+																font-weight: 100;
+																font-family: 'Roboto', sans-serif;
+																font-size: 1.4em;
+																line-height: 140%;
+																color: #222;
+															}	
+										
+										.views-field-field-illustration img	{	
+																			}									
+									}
+									
 #block-views-suppliers-block	{	.views-row	{	clear: both;
 													padding: 0 0 2em 0;
 													border-bottom: 1px solid #ccc;
@@ -305,16 +338,21 @@ h2.block-title	{	font-size: 2em;
 												}		
 								}
 
-#block-views-frontpage-news-block	{	margin: 2em 0 0 0;
+#block-views-frontpage-news-block	{	/* margin: 2em 0 0 0; */
+
+										.views-row	{	padding: 1em 0;
+														border-bottom: 1px solid #ccc;
+													}
+													
 										.views-field-title	{	margin-bottom: 10px;
-															a			{	color: #222;
-																			font-size: 1.1em;
-																			text-decoration: none;
-																			font-family: "Roboto", sans-serif;
-																			text-transform: uppercase;
-																			font-weight: 300;
-																		}
-														}
+																a	{	color: #222;
+																		font-size: 1.1em;
+																		text-decoration: none;
+																		font-family: "Roboto", sans-serif;
+																		text-transform: uppercase;
+																		font-weight: 300;
+																	}
+															}
 														
 										.views-field-body	p,
 										.views-field-body	 	{	@include small-body;
