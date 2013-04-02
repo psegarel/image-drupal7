@@ -1,6 +1,7 @@
 name = Image Frontpage News
 core = 7.x
 package = Image service
+php = 5.2.4
 dependencies[] = features
 dependencies[] = image
 dependencies[] = text

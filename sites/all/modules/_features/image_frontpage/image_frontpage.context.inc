@@ -32,17 +32,17 @@ function image_frontpage_context_default_contexts() {
           'region' => 'branding',
           'weight' => '-10',
         ),
+        'views-featured_product-block' => array(
+          'module' => 'views',
+          'delta' => 'featured_product-block',
+          'region' => 'sidebar_first',
+          'weight' => '-28',
+        ),
         'views-product-block' => array(
           'module' => 'views',
           'delta' => 'product-block',
           'region' => 'sidebar_first',
-          'weight' => '-10',
-        ),
-        'views-product-block_3' => array(
-          'module' => 'views',
-          'delta' => 'product-block_3',
-          'region' => 'sidebar_first',
-          'weight' => '-9',
+          'weight' => '-27',
         ),
         'views-frontpage_news-block' => array(
           'module' => 'views',
