@@ -23,11 +23,11 @@ function image_supplier_menu_default_menu_links() {
       'alter' => TRUE,
     ),
     'module' => 'taxonomy_menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '1',
-    'weight' => '0',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => 0,
   );
   // Exported menu link: menu-suppliers:taxonomy/term/50
   $menu_links['menu-suppliers:taxonomy/term/50'] = array(
@@ -42,11 +42,11 @@ function image_supplier_menu_default_menu_links() {
       'alter' => TRUE,
     ),
     'module' => 'taxonomy_menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '1',
-    'weight' => '0',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => 0,
   );
   // Exported menu link: menu-suppliers:taxonomy/term/51
   $menu_links['menu-suppliers:taxonomy/term/51'] = array(
@@ -61,11 +61,11 @@ function image_supplier_menu_default_menu_links() {
       'alter' => TRUE,
     ),
     'module' => 'taxonomy_menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '1',
-    'weight' => '0',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => 0,
   );
   // Exported menu link: menu-suppliers:taxonomy/term/52
   $menu_links['menu-suppliers:taxonomy/term/52'] = array(
@@ -80,11 +80,11 @@ function image_supplier_menu_default_menu_links() {
       'alter' => TRUE,
     ),
     'module' => 'taxonomy_menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '1',
-    'weight' => '0',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 1,
+    'weight' => 0,
   );
   // Translatables
   // Included for use with string extractors like potx.

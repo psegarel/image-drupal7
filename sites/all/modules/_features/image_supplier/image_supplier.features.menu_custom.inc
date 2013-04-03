@@ -16,7 +16,7 @@ function image_supplier_menu_default_menu_custom() {
     'title' => 'Suppliers',
     'description' => '',
     'language' => 'und',
-    'i18n_mode' => '5',
+    'i18n_mode' => 5,
   );
   // Translatables
   // Included for use with string extractors like potx.

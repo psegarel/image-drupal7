@@ -60,7 +60,6 @@ function image_supplier_views_default_views() {
 
   /* Display: Front page Supplier */
   $handler = $view->new_display('block', 'Front page Supplier', 'block');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -105,7 +104,6 @@ function image_supplier_views_default_views() {
 
   /* Display: Supplier Products */
   $handler = $view->new_display('block', 'Supplier Products', 'block_2');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['grouping'] = array(
@@ -219,7 +217,6 @@ function image_supplier_views_default_views() {
   /* Display: Supplier Info */
   $handler = $view->new_display('block', 'Supplier Info', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';

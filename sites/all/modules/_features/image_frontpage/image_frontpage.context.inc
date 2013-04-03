@@ -26,28 +26,10 @@ function image_frontpage_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-catchphrases-block' => array(
-          'module' => 'views',
-          'delta' => 'catchphrases-block',
-          'region' => 'branding',
-          'weight' => '-10',
-        ),
         'views-featured_product-block' => array(
           'module' => 'views',
           'delta' => 'featured_product-block',
-          'region' => 'sidebar_first',
-          'weight' => '-28',
-        ),
-        'views-product-block' => array(
-          'module' => 'views',
-          'delta' => 'product-block',
-          'region' => 'sidebar_first',
-          'weight' => '-27',
-        ),
-        'views-frontpage_news-block' => array(
-          'module' => 'views',
-          'delta' => 'frontpage_news-block',
-          'region' => 'sidebar_second',
+          'region' => 'branding',
           'weight' => '-9',
         ),
         'superfish-2' => array(
@@ -150,37 +132,37 @@ function image_frontpage_context_default_contexts() {
           'module' => 'locale',
           'delta' => 'language',
           'region' => 'user_first',
-          'weight' => '-10',
+          'weight' => '-28',
         ),
         'delta_blocks-site-name' => array(
           'module' => 'delta_blocks',
           'delta' => 'site-name',
-          'region' => 'user_second',
-          'weight' => '-10',
+          'region' => 'user_first',
+          'weight' => '-27',
         ),
         'delta_blocks-site-slogan' => array(
           'module' => 'delta_blocks',
           'delta' => 'site-slogan',
-          'region' => 'user_second',
-          'weight' => '-9',
+          'region' => 'user_first',
+          'weight' => '-26',
         ),
         'delta_blocks-logo' => array(
           'module' => 'delta_blocks',
           'delta' => 'logo',
-          'region' => 'user_second',
-          'weight' => '-8',
+          'region' => 'user_first',
+          'weight' => '-25',
+        ),
+        'search-form' => array(
+          'module' => 'search',
+          'delta' => 'form',
+          'region' => 'user_first',
+          'weight' => '-10',
         ),
         'views-catchphrases-block' => array(
           'module' => 'views',
           'delta' => 'catchphrases-block',
           'region' => 'branding',
-          'weight' => '-22',
-        ),
-        'search-form' => array(
-          'module' => 'search',
-          'delta' => 'form',
-          'region' => 'branding',
-          'weight' => '-21',
+          'weight' => '-9',
         ),
         'superfish-1' => array(
           'module' => 'superfish',

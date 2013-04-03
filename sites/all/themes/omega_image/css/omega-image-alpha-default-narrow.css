@@ -26,7 +26,8 @@
   outline: none;
 }
 
-/* line 9, ../sass/_base.scss */
+/* $imageblue: #5675d7; */
+/* line 12, ../sass/_base.scss */
 button {
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;

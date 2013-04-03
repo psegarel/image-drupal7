@@ -15,26 +15,26 @@ function image_languages_locale_default_languages() {
     'language' => 'en',
     'name' => 'English',
     'native' => 'English',
-    'direction' => '0',
-    'enabled' => '1',
-    'plurals' => '0',
+    'direction' => 0,
+    'enabled' => 1,
+    'plurals' => 0,
     'formula' => '',
     'domain' => '',
     'prefix' => '',
-    'weight' => '-10',
+    'weight' => -10,
   );
   // Exported language: zh-hans.
   $languages['zh-hans'] = array(
     'language' => 'zh-hans',
     'name' => 'Chinese, Simplified',
     'native' => '简体中文',
-    'direction' => '0',
-    'enabled' => '1',
-    'plurals' => '2',
+    'direction' => 0,
+    'enabled' => 1,
+    'plurals' => 2,
     'formula' => '($n!=1)',
     'domain' => '',
     'prefix' => 'zh-hans',
-    'weight' => '-9',
+    'weight' => -9,
   );
   return $languages;
 }

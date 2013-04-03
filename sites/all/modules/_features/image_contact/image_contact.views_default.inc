@@ -86,7 +86,6 @@ function image_contact_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $export['contact'] = $view;
 
   return $export;

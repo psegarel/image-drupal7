@@ -125,7 +125,6 @@ function image_frontpage_products_views_default_views() {
 
   /* Display: Frontpage Products */
   $handler = $view->new_display('block', 'Frontpage Products', 'block');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '8';
@@ -154,7 +153,6 @@ function image_frontpage_products_views_default_views() {
   $handler = $view->new_display('block', 'Products Page', 'block_1');
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
   $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'Ascending';
@@ -384,7 +382,6 @@ function image_frontpage_products_views_default_views() {
 
   /* Display: Single Product */
   $handler = $view->new_display('block', 'Single Product', 'block_2');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';

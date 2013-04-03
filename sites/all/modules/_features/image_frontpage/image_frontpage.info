@@ -1,6 +1,7 @@
 name = Image Frontpage
 core = 7.x
 package = Image service layout
+php = 5.2.4
 dependencies[] = context
 dependencies[] = ctools
 dependencies[] = delta
