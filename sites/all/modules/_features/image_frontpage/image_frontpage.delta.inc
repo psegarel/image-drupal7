@@ -21,12 +21,10 @@ function image_frontpage_delta_default_templates() {
   $delta->parent = '';
   $delta->settings = array(
     'theme_omega_image_settings' => array(
-      'alpha_region_preface_first_columns' => '12',
-      'alpha_region_preface_second_columns' => '6',
-      'alpha_region_preface_third_columns' => '6',
       'alpha_region_sidebar_first_columns' => '12',
       'alpha_region_content_columns' => '12',
       'alpha_region_sidebar_second_columns' => '12',
+      'alpha_region_preface_third_columns' => '6',
     ),
     'color_omega_image_files' => NULL,
     'color_omega_image_logo' => NULL,

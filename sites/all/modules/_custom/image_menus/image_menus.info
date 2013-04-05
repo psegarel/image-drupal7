@@ -1,0 +1,4 @@
+name = "Image Custom Menus"
+description = "Create custom menu items"
+package = "Development"
+core = 7.x
