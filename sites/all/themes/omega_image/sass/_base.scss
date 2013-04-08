@@ -9,7 +9,7 @@ $brightgreen: #ceff00;
 
 $default-box-shadow-color : #222;
 
-button	{	@include fancy-button(#444 , 10px, 1px , 1px );
+button	{	@include fancy-button( );
 		}
 		
 		
@@ -21,7 +21,7 @@ $moz:true;
 $w3:true;
 $ms:true;
 
-@mixin lightborder	{	border: 1px solid #ccc;
+@mixin lightborder	{	border: 1px solid #ddd;
 					}
 
 

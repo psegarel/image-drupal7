@@ -15,6 +15,8 @@ class NewsMigration extends ImageNodeMigration
 	    	->sourceMigration('Files');
 		$this->addFieldMapping('field_gallery_image:file_class')
 			     ->defaultValue('MigrateFileFid');
+		$this->addFieldMapping('field_gallery_image:preserve_files')
+			     ->defaultValue(TRUE);
 			
 		$this->addFieldMapping('field_introduction', 'field_teaser');
 
@@ -23,4 +25,9 @@ class NewsMigration extends ImageNodeMigration
 		$this->addUnmigratedDestinations(array('field_introduction:language', 'field_gallery_image:language', 
 		'field_gallery_image:alt', 'field_gallery_image:title'));		
 	}
+
+	public function prepare($node, stdClass $row) 
+	{
+		dsm($node);
+	}	
 }
