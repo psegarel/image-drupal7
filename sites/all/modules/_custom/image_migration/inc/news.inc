@@ -28,6 +28,5 @@ class NewsMigration extends ImageNodeMigration
 
 	public function prepare($node, stdClass $row) 
 	{
-		dsm($node);
 	}	
 }
