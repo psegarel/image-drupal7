@@ -115,6 +115,14 @@ function image_migration_register_migrations() {
 			'dependencies' => array('User'),
 		),
 		array(
+			'class_name' => 'CountryMigration',
+			'description' => t('Migration of Country nodes from Drupal 6'),
+			'machine_name' => 'Country',
+			'source_type' => 'country',
+			'destination_type' => 'country',
+			'dependencies' => array('Files'),
+		),
+		array(
 			'class_name' => 'NewsMigration',
 			'description' => t('Migration of news nodes from Drupal 6'),
 			'machine_name' => 'News',

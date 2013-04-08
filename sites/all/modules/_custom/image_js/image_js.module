@@ -1,0 +1,19 @@
+<?php
+
+/**
+*	Implements hook_library_info
+*/
+function image_js_library() {
+  
+	// Smooth Scroll
+	$libraries['smoothscroll'] = 
+		array(	'title' => 'Smooth Scroll',
+				'website' => 'https://github.com/kswedberg/jquery-smooth-scroll',
+				'version' => '1.0.1',
+				'js' => array( 
+					drupal_get_path('module', 'image_js') . '/jquery-smooth-scroll/jquery.smooth-scroll.min.js' => array(),
+				),
+			);
+	
+	return $libraries;
+}

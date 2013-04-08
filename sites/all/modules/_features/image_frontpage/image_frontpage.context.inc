@@ -26,29 +26,23 @@ function image_frontpage_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-catchphrases-block' => array(
-          'module' => 'views',
-          'delta' => 'catchphrases-block',
-          'region' => 'branding',
-          'weight' => '-10',
-        ),
         'views-featured_product-block' => array(
           'module' => 'views',
           'delta' => 'featured_product-block',
-          'region' => 'sidebar_first',
-          'weight' => '-28',
-        ),
-        'views-product-block' => array(
-          'module' => 'views',
-          'delta' => 'product-block',
-          'region' => 'sidebar_first',
-          'weight' => '-27',
+          'region' => 'branding',
+          'weight' => '-9',
         ),
         'views-frontpage_news-block' => array(
           'module' => 'views',
           'delta' => 'frontpage_news-block',
-          'region' => 'sidebar_second',
-          'weight' => '-9',
+          'region' => 'sidebar_first',
+          'weight' => '-10',
+        ),
+        'views-product-block' => array(
+          'module' => 'views',
+          'delta' => 'product-block',
+          'region' => 'preface_first',
+          'weight' => '-10',
         ),
         'superfish-2' => array(
           'module' => 'superfish',
@@ -150,37 +144,43 @@ function image_frontpage_context_default_contexts() {
           'module' => 'locale',
           'delta' => 'language',
           'region' => 'user_first',
-          'weight' => '-10',
-        ),
-        'delta_blocks-site-name' => array(
-          'module' => 'delta_blocks',
-          'delta' => 'site-name',
-          'region' => 'user_second',
-          'weight' => '-10',
-        ),
-        'delta_blocks-site-slogan' => array(
-          'module' => 'delta_blocks',
-          'delta' => 'site-slogan',
-          'region' => 'user_second',
-          'weight' => '-9',
-        ),
-        'delta_blocks-logo' => array(
-          'module' => 'delta_blocks',
-          'delta' => 'logo',
-          'region' => 'user_second',
-          'weight' => '-8',
+          'weight' => '-29',
         ),
         'views-catchphrases-block' => array(
           'module' => 'views',
           'delta' => 'catchphrases-block',
-          'region' => 'branding',
-          'weight' => '-22',
+          'region' => 'user_first',
+          'weight' => '-28',
+        ),
+        'delta_blocks-logo' => array(
+          'module' => 'delta_blocks',
+          'delta' => 'logo',
+          'region' => 'user_first',
+          'weight' => '-27',
+        ),
+        'delta_blocks-site-name' => array(
+          'module' => 'delta_blocks',
+          'delta' => 'site-name',
+          'region' => 'user_first',
+          'weight' => '-26',
+        ),
+        'delta_blocks-site-slogan' => array(
+          'module' => 'delta_blocks',
+          'delta' => 'site-slogan',
+          'region' => 'user_first',
+          'weight' => '-25',
         ),
         'search-form' => array(
           'module' => 'search',
           'delta' => 'form',
-          'region' => 'branding',
-          'weight' => '-21',
+          'region' => 'user_first',
+          'weight' => '-24',
+        ),
+        'views-illustrations-block' => array(
+          'module' => 'views',
+          'delta' => 'illustrations-block',
+          'region' => 'user_second',
+          'weight' => '-10',
         ),
         'superfish-1' => array(
           'module' => 'superfish',

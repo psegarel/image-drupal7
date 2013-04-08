@@ -126,7 +126,6 @@ function image_products_page_views_default_views() {
   $handler = $view->new_display('block', 'All Products Page', 'block_3');
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
   $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'Ascending';

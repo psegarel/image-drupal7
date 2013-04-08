@@ -1,0 +1,3212 @@
+3.2.5 (Media Mark)
+2e2fd82a67c60c40a6873279733a523d61b4c6bf
+o:Sass::Tree::RootNode
+:
+@linei:@template"∆ì/* ------------------------------------------
+PURE CSS SPEECH BUBBLES
+by Nicolas Gallagher
+- http://nicolasgallagher.com/pure-css-speech-bubbles/
+
+http://nicolasgallagher.com
+http://twitter.com/necolas
+
+Created: 02 March 2010
+Version: 1.2 (03 March 2011)
+
+Dual licensed under MIT and GNU GPLv2 ÔøΩ Nicolas Gallagher 
+------------------------------------------ */
+
+/* NOTE: Some declarations use longhand notation so that it can be clearly
+explained what specific properties or values do and what their relationship
+is to other properties or values in creating the effect */
+
+
+
+/* ============================================================================================================================
+== BUBBLE WITH AN ISOCELES TRIANGLE
+** ============================================================================================================================ */
+
+/* THE SPEECH BUBBLE
+------------------------------------------------------------------------------------------------------------------------------- */
+
+.triangle-isosceles {
+	position:relative;
+	padding:15px;
+	margin:1em 0 3em;
+	color:#000;
+	background:#f3961c; /* default background for browsers without gradient support */
+	/* css3 */
+	background:-webkit-gradient(linear, 0 0, 0 100%, from(#f9d835), to(#f3961c));
+	background:-moz-linear-gradient(#f9d835, #f3961c);
+	background:-o-linear-gradient(#f9d835, #f3961c);
+	background:linear-gradient(#f9d835, #f3961c);
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+
+/* Variant : for top positioned triangle
+------------------------------------------ */
+
+.triangle-isosceles.top {
+	background:-webkit-gradient(linear, 0 0, 0 100%, from(#f3961c), to(#f9d835));
+	background:-moz-linear-gradient(#f3961c, #f9d835);
+	background:-o-linear-gradient(#f3961c, #f9d835);
+	background:linear-gradient(#f3961c, #f9d835);
+}
+
+/* Variant : for left/right positioned triangle
+------------------------------------------ */
+
+.triangle-isosceles.left {
+	margin-left:50px;
+	background:#f3961c;
+}
+
+/* Variant : for right positioned triangle
+------------------------------------------ */
+
+.triangle-isosceles.right {
+	margin-right:50px;
+	background:#f3961c;
+}
+
+/* THE TRIANGLE
+------------------------------------------------------------------------------------------------------------------------------- */
+
+/* creates triangle */
+.triangle-isosceles:after {
+	content:"";
+	position:absolute;
+	bottom:-15px; /* value = - border-top-width - border-bottom-width */
+	left:50px; /* controls horizontal position */
+	border-width:15px 15px 0; /* vary these values to change the angle of the vertex */
+	border-style:solid;
+	border-color:#f3961c transparent;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+}
+
+/* Variant : top
+------------------------------------------ */
+
+.triangle-isosceles.top:after {
+	top:-15px; /* value = - border-top-width - border-bottom-width */
+	right:50px; /* controls horizontal position */
+	bottom:auto;
+	left:auto;
+	border-width:0 15px 15px; /* vary these values to change the angle of the vertex */
+	border-color:#f3961c transparent;
+}
+
+/* Variant : left
+------------------------------------------ */
+
+.triangle-isosceles.left:after {
+	top:16px; /* controls vertical position */
+	left:-50px; /* value = - border-left-width - border-right-width */
+	bottom:auto;
+	border-width:10px 50px 10px 0;
+	border-color:transparent #f3961c;
+}
+
+/* Variant : right
+------------------------------------------ */
+
+.triangle-isosceles.right:after {
+	top:16px; /* controls vertical position */
+	right:-50px; /* value = - border-left-width - border-right-width */
+	bottom:auto;
+    left:auto;
+	border-width:10px 0 10px 50px;
+	border-color:transparent #f3961c;
+}
+
+
+/* ============================================================================================================================
+== BUBBLE WITH A RIGHT-ANGLED TRIANGLE
+** ============================================================================================================================ */
+
+/* THE SPEECH BUBBLE
+------------------------------------------------------------------------------------------------------------------------------- */
+
+.triangle-right {
+	position:relative;
+	padding:15px;
+	margin:1em 0 3em;
+	color:#fff;
+	background:#075698; /* default background for browsers without gradient support */
+	/* css3 */
+	background:-webkit-gradient(linear, 0 0, 0 100%, from(#2e88c4), to(#075698));
+	background:-moz-linear-gradient(#2e88c4, #075698);
+	background:-o-linear-gradient(#2e88c4, #075698);
+	background:linear-gradient(#2e88c4, #075698);
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+
+/* Variant : for top positioned triangle
+------------------------------------------ */
+
+.triangle-right.top {
+	background:-webkit-gradient(linear, 0 0, 0 100%, from(#075698), to(#2e88c4));
+	background:-moz-linear-gradient(#075698, #2e88c4);
+	background:-o-linear-gradient(#075698, #2e88c4);
+	background:linear-gradient(#075698, #2e88c4);
+}
+
+/* Variant : for left positioned triangle
+------------------------------------------ */
+
+.triangle-right.left {
+	margin-left:40px;
+	background:#075698;
+}
+
+/* Variant : for right positioned triangle
+------------------------------------------ */
+
+.triangle-right.right {
+	margin-right:40px;
+	background:#075698;
+}
+
+/* THE TRIANGLE
+------------------------------------------------------------------------------------------------------------------------------- */
+
+.triangle-right:after {
+	content:"";
+	position:absolute;
+	bottom:-20px; /* value = - border-top-width - border-bottom-width */
+	left:50px; /* controls horizontal position */
+	border-width:20px 0 0 20px; /* vary these values to change the angle of the vertex */
+	border-style:solid;
+	border-color:#075698 transparent; 
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+}
+
+/* Variant : top
+------------------------------------------ */
+
+.triangle-right.top:after {
+	top:-20px; /* value = - border-top-width - border-bottom-width */
+	right:50px; /* controls horizontal position */
+	bottom:auto;
+	left:auto;
+	border-width:20px 20px 0 0; /* vary these values to change the angle of the vertex */
+	border-color:transparent #075698; 
+}
+
+/* Variant : left
+------------------------------------------ */
+
+.triangle-right.left:after {
+	top:16px; 
+	left:-40px; /* value = - border-left-width - border-right-width */
+	bottom:auto;
+	border-width:15px 40px 0 0; /* vary these values to change the angle of the vertex */
+	border-color:transparent #075698; 
+}
+
+/* Variant : right
+------------------------------------------ */
+
+.triangle-right.right:after {
+	top:16px; 
+	right:-40px; /* value = - border-left-width - border-right-width */
+	bottom:auto;
+    left:auto;
+	border-width:15px 0 0 40px; /* vary these values to change the angle of the vertex */
+	border-color:transparent #075698 ; 
+}
+
+
+/* ============================================================================================================================
+== BUBBLE WITH AN OBTUSE TRIANGLE
+** ============================================================================================================================ */
+
+/* THE SPEECH BUBBLE
+------------------------------------------------------------------------------------------------------------------------------- */
+
+.triangle-obtuse {
+	position:relative;
+	padding:15px;
+	margin:1em 0 3em;
+	color:#fff;
+	background:#c81e2b;
+	/* css3 */
+	background:-webkit-gradient(linear, 0 0, 0 100%, from(#f04349), to(#c81e2b));
+	background:-moz-linear-gradient(#f04349, #c81e2b);
+	background:-o-linear-gradient(#f04349, #c81e2b);
+	background:linear-gradient(#f04349, #c81e2b);
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+
+/* Variant : for top positioned triangle
+------------------------------------------ */
+
+.triangle-obtuse.top {
+	background:-webkit-gradient(linear, 0 0, 0 100%, from(#c81e2b), to(#f04349));
+	background:-moz-linear-gradient(#c81e2b, #f04349);
+	background:-o-linear-gradient(#c81e2b, #f04349);
+	background:linear-gradient(#c81e2b, #f04349);
+}
+
+/* Variant : for left positioned triangle
+------------------------------------------ */
+
+.triangle-obtuse.left {
+	margin-left:50px;
+	background:#c81e2b;
+}
+
+/* Variant : for right positioned triangle
+------------------------------------------ */
+
+.triangle-obtuse.right {
+	margin-right:50px;
+	background:#c81e2b;
+}
+
+/* THE TRIANGLE
+------------------------------------------------------------------------------------------------------------------------------- */
+
+/* creates the wider right-angled triangle */
+.triangle-obtuse:before {
+	content:"";
+	position:absolute;
+	bottom:-20px; /* value = - border-top-width - border-bottom-width */
+	left:60px; /* controls horizontal position */
+	border:0;
+	border-right-width:30px; /* vary this value to change the angle of the vertex */
+	border-bottom-width:20px; /* vary this value to change the height of the triangle. must be equal to the corresponding value in :after */
+	border-style:solid;
+	border-color:transparent #c81e2b;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+}
+
+/* creates the narrower right-angled triangle */
+.triangle-obtuse:after {
+	content:"";
+	position:absolute;
+	bottom:-20px; /* value = - border-top-width - border-bottom-width */
+	left:80px; /* value = (:before's left) + (:before's border-right/left-width)  - (:after's border-right/left-width) */
+	border:0;
+	border-right-width:10px; /* vary this value to change the angle of the vertex */
+	border-bottom-width:20px; /* vary this value to change the height of the triangle. must be equal to the corresponding value in :before */
+	border-style:solid;
+	border-color:transparent #fff;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+}
+
+/* Variant : top
+------------------------------------------ */
+
+.triangle-obtuse.top:before {
+	top:-20px; /* value = - border-top-width - border-bottom-width */
+	bottom:auto;
+	left:auto;
+	right:60px; /* controls horizontal position */
+	border:0;
+	border-left-width:30px; /* vary this value to change the width of the triangle */
+	border-top-width:20px; /* vary this value to change the height of the triangle. must be equal to the corresponding value in :after */
+	border-color:transparent #c81e2b;
+}
+
+.triangle-obtuse.top:after {
+	top:-20px; /* value = - border-top-width - border-bottom-width */
+	bottom:auto;
+	left:auto;
+	right:80px; /* value = (:before's right) + (:before's border-right/left-width)  - (:after's border-right/left-width) */
+	border-width:0;
+	border-left-width:10px; /* vary this value to change the width of the triangle */
+	border-top-width:20px; /* vary this value to change the height of the triangle. must be equal to the corresponding value in :before */
+	border-color:transparent #fff;
+}
+
+/* Variant : left
+------------------------------------------ */
+
+.triangle-obtuse.left:before {
+	top:15px; /* controls vertical position */
+	bottom:auto;
+	left:-50px; /* value = - border-left-width - border-right-width */
+	border:0;
+	border-bottom-width:30px; /* vary this value to change the height of the triangle */
+	border-left-width:50px; /* vary this value to change the width of the triangle. must be equal to the corresponding value in :after */
+	border-color:#c81e2b transparent;
+}
+
+.triangle-obtuse.left:after {
+	top:35px; /* value = (:before's top) + (:before's border-top/bottom-width)  - (:after's border-top/bottom-width) */
+	bottom:auto;
+	left:-50px; /* value = - border-left-width - border-right-width */
+	border:0;
+	border-bottom-width:10px; /* vary this value to change the height of the triangle */
+	border-left-width:50px; /* vary this value to change the width of the triangle. must be equal to the corresponding value in :before */
+	border-color:#fff transparent;
+}
+
+/* Variant : right
+------------------------------------------ */
+
+.triangle-obtuse.right:before {
+	top:15px; /* controls vertical position */
+	bottom:auto;
+    left:auto;
+	right:-50px; /* value = - border-left-width - border-right-width */
+	border:0;
+	border-bottom-width:30px; /* vary this value to change the height of the triangle */
+	border-right-width:50px; /* vary this value to change the width of the triangle. must be equal to the corresponding value in :after */
+	border-color:#c81e2b transparent;
+}
+
+.triangle-obtuse.right:after {
+	top:35px; /* value = (:before's top) + (:before's border-top/bottom-width)  - (:after's border-top/bottom-width) */
+	bottom:auto;
+	right:-50px; /* value = - border-left-width - border-right-width */
+    left:auto;
+	border:0;
+	border-bottom-width:10px; /* vary this value to change the height of the triangle */
+	border-right-width:50px; /* vary this value to change the width of the triangle. must be equal to the corresponding value in :before */
+	border-color:#fff transparent;
+}
+
+
+/* ============================================================================================================================
+== BUBBLE WITH A BORDER AND TRIANGLE
+** ============================================================================================================================ */
+
+/* THE SPEECH BUBBLE
+------------------------------------------------------------------------------------------------------------------------------- */
+
+.triangle-border {
+	position:relative;
+	padding:15px;
+	margin:1em 0 3em;
+	border:5px solid #5a8f00;
+	color:#333;
+	background:#fff;
+	/* css3 */
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+
+/* Variant : for left positioned triangle
+------------------------------------------ */
+
+.triangle-border.left {
+	margin-left:30px;
+}
+
+/* Variant : for right positioned triangle
+------------------------------------------ */
+
+.triangle-border.right {
+	margin-right:30px;
+}
+
+/* THE TRIANGLE
+------------------------------------------------------------------------------------------------------------------------------- */
+
+.triangle-border:before {
+	content:"";
+	position:absolute;
+	bottom:-20px; /* value = - border-top-width - border-bottom-width */
+	left:40px; /* controls horizontal position */
+    border-width:20px 20px 0;
+	border-style:solid;
+    border-color:#5a8f00 transparent;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+}
+
+/* creates the smaller  triangle */
+.triangle-border:after {
+	content:"";
+	position:absolute;
+	bottom:-13px; /* value = - border-top-width - border-bottom-width */
+	left:47px; /* value = (:before left) + (:before border-left) - (:after border-left) */
+	border-width:13px 13px 0;
+	border-style:solid;
+	border-color:#fff transparent;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+}
+
+/* Variant : top
+------------------------------------------ */
+
+/* creates the larger triangle */
+.triangle-border.top:before {
+	top:-20px; /* value = - border-top-width - border-bottom-width */
+	bottom:auto;
+	left:auto;
+	right:40px; /* controls horizontal position */
+    border-width:0 20px 20px;
+}
+
+/* creates the smaller  triangle */
+.triangle-border.top:after {
+	top:-13px; /* value = - border-top-width - border-bottom-width */
+	bottom:auto;
+	left:auto;
+	right:47px; /* value = (:before right) + (:before border-right) - (:after border-right) */
+    border-width:0 13px 13px;
+}
+
+/* Variant : left
+------------------------------------------ */
+
+/* creates the larger triangle */
+.triangle-border.left:before {
+	top:10px; /* controls vertical position */
+	bottom:auto;
+	left:-30px; /* value = - border-left-width - border-right-width */
+	border-width:15px 30px 15px 0;
+	border-color:transparent #5a8f00;
+}
+
+/* creates the smaller  triangle */
+.triangle-border.left:after {
+	top:16px; /* value = (:before top) + (:before border-top) - (:after border-top) */
+	bottom:auto;
+	left:-21px; /* value = - border-left-width - border-right-width */
+	border-width:9px 21px 9px 0;
+	border-color:transparent #fff;
+}
+
+/* Variant : right
+------------------------------------------ */
+
+/* creates the larger triangle */
+.triangle-border.right:before {
+	top:10px; /* controls vertical position */
+	bottom:auto;
+    left:auto;
+	right:-30px; /* value = - border-left-width - border-right-width */
+	border-width:15px 0 15px 30px;
+	border-color:transparent #5a8f00;
+}
+
+/* creates the smaller  triangle */
+.triangle-border.right:after {
+	top:16px; /* value = (:before top) + (:before border-top) - (:after border-top) */
+	bottom:auto;
+    left:auto;
+	right:-21px; /* value = - border-left-width - border-right-width */
+	border-width:9px 0 9px 21px;
+	border-color:transparent #fff;
+}
+
+
+/* ============================================================================================================================
+== SPEECH BUBBLE ICON
+** ============================================================================================================================ */
+
+.example-commentheading {
+	position:relative;
+	padding:0;
+	color:#b513af;
+}
+
+/* creates the rectangle */
+.example-commentheading:before {
+	content:"";
+	position:absolute;
+	top:9px;
+	left:-25px;
+	width:15px;
+	height:10px;
+	background:#b513af;
+	/* css3 */
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+}
+
+/* creates the triangle */
+.example-commentheading:after {
+	content:"";
+	position:absolute;
+	top:15px;
+	left:-19px;
+	border:4px solid transparent;
+	border-left-color:#b513af;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+}
+
+
+/* ============================================================================================================================
+== BLOCKQUOTE WITH RIGHT-ANGLED TRIANGLE
+** ============================================================================================================================ */
+
+.example-right {
+	position:relative;
+	padding:15px 30px;
+	margin:0;
+	color:#fff;
+	background:#5a8f00; /* default background for browsers without gradient support */
+	/* css3 */
+	background:-webkit-gradient(linear, 0 0, 0 100%, from(#b8db29), to(#5a8f00));
+	background:-moz-linear-gradient(#b8db29, #5a8f00);
+	background:-o-linear-gradient(#b8db29, #5a8f00);
+	background:linear-gradient(#b8db29, #5a8f00);
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+
+/* display of quote author (alternatively use a class on the element following the blockquote) */
+.example-right + p {margin:15px 0 2em 85px; font-style:italic;}
+
+/* creates the triangle */
+.example-right:after {
+	content:"";
+	position:absolute;
+	bottom:-50px;
+	left:50px;
+	border-width:0 20px 50px 0px;
+	border-style:solid;
+	border-color:transparent #5a8f00;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+}
+
+
+/* ============================================================================================================================
+== BLOCKQUOTE WITH OBTUSE TRIANGLE
+** ============================================================================================================================ */
+
+.example-obtuse {
+	position:relative;
+	padding:15px 30px;
+	margin:0;
+	color:#000;
+	background:#f3961c; /* default background for browsers without gradient support */
+	/* css3 */
+    background:-webkit-gradient(linear, 0 0, 0 100%, from(#f9d835), to(#f3961c));
+	background:-moz-linear-gradient(#f9d835, #f3961c);
+	background:-o-linear-gradient(#f9d835, #f3961c);
+	background:linear-gradient(#f9d835, #f3961c);
+	/* Using longhand to avoid inconsistencies between Safari 4 and Chrome 4 */
+	-webkit-border-top-left-radius:25px 50px;
+	-webkit-border-top-right-radius:25px 50px;
+	-webkit-border-bottom-right-radius:25px 50px;
+	-webkit-border-bottom-left-radius:25px 50px;
+	-moz-border-radius:25px / 50px;
+	border-radius:25px / 50px;
+}
+
+/* display of quote author (alternatively use a class on the element following the blockquote) */
+.example-obtuse + p {margin:10px 150px 2em 0; text-align:right; font-style:italic;}
+
+/* creates the larger triangle */
+.example-obtuse:before {
+	content:"";
+	position:absolute;
+	bottom:-30px;
+	right:80px;
+	border-width:0 0 30px 50px;
+	border-style:solid;
+	border-color:transparent #f3961c;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+}
+
+/* creates the smaller triangle */
+.example-obtuse:after {
+	content:"";
+	position:absolute;
+	bottom:-30px;
+	right:110px; 
+	border-width:0 0 30px 20px;
+	border-style:solid;
+	border-color:transparent #fff;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+}
+
+
+/* ============================================================================================================================
+== TWITTER
+** ============================================================================================================================ */
+
+.example-twitter {
+	position:relative;
+	padding:15px;
+	margin:100px 0 0.5em;
+	color:#333;
+	background:#eee;
+	/* css3 */
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+
+.example-twitter p {font-size:28px; line-height:1.25em;}
+
+/* this isn't necessary, just saves me having to edit the HTML of the demo */
+.example-twitter:before {
+	content:url(twitter-logo.gif);
+	position:absolute;
+	top:-60px;
+	left:0;
+	width:155px;
+	height:36px;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+}
+
+/* creates the triangle */
+.example-twitter:after {
+	content:"";
+	position:absolute;
+	top:-30px;
+	left:50px;
+	border:15px solid transparent;
+	border-bottom-color:#eee;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+}
+
+/* display of quote author (alternatively use a class on the element following the blockquote) */
+.example-twitter + p {padding-left:15px; font:14px Arial, sans-serif;}
+
+
+/* ============================================================================================================================
+== NUMBER
+** ============================================================================================================================ */
+
+.example-number {
+	position:relative;
+	width:200px;
+	height:200px;
+	margin:50px 0 200px;
+	text-align:center;
+	font:140px/200px Arial, sans-serif;
+	color:#fff;
+	background:#C91F2C;
+}
+
+/* creates the larger triangle */
+.example-number:before {
+	content:"";
+	position:absolute;
+	bottom:-140px;
+	right:0;
+	border-width:0 0 140px 140px;
+	border-style:solid;
+	border-color:transparent #C91F2C;
+}
+
+/* creates the larger triangle */
+.example-number:after {
+	content:"";
+	position:absolute;
+	bottom:-140px;
+	right:85px; 
+	border-width:0 0 140px 55px;
+	border-style:solid;
+	border-color:transparent #fff;
+}
+
+
+/* ============================================================================================================================
+== PINCHED SPEECH BUBBLE (more CSS3)
+** ============================================================================================================================ */
+
+.pinched {
+	position:relative;
+	padding:15px;
+	margin:50px 0 3em;
+	text-align:center;
+	color:#fff;
+	background:#333; 
+	/* css3 */
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+
+/* creates a rectangle of the colour wanted for the pointy bit */
+.pinched:before {
+	content:"";
+	position:absolute;
+	top:-20px;
+	left:50%;
+	width:100px;
+	height:20px;
+	margin:0 0 0 -50px;
+	background:#333;
+}
+
+/* creates a rounded rectangle to cover part of the rectangle generated above */
+.pinched:after {
+	content:"";
+	position:absolute;
+	top:-20px;
+	left:0;
+	width:50%;
+	height:20px;
+	background:#fff;
+	/* css3 */
+	-webkit-border-bottom-right-radius:15px;
+	-moz-border-radius-bottomright:15px;
+	border-bottom-right-radius:15px;
+}
+
+/* creates the other rounded rectangle */
+.pinched > :first-child:before {
+	content:""; 
+	position:absolute; 
+	top:-20px; 
+	right:0; 
+	width:50%; 
+	height:20px; 
+	background:#fff;
+	/* css3 */
+	-webkit-border-bottom-left-radius:15px;
+	-moz-border-radius-bottomleft:15px;
+	border-bottom-left-radius:15px;
+}
+
+
+/* ============================================================================================================================
+== OVAL SPEECH BUBBLE (more CSS3)
+** ============================================================================================================================ */
+
+.oval-speech {
+	position:relative;
+	width:270px;
+	padding:50px 40px;
+	margin:1em auto 50px;
+	text-align:center;
+	color:#fff; 
+	background:#5a8f00;
+	/* css3 */
+	background:-webkit-gradient(linear, 0 0, 0 100%, from(#b8db29), to(#5a8f00));
+	background:-moz-linear-gradient(#b8db29, #5a8f00);
+	background:-o-linear-gradient(#b8db29, #5a8f00);
+	background:linear-gradient(#b8db29, #5a8f00);
+	/*
+	NOTES:
+	-webkit-border-radius:220px 120px; // produces oval in safari 4 and chrome 4
+	-webkit-border-radius:220px / 120px; // produces oval in chrome 4 (again!) but not supported in safari 4
+	Not correct application of the current spec, therefore, using longhand to avoid future problems with webkit corrects this
+	*/
+	-webkit-border-top-left-radius:220px 120px;
+	-webkit-border-top-right-radius:220px 120px;
+	-webkit-border-bottom-right-radius:220px 120px;
+	-webkit-border-bottom-left-radius:220px 120px;
+	-moz-border-radius:220px / 120px;
+	border-radius:220px / 120px;
+}
+
+.oval-speech p {font-size:1.25em;}
+
+/* creates part of the curve */
+.oval-speech:before {
+	content:"";
+	position:absolute;
+	z-index:-1;
+	bottom:-30px;
+	right:50%;
+	height:30px;
+	border-right:60px solid #5a8f00;
+	background:#5a8f00; /* need this for webkit - bug in handling of border-radius */
+	/* css3 */
+	-webkit-border-bottom-right-radius:80px 50px;
+	-moz-border-radius-bottomright:80px 50px;
+	border-bottom-right-radius:80px 50px;
+	/* using translate to avoid undesired appearance in CSS2.1-capabable but CSS3-incapable browsers */
+	-webkit-transform:translate(0, -2px);
+	-moz-transform:translate(0, -2px);
+	-ms-transform:translate(0, -2px);
+	-o-transform:translate(0, -2px);
+	transform:translate(0, -2px);
+}
+
+/* creates part of the curved pointy bit */
+.oval-speech:after {
+	content:"";
+	position:absolute;
+	z-index:-1;
+	bottom:-30px;
+	right:50%;
+	width:60px;
+	height:30px;
+	background:#fff;
+	/* css3 */
+	-webkit-border-bottom-right-radius:40px 50px; 
+	-moz-border-radius-bottomright:40px 50px; 
+	border-bottom-right-radius:40px 50px; 
+	/* using translate to avoid undesired appearance in CSS2.1-capabable but CSS3-incapable browsers */
+	-webkit-transform:translate(-30px, -2px);
+	-moz-transform:translate(-30px, -2px);
+	-ms-transform:translate(-30px, -2px);
+	-o-transform:translate(-30px, -2px);
+	transform:translate(-30px, -2px);
+}
+
+
+/* ============================================================================================================================
+== OVAL THOUGHT BUBBLE (more CSS3)
+** ============================================================================================================================ */
+
+.oval-thought {
+	position:relative;
+	width:270px;
+	padding:50px 40px;
+	margin:1em auto 80px;
+	text-align:center;
+	color:#fff; 
+	background:#075698;
+	/* css3 */
+	background:-webkit-gradient(linear, 0 0, 0 100%, from(#2e88c4), to(#075698));
+	background:-moz-linear-gradient(#2e88c4, #075698);
+	background:-o-linear-gradient(#2e88c4, #075698);
+	background:linear-gradient(#2e88c4, #075698);
+	/*
+	NOTES:
+	-webkit-border-radius:220px 120px; // produces oval in safari 4 and chrome 4
+	-webkit-border-radius:220px / 120px; // produces oval in chrome 4 (again!) but not supported in safari 4
+	Not correct application of the current spec, therefore, using longhand to avoid future problems with webkit corrects this
+	*/
+	-webkit-border-top-left-radius:220px 120px;
+	-webkit-border-top-right-radius:220px 120px;
+	-webkit-border-bottom-right-radius:220px 120px;
+	-webkit-border-bottom-left-radius:220px 120px;
+	-moz-border-radius:220px / 120px;
+	border-radius:220px / 120px;
+}
+
+.oval-thought p {font-size:1.25em;}
+
+/* creates the larger circle */
+.oval-thought:before {
+	content:"";
+	position:absolute;
+	bottom:-20px;
+	left:50px;
+	width:30px;
+	height:30px;
+	background:#075698;
+	/* css3 */
+	-webkit-border-radius:30px;
+	-moz-border-radius:30px;
+	border-radius:30px;
+}
+
+/* creates the smaller circle */
+.oval-thought:after {
+	content:"";
+	position:absolute;
+	bottom:-30px;
+	left:30px;
+	width:15px;
+	height:15px;
+	background:#075698;
+	/* css3 */
+	-webkit-border-radius:15px;
+	-moz-border-radius:15px;
+	border-radius:15px;
+}
+
+/* ============================================================================================================================
+== OVAL SPEECH BUBBLE WITH QUOTATION MARKS (more CSS3)
+** ============================================================================================================================ */
+
+.oval-quotes {
+	position:relative;
+	width:400px;
+	height:350px;
+	margin:2em auto 10px;
+	color:#000;
+	background:#ffed26;
+	/* css3 */
+	/*
+	NOTES:
+	-webkit-border-radius:Apx Bpx; // produces oval in safari 4 and chrome 4
+	-webkit-border-radius:Apx / Bpx; // produces oval in chrome 4 (again!) but not supported in safari 4
+	Not correct application of the current spec, therefore, using longhand to avoid future problems with webkit corrects this
+	*/
+	-webkit-border-top-left-radius:400px 350px;
+	-webkit-border-top-right-radius:400px 350px;
+	-webkit-border-bottom-right-radius:400px 350px;
+	-webkit-border-bottom-left-radius:400px 350px;
+	-moz-border-radius:400px / 350px;
+	border-radius:400px / 350px;
+}
+
+/* creates opening quotation mark */
+.oval-quotes:before {
+	content:"\201C"; 
+	position:absolute; 
+	z-index:1; 
+	top:20px; 
+	left:20px; 
+	font:80px/1 Georgia, serif;
+	color:#ffed26;
+}
+
+/* creates closing quotation mark */
+.oval-quotes:after {
+	content:"\201D"; 
+	position:absolute; 
+	z-index:1; 
+	bottom:0; 
+	right:20px; 
+	font:80px/0.25 Georgia, serif;
+	color:#ffed26;
+}
+
+.oval-quotes p {
+	width:250px;
+	height:250px;
+	padding:50px 0 0;
+	margin:0 auto;
+	text-align:center;
+	font-size:35px;
+}
+
+/* creates smaller curve */
+.oval-quotes p:before {
+	content:"";
+	position:absolute;
+	z-index:-1;
+	bottom:-30px;
+	right:55%;
+	width:180px; /* wider than necessary to make it look a bit better in IE8 */
+	height:60px;
+	background:#fff; /* need this for webkit - bug in handling of border-radius */
+	/* css3 */
+	-webkit-border-bottom-right-radius:40px 50px; 
+	-moz-border-radius-bottomright:40px 50px; 
+	border-bottom-right-radius:40px 50px; 
+	/* using translate to avoid undesired appearance in CSS2.1-capabable but CSS3-incapable browsers */
+	-webkit-transform:translate(-30px, -2px);
+	-moz-transform:translate(-30px, -2px);
+	-ms-transform:translate(-30px, -2px);
+	-o-transform:translate(-30px, -2px);
+	transform:translate(-30px, -2px);
+}
+
+/* creates larger curve */
+.oval-quotes p:after {
+	content:"";
+	position:absolute;
+	z-index:-2;
+	bottom:-30px;
+	right:25%;
+	height:80px;
+	border-right:200px solid #ffed26;
+	background:#ffed26; /* need this for webkit - bug in handling of border-radius */
+	/* css3 */
+	-webkit-border-bottom-right-radius:200px 100px;
+	-moz-border-radius-bottomright:200px 100px;
+	border-bottom-right-radius:200px 100px;
+	/* using translate to avoid undesired appearance in CSS2.1-capabable but CSS3-incapable browsers */
+	-webkit-transform:translate(0, -2px);
+	-moz-transform:translate(0, -2px);
+	-ms-transform:translate(0, -2px);
+	-o-transform:translate(0, -2px);
+	transform:translate(0, -2px);
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+}
+
+.oval-quotes + p {
+	position:relative; /* part of the IE8 width compromise */
+	width:150px;
+	margin:0 0 2em;
+	font-size:18px;
+	font-weight:bold;
+}
+
+
+/* ============================================================================================================================
+== RECTANGLE-BORDER STYLE WITH CURVE
+** ============================================================================================================================ */
+
+.rectangle-speech-border {
+	position:relative; 
+	padding:50px 15px; 
+	margin:1em 0 3em;
+	border:10px solid #5a8f00; 
+	text-align:center; 
+	color:#333;
+	background:#fff; 
+	/* css3 */
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	border-radius:20px;
+}
+
+/* creates larger curve */
+.rectangle-speech-border:before {
+	content:""; 
+	position:absolute; 
+	z-index:10; 
+	bottom:-40px; 
+	left:50px; 
+	width:50px; 
+	height:30px;
+	border-style:solid; 
+	border-width:0 10px 10px 0; 
+	border-color:#5a8f00; 
+	background:transparent;
+	/* css3 */
+	-webkit-border-bottom-right-radius:80px 50px;
+	-moz-border-radius-bottomright:80px 50px;
+	border-bottom-right-radius:80px 50px;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+}
+
+/* creates smaller curve */
+.rectangle-speech-border:after {
+	content:""; 
+	position:absolute; 
+	z-index:10; 
+	bottom:-40px; 
+	left:50px; 
+	width:20px; 
+	height:30px; 
+	border-style:solid; 
+	border-width:0 10px 10px 0; 
+	border-color:#5a8f00; 
+	background:transparent;
+	/* css3 */
+	-webkit-border-bottom-right-radius:40px 50px; 
+	-moz-border-radius-bottomright:40px 50px; 
+	border-bottom-right-radius:40px 50px; 
+    /* reduce the damage in FF3.0 */
+    display:block; 
+}
+
+/* creates a small circle to produce a rounded point where the two curves meet */
+.rectangle-speech-border > :first-child:before {
+	content:""; 
+	position:absolute; 
+	bottom:-40px; 
+	left:45px; 
+	width:10px; 
+	height:10px;
+	background:#5a8f00;
+	/* css3 */
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+
+/* creates a white rectangle to cover part of the oval border*/
+.rectangle-speech-border > :first-child:after {
+	content:""; 
+	position:absolute; 
+	bottom:-10px; 
+	left:76px; 
+	width:24px; 
+	height:15px; 
+	background:#fff;
+}
+
+/* ============================================================================================================================
+== OVER SPEECH BUBBLE, EMPTY, WITH BORDER (more CSS3)
+** ============================================================================================================================ */
+
+.oval-speech-border {
+	position:relative; 
+	padding:70px 30px;
+	margin:1em auto 60px;
+	border:10px solid #f3961c; 
+	text-align:center;
+	color:#333; 
+	background:#fff;
+	/* css3 */
+	/*
+	NOTES:
+	-webkit-border-radius:240px 140px; // produces oval in safari 4 and chrome 4
+	-webkit-border-radius:240px / 140px; // produces oval in chrome 4 (again!) but not supported in safari 4
+	Not correct application of the current spec, therefore, using longhand to avoid future problems with webkit corrects this
+	*/
+	-webkit-border-top-left-radius:240px 140px;
+	-webkit-border-top-right-radius:240px 140px;
+	-webkit-border-bottom-right-radius:240px 140px;
+	-webkit-border-bottom-left-radius:240px 140px;
+	-moz-border-radius:240px / 140px;
+	border-radius:240px / 140px;
+}
+
+/* creates larger curve */
+.oval-speech-border:before {
+	content:""; 
+	position:absolute; 
+	z-index:2; 
+	bottom:-40px; 
+	right:50%; 
+	width:50px; 
+	height:30px;
+	border-style:solid;
+	border-width:0 10px 10px 0;
+	border-color:#f3961c;
+	margin-right:-10px;
+	background:transparent;
+	/* css3 */
+	-webkit-border-bottom-right-radius:80px 50px;
+	-moz-border-radius-bottomright:80px 50px;
+	border-bottom-right-radius:80px 50px;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+}
+
+/* creates smaller curve */
+.oval-speech-border:after {
+	content:""; 
+	position:absolute; 
+	z-index:2; 
+	bottom:-40px; 
+	right:50%; 
+	width:20px; 
+	height:31px; 
+	border-style:solid;
+	border-width:0 10px 10px 0;
+	border-color:#f3961c;
+	margin-right:20px;
+	background:transparent;
+	/* css3 */
+	-webkit-border-bottom-right-radius:40px 50px; 
+	-moz-border-radius-bottomright:40px 50px; 
+	border-bottom-right-radius:40px 50px; 
+    /* reduce the damage in FF3.0 */
+    display:block; 
+}
+
+/* creates a small circle to produce a rounded point where the two curves meet */
+.oval-speech-border > :first-child:before {
+	content:""; 
+	position:absolute; 
+	z-index:1; 
+	bottom:-40px; 
+	right:50%; 
+	width:10px; 
+	height:10px;
+	margin-right:45px;
+	background:#f3961c;
+	/* css3 */
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+
+/* creates a white rectangle to cover part of the oval border*/
+.oval-speech-border > :first-child:after {
+	content:""; 
+	position:absolute; 
+	z-index:1; 
+	bottom:-10px; 
+	right:50%; 
+	width:30px; 
+	height:15px; 
+	background:#fff;
+}
+
+/* ============================================================================================================================
+== OVER THOUGHT BUBBLE, EMPTY, WITH BORDER (more CSS3)
+** ============================================================================================================================ */
+
+.oval-thought-border {
+	position:relative; 
+	padding:70px 30px;
+	margin:1em auto 80px;
+	border:10px solid #c81e2b; 
+	text-align:center;
+	color:#333; 
+	background:#fff;
+	/* css3 */
+	/*
+	NOTES:
+	-webkit-border-radius:240px 140px; // produces oval in safari 4 and chrome 4
+	-webkit-border-radius:240px / 140px; // produces oval in chrome 4 (again!) but not supported in safari 4
+	Not correct application of the current spec, therefore, using longhand to avoid future problems with webkit corrects this
+	*/
+	-webkit-border-top-left-radius:240px 140px;
+	-webkit-border-top-right-radius:240px 140px;
+	-webkit-border-bottom-right-radius:240px 140px;
+	-webkit-border-bottom-left-radius:240px 140px;
+	-moz-border-radius:240px / 140px;
+	border-radius:240px / 140px;
+}
+
+/* creates the larger circle */
+.oval-thought-border:before {
+	content:""; 
+	position:absolute; 
+	z-index:10; 
+	bottom:-40px; 
+	right:100px; 
+	width:50px; 
+	height:50px;
+	border:10px solid #c81e2b;
+	background:#fff;
+	/* css3 */
+	-webkit-border-radius:50px;
+	-moz-border-radius:50px;
+	border-radius:50px;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+}
+
+/* creates the smaller circle */
+.oval-thought-border:after {
+	content:""; 
+	position:absolute; 
+	z-index:10; 
+	bottom:-60px; 
+	right:50px; 
+	width:25px; 
+	height:25px; 
+	border:10px solid #c81e2b;
+	background:#fff;
+	/* css3 */
+	-webkit-border-radius:25px;
+	-moz-border-radius:25px;
+	border-radius:25px;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+}:@has_childrenT:@options{ :@children[µo:Sass::Tree::CommentNode
+:
+@type:normal;i;	@;
+[ :@value["j/* ------------------------------------------
+PURE CSS SPEECH BUBBLES
+by Nicolas Gallagher
+- http://nicolasgallagher.com/pure-css-speech-bubbles/
+
+http://nicolasgallagher.com
+http://twitter.com/necolas
+
+Created: 02 March 2010
+Version: 1.2 (03 March 2011)
+
+Dual licensed under MIT and GNU GPLv2 ÔøΩ Nicolas Gallagher 
+------------------------------------------ */o;
+;;;i;	@;
+[ ;["—/* NOTE: Some declarations use longhand notation so that it can be clearly
+explained what specific properties or values do and what their relationship
+is to other properties or values in creating the effect */o;
+;;;i;	@;
+[ ;["&/* ============================================================================================================================
+== BUBBLE WITH AN ISOCELES TRIANGLE
+** ============================================================================================================================ */o;
+;;;i;	@;
+[ ;["ó/* THE SPEECH BUBBLE
+------------------------------------------------------------------------------------------------------------------------------- */o:Sass::Tree::RuleNode:
+@rule[".triangle-isosceles:@parsed_ruleso:"Sass::Selector::CommaSequence:@filename" ;i!:@members[o:Sass::Selector::Sequence;[o:#Sass::Selector::SimpleSequence
+;@;i!:@sourceso:Set:
+@hash{ ;[o:Sass::Selector::Class;@:
+@name["triangle-isosceles;i!:@subject0;i!;T;	@:
+@tabsi ;
+[o:Sass::Tree::PropNode;["position;i";	@;i ;
+[ :@prop_syntax:new;o:Sass::Script::String;:identifier;	@;"relativeo;;["padding;i#;	@;i ;
+[ ;; ;o;!;;";	@;"	15pxo;;["margin;i$;	@;i ;
+[ ;; ;o:Sass::Script::List	;i$;	@:@separator:
+space;[o:Sass::Script::Number:@denominator_units[ ;i$:@numerator_units["em;	@:@original"1em;io;&;'[ ;i$;([ ;	@;)"0;i o;&;'[ ;i$;(["em;	@;)"3em;io;;["
+color;i%;	@;i ;
+[ ;; ;o;!;;";	@;"	#000o;;["background;i&;	@;i ;
+[ ;; ;o;!;;";	@;"#f3961co;
+;;;i&;	@;
+[ ;["C/* default background for browsers without gradient support */o;
+;;;i';	@;
+[ ;["/* css3 */o;;["background;i(;	@;i ;
+[ ;; ;o:Sass::Script::Funcall;"-webkit-gradient;i(:@keywords{ ;	@:@splat0:
+@args[
+o;!	;;";i(;	@;"linearo;#	;i(;	@;$;%;[o;&;'@A;i(;([ ;	@;)"0;i o;&;'@A;i(;([ ;	@;)"0;i o;#	;i(;	@;$;%;[o;&;'@A;i(;([ ;	@;)"0;i o;&;'[ ;i(;(["%;	@;)"	100%;iio;*;"	from;i(;+{ ;	@;,0;-[o:Sass::Script::Color	;i(:@attrs{	:redi˘:
+alphai:
+greeniÿ:	bluei:;	@;0o;*;"to;i(;+{ ;	@;,0;-[o;.	;i(;/{	;0iÛ;1i;2iñ;3i!;	@;0o;;["background;i);	@;i ;
+[ ;; ;o;*;"-moz-linear-gradient;i);+{ ;	@;,0;-[o;.	;i);/{	;0i˘;1i;2iÿ;3i:;	@;0o;.	;i);/{	;0iÛ;1i;2iñ;3i!;	@;0o;;["background;i*;	@;i ;
+[ ;; ;o;*;"-o-linear-gradient;i*;+{ ;	@;,0;-[o;.	;i*;/{	;0i˘;1i;2iÿ;3i:;	@;0o;.	;i*;/{	;0iÛ;1i;2iñ;3i!;	@;0o;;["background;i+;	@;i ;
+[ ;; ;o;*;"linear-gradient;i+;+{ ;	@;,0;-[o;.	;i+;/{	;0i˘;1i;2iÿ;3i:;	@;0o;.	;i+;/{	;0iÛ;1i;2iñ;3i!;	@;0o;;["-webkit-border-radius;i,;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;;["-moz-border-radius;i-;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;;["border-radius;i.;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;
+;;;i1;	@;
+[ ;["[/* Variant : for top positioned triangle
+------------------------------------------ */o;;[".triangle-isosceles.top;o;;" ;i4;[o;;[o;
+;@æ;i4;o;;{ ;[o;;@æ;["triangle-isosceles;i4o;;@æ;["top;i4;0;i4;T;	@;i ;
+[	o;;["background;i5;	@;i ;
+[ ;; ;o;*;"-webkit-gradient;i5;+{ ;	@;,0;-[
+o;!	;;";i5;	@;"linearo;#	;i5;	@;$;%;[o;&;'@A;i5;([ ;	@;)"0;i o;&;'@A;i5;([ ;	@;)"0;i o;#	;i5;	@;$;%;[o;&;'@A;i5;([ ;	@;)"0;i o;&;'[ ;i5;(["%;	@;)"	100%;iio;*;"	from;i5;+{ ;	@;,0;-[o;.	;i5;/{	;0iÛ;1i;2iñ;3i!;	@;0o;*;"to;i5;+{ ;	@;,0;-[o;.	;i5;/{	;0i˘;1i;2iÿ;3i:;	@;0o;;["background;i6;	@;i ;
+[ ;; ;o;*;"-moz-linear-gradient;i6;+{ ;	@;,0;-[o;.	;i6;/{	;0iÛ;1i;2iñ;3i!;	@;0o;.	;i6;/{	;0i˘;1i;2iÿ;3i:;	@;0o;;["background;i7;	@;i ;
+[ ;; ;o;*;"-o-linear-gradient;i7;+{ ;	@;,0;-[o;.	;i7;/{	;0iÛ;1i;2iñ;3i!;	@;0o;.	;i7;/{	;0i˘;1i;2iÿ;3i:;	@;0o;;["background;i8;	@;i ;
+[ ;; ;o;*;"linear-gradient;i8;+{ ;	@;,0;-[o;.	;i8;/{	;0iÛ;1i;2iñ;3i!;	@;0o;.	;i8;/{	;0i˘;1i;2iÿ;3i:;	@;0o;
+;;;i;;	@;
+[ ;["b/* Variant : for left/right positioned triangle
+------------------------------------------ */o;;[".triangle-isosceles.left;o;;" ;i>;[o;;[o;
+;@!;i>;o;;{ ;[o;;@!;["triangle-isosceles;i>o;;@!;["	left;i>;0;i>;T;	@;i ;
+[o;;["margin-left;i?;	@;i ;
+[ ;; ;o;!;;";	@;"	50pxo;;["background;i@;	@;i ;
+[ ;; ;o;!;;";	@;"#f3961co;
+;;;iC;	@;
+[ ;["]/* Variant : for right positioned triangle
+------------------------------------------ */o;;[".triangle-isosceles.right;o;;" ;iF;[o;;[o;
+;@D;iF;o;;{ ;[o;;@D;["triangle-isosceles;iFo;;@D;["
+right;iF;0;iF;T;	@;i ;
+[o;;["margin-right;iG;	@;i ;
+[ ;; ;o;!;;";	@;"	50pxo;;["background;iH;	@;i ;
+[ ;; ;o;!;;";	@;"#f3961co;
+;;;iK;	@;
+[ ;["í/* THE TRIANGLE
+------------------------------------------------------------------------------------------------------------------------------- */o;
+;;;iN;	@;
+[ ;["/* creates triangle */o;;[".triangle-isosceles:after;o;;" ;iO;[o;;[o;
+;@k;iO;o;;{ ;[o;;@k;["triangle-isosceles;iOo:Sass::Selector::Pseudo
+;@k;["
+after;:
+class;iO:	@arg0;0;iO;T;	@;i ;
+[o;;["content;iP;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;iQ;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["bottom;iR;	@;i ;
+[ ;; ;o;!;;";	@;"
+-15pxo;
+;;;iR;	@;
+[ ;[";/* value = - border-top-width - border-bottom-width */o;;["	left;iS;	@;i ;
+[ ;; ;o;!;;";	@;"	50pxo;
+;;;iS;	@;
+[ ;["'/* controls horizontal position */o;;["border-width;iT;	@;i ;
+[ ;; ;o;#	;iT;	@;$;%;[o;&;'[ ;iT;(["px;	@;)"	15px;io;&;'[ ;iT;(["px;	@;)"	15px;io;&;'@A;iT;([ ;	@;)"0;i o;
+;;;iT;	@;
+[ ;[">/* vary these values to change the angle of the vertex */o;;["border-style;iU;	@;i ;
+[ ;; ;o;!;;";	@;"
+solido;;["border-color;iV;	@;i ;
+[ ;; ;o;#	;iV;	@;$;%;[o;.	;iV;/{	;0iÛ;1i;2iñ;3i!;	@;0o;!	;;";iV;	@;"transparento;
+;;;iW;	@;
+[ ;["%/* reduce the damage in FF3.0 */o;;["display;iX;	@;i ;
+[ ;; ;o;!;;";	@;"
+blocko;;["
+width;iY;	@;i ;
+[ ;; ;o;!;;";	@;"0o;
+;;;i\;	@;
+[ ;["C/* Variant : top
+------------------------------------------ */o;;["".triangle-isosceles.top:after;o;;" ;i_;[o;;[o;
+;@Ÿ;i_;o;;{ ;[o;;@Ÿ;["triangle-isosceles;i_o;;@Ÿ;["top;i_o;4
+;@Ÿ;["
+after;;5;i_;60;0;i_;T;	@;i ;
+[o;;["top;i`;	@;i ;
+[ ;; ;o;!;;";	@;"
+-15pxo;
+;;;i`;	@;
+[ ;[";/* value = - border-top-width - border-bottom-width */o;;["
+right;ia;	@;i ;
+[ ;; ;o;!;;";	@;"	50pxo;
+;;;ia;	@;
+[ ;["'/* controls horizontal position */o;;["bottom;ib;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["	left;ic;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["border-width;id;	@;i ;
+[ ;; ;o;#	;id;	@;$;%;[o;&;'@A;id;([ ;	@;)"0;i o;&;'[ ;id;(["px;	@;)"	15px;io;&;'[ ;id;(["px;	@;)"	15px;io;
+;;;id;	@;
+[ ;[">/* vary these values to change the angle of the vertex */o;;["border-color;ie;	@;i ;
+[ ;; ;o;#	;ie;	@;$;%;[o;.	;ie;/{	;0iÛ;1i;2iñ;3i!;	@;0o;!	;;";ie;	@;"transparento;
+;;;ih;	@;
+[ ;["D/* Variant : left
+------------------------------------------ */o;;["#.triangle-isosceles.left:after;o;;" ;ik;[o;;[o;
+;@4;ik;o;;{ ;[o;;@4;["triangle-isosceles;iko;;@4;["	left;iko;4
+;@4;["
+after;;5;ik;60;0;ik;T;	@;i ;
+[o;;["top;il;	@;i ;
+[ ;; ;o;!;;";	@;"	16pxo;
+;;;il;	@;
+[ ;["%/* controls vertical position */o;;["	left;im;	@;i ;
+[ ;; ;o;!;;";	@;"
+-50pxo;
+;;;im;	@;
+[ ;[";/* value = - border-left-width - border-right-width */o;;["bottom;in;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["border-width;io;	@;i ;
+[ ;; ;o;#	;io;	@;$;%;[	o;&;'[ ;io;(["px;	@;)"	10px;io;&;'[ ;io;(["px;	@;)"	50px;i7o;&;'[ ;io;(["px;	@;)"	10px;io;&;'@A;io;([ ;	@;)"0;i o;;["border-color;ip;	@;i ;
+[ ;; ;o;#	;ip;	@;$;%;[o;!	;;";ip;	@;"transparento;.	;ip;/{	;0iÛ;1i;2iñ;3i!;	@;0o;
+;;;is;	@;
+[ ;["E/* Variant : right
+------------------------------------------ */o;;["$.triangle-isosceles.right:after;o;;" ;iv;[o;;[o;
+;@ä;iv;o;;{ ;[o;;@ä;["triangle-isosceles;ivo;;@ä;["
+right;ivo;4
+;@ä;["
+after;;5;iv;60;0;iv;T;	@;i ;
+[o;;["top;iw;	@;i ;
+[ ;; ;o;!;;";	@;"	16pxo;
+;;;iw;	@;
+[ ;["%/* controls vertical position */o;;["
+right;ix;	@;i ;
+[ ;; ;o;!;;";	@;"
+-50pxo;
+;;;ix;	@;
+[ ;[";/* value = - border-left-width - border-right-width */o;;["bottom;iy;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["	left;iz;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["border-width;i{;	@;i ;
+[ ;; ;o;#	;i{;	@;$;%;[	o;&;'[ ;i{;(["px;	@;)"	10px;io;&;'@A;i{;([ ;	@;)"0;i o;&;'[ ;i{;(["px;	@;)"	10px;io;&;'[ ;i{;(["px;	@;)"	50px;i7o;;["border-color;i|;	@;i ;
+[ ;; ;o;#	;i|;	@;$;%;[o;!	;;";i|;	@;"transparento;.	;i|;/{	;0iÛ;1i;2iñ;3i!;	@;0o;
+;;;i{;	@;
+[ ;[")/* ============================================================================================================================
+== BUBBLE WITH A RIGHT-ANGLED TRIANGLE
+** ============================================================================================================================ */o;
+;;;i;	@;
+[ ;["ó/* THE SPEECH BUBBLE
+------------------------------------------------------------------------------------------------------------------------------- */o;;[".triangle-right;o;;" ;iÇ;[o;;[o;
+;@Í;iÇ;o;;{ ;[o;;@Í;["triangle-right;iÇ;0;iÇ;T;	@;i ;
+[o;;["position;iÉ;	@;i ;
+[ ;; ;o;!;;";	@;"relativeo;;["padding;iÑ;	@;i ;
+[ ;; ;o;!;;";	@;"	15pxo;;["margin;iÖ;	@;i ;
+[ ;; ;o;#	;iÖ;	@;$;%;[o;&;'[ ;iÖ;(["em;	@;)"1em;io;&;'@A;iÖ;([ ;	@;)"0;i o;&;'[ ;iÖ;(["em;	@;)"3em;io;;["
+color;iÜ;	@;i ;
+[ ;; ;o;!;;";	@;"	#fffo;;["background;iá;	@;i ;
+[ ;; ;o;!;;";	@;"#075698o;
+;;;iá;	@;
+[ ;["C/* default background for browsers without gradient support */o;
+;;;ià;	@;
+[ ;["/* css3 */o;;["background;iâ;	@;i ;
+[ ;; ;o;*;"-webkit-gradient;iâ;+{ ;	@;,0;-[
+o;!	;;";iâ;	@;"linearo;#	;iâ;	@;$;%;[o;&;'@A;iâ;([ ;	@;)"0;i o;&;'@A;iâ;([ ;	@;)"0;i o;#	;iâ;	@;$;%;[o;&;'@A;iâ;([ ;	@;)"0;i o;&;'[ ;iâ;(["%;	@;)"	100%;iio;*;"	from;iâ;+{ ;	@;,0;-[o;.	;iâ;/{	;0i3;1i;2ià;3iƒ;	@;0o;*;"to;iâ;+{ ;	@;,0;-[o;.	;iâ;/{	;0i;1i;2i[;3iò;	@;0o;;["background;iä;	@;i ;
+[ ;; ;o;*;"-moz-linear-gradient;iä;+{ ;	@;,0;-[o;.	;iä;/{	;0i3;1i;2ià;3iƒ;	@;0o;.	;iä;/{	;0i;1i;2i[;3iò;	@;0o;;["background;iã;	@;i ;
+[ ;; ;o;*;"-o-linear-gradient;iã;+{ ;	@;,0;-[o;.	;iã;/{	;0i3;1i;2ià;3iƒ;	@;0o;.	;iã;/{	;0i;1i;2i[;3iò;	@;0o;;["background;iå;	@;i ;
+[ ;; ;o;*;"linear-gradient;iå;+{ ;	@;,0;-[o;.	;iå;/{	;0i3;1i;2ià;3iƒ;	@;0o;.	;iå;/{	;0i;1i;2i[;3iò;	@;0o;;["-webkit-border-radius;iç;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;;["-moz-border-radius;ié;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;;["border-radius;iè;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;
+;;;ií;	@;
+[ ;["[/* Variant : for top positioned triangle
+------------------------------------------ */o;;[".triangle-right.top;o;;" ;iï;[o;;[o;
+;@è;iï;o;;{ ;[o;;@è;["triangle-right;iïo;;@è;["top;iï;0;iï;T;	@;i ;
+[	o;;["background;iñ;	@;i ;
+[ ;; ;o;*;"-webkit-gradient;iñ;+{ ;	@;,0;-[
+o;!	;;";iñ;	@;"linearo;#	;iñ;	@;$;%;[o;&;'@A;iñ;([ ;	@;)"0;i o;&;'@A;iñ;([ ;	@;)"0;i o;#	;iñ;	@;$;%;[o;&;'@A;iñ;([ ;	@;)"0;i o;&;'[ ;iñ;(["%;	@;)"	100%;iio;*;"	from;iñ;+{ ;	@;,0;-[o;.	;iñ;/{	;0i;1i;2i[;3iò;	@;0o;*;"to;iñ;+{ ;	@;,0;-[o;.	;iñ;/{	;0i3;1i;2ià;3iƒ;	@;0o;;["background;ió;	@;i ;
+[ ;; ;o;*;"-moz-linear-gradient;ió;+{ ;	@;,0;-[o;.	;ió;/{	;0i;1i;2i[;3iò;	@;0o;.	;ió;/{	;0i3;1i;2ià;3iƒ;	@;0o;;["background;iò;	@;i ;
+[ ;; ;o;*;"-o-linear-gradient;iò;+{ ;	@;,0;-[o;.	;iò;/{	;0i;1i;2i[;3iò;	@;0o;.	;iò;/{	;0i3;1i;2ià;3iƒ;	@;0o;;["background;iô;	@;i ;
+[ ;; ;o;*;"linear-gradient;iô;+{ ;	@;,0;-[o;.	;iô;/{	;0i;1i;2i[;3iò;	@;0o;.	;iô;/{	;0i3;1i;2ià;3iƒ;	@;0o;
+;;;iú;	@;
+[ ;["\/* Variant : for left positioned triangle
+------------------------------------------ */o;;[".triangle-right.left;o;;" ;iü;[o;;[o;
+;@Ú;iü;o;;{ ;[o;;@Ú;["triangle-right;iüo;;@Ú;["	left;iü;0;iü;T;	@;i ;
+[o;;["margin-left;i†;	@;i ;
+[ ;; ;o;!;;";	@;"	40pxo;;["background;i°;	@;i ;
+[ ;; ;o;!;;";	@;"#075698o;
+;;;i§;	@;
+[ ;["]/* Variant : for right positioned triangle
+------------------------------------------ */o;;[".triangle-right.right;o;;" ;iß;[o;;[o;
+;@;iß;o;;{ ;[o;;@;["triangle-right;ißo;;@;["
+right;iß;0;iß;T;	@;i ;
+[o;;["margin-right;i®;	@;i ;
+[ ;; ;o;!;;";	@;"	40pxo;;["background;i©;	@;i ;
+[ ;; ;o;!;;";	@;"#075698o;
+;;;i¨;	@;
+[ ;["í/* THE TRIANGLE
+------------------------------------------------------------------------------------------------------------------------------- */o;;[".triangle-right:after;o;;" ;iØ;[o;;[o;
+;@8;iØ;o;;{ ;[o;;@8;["triangle-right;iØo;4
+;@8;["
+after;;5;iØ;60;0;iØ;T;	@;i ;
+[o;;["content;i∞;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;i±;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["bottom;i≤;	@;i ;
+[ ;; ;o;!;;";	@;"
+-20pxo;
+;;;i≤;	@;
+[ ;[";/* value = - border-top-width - border-bottom-width */o;;["	left;i≥;	@;i ;
+[ ;; ;o;!;;";	@;"	50pxo;
+;;;i≥;	@;
+[ ;["'/* controls horizontal position */o;;["border-width;i¥;	@;i ;
+[ ;; ;o;#	;i¥;	@;$;%;[	o;&;'[ ;i¥;(["px;	@;)"	20px;io;&;'@A;i¥;([ ;	@;)"0;i o;&;'@A;i¥;([ ;	@;)"0;i o;&;'[ ;i¥;(["px;	@;)"	20px;io;
+;;;i¥;	@;
+[ ;[">/* vary these values to change the angle of the vertex */o;;["border-style;iµ;	@;i ;
+[ ;; ;o;!;;";	@;"
+solido;;["border-color;i∂;	@;i ;
+[ ;; ;o;#	;i∂;	@;$;%;[o;.	;i∂;/{	;0i;1i;2i[;3iò;	@;0o;!	;;";i∂;	@;"transparento;
+;;;i∑;	@;
+[ ;["%/* reduce the damage in FF3.0 */o;;["display;i∏;	@;i ;
+[ ;; ;o;!;;";	@;"
+blocko;;["
+width;iπ;	@;i ;
+[ ;; ;o;!;;";	@;"0o;
+;;;iº;	@;
+[ ;["C/* Variant : top
+------------------------------------------ */o;;[".triangle-right.top:after;o;;" ;iø;[o;;[o;
+;@©;iø;o;;{ ;[o;;@©;["triangle-right;iøo;;@©;["top;iøo;4
+;@©;["
+after;;5;iø;60;0;iø;T;	@;i ;
+[o;;["top;i¿;	@;i ;
+[ ;; ;o;!;;";	@;"
+-20pxo;
+;;;i¿;	@;
+[ ;[";/* value = - border-top-width - border-bottom-width */o;;["
+right;i¡;	@;i ;
+[ ;; ;o;!;;";	@;"	50pxo;
+;;;i¡;	@;
+[ ;["'/* controls horizontal position */o;;["bottom;i¬;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["	left;i√;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["border-width;iƒ;	@;i ;
+[ ;; ;o;#	;iƒ;	@;$;%;[	o;&;'[ ;iƒ;(["px;	@;)"	20px;io;&;'[ ;iƒ;(["px;	@;)"	20px;io;&;'@A;iƒ;([ ;	@;)"0;i o;&;'@A;iƒ;([ ;	@;)"0;i o;
+;;;iƒ;	@;
+[ ;[">/* vary these values to change the angle of the vertex */o;;["border-color;i≈;	@;i ;
+[ ;; ;o;#	;i≈;	@;$;%;[o;!	;;";i≈;	@;"transparento;.	;i≈;/{	;0i;1i;2i[;3iò;	@;0o;
+;;;i»;	@;
+[ ;["D/* Variant : left
+------------------------------------------ */o;;[".triangle-right.left:after;o;;" ;iÀ;[o;;[o;
+;@;iÀ;o;;{ ;[o;;@;["triangle-right;iÀo;;@;["	left;iÀo;4
+;@;["
+after;;5;iÀ;60;0;iÀ;T;	@;i ;
+[o;;["top;iÃ;	@;i ;
+[ ;; ;o;!;;";	@;"	16pxo;;["	left;iÕ;	@;i ;
+[ ;; ;o;!;;";	@;"
+-40pxo;
+;;;iÕ;	@;
+[ ;[";/* value = - border-left-width - border-right-width */o;;["bottom;iŒ;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["border-width;iœ;	@;i ;
+[ ;; ;o;#	;iœ;	@;$;%;[	o;&;'[ ;iœ;(["px;	@;)"	15px;io;&;'[ ;iœ;(["px;	@;)"	40px;i-o;&;'@A;iœ;([ ;	@;)"0;i o;&;'@A;iœ;([ ;	@;)"0;i o;
+;;;iœ;	@;
+[ ;[">/* vary these values to change the angle of the vertex */o;;["border-color;i–;	@;i ;
+[ ;; ;o;#	;i–;	@;$;%;[o;!	;;";i–;	@;"transparento;.	;i–;/{	;0i;1i;2i[;3iò;	@;0o;
+;;;i”;	@;
+[ ;["E/* Variant : right
+------------------------------------------ */o;;[" .triangle-right.right:after;o;;" ;i÷;[o;;[o;
+;@[;i÷;o;;{ ;[o;;@[;["triangle-right;i÷o;;@[;["
+right;i÷o;4
+;@[;["
+after;;5;i÷;60;0;i÷;T;	@;i ;
+[o;;["top;i◊;	@;i ;
+[ ;; ;o;!;;";	@;"	16pxo;;["
+right;iÿ;	@;i ;
+[ ;; ;o;!;;";	@;"
+-40pxo;
+;;;iÿ;	@;
+[ ;[";/* value = - border-left-width - border-right-width */o;;["bottom;iŸ;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["	left;i⁄;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["border-width;i€;	@;i ;
+[ ;; ;o;#	;i€;	@;$;%;[	o;&;'[ ;i€;(["px;	@;)"	15px;io;&;'@A;i€;([ ;	@;)"0;i o;&;'@A;i€;([ ;	@;)"0;i o;&;'[ ;i€;(["px;	@;)"	40px;i-o;
+;;;i€;	@;
+[ ;[">/* vary these values to change the angle of the vertex */o;;["border-color;i‹;	@;i ;
+[ ;; ;o;#	;i‹;	@;$;%;[o;!	;;";i‹;	@;"transparento;.	;i‹;/{	;0i;1i;2i[;3iò;	@;0o;
+;;;i‡;	@;
+[ ;["$/* ============================================================================================================================
+== BUBBLE WITH AN OBTUSE TRIANGLE
+** ============================================================================================================================ */o;
+;;;i‰;	@;
+[ ;["ó/* THE SPEECH BUBBLE
+------------------------------------------------------------------------------------------------------------------------------- */o;;[".triangle-obtuse;o;;" ;iÁ;[o;;[o;
+;@π;iÁ;o;;{ ;[o;;@π;["triangle-obtuse;iÁ;0;iÁ;T;	@;i ;
+[o;;["position;iË;	@;i ;
+[ ;; ;o;!;;";	@;"relativeo;;["padding;iÈ;	@;i ;
+[ ;; ;o;!;;";	@;"	15pxo;;["margin;iÍ;	@;i ;
+[ ;; ;o;#	;iÍ;	@;$;%;[o;&;'[ ;iÍ;(["em;	@;)"1em;io;&;'@A;iÍ;([ ;	@;)"0;i o;&;'[ ;iÍ;(["em;	@;)"3em;io;;["
+color;iÎ;	@;i ;
+[ ;; ;o;!;;";	@;"	#fffo;;["background;iÏ;	@;i ;
+[ ;; ;o;!;;";	@;"#c81e2bo;
+;;;iÌ;	@;
+[ ;["/* css3 */o;;["background;iÓ;	@;i ;
+[ ;; ;o;*;"-webkit-gradient;iÓ;+{ ;	@;,0;-[
+o;!	;;";iÓ;	@;"linearo;#	;iÓ;	@;$;%;[o;&;'@A;iÓ;([ ;	@;)"0;i o;&;'@A;iÓ;([ ;	@;)"0;i o;#	;iÓ;	@;$;%;[o;&;'@A;iÓ;([ ;	@;)"0;i o;&;'[ ;iÓ;(["%;	@;)"	100%;iio;*;"	from;iÓ;+{ ;	@;,0;-[o;.	;iÓ;/{	;0i;1i;2iH;3iN;	@;0o;*;"to;iÓ;+{ ;	@;,0;-[o;.	;iÓ;/{	;0i»;1i;2i#;3i0;	@;0o;;["background;iÔ;	@;i ;
+[ ;; ;o;*;"-moz-linear-gradient;iÔ;+{ ;	@;,0;-[o;.	;iÔ;/{	;0i;1i;2iH;3iN;	@;0o;.	;iÔ;/{	;0i»;1i;2i#;3i0;	@;0o;;["background;i;	@;i ;
+[ ;; ;o;*;"-o-linear-gradient;i;+{ ;	@;,0;-[o;.	;i;/{	;0i;1i;2iH;3iN;	@;0o;.	;i;/{	;0i»;1i;2i#;3i0;	@;0o;;["background;iÒ;	@;i ;
+[ ;; ;o;*;"linear-gradient;iÒ;+{ ;	@;,0;-[o;.	;iÒ;/{	;0i;1i;2iH;3iN;	@;0o;.	;iÒ;/{	;0i»;1i;2i#;3i0;	@;0o;;["-webkit-border-radius;iÚ;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;;["-moz-border-radius;iÛ;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;;["border-radius;iÙ;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;
+;;;i˜;	@;
+[ ;["[/* Variant : for top positioned triangle
+------------------------------------------ */o;;[".triangle-obtuse.top;o;;" ;i˙;[o;;[o;
+;@Z;i˙;o;;{ ;[o;;@Z;["triangle-obtuse;i˙o;;@Z;["top;i˙;0;i˙;T;	@;i ;
+[	o;;["background;i˚;	@;i ;
+[ ;; ;o;*;"-webkit-gradient;i˚;+{ ;	@;,0;-[
+o;!	;;";i˚;	@;"linearo;#	;i˚;	@;$;%;[o;&;'@A;i˚;([ ;	@;)"0;i o;&;'@A;i˚;([ ;	@;)"0;i o;#	;i˚;	@;$;%;[o;&;'@A;i˚;([ ;	@;)"0;i o;&;'[ ;i˚;(["%;	@;)"	100%;iio;*;"	from;i˚;+{ ;	@;,0;-[o;.	;i˚;/{	;0i»;1i;2i#;3i0;	@;0o;*;"to;i˚;+{ ;	@;,0;-[o;.	;i˚;/{	;0i;1i;2iH;3iN;	@;0o;;["background;i¸;	@;i ;
+[ ;; ;o;*;"-moz-linear-gradient;i¸;+{ ;	@;,0;-[o;.	;i¸;/{	;0i»;1i;2i#;3i0;	@;0o;.	;i¸;/{	;0i;1i;2iH;3iN;	@;0o;;["background;i˝;	@;i ;
+[ ;; ;o;*;"-o-linear-gradient;i˝;+{ ;	@;,0;-[o;.	;i˝;/{	;0i»;1i;2i#;3i0;	@;0o;.	;i˝;/{	;0i;1i;2iH;3iN;	@;0o;;["background;i˛;	@;i ;
+[ ;; ;o;*;"linear-gradient;i˛;+{ ;	@;,0;-[o;.	;i˛;/{	;0i»;1i;2i#;3i0;	@;0o;.	;i˛;/{	;0i;1i;2iH;3iN;	@;0o;
+;;;i;	@;
+[ ;["\/* Variant : for left positioned triangle
+------------------------------------------ */o;;[".triangle-obtuse.left;o;;" ;i;[o;;[o;
+;@Ω;i;o;;{ ;[o;;@Ω;["triangle-obtuse;io;;@Ω;["	left;i;0;i;T;	@;i ;
+[o;;["margin-left;i;	@;i ;
+[ ;; ;o;!;;";	@;"	50pxo;;["background;i;	@;i ;
+[ ;; ;o;!;;";	@;"#c81e2bo;
+;;;i	;	@;
+[ ;["]/* Variant : for right positioned triangle
+------------------------------------------ */o;;[".triangle-obtuse.right;o;;" ;i;[o;;[o;
+;@‡;i;o;;{ ;[o;;@‡;["triangle-obtuse;io;;@‡;["
+right;i;0;i;T;	@;i ;
+[o;;["margin-right;i;	@;i ;
+[ ;; ;o;!;;";	@;"	50pxo;;["background;i;	@;i ;
+[ ;; ;o;!;;";	@;"#c81e2bo;
+;;;i;	@;
+[ ;["í/* THE TRIANGLE
+------------------------------------------------------------------------------------------------------------------------------- */o;
+;;;i;	@;
+[ ;["2/* creates the wider right-angled triangle */o;;[".triangle-obtuse:before;o;;" ;i;[o;;[o;
+;@;i;o;;{ ;[o;;@;["triangle-obtuse;io;4
+;@;["before;;5;i;60;0;i;T;	@;i ;
+[o;;["content;i;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;i;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["bottom;i;	@;i ;
+[ ;; ;o;!;;";	@;"
+-20pxo;
+;;;i;	@;
+[ ;[";/* value = - border-top-width - border-bottom-width */o;;["	left;i;	@;i ;
+[ ;; ;o;!;;";	@;"	60pxo;
+;;;i;	@;
+[ ;["'/* controls horizontal position */o;;["border;i;	@;i ;
+[ ;; ;o;!;;";	@;"0o;;["border-right-width;i;	@;i ;
+[ ;; ;o;!;;";	@;"	30pxo;
+;;;i;	@;
+[ ;["</* vary this value to change the angle of the vertex */o;;["border-bottom-width;i;	@;i ;
+[ ;; ;o;!;;";	@;"	20pxo;
+;;;i;	@;
+[ ;["s/* vary this value to change the height of the triangle. must be equal to the corresponding value in :after */o;;["border-style;i;	@;i ;
+[ ;; ;o;!;;";	@;"
+solido;;["border-color;i;	@;i ;
+[ ;; ;o;#	;i;	@;$;%;[o;!	;;";i;	@;"transparento;.	;i;/{	;0i»;1i;2i#;3i0;	@;0o;
+;;;i;	@;
+[ ;["%/* reduce the damage in FF3.0 */o;;["display;i ;	@;i ;
+[ ;; ;o;!;;";	@;"
+blocko;;["
+width;i!;	@;i ;
+[ ;; ;o;!;;";	@;"0o;
+;;;i$;	@;
+[ ;["5/* creates the narrower right-angled triangle */o;;[".triangle-obtuse:after;o;;" ;i%;[o;;[o;
+;@x;i%;o;;{ ;[o;;@x;["triangle-obtuse;i%o;4
+;@x;["
+after;;5;i%;60;0;i%;T;	@;i ;
+[o;;["content;i&;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;i';	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["bottom;i(;	@;i ;
+[ ;; ;o;!;;";	@;"
+-20pxo;
+;;;i(;	@;
+[ ;[";/* value = - border-top-width - border-bottom-width */o;;["	left;i);	@;i ;
+[ ;; ;o;!;;";	@;"	80pxo;
+;;;i);	@;
+[ ;["o/* value = (:before's left) + (:before's border-right/left-width)  - (:after's border-right/left-width) */o;;["border;i*;	@;i ;
+[ ;; ;o;!;;";	@;"0o;;["border-right-width;i+;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;
+;;;i+;	@;
+[ ;["</* vary this value to change the angle of the vertex */o;;["border-bottom-width;i,;	@;i ;
+[ ;; ;o;!;;";	@;"	20pxo;
+;;;i,;	@;
+[ ;["t/* vary this value to change the height of the triangle. must be equal to the corresponding value in :before */o;;["border-style;i-;	@;i ;
+[ ;; ;o;!;;";	@;"
+solido;;["border-color;i.;	@;i ;
+[ ;; ;o;#	;i.;	@;$;%;[o;!	;;";i.;	@;"transparento;.	;i.;/{	;0iˇ;1i;2iˇ;3iˇ;	@;0o;
+;;;i/;	@;
+[ ;["%/* reduce the damage in FF3.0 */o;;["display;i0;	@;i ;
+[ ;; ;o;!;;";	@;"
+blocko;;["
+width;i1;	@;i ;
+[ ;; ;o;!;;";	@;"0o;
+;;;i4;	@;
+[ ;["C/* Variant : top
+------------------------------------------ */o;;[" .triangle-obtuse.top:before;o;;" ;i7;[o;;[o;
+;@È;i7;o;;{ ;[o;;@È;["triangle-obtuse;i7o;;@È;["top;i7o;4
+;@È;["before;;5;i7;60;0;i7;T;	@;i ;
+[o;;["top;i8;	@;i ;
+[ ;; ;o;!;;";	@;"
+-20pxo;
+;;;i8;	@;
+[ ;[";/* value = - border-top-width - border-bottom-width */o;;["bottom;i9;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["	left;i:;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["
+right;i;;	@;i ;
+[ ;; ;o;!;;";	@;"	60pxo;
+;;;i;;	@;
+[ ;["'/* controls horizontal position */o;;["border;i<;	@;i ;
+[ ;; ;o;!;;";	@;"0o;;["border-left-width;i=;	@;i ;
+[ ;; ;o;!;;";	@;"	30pxo;
+;;;i=;	@;
+[ ;[">/* vary this value to change the width of the triangle */o;;["border-top-width;i>;	@;i ;
+[ ;; ;o;!;;";	@;"	20pxo;
+;;;i>;	@;
+[ ;["s/* vary this value to change the height of the triangle. must be equal to the corresponding value in :after */o;;["border-color;i?;	@;i ;
+[ ;; ;o;#	;i?;	@;$;%;[o;!	;;";i?;	@;"transparento;.	;i?;/{	;0i»;1i;2i#;3i0;	@;0o;;[".triangle-obtuse.top:after;o;;" ;iB;[o;;[o;
+;@C;iB;o;;{ ;[o;;@C;["triangle-obtuse;iBo;;@C;["top;iBo;4
+;@C;["
+after;;5;iB;60;0;iB;T;	@;i ;
+[o;;["top;iC;	@;i ;
+[ ;; ;o;!;;";	@;"
+-20pxo;
+;;;iC;	@;
+[ ;[";/* value = - border-top-width - border-bottom-width */o;;["bottom;iD;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["	left;iE;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["
+right;iF;	@;i ;
+[ ;; ;o;!;;";	@;"	80pxo;
+;;;iF;	@;
+[ ;["p/* value = (:before's right) + (:before's border-right/left-width)  - (:after's border-right/left-width) */o;;["border-width;iG;	@;i ;
+[ ;; ;o;!;;";	@;"0o;;["border-left-width;iH;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;
+;;;iH;	@;
+[ ;[">/* vary this value to change the width of the triangle */o;;["border-top-width;iI;	@;i ;
+[ ;; ;o;!;;";	@;"	20pxo;
+;;;iI;	@;
+[ ;["t/* vary this value to change the height of the triangle. must be equal to the corresponding value in :before */o;;["border-color;iJ;	@;i ;
+[ ;; ;o;#	;iJ;	@;$;%;[o;!	;;";iJ;	@;"transparento;.	;iJ;/{	;0iˇ;1i;2iˇ;3iˇ;	@;0o;
+;;;iM;	@;
+[ ;["D/* Variant : left
+------------------------------------------ */o;;["!.triangle-obtuse.left:before;o;;" ;iP;[o;;[o;
+;@°;iP;o;;{ ;[o;;@°;["triangle-obtuse;iPo;;@°;["	left;iPo;4
+;@°;["before;;5;iP;60;0;iP;T;	@;i ;
+[o;;["top;iQ;	@;i ;
+[ ;; ;o;!;;";	@;"	15pxo;
+;;;iQ;	@;
+[ ;["%/* controls vertical position */o;;["bottom;iR;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["	left;iS;	@;i ;
+[ ;; ;o;!;;";	@;"
+-50pxo;
+;;;iS;	@;
+[ ;[";/* value = - border-left-width - border-right-width */o;;["border;iT;	@;i ;
+[ ;; ;o;!;;";	@;"0o;;["border-bottom-width;iU;	@;i ;
+[ ;; ;o;!;;";	@;"	30pxo;
+;;;iU;	@;
+[ ;["?/* vary this value to change the height of the triangle */o;;["border-left-width;iV;	@;i ;
+[ ;; ;o;!;;";	@;"	50pxo;
+;;;iV;	@;
+[ ;["r/* vary this value to change the width of the triangle. must be equal to the corresponding value in :after */o;;["border-color;iW;	@;i ;
+[ ;; ;o;#	;iW;	@;$;%;[o;.	;iW;/{	;0i»;1i;2i#;3i0;	@;0o;!	;;";iW;	@;"transparento;;[" .triangle-obtuse.left:after;o;;" ;iZ;[o;;[o;
+;@ı;iZ;o;;{ ;[o;;@ı;["triangle-obtuse;iZo;;@ı;["	left;iZo;4
+;@ı;["
+after;;5;iZ;60;0;iZ;T;	@;i ;
+[o;;["top;i[;	@;i ;
+[ ;; ;o;!;;";	@;"	35pxo;
+;;;i[;	@;
+[ ;["n/* value = (:before's top) + (:before's border-top/bottom-width)  - (:after's border-top/bottom-width) */o;;["bottom;i\;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["	left;i];	@;i ;
+[ ;; ;o;!;;";	@;"
+-50pxo;
+;;;i];	@;
+[ ;[";/* value = - border-left-width - border-right-width */o;;["border;i^;	@;i ;
+[ ;; ;o;!;;";	@;"0o;;["border-bottom-width;i_;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;
+;;;i_;	@;
+[ ;["?/* vary this value to change the height of the triangle */o;;["border-left-width;i`;	@;i ;
+[ ;; ;o;!;;";	@;"	50pxo;
+;;;i`;	@;
+[ ;["s/* vary this value to change the width of the triangle. must be equal to the corresponding value in :before */o;;["border-color;ia;	@;i ;
+[ ;; ;o;#	;ia;	@;$;%;[o;.	;ia;/{	;0iˇ;1i;2iˇ;3iˇ;	@;0o;!	;;";ia;	@;"transparento;
+;;;id;	@;
+[ ;["E/* Variant : right
+------------------------------------------ */o;;["".triangle-obtuse.right:before;o;;" ;ig;[o;;[o;
+;@M	;ig;o;;{ ;[o;;@M	;["triangle-obtuse;igo;;@M	;["
+right;igo;4
+;@M	;["before;;5;ig;60;0;ig;T;	@;i ;
+[o;;["top;ih;	@;i ;
+[ ;; ;o;!;;";	@;"	15pxo;
+;;;ih;	@;
+[ ;["%/* controls vertical position */o;;["bottom;ii;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["	left;ij;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["
+right;ik;	@;i ;
+[ ;; ;o;!;;";	@;"
+-50pxo;
+;;;ik;	@;
+[ ;[";/* value = - border-left-width - border-right-width */o;;["border;il;	@;i ;
+[ ;; ;o;!;;";	@;"0o;;["border-bottom-width;im;	@;i ;
+[ ;; ;o;!;;";	@;"	30pxo;
+;;;im;	@;
+[ ;["?/* vary this value to change the height of the triangle */o;;["border-right-width;in;	@;i ;
+[ ;; ;o;!;;";	@;"	50pxo;
+;;;in;	@;
+[ ;["r/* vary this value to change the width of the triangle. must be equal to the corresponding value in :after */o;;["border-color;io;	@;i ;
+[ ;; ;o;#	;io;	@;$;%;[o;.	;io;/{	;0i»;1i;2i#;3i0;	@;0o;!	;;";io;	@;"transparento;;["!.triangle-obtuse.right:after;o;;" ;ir;[o;;[o;
+;@ß	;ir;o;;{ ;[o;;@ß	;["triangle-obtuse;iro;;@ß	;["
+right;iro;4
+;@ß	;["
+after;;5;ir;60;0;ir;T;	@;i ;
+[o;;["top;is;	@;i ;
+[ ;; ;o;!;;";	@;"	35pxo;
+;;;is;	@;
+[ ;["n/* value = (:before's top) + (:before's border-top/bottom-width)  - (:after's border-top/bottom-width) */o;;["bottom;it;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["
+right;iu;	@;i ;
+[ ;; ;o;!;;";	@;"
+-50pxo;
+;;;iu;	@;
+[ ;[";/* value = - border-left-width - border-right-width */o;;["	left;iv;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["border;iw;	@;i ;
+[ ;; ;o;!;;";	@;"0o;;["border-bottom-width;ix;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;
+;;;ix;	@;
+[ ;["?/* vary this value to change the height of the triangle */o;;["border-right-width;iy;	@;i ;
+[ ;; ;o;!;;";	@;"	50pxo;
+;;;iy;	@;
+[ ;["s/* vary this value to change the width of the triangle. must be equal to the corresponding value in :before */o;;["border-color;iz;	@;i ;
+[ ;; ;o;#	;iz;	@;$;%;[o;.	;iz;/{	;0iˇ;1i;2iˇ;3iˇ;	@;0o;!	;;";iz;	@;"transparento;
+;;;i~;	@;
+[ ;["'/* ============================================================================================================================
+== BUBBLE WITH A BORDER AND TRIANGLE
+** ============================================================================================================================ */o;
+;;;iÇ;	@;
+[ ;["ó/* THE SPEECH BUBBLE
+------------------------------------------------------------------------------------------------------------------------------- */o;;[".triangle-border;o;;" ;iÖ;[o;;[o;
+;@	
+;iÖ;o;;{ ;[o;;@	
+;["triangle-border;iÖ;0;iÖ;T;	@;i ;
+[o;;["position;iÜ;	@;i ;
+[ ;; ;o;!;;";	@;"relativeo;;["padding;iá;	@;i ;
+[ ;; ;o;!;;";	@;"	15pxo;;["margin;ià;	@;i ;
+[ ;; ;o;#	;ià;	@;$;%;[o;&;'[ ;ià;(["em;	@;)"1em;io;&;'@A;ià;([ ;	@;)"0;i o;&;'[ ;ià;(["em;	@;)"3em;io;;["border;iâ;	@;i ;
+[ ;; ;o;#	;iâ;	@;$;%;[o;&;'[ ;iâ;(["px;	@;)"5px;i
+o;!	;;";iâ;	@;"
+solido;.	;iâ;/{	;0i_;1i;2iè;3i ;	@;0o;;["
+color;iä;	@;i ;
+[ ;; ;o;!;;";	@;"	#333o;;["background;iã;	@;i ;
+[ ;; ;o;!;;";	@;"	#fffo;
+;;;iå;	@;
+[ ;["/* css3 */o;;["-webkit-border-radius;iç;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;;["-moz-border-radius;ié;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;;["border-radius;iè;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;
+;;;ií;	@;
+[ ;["\/* Variant : for left positioned triangle
+------------------------------------------ */o;;[".triangle-border.left;o;;" ;iï;[o;;[o;
+;@m
+;iï;o;;{ ;[o;;@m
+;["triangle-border;iïo;;@m
+;["	left;iï;0;iï;T;	@;i ;
+[o;;["margin-left;iñ;	@;i ;
+[ ;; ;o;!;;";	@;"	30pxo;
+;;;iô;	@;
+[ ;["]/* Variant : for right positioned triangle
+------------------------------------------ */o;;[".triangle-border.right;o;;" ;iú;[o;;[o;
+;@ä
+;iú;o;;{ ;[o;;@ä
+;["triangle-border;iúo;;@ä
+;["
+right;iú;0;iú;T;	@;i ;
+[o;;["margin-right;iù;	@;i ;
+[ ;; ;o;!;;";	@;"	30pxo;
+;;;i†;	@;
+[ ;["í/* THE TRIANGLE
+------------------------------------------------------------------------------------------------------------------------------- */o;;[".triangle-border:before;o;;" ;i£;[o;;[o;
+;@ß
+;i£;o;;{ ;[o;;@ß
+;["triangle-border;i£o;4
+;@ß
+;["before;;5;i£;60;0;i£;T;	@;i ;
+[o;;["content;i§;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;i•;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["bottom;i¶;	@;i ;
+[ ;; ;o;!;;";	@;"
+-20pxo;
+;;;i¶;	@;
+[ ;[";/* value = - border-top-width - border-bottom-width */o;;["	left;iß;	@;i ;
+[ ;; ;o;!;;";	@;"	40pxo;
+;;;iß;	@;
+[ ;["'/* controls horizontal position */o;;["border-width;i®;	@;i ;
+[ ;; ;o;#	;i®;	@;$;%;[o;&;'[ ;i®;(["px;	@;)"	20px;io;&;'[ ;i®;(["px;	@;)"	20px;io;&;'@A;i®;([ ;	@;)"0;i o;;["border-style;i©;	@;i ;
+[ ;; ;o;!;;";	@;"
+solido;;["border-color;i™;	@;i ;
+[ ;; ;o;#	;i™;	@;$;%;[o;.	;i™;/{	;0i_;1i;2iè;3i ;	@;0o;!	;;";i™;	@;"transparento;
+;;;i´;	@;
+[ ;["%/* reduce the damage in FF3.0 */o;;["display;i¨;	@;i ;
+[ ;; ;o;!;;";	@;"
+blocko;;["
+width;i≠;	@;i ;
+[ ;; ;o;!;;";	@;"0o;
+;;;i∞;	@;
+[ ;["(/* creates the smaller  triangle */o;;[".triangle-border:after;o;;" ;i±;[o;;[o;
+;@;i±;o;;{ ;[o;;@;["triangle-border;i±o;4
+;@;["
+after;;5;i±;60;0;i±;T;	@;i ;
+[o;;["content;i≤;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;i≥;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["bottom;i¥;	@;i ;
+[ ;; ;o;!;;";	@;"
+-13pxo;
+;;;i¥;	@;
+[ ;[";/* value = - border-top-width - border-bottom-width */o;;["	left;iµ;	@;i ;
+[ ;; ;o;!;;";	@;"	47pxo;
+;;;iµ;	@;
+[ ;["P/* value = (:before left) + (:before border-left) - (:after border-left) */o;;["border-width;i∂;	@;i ;
+[ ;; ;o;#	;i∂;	@;$;%;[o;&;'[ ;i∂;(["px;	@;)"	13px;io;&;'[ ;i∂;(["px;	@;)"	13px;io;&;'@A;i∂;([ ;	@;)"0;i o;;["border-style;i∑;	@;i ;
+[ ;; ;o;!;;";	@;"
+solido;;["border-color;i∏;	@;i ;
+[ ;; ;o;#	;i∏;	@;$;%;[o;.	;i∏;/{	;0iˇ;1i;2iˇ;3iˇ;	@;0o;!	;;";i∏;	@;"transparento;
+;;;iπ;	@;
+[ ;["%/* reduce the damage in FF3.0 */o;;["display;i∫;	@;i ;
+[ ;; ;o;!;;";	@;"
+blocko;;["
+width;iª;	@;i ;
+[ ;; ;o;!;;";	@;"0o;
+;;;iæ;	@;
+[ ;["C/* Variant : top
+------------------------------------------ */o;
+;;;i¡;	@;
+[ ;["&/* creates the larger triangle */o;;[" .triangle-border.top:before;o;;" ;i¬;[o;;[o;
+;@;i¬;o;;{ ;[o;;@;["triangle-border;i¬o;;@;["top;i¬o;4
+;@;["before;;5;i¬;60;0;i¬;T;	@;i ;
+[o;;["top;i√;	@;i ;
+[ ;; ;o;!;;";	@;"
+-20pxo;
+;;;i√;	@;
+[ ;[";/* value = - border-top-width - border-bottom-width */o;;["bottom;iƒ;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["	left;i≈;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["
+right;i∆;	@;i ;
+[ ;; ;o;!;;";	@;"	40pxo;
+;;;i∆;	@;
+[ ;["'/* controls horizontal position */o;;["border-width;i«;	@;i ;
+[ ;; ;o;#	;i«;	@;$;%;[o;&;'@A;i«;([ ;	@;)"0;i o;&;'[ ;i«;(["px;	@;)"	20px;io;&;'[ ;i«;(["px;	@;)"	20px;io;
+;;;i ;	@;
+[ ;["(/* creates the smaller  triangle */o;;[".triangle-border.top:after;o;;" ;iÀ;[o;;[o;
+;@Ã;iÀ;o;;{ ;[o;;@Ã;["triangle-border;iÀo;;@Ã;["top;iÀo;4
+;@Ã;["
+after;;5;iÀ;60;0;iÀ;T;	@;i ;
+[o;;["top;iÃ;	@;i ;
+[ ;; ;o;!;;";	@;"
+-13pxo;
+;;;iÃ;	@;
+[ ;[";/* value = - border-top-width - border-bottom-width */o;;["bottom;iÕ;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["	left;iŒ;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["
+right;iœ;	@;i ;
+[ ;; ;o;!;;";	@;"	47pxo;
+;;;iœ;	@;
+[ ;["S/* value = (:before right) + (:before border-right) - (:after border-right) */o;;["border-width;i–;	@;i ;
+[ ;; ;o;#	;i–;	@;$;%;[o;&;'@A;i–;([ ;	@;)"0;i o;&;'[ ;i–;(["px;	@;)"	13px;io;&;'[ ;i–;(["px;	@;)"	13px;io;
+;;;i”;	@;
+[ ;["D/* Variant : left
+------------------------------------------ */o;
+;;;i÷;	@;
+[ ;["&/* creates the larger triangle */o;;["!.triangle-border.left:before;o;;" ;i◊;[o;;[o;
+;@;i◊;o;;{ ;[o;;@;["triangle-border;i◊o;;@;["	left;i◊o;4
+;@;["before;;5;i◊;60;0;i◊;T;	@;i ;
+[o;;["top;iÿ;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;
+;;;iÿ;	@;
+[ ;["%/* controls vertical position */o;;["bottom;iŸ;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["	left;i⁄;	@;i ;
+[ ;; ;o;!;;";	@;"
+-30pxo;
+;;;i⁄;	@;
+[ ;[";/* value = - border-left-width - border-right-width */o;;["border-width;i€;	@;i ;
+[ ;; ;o;#	;i€;	@;$;%;[	o;&;'[ ;i€;(["px;	@;)"	15px;io;&;'[ ;i€;(["px;	@;)"	30px;i#o;&;'[ ;i€;(["px;	@;)"	15px;io;&;'@A;i€;([ ;	@;)"0;i o;;["border-color;i‹;	@;i ;
+[ ;; ;o;#	;i‹;	@;$;%;[o;!	;;";i‹;	@;"transparento;.	;i‹;/{	;0i_;1i;2iè;3i ;	@;0o;
+;;;iﬂ;	@;
+[ ;["(/* creates the smaller  triangle */o;;[" .triangle-border.left:after;o;;" ;i‡;[o;;[o;
+;@s;i‡;o;;{ ;[o;;@s;["triangle-border;i‡o;;@s;["	left;i‡o;4
+;@s;["
+after;;5;i‡;60;0;i‡;T;	@;i ;
+[o;;["top;i·;	@;i ;
+[ ;; ;o;!;;";	@;"	16pxo;
+;;;i·;	@;
+[ ;["M/* value = (:before top) + (:before border-top) - (:after border-top) */o;;["bottom;i‚;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["	left;i„;	@;i ;
+[ ;; ;o;!;;";	@;"
+-21pxo;
+;;;i„;	@;
+[ ;[";/* value = - border-left-width - border-right-width */o;;["border-width;i‰;	@;i ;
+[ ;; ;o;#	;i‰;	@;$;%;[	o;&;'[ ;i‰;(["px;	@;)"9px;io;&;'[ ;i‰;(["px;	@;)"	21px;io;&;'[ ;i‰;(["px;	@;)"9px;io;&;'@A;i‰;([ ;	@;)"0;i o;;["border-color;iÂ;	@;i ;
+[ ;; ;o;#	;iÂ;	@;$;%;[o;!	;;";iÂ;	@;"transparento;.	;iÂ;/{	;0iˇ;1i;2iˇ;3iˇ;	@;0o;
+;;;iË;	@;
+[ ;["E/* Variant : right
+------------------------------------------ */o;
+;;;iÎ;	@;
+[ ;["&/* creates the larger triangle */o;;["".triangle-border.right:before;o;;" ;iÏ;[o;;[o;
+;@Õ;iÏ;o;;{ ;[o;;@Õ;["triangle-border;iÏo;;@Õ;["
+right;iÏo;4
+;@Õ;["before;;5;iÏ;60;0;iÏ;T;	@;i ;
+[o;;["top;iÌ;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;
+;;;iÌ;	@;
+[ ;["%/* controls vertical position */o;;["bottom;iÓ;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["	left;iÔ;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["
+right;i;	@;i ;
+[ ;; ;o;!;;";	@;"
+-30pxo;
+;;;i;	@;
+[ ;[";/* value = - border-left-width - border-right-width */o;;["border-width;iÒ;	@;i ;
+[ ;; ;o;#	;iÒ;	@;$;%;[	o;&;'[ ;iÒ;(["px;	@;)"	15px;io;&;'@A;iÒ;([ ;	@;)"0;i o;&;'[ ;iÒ;(["px;	@;)"	15px;io;&;'[ ;iÒ;(["px;	@;)"	30px;i#o;;["border-color;iÚ;	@;i ;
+[ ;; ;o;#	;iÚ;	@;$;%;[o;!	;;";iÚ;	@;"transparento;.	;iÚ;/{	;0i_;1i;2iè;3i ;	@;0o;
+;;;iı;	@;
+[ ;["(/* creates the smaller  triangle */o;;["!.triangle-border.right:after;o;;" ;iˆ;[o;;[o;
+;@);iˆ;o;;{ ;[o;;@);["triangle-border;iˆo;;@);["
+right;iˆo;4
+;@);["
+after;;5;iˆ;60;0;iˆ;T;	@;i ;
+[o;;["top;i˜;	@;i ;
+[ ;; ;o;!;;";	@;"	16pxo;
+;;;i˜;	@;
+[ ;["M/* value = (:before top) + (:before border-top) - (:after border-top) */o;;["bottom;i¯;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["	left;i˘;	@;i ;
+[ ;; ;o;!;;";	@;"	autoo;;["
+right;i˙;	@;i ;
+[ ;; ;o;!;;";	@;"
+-21pxo;
+;;;i˙;	@;
+[ ;[";/* value = - border-left-width - border-right-width */o;;["border-width;i˚;	@;i ;
+[ ;; ;o;#	;i˚;	@;$;%;[	o;&;'[ ;i˚;(["px;	@;)"9px;io;&;'@A;i˚;([ ;	@;)"0;i o;&;'[ ;i˚;(["px;	@;)"9px;io;&;'[ ;i˚;(["px;	@;)"	21px;io;;["border-color;i¸;	@;i ;
+[ ;; ;o;#	;i¸;	@;$;%;[o;!	;;";i¸;	@;"transparento;.	;i¸;/{	;0iˇ;1i;2iˇ;3iˇ;	@;0o;
+;;;i ;	@;
+[ ;["/* ============================================================================================================================
+== SPEECH BUBBLE ICON
+** ============================================================================================================================ */o;;[".example-commentheading;o;;" ;i;[o;;[o;
+;@Ö;i;o;;{ ;[o;;@Ö;["example-commentheading;i;0;i;T;	@;i ;
+[o;;["position;i;	@;i ;
+[ ;; ;o;!;;";	@;"relativeo;;["padding;i;	@;i ;
+[ ;; ;o;!;;";	@;"0o;;["
+color;i;	@;i ;
+[ ;; ;o;!;;";	@;"#b513afo;
+;;;i
+;	@;
+[ ;[" /* creates the rectangle */o;;["#.example-commentheading:before;o;;" ;i;[o;;[o;
+;@´;i;o;;{ ;[o;;@´;["example-commentheading;io;4
+;@´;["before;;5;i;60;0;i;T;	@;i ;
+[o;;["content;i;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;i;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["top;i;	@;i ;
+[ ;; ;o;!;;";	@;"9pxo;;["	left;i;	@;i ;
+[ ;; ;o;!;;";	@;"
+-25pxo;;["
+width;i;	@;i ;
+[ ;; ;o;!;;";	@;"	15pxo;;["height;i;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;;["background;i;	@;i ;
+[ ;; ;o;!;;";	@;"#b513afo;
+;;;i;	@;
+[ ;["/* css3 */o;;["-webkit-border-radius;i;	@;i ;
+[ ;; ;o;!;;";	@;"3pxo;;["-moz-border-radius;i;	@;i ;
+[ ;; ;o;!;;";	@;"3pxo;;["border-radius;i;	@;i ;
+[ ;; ;o;!;;";	@;"3pxo;
+;;;i;	@;
+[ ;["/* creates the triangle */o;;["".example-commentheading:after;o;;" ;i;[o;;[o;
+;@;i;o;;{ ;[o;;@;["example-commentheading;io;4
+;@;["
+after;;5;i;60;0;i;T;	@;i ;
+[o;;["content;i;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;i;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["top;i;	@;i ;
+[ ;; ;o;!;;";	@;"	15pxo;;["	left;i;	@;i ;
+[ ;; ;o;!;;";	@;"
+-19pxo;;["border;i;	@;i ;
+[ ;; ;o;#	;i;	@;$;%;[o;&;'[ ;i;(["px;	@;)"4px;i	o;!	;;";i;	@;"
+solido;!	;;";i;	@;"transparento;;["border-left-color;i ;	@;i ;
+[ ;; ;o;!;;";	@;"#b513afo;
+;;;i!;	@;
+[ ;["%/* reduce the damage in FF3.0 */o;;["display;i";	@;i ;
+[ ;; ;o;!;;";	@;"
+blocko;;["
+width;i#;	@;i ;
+[ ;; ;o;!;;";	@;"0o;
+;;;i';	@;
+[ ;["+/* ============================================================================================================================
+== BLOCKQUOTE WITH RIGHT-ANGLED TRIANGLE
+** ============================================================================================================================ */o;;[".example-right;o;;" ;i+;[o;;[o;
+;@V;i+;o;;{ ;[o;;@V;["example-right;i+;0;i+;T;	@;i ;
+[o;;["position;i,;	@;i ;
+[ ;; ;o;!;;";	@;"relativeo;;["padding;i-;	@;i ;
+[ ;; ;o;#	;i-;	@;$;%;[o;&;'[ ;i-;(["px;	@;)"	15px;io;&;'[ ;i-;(["px;	@;)"	30px;i#o;;["margin;i.;	@;i ;
+[ ;; ;o;!;;";	@;"0o;;["
+color;i/;	@;i ;
+[ ;; ;o;!;;";	@;"	#fffo;;["background;i0;	@;i ;
+[ ;; ;o;!;;";	@;"#5a8f00o;
+;;;i0;	@;
+[ ;["C/* default background for browsers without gradient support */o;
+;;;i1;	@;
+[ ;["/* css3 */o;;["background;i2;	@;i ;
+[ ;; ;o;*;"-webkit-gradient;i2;+{ ;	@;,0;-[
+o;!	;;";i2;	@;"linearo;#	;i2;	@;$;%;[o;&;'@A;i2;([ ;	@;)"0;i o;&;'@A;i2;([ ;	@;)"0;i o;#	;i2;	@;$;%;[o;&;'@A;i2;([ ;	@;)"0;i o;&;'[ ;i2;(["%;	@;)"	100%;iio;*;"	from;i2;+{ ;	@;,0;-[o;.	;i2;/{	;0i∏;1i;2i€;3i.;	@;0o;*;"to;i2;+{ ;	@;,0;-[o;.	;i2;/{	;0i_;1i;2iè;3i ;	@;0o;;["background;i3;	@;i ;
+[ ;; ;o;*;"-moz-linear-gradient;i3;+{ ;	@;,0;-[o;.	;i3;/{	;0i∏;1i;2i€;3i.;	@;0o;.	;i3;/{	;0i_;1i;2iè;3i ;	@;0o;;["background;i4;	@;i ;
+[ ;; ;o;*;"-o-linear-gradient;i4;+{ ;	@;,0;-[o;.	;i4;/{	;0i∏;1i;2i€;3i.;	@;0o;.	;i4;/{	;0i_;1i;2iè;3i ;	@;0o;;["background;i5;	@;i ;
+[ ;; ;o;*;"linear-gradient;i5;+{ ;	@;,0;-[o;.	;i5;/{	;0i∏;1i;2i€;3i.;	@;0o;.	;i5;/{	;0i_;1i;2iè;3i ;	@;0o;;["-webkit-border-radius;i6;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;;["-moz-border-radius;i7;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;;["border-radius;i8;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;
+;;;i;;	@;
+[ ;["f/* display of quote author (alternatively use a class on the element following the blockquote) */o;;[".example-right + p;o;;" ;i<;[o;;[o;
+;@¯;i<;o;;{ ;[o;;@¯;["example-right;i<;0"+o;
+;@¯;i<;o;;{ ;[o:Sass::Selector::Element	;@¯;["p;i<:@namespace0;0;i<;T;	@;i ;
+[o;;["margin;i<;	@;i ;
+[ ;; ;o;#	;i<;	@;$;%;[	o;&;'[ ;i<;(["px;	@;)"	15px;io;&;'@A;i<;([ ;	@;)"0;i o;&;'[ ;i<;(["em;	@;)"2em;io;&;'[ ;i<;(["px;	@;)"	85px;iZo;;["font-style;i<;	@;i ;
+[ ;; ;o;!;;";	@;"italico;
+;;;i>;	@;
+[ ;["/* creates the triangle */o;;[".example-right:after;o;;" ;i?;[o;;[o;
+;@2;i?;o;;{ ;[o;;@2;["example-right;i?o;4
+;@2;["
+after;;5;i?;60;0;i?;T;	@;i ;
+[o;;["content;i@;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;iA;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["bottom;iB;	@;i ;
+[ ;; ;o;!;;";	@;"
+-50pxo;;["	left;iC;	@;i ;
+[ ;; ;o;!;;";	@;"	50pxo;;["border-width;iD;	@;i ;
+[ ;; ;o;#	;iD;	@;$;%;[	o;&;'@A;iD;([ ;	@;)"0;i o;&;'[ ;iD;(["px;	@;)"	20px;io;&;'[ ;iD;(["px;	@;)"	50px;i7o;&;'[ ;iD;(["px;	@;)"0px;i o;;["border-style;iE;	@;i ;
+[ ;; ;o;!;;";	@;"
+solido;;["border-color;iF;	@;i ;
+[ ;; ;o;#	;iF;	@;$;%;[o;!	;;";iF;	@;"transparento;.	;iF;/{	;0i_;1i;2iè;3i ;	@;0o;
+;;;iG;	@;
+[ ;["%/* reduce the damage in FF3.0 */o;;["display;iH;	@;i ;
+[ ;; ;o;!;;";	@;"
+blocko;;["
+width;iI;	@;i ;
+[ ;; ;o;!;;";	@;"0o;
+;;;iM;	@;
+[ ;["%/* ============================================================================================================================
+== BLOCKQUOTE WITH OBTUSE TRIANGLE
+** ============================================================================================================================ */o;;[".example-obtuse;o;;" ;iQ;[o;;[o;
+;@ô;iQ;o;;{ ;[o;;@ô;["example-obtuse;iQ;0;iQ;T;	@;i ;
+[o;;["position;iR;	@;i ;
+[ ;; ;o;!;;";	@;"relativeo;;["padding;iS;	@;i ;
+[ ;; ;o;#	;iS;	@;$;%;[o;&;'[ ;iS;(["px;	@;)"	15px;io;&;'[ ;iS;(["px;	@;)"	30px;i#o;;["margin;iT;	@;i ;
+[ ;; ;o;!;;";	@;"0o;;["
+color;iU;	@;i ;
+[ ;; ;o;!;;";	@;"	#000o;;["background;iV;	@;i ;
+[ ;; ;o;!;;";	@;"#f3961co;
+;;;iV;	@;
+[ ;["C/* default background for browsers without gradient support */o;
+;;;iW;	@;
+[ ;["/* css3 */o;;["background;iX;	@;i ;
+[ ;; ;o;*;"-webkit-gradient;iX;+{ ;	@;,0;-[
+o;!	;;";iX;	@;"linearo;#	;iX;	@;$;%;[o;&;'@A;iX;([ ;	@;)"0;i o;&;'@A;iX;([ ;	@;)"0;i o;#	;iX;	@;$;%;[o;&;'@A;iX;([ ;	@;)"0;i o;&;'[ ;iX;(["%;	@;)"	100%;iio;*;"	from;iX;+{ ;	@;,0;-[o;.	;iX;/{	;0i˘;1i;2iÿ;3i:;	@;0o;*;"to;iX;+{ ;	@;,0;-[o;.	;iX;/{	;0iÛ;1i;2iñ;3i!;	@;0o;;["background;iY;	@;i ;
+[ ;; ;o;*;"-moz-linear-gradient;iY;+{ ;	@;,0;-[o;.	;iY;/{	;0i˘;1i;2iÿ;3i:;	@;0o;.	;iY;/{	;0iÛ;1i;2iñ;3i!;	@;0o;;["background;iZ;	@;i ;
+[ ;; ;o;*;"-o-linear-gradient;iZ;+{ ;	@;,0;-[o;.	;iZ;/{	;0i˘;1i;2iÿ;3i:;	@;0o;.	;iZ;/{	;0iÛ;1i;2iñ;3i!;	@;0o;;["background;i[;	@;i ;
+[ ;; ;o;*;"linear-gradient;i[;+{ ;	@;,0;-[o;.	;i[;/{	;0i˘;1i;2iÿ;3i:;	@;0o;.	;i[;/{	;0iÛ;1i;2iñ;3i!;	@;0o;
+;;;i\;	@;
+[ ;["P/* Using longhand to avoid inconsistencies between Safari 4 and Chrome 4 */o;;["#-webkit-border-top-left-radius;i];	@;i ;
+[ ;; ;o;#	;i];	@;$;%;[o;&;'[ ;i];(["px;	@;)"	25px;io;&;'[ ;i];(["px;	@;)"	50px;i7o;;["$-webkit-border-top-right-radius;i^;	@;i ;
+[ ;; ;o;#	;i^;	@;$;%;[o;&;'[ ;i^;(["px;	@;)"	25px;io;&;'[ ;i^;(["px;	@;)"	50px;i7o;;["'-webkit-border-bottom-right-radius;i_;	@;i ;
+[ ;; ;o;#	;i_;	@;$;%;[o;&;'[ ;i_;(["px;	@;)"	25px;io;&;'[ ;i_;(["px;	@;)"	50px;i7o;;["&-webkit-border-bottom-left-radius;i`;	@;i ;
+[ ;; ;o;#	;i`;	@;$;%;[o;&;'[ ;i`;(["px;	@;)"	25px;io;&;'[ ;i`;(["px;	@;)"	50px;i7o;;["-moz-border-radius;ia;	@;i ;
+[ ;; ;o:Sass::Script::Operation
+:@operand1o;&;'[ ;ia;(["px;	@;)"	25px;i;ia:@operator:div;	@:@operand2o;&;'[ ;ia;(["px;	@;)"	50px;i7o;;["border-radius;ib;	@;i ;
+[ ;; ;o;9
+;:o;&;'[ ;ib;(["px;	@;)"	25px;i;ib;;;<;	@;=o;&;'[ ;ib;(["px;	@;)"	50px;i7o;
+;;;ie;	@;
+[ ;["f/* display of quote author (alternatively use a class on the element following the blockquote) */o;;[".example-obtuse + p;o;;" ;if;[o;;[o;
+;@ã;if;o;;{ ;[o;;@ã;["example-obtuse;if;0"+o;
+;@ã;if;o;;{ ;[o;7	;@ã;["p;if;80;0;if;T;	@;i ;
+[o;;["margin;if;	@;i ;
+[ ;; ;o;#	;if;	@;$;%;[	o;&;'[ ;if;(["px;	@;)"	10px;io;&;'[ ;if;(["px;	@;)"
+150px;iño;&;'[ ;if;(["em;	@;)"2em;io;&;'@A;if;([ ;	@;)"0;i o;;["text-align;if;	@;i ;
+[ ;; ;o;!;;";	@;"
+righto;;["font-style;if;	@;i ;
+[ ;; ;o;!;;";	@;"italico;
+;;;ih;	@;
+[ ;["&/* creates the larger triangle */o;;[".example-obtuse:before;o;;" ;ii;[o;;[o;
+;@À;ii;o;;{ ;[o;;@À;["example-obtuse;iio;4
+;@À;["before;;5;ii;60;0;ii;T;	@;i ;
+[o;;["content;ij;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;ik;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["bottom;il;	@;i ;
+[ ;; ;o;!;;";	@;"
+-30pxo;;["
+right;im;	@;i ;
+[ ;; ;o;!;;";	@;"	80pxo;;["border-width;in;	@;i ;
+[ ;; ;o;#	;in;	@;$;%;[	o;&;'@A;in;([ ;	@;)"0;i o;&;'@A;in;([ ;	@;)"0;i o;&;'[ ;in;(["px;	@;)"	30px;i#o;&;'[ ;in;(["px;	@;)"	50px;i7o;;["border-style;io;	@;i ;
+[ ;; ;o;!;;";	@;"
+solido;;["border-color;ip;	@;i ;
+[ ;; ;o;#	;ip;	@;$;%;[o;!	;;";ip;	@;"transparento;.	;ip;/{	;0iÛ;1i;2iñ;3i!;	@;0o;
+;;;iq;	@;
+[ ;["%/* reduce the damage in FF3.0 */o;;["display;ir;	@;i ;
+[ ;; ;o;!;;";	@;"
+blocko;;["
+width;is;	@;i ;
+[ ;; ;o;!;;";	@;"0o;
+;;;iv;	@;
+[ ;["'/* creates the smaller triangle */o;;[".example-obtuse:after;o;;" ;iw;[o;;[o;
+;@0;iw;o;;{ ;[o;;@0;["example-obtuse;iwo;4
+;@0;["
+after;;5;iw;60;0;iw;T;	@;i ;
+[o;;["content;ix;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;iy;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["bottom;iz;	@;i ;
+[ ;; ;o;!;;";	@;"
+-30pxo;;["
+right;i{;	@;i ;
+[ ;; ;o;!;;";	@;"
+110pxo;;["border-width;i|;	@;i ;
+[ ;; ;o;#	;i|;	@;$;%;[	o;&;'@A;i|;([ ;	@;)"0;i o;&;'@A;i|;([ ;	@;)"0;i o;&;'[ ;i|;(["px;	@;)"	30px;i#o;&;'[ ;i|;(["px;	@;)"	20px;io;;["border-style;i};	@;i ;
+[ ;; ;o;!;;";	@;"
+solido;;["border-color;i~;	@;i ;
+[ ;; ;o;#	;i~;	@;$;%;[o;!	;;";i~;	@;"transparento;.	;i~;/{	;0iˇ;1i;2iˇ;3iˇ;	@;0o;
+;;;i;	@;
+[ ;["%/* reduce the damage in FF3.0 */o;;["display;iÄ;	@;i ;
+[ ;; ;o;!;;";	@;"
+blocko;;["
+width;iÅ;	@;i ;
+[ ;; ;o;!;;";	@;"0o;
+;;;iÖ;	@;
+[ ;["/* ============================================================================================================================
+== TWITTER
+** ============================================================================================================================ */o;;[".example-twitter;o;;" ;iâ;[o;;[o;
+;@ï;iâ;o;;{ ;[o;;@ï;["example-twitter;iâ;0;iâ;T;	@;i ;
+[o;;["position;iä;	@;i ;
+[ ;; ;o;!;;";	@;"relativeo;;["padding;iã;	@;i ;
+[ ;; ;o;!;;";	@;"	15pxo;;["margin;iå;	@;i ;
+[ ;; ;o;#	;iå;	@;$;%;[o;&;'[ ;iå;(["px;	@;)"
+100px;iio;&;'@A;iå;([ ;	@;)"0;i o;&;'[ ;iå;(["em;	@;)"
+0.5em;f0.5o;;["
+color;iç;	@;i ;
+[ ;; ;o;!;;";	@;"	#333o;;["background;ié;	@;i ;
+[ ;; ;o;!;;";	@;"	#eeeo;
+;;;iè;	@;
+[ ;["/* css3 */o;;["-webkit-border-radius;iê;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;;["-moz-border-radius;ië;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;;["border-radius;ií;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;;[".example-twitter p;o;;" ;iï;[o;;[o;
+;@Á;iï;o;;{ ;[o;;@Á;["example-twitter;iï;0o;
+;@Á;iï;o;;{ ;[o;7	;@Á;["p;iï;80;0;iï;T;	@;i ;
+[o;;["font-size;iï;	@;i ;
+[ ;; ;o;!;;";	@;"	28pxo;;["line-height;iï;	@;i ;
+[ ;; ;o;!;;";	@;"1.25emo;
+;;;ió;	@;
+[ ;["R/* this isn't necessary, just saves me having to edit the HTML of the demo */o;;[".example-twitter:before;o;;" ;iò;[o;;[o;
+;@;iò;o;;{ ;[o;;@;["example-twitter;iòo;4
+;@;["before;;5;iò;60;0;iò;T;	@;i ;
+[o;;["content;iô;	@;i ;
+[ ;; ;o;!	;;";iô;	@;"url(twitter-logo.gif)o;;["position;iö;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["top;iõ;	@;i ;
+[ ;; ;o;!;;";	@;"
+-60pxo;;["	left;iú;	@;i ;
+[ ;; ;o;!;;";	@;"0o;;["
+width;iù;	@;i ;
+[ ;; ;o;!;;";	@;"
+155pxo;;["height;iû;	@;i ;
+[ ;; ;o;!;;";	@;"	36pxo;
+;;;iü;	@;
+[ ;["%/* reduce the damage in FF3.0 */o;;["display;i†;	@;i ;
+[ ;; ;o;!;;";	@;"
+blocko;
+;;;i£;	@;
+[ ;["/* creates the triangle */o;;[".example-twitter:after;o;;" ;i§;[o;;[o;
+;@S;i§;o;;{ ;[o;;@S;["example-twitter;i§o;4
+;@S;["
+after;;5;i§;60;0;i§;T;	@;i ;
+[o;;["content;i•;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;i¶;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["top;iß;	@;i ;
+[ ;; ;o;!;;";	@;"
+-30pxo;;["	left;i®;	@;i ;
+[ ;; ;o;!;;";	@;"	50pxo;;["border;i©;	@;i ;
+[ ;; ;o;#	;i©;	@;$;%;[o;&;'[ ;i©;(["px;	@;)"	15px;io;!	;;";i©;	@;"
+solido;!	;;";i©;	@;"transparento;;["border-bottom-color;i™;	@;i ;
+[ ;; ;o;!;;";	@;"	#eeeo;
+;;;i´;	@;
+[ ;["%/* reduce the damage in FF3.0 */o;;["display;i¨;	@;i ;
+[ ;; ;o;!;;";	@;"
+blocko;;["
+width;i≠;	@;i ;
+[ ;; ;o;!;;";	@;"0o;
+;;;i∞;	@;
+[ ;["f/* display of quote author (alternatively use a class on the element following the blockquote) */o;;[".example-twitter + p;o;;" ;i±;[o;;[o;
+;@ß;i±;o;;{ ;[o;;@ß;["example-twitter;i±;0"+o;
+;@ß;i±;o;;{ ;[o;7	;@ß;["p;i±;80;0;i±;T;	@;i ;
+[o;;["padding-left;i±;	@;i ;
+[ ;; ;o;!;;";	@;"	15pxo;;["	font;i±;	@;i ;
+[ ;; ;o;#	;i±;	@;$:
+comma;[o;#	;i±;	@;$;%;[o;&;'[ ;i±;(["px;	@;)"	14px;io;!	;;";i±;	@;"
+Arialo;!	;;";i±;	@;"sans-serifo;
+;;;i¥;	@;
+[ ;["/* ============================================================================================================================
+== NUMBER
+** ============================================================================================================================ */o;;[".example-number;o;;" ;i∏;[o;;[o;
+;@⁄;i∏;o;;{ ;[o;;@⁄;["example-number;i∏;0;i∏;T;	@;i ;
+[o;;["position;iπ;	@;i ;
+[ ;; ;o;!;;";	@;"relativeo;;["
+width;i∫;	@;i ;
+[ ;; ;o;!;;";	@;"
+200pxo;;["height;iª;	@;i ;
+[ ;; ;o;!;;";	@;"
+200pxo;;["margin;iº;	@;i ;
+[ ;; ;o;#	;iº;	@;$;%;[o;&;'[ ;iº;(["px;	@;)"	50px;i7o;&;'@A;iº;([ ;	@;)"0;i o;&;'[ ;iº;(["px;	@;)"
+200px;i»o;;["text-align;iΩ;	@;i ;
+[ ;; ;o;!;;";	@;"centero;;["	font;iæ;	@;i ;
+[ ;; ;o;#	;iæ;	@;$;>;[o;#	;iæ;	@;$;%;[o;9
+;:o;&;'[ ;iæ;(["px;	@;)"
+140px;iå;iæ;;;<;	@;=o;&;'[ ;iæ;(["px;	@;)"
+200px;i»o;!	;;";iæ;	@;"
+Arialo;!	;;";iæ;	@;"sans-serifo;;["
+color;iø;	@;i ;
+[ ;; ;o;!;;";	@;"	#fffo;;["background;i¿;	@;i ;
+[ ;; ;o;!;;";	@;"#C91F2Co;
+;;;i√;	@;
+[ ;["&/* creates the larger triangle */o;;[".example-number:before;o;;" ;iƒ;[o;;[o;
+;@<;iƒ;o;;{ ;[o;;@<;["example-number;iƒo;4
+;@<;["before;;5;iƒ;60;0;iƒ;T;	@;i ;
+[o;;["content;i≈;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;i∆;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["bottom;i«;	@;i ;
+[ ;; ;o;!;;";	@;"-140pxo;;["
+right;i»;	@;i ;
+[ ;; ;o;!;;";	@;"0o;;["border-width;i…;	@;i ;
+[ ;; ;o;#	;i…;	@;$;%;[	o;&;'@A;i…;([ ;	@;)"0;i o;&;'@A;i…;([ ;	@;)"0;i o;&;'[ ;i…;(["px;	@;)"
+140px;iåo;&;'[ ;i…;(["px;	@;)"
+140px;iåo;;["border-style;i ;	@;i ;
+[ ;; ;o;!;;";	@;"
+solido;;["border-color;iÀ;	@;i ;
+[ ;; ;o;#	;iÀ;	@;$;%;[o;!	;;";iÀ;	@;"transparento;.	;iÀ;/{	;0i…;1i;2i$;3i1;	@;0o;
+;;;iŒ;	@;
+[ ;["&/* creates the larger triangle */o;;[".example-number:after;o;;" ;iœ;[o;;[o;
+;@ë;iœ;o;;{ ;[o;;@ë;["example-number;iœo;4
+;@ë;["
+after;;5;iœ;60;0;iœ;T;	@;i ;
+[o;;["content;i–;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;i—;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["bottom;i“;	@;i ;
+[ ;; ;o;!;;";	@;"-140pxo;;["
+right;i”;	@;i ;
+[ ;; ;o;!;;";	@;"	85pxo;;["border-width;i‘;	@;i ;
+[ ;; ;o;#	;i‘;	@;$;%;[	o;&;'@A;i‘;([ ;	@;)"0;i o;&;'@A;i‘;([ ;	@;)"0;i o;&;'[ ;i‘;(["px;	@;)"
+140px;iåo;&;'[ ;i‘;(["px;	@;)"	55px;i<o;;["border-style;i’;	@;i ;
+[ ;; ;o;!;;";	@;"
+solido;;["border-color;i÷;	@;i ;
+[ ;; ;o;#	;i÷;	@;$;%;[o;!	;;";i÷;	@;"transparento;.	;i÷;/{	;0iˇ;1i;2iˇ;3iˇ;	@;0o;
+;;;i⁄;	@;
+[ ;["'/* ============================================================================================================================
+== PINCHED SPEECH BUBBLE (more CSS3)
+** ============================================================================================================================ */o;;[".pinched;o;;" ;iﬁ;[o;;[o;
+;@Ê;iﬁ;o;;{ ;[o;;@Ê;["pinched;iﬁ;0;iﬁ;T;	@;i ;
+[o;;["position;iﬂ;	@;i ;
+[ ;; ;o;!;;";	@;"relativeo;;["padding;i‡;	@;i ;
+[ ;; ;o;!;;";	@;"	15pxo;;["margin;i·;	@;i ;
+[ ;; ;o;#	;i·;	@;$;%;[o;&;'[ ;i·;(["px;	@;)"	50px;i7o;&;'@A;i·;([ ;	@;)"0;i o;&;'[ ;i·;(["em;	@;)"3em;io;;["text-align;i‚;	@;i ;
+[ ;; ;o;!;;";	@;"centero;;["
+color;i„;	@;i ;
+[ ;; ;o;!;;";	@;"	#fffo;;["background;i‰;	@;i ;
+[ ;; ;o;!;;";	@;"	#333o;
+;;;iÂ;	@;
+[ ;["/* css3 */o;;["-webkit-border-radius;iÊ;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;;["-moz-border-radius;iÁ;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;;["border-radius;iË;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;
+;;;iÎ;	@;
+[ ;["F/* creates a rectangle of the colour wanted for the pointy bit */o;;[".pinched:before;o;;" ;iÏ;[o;;[o;
+;@A;iÏ;o;;{ ;[o;;@A;["pinched;iÏo;4
+;@A;["before;;5;iÏ;60;0;iÏ;T;	@;i ;
+[o;;["content;iÌ;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;iÓ;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["top;iÔ;	@;i ;
+[ ;; ;o;!;;";	@;"
+-20pxo;;["	left;i;	@;i ;
+[ ;; ;o;!;;";	@;"50%o;;["
+width;iÒ;	@;i ;
+[ ;; ;o;!;;";	@;"
+100pxo;;["height;iÚ;	@;i ;
+[ ;; ;o;!;;";	@;"	20pxo;;["margin;iÛ;	@;i ;
+[ ;; ;o;#	;iÛ;	@;$;%;[	o;&;'@A;iÛ;([ ;	@;)"0;i o;&;'@A;iÛ;([ ;	@;)"0;i o;&;'@A;iÛ;([ ;	@;)"0;i o;&;'[ ;iÛ;(["px;	@;)"
+-50px;i…o;;["background;iÙ;	@;i ;
+[ ;; ;o;!;;";	@;"	#333o;
+;;;i˜;	@;
+[ ;["U/* creates a rounded rectangle to cover part of the rectangle generated above */o;;[".pinched:after;o;;" ;i¯;[o;;[o;
+;@ñ;i¯;o;;{ ;[o;;@ñ;["pinched;i¯o;4
+;@ñ;["
+after;;5;i¯;60;0;i¯;T;	@;i ;
+[o;;["content;i˘;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;i˙;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["top;i˚;	@;i ;
+[ ;; ;o;!;;";	@;"
+-20pxo;;["	left;i¸;	@;i ;
+[ ;; ;o;!;;";	@;"0o;;["
+width;i˝;	@;i ;
+[ ;; ;o;!;;";	@;"50%o;;["height;i˛;	@;i ;
+[ ;; ;o;!;;";	@;"	20pxo;;["background;iˇ;	@;i ;
+[ ;; ;o;!;;";	@;"	#fffo;
+;;;i ;	@;
+[ ;["/* css3 */o;;["'-webkit-border-bottom-right-radius;i;	@;i ;
+[ ;; ;o;!;;";	@;"	15pxo;;["#-moz-border-radius-bottomright;i;	@;i ;
+[ ;; ;o;!;;";	@;"	15pxo;;["border-bottom-right-radius;i;	@;i ;
+[ ;; ;o;!;;";	@;"	15pxo;
+;;;i;	@;
+[ ;["./* creates the other rounded rectangle */o;;["#.pinched > :first-child:before;o;;" ;i;[o;;[o;
+;@Ì;i;o;;{ ;[o;;@Ì;["pinched;i;0">o;
+;@Ì;i;o;;{ ;[o;4
+;@Ì;["first-child;;5;i;60o;4
+;@Ì;["before;;5;i;60;0;i;T;	@;i ;
+[o;;["content;i;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;i	;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["top;i
+;	@;i ;
+[ ;; ;o;!;;";	@;"
+-20pxo;;["
+right;i;	@;i ;
+[ ;; ;o;!;;";	@;"0o;;["
+width;i;	@;i ;
+[ ;; ;o;!;;";	@;"50%o;;["height;i;	@;i ;
+[ ;; ;o;!;;";	@;"	20pxo;;["background;i;	@;i ;
+[ ;; ;o;!;;";	@;"	#fffo;
+;;;i;	@;
+[ ;["/* css3 */o;;["&-webkit-border-bottom-left-radius;i;	@;i ;
+[ ;; ;o;!;;";	@;"	15pxo;;[""-moz-border-radius-bottomleft;i;	@;i ;
+[ ;; ;o;!;;";	@;"	15pxo;;["border-bottom-left-radius;i;	@;i ;
+[ ;; ;o;!;;";	@;"	15pxo;
+;;;i;	@;
+[ ;["$/* ============================================================================================================================
+== OVAL SPEECH BUBBLE (more CSS3)
+** ============================================================================================================================ */o;;[".oval-speech;o;;" ;i;[o;;[o;
+;@L;i;o;;{ ;[o;;@L;["oval-speech;i;0;i;T;	@;i ;
+[o;;["position;i;	@;i ;
+[ ;; ;o;!;;";	@;"relativeo;;["
+width;i;	@;i ;
+[ ;; ;o;!;;";	@;"
+270pxo;;["padding;i;	@;i ;
+[ ;; ;o;#	;i;	@;$;%;[o;&;'[ ;i;(["px;	@;)"	50px;i7o;&;'[ ;i;(["px;	@;)"	40px;i-o;;["margin;i;	@;i ;
+[ ;; ;o;#	;i;	@;$;%;[o;&;'[ ;i;(["em;	@;)"1em;io;!	;;";i;	@;"	autoo;&;'[ ;i;(["px;	@;)"	50px;i7o;;["text-align;i;	@;i ;
+[ ;; ;o;!;;";	@;"centero;;["
+color;i ;	@;i ;
+[ ;; ;o;!;;";	@;"	#fffo;;["background;i!;	@;i ;
+[ ;; ;o;!;;";	@;"#5a8f00o;
+;;;i";	@;
+[ ;["/* css3 */o;;["background;i#;	@;i ;
+[ ;; ;o;*;"-webkit-gradient;i#;+{ ;	@;,0;-[
+o;!	;;";i#;	@;"linearo;#	;i#;	@;$;%;[o;&;'@A;i#;([ ;	@;)"0;i o;&;'@A;i#;([ ;	@;)"0;i o;#	;i#;	@;$;%;[o;&;'@A;i#;([ ;	@;)"0;i o;&;'[ ;i#;(["%;	@;)"	100%;iio;*;"	from;i#;+{ ;	@;,0;-[o;.	;i#;/{	;0i∏;1i;2i€;3i.;	@;0o;*;"to;i#;+{ ;	@;,0;-[o;.	;i#;/{	;0i_;1i;2iè;3i ;	@;0o;;["background;i$;	@;i ;
+[ ;; ;o;*;"-moz-linear-gradient;i$;+{ ;	@;,0;-[o;.	;i$;/{	;0i∏;1i;2i€;3i.;	@;0o;.	;i$;/{	;0i_;1i;2iè;3i ;	@;0o;;["background;i%;	@;i ;
+[ ;; ;o;*;"-o-linear-gradient;i%;+{ ;	@;,0;-[o;.	;i%;/{	;0i∏;1i;2i€;3i.;	@;0o;.	;i%;/{	;0i_;1i;2iè;3i ;	@;0o;;["background;i&;	@;i ;
+[ ;; ;o;*;"linear-gradient;i&;+{ ;	@;,0;-[o;.	;i&;/{	;0i∏;1i;2i€;3i.;	@;0o;.	;i&;/{	;0i_;1i;2iè;3i ;	@;0o;
+;;;i';	@;
+[ ;["</*
+NOTES:
+-webkit-border-radius:220px 120px; // produces oval in safari 4 and chrome 4
+-webkit-border-radius:220px / 120px; // produces oval in chrome 4 (again!) but not supported in safari 4
+Not correct application of the current spec, therefore, using longhand to avoid future problems with webkit corrects this
+*/o;;["#-webkit-border-top-left-radius;i-;	@;i ;
+[ ;; ;o;#	;i-;	@;$;%;[o;&;'[ ;i-;(["px;	@;)"
+220px;i‹o;&;'[ ;i-;(["px;	@;)"
+120px;i}o;;["$-webkit-border-top-right-radius;i.;	@;i ;
+[ ;; ;o;#	;i.;	@;$;%;[o;&;'[ ;i.;(["px;	@;)"
+220px;i‹o;&;'[ ;i.;(["px;	@;)"
+120px;i}o;;["'-webkit-border-bottom-right-radius;i/;	@;i ;
+[ ;; ;o;#	;i/;	@;$;%;[o;&;'[ ;i/;(["px;	@;)"
+220px;i‹o;&;'[ ;i/;(["px;	@;)"
+120px;i}o;;["&-webkit-border-bottom-left-radius;i0;	@;i ;
+[ ;; ;o;#	;i0;	@;$;%;[o;&;'[ ;i0;(["px;	@;)"
+220px;i‹o;&;'[ ;i0;(["px;	@;)"
+120px;i}o;;["-moz-border-radius;i1;	@;i ;
+[ ;; ;o;9
+;:o;&;'[ ;i1;(["px;	@;)"
+220px;i‹;i1;;;<;	@;=o;&;'[ ;i1;(["px;	@;)"
+120px;i}o;;["border-radius;i2;	@;i ;
+[ ;; ;o;9
+;:o;&;'[ ;i2;(["px;	@;)"
+220px;i‹;i2;;;<;	@;=o;&;'[ ;i2;(["px;	@;)"
+120px;i}o;;[".oval-speech p;o;;" ;i5;[o;;[o;
+;@N;i5;o;;{ ;[o;;@N;["oval-speech;i5;0o;
+;@N;i5;o;;{ ;[o;7	;@N;["p;i5;80;0;i5;T;	@;i ;
+[o;;["font-size;i5;	@;i ;
+[ ;; ;o;!;;";	@;"1.25emo;
+;;;i7;	@;
+[ ;["$/* creates part of the curve */o;;[".oval-speech:before;o;;" ;i8;[o;;[o;
+;@o;i8;o;;{ ;[o;;@o;["oval-speech;i8o;4
+;@o;["before;;5;i8;60;0;i8;T;	@;i ;
+[o;;["content;i9;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;i:;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["z-index;i;;	@;i ;
+[ ;; ;o;!;;";	@;"-1o;;["bottom;i<;	@;i ;
+[ ;; ;o;!;;";	@;"
+-30pxo;;["
+right;i=;	@;i ;
+[ ;; ;o;!;;";	@;"50%o;;["height;i>;	@;i ;
+[ ;; ;o;!;;";	@;"	30pxo;;["border-right;i?;	@;i ;
+[ ;; ;o;#	;i?;	@;$;%;[o;&;'[ ;i?;(["px;	@;)"	60px;iAo;!	;;";i?;	@;"
+solido;.	;i?;/{	;0i_;1i;2iè;3i ;	@;0o;;["background;i@;	@;i ;
+[ ;; ;o;!;;";	@;"#5a8f00o;
+;;;i@;	@;
+[ ;["B/* need this for webkit - bug in handling of border-radius */o;
+;;;iA;	@;
+[ ;["/* css3 */o;;["'-webkit-border-bottom-right-radius;iB;	@;i ;
+[ ;; ;o;#	;iB;	@;$;%;[o;&;'[ ;iB;(["px;	@;)"	80px;iUo;&;'[ ;iB;(["px;	@;)"	50px;i7o;;["#-moz-border-radius-bottomright;iC;	@;i ;
+[ ;; ;o;#	;iC;	@;$;%;[o;&;'[ ;iC;(["px;	@;)"	80px;iUo;&;'[ ;iC;(["px;	@;)"	50px;i7o;;["border-bottom-right-radius;iD;	@;i ;
+[ ;; ;o;#	;iD;	@;$;%;[o;&;'[ ;iD;(["px;	@;)"	80px;iUo;&;'[ ;iD;(["px;	@;)"	50px;i7o;
+;;;iE;	@;
+[ ;["h/* using translate to avoid undesired appearance in CSS2.1-capabable but CSS3-incapable browsers */o;;["-webkit-transform;iF;	@;i ;
+[ ;; ;o;*;"translate;iF;+{ ;	@;,0;-[o;&;'@A;iF;([ ;	@;)"0;i o;&;'[ ;iF;(["px;	@;)"	-2px;i˘o;;["-moz-transform;iG;	@;i ;
+[ ;; ;o;*;"translate;iG;+{ ;	@;,0;-[o;&;'@A;iG;([ ;	@;)"0;i o;&;'[ ;iG;(["px;	@;)"	-2px;i˘o;;["-ms-transform;iH;	@;i ;
+[ ;; ;o;*;"translate;iH;+{ ;	@;,0;-[o;&;'@A;iH;([ ;	@;)"0;i o;&;'[ ;iH;(["px;	@;)"	-2px;i˘o;;["-o-transform;iI;	@;i ;
+[ ;; ;o;*;"translate;iI;+{ ;	@;,0;-[o;&;'@A;iI;([ ;	@;)"0;i o;&;'[ ;iI;(["px;	@;)"	-2px;i˘o;;["transform;iJ;	@;i ;
+[ ;; ;o;*;"translate;iJ;+{ ;	@;,0;-[o;&;'@A;iJ;([ ;	@;)"0;i o;&;'[ ;iJ;(["px;	@;)"	-2px;i˘o;
+;;;iM;	@;
+[ ;["0/* creates part of the curved pointy bit */o;;[".oval-speech:after;o;;" ;iN;[o;;[o;
+;@K;iN;o;;{ ;[o;;@K;["oval-speech;iNo;4
+;@K;["
+after;;5;iN;60;0;iN;T;	@;i ;
+[o;;["content;iO;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;iP;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["z-index;iQ;	@;i ;
+[ ;; ;o;!;;";	@;"-1o;;["bottom;iR;	@;i ;
+[ ;; ;o;!;;";	@;"
+-30pxo;;["
+right;iS;	@;i ;
+[ ;; ;o;!;;";	@;"50%o;;["
+width;iT;	@;i ;
+[ ;; ;o;!;;";	@;"	60pxo;;["height;iU;	@;i ;
+[ ;; ;o;!;;";	@;"	30pxo;;["background;iV;	@;i ;
+[ ;; ;o;!;;";	@;"	#fffo;
+;;;iW;	@;
+[ ;["/* css3 */o;;["'-webkit-border-bottom-right-radius;iX;	@;i ;
+[ ;; ;o;#	;iX;	@;$;%;[o;&;'[ ;iX;(["px;	@;)"	40px;i-o;&;'[ ;iX;(["px;	@;)"	50px;i7o;;["#-moz-border-radius-bottomright;iY;	@;i ;
+[ ;; ;o;#	;iY;	@;$;%;[o;&;'[ ;iY;(["px;	@;)"	40px;i-o;&;'[ ;iY;(["px;	@;)"	50px;i7o;;["border-bottom-right-radius;iZ;	@;i ;
+[ ;; ;o;#	;iZ;	@;$;%;[o;&;'[ ;iZ;(["px;	@;)"	40px;i-o;&;'[ ;iZ;(["px;	@;)"	50px;i7o;
+;;;i[;	@;
+[ ;["h/* using translate to avoid undesired appearance in CSS2.1-capabable but CSS3-incapable browsers */o;;["-webkit-transform;i\;	@;i ;
+[ ;; ;o;*;"translate;i\;+{ ;	@;,0;-[o;&;'[ ;i\;(["px;	@;)"
+-30px;i›o;&;'[ ;i\;(["px;	@;)"	-2px;i˘o;;["-moz-transform;i];	@;i ;
+[ ;; ;o;*;"translate;i];+{ ;	@;,0;-[o;&;'[ ;i];(["px;	@;)"
+-30px;i›o;&;'[ ;i];(["px;	@;)"	-2px;i˘o;;["-ms-transform;i^;	@;i ;
+[ ;; ;o;*;"translate;i^;+{ ;	@;,0;-[o;&;'[ ;i^;(["px;	@;)"
+-30px;i›o;&;'[ ;i^;(["px;	@;)"	-2px;i˘o;;["-o-transform;i_;	@;i ;
+[ ;; ;o;*;"translate;i_;+{ ;	@;,0;-[o;&;'[ ;i_;(["px;	@;)"
+-30px;i›o;&;'[ ;i_;(["px;	@;)"	-2px;i˘o;;["transform;i`;	@;i ;
+[ ;; ;o;*;"translate;i`;+{ ;	@;,0;-[o;&;'[ ;i`;(["px;	@;)"
+-30px;i›o;&;'[ ;i`;(["px;	@;)"	-2px;i˘o;
+;;;id;	@;
+[ ;["%/* ============================================================================================================================
+== OVAL THOUGHT BUBBLE (more CSS3)
+** ============================================================================================================================ */o;;[".oval-thought;o;;" ;ih;[o;;[o;
+;@$;ih;o;;{ ;[o;;@$;["oval-thought;ih;0;ih;T;	@;i ;
+[o;;["position;ii;	@;i ;
+[ ;; ;o;!;;";	@;"relativeo;;["
+width;ij;	@;i ;
+[ ;; ;o;!;;";	@;"
+270pxo;;["padding;ik;	@;i ;
+[ ;; ;o;#	;ik;	@;$;%;[o;&;'[ ;ik;(["px;	@;)"	50px;i7o;&;'[ ;ik;(["px;	@;)"	40px;i-o;;["margin;il;	@;i ;
+[ ;; ;o;#	;il;	@;$;%;[o;&;'[ ;il;(["em;	@;)"1em;io;!	;;";il;	@;"	autoo;&;'[ ;il;(["px;	@;)"	80px;iUo;;["text-align;im;	@;i ;
+[ ;; ;o;!;;";	@;"centero;;["
+color;in;	@;i ;
+[ ;; ;o;!;;";	@;"	#fffo;;["background;io;	@;i ;
+[ ;; ;o;!;;";	@;"#075698o;
+;;;ip;	@;
+[ ;["/* css3 */o;;["background;iq;	@;i ;
+[ ;; ;o;*;"-webkit-gradient;iq;+{ ;	@;,0;-[
+o;!	;;";iq;	@;"linearo;#	;iq;	@;$;%;[o;&;'@A;iq;([ ;	@;)"0;i o;&;'@A;iq;([ ;	@;)"0;i o;#	;iq;	@;$;%;[o;&;'@A;iq;([ ;	@;)"0;i o;&;'[ ;iq;(["%;	@;)"	100%;iio;*;"	from;iq;+{ ;	@;,0;-[o;.	;iq;/{	;0i3;1i;2ià;3iƒ;	@;0o;*;"to;iq;+{ ;	@;,0;-[o;.	;iq;/{	;0i;1i;2i[;3iò;	@;0o;;["background;ir;	@;i ;
+[ ;; ;o;*;"-moz-linear-gradient;ir;+{ ;	@;,0;-[o;.	;ir;/{	;0i3;1i;2ià;3iƒ;	@;0o;.	;ir;/{	;0i;1i;2i[;3iò;	@;0o;;["background;is;	@;i ;
+[ ;; ;o;*;"-o-linear-gradient;is;+{ ;	@;,0;-[o;.	;is;/{	;0i3;1i;2ià;3iƒ;	@;0o;.	;is;/{	;0i;1i;2i[;3iò;	@;0o;;["background;it;	@;i ;
+[ ;; ;o;*;"linear-gradient;it;+{ ;	@;,0;-[o;.	;it;/{	;0i3;1i;2ià;3iƒ;	@;0o;.	;it;/{	;0i;1i;2i[;3iò;	@;0o;
+;;;iu;	@;
+[ ;["</*
+NOTES:
+-webkit-border-radius:220px 120px; // produces oval in safari 4 and chrome 4
+-webkit-border-radius:220px / 120px; // produces oval in chrome 4 (again!) but not supported in safari 4
+Not correct application of the current spec, therefore, using longhand to avoid future problems with webkit corrects this
+*/o;;["#-webkit-border-top-left-radius;i{;	@;i ;
+[ ;; ;o;#	;i{;	@;$;%;[o;&;'[ ;i{;(["px;	@;)"
+220px;i‹o;&;'[ ;i{;(["px;	@;)"
+120px;i}o;;["$-webkit-border-top-right-radius;i|;	@;i ;
+[ ;; ;o;#	;i|;	@;$;%;[o;&;'[ ;i|;(["px;	@;)"
+220px;i‹o;&;'[ ;i|;(["px;	@;)"
+120px;i}o;;["'-webkit-border-bottom-right-radius;i};	@;i ;
+[ ;; ;o;#	;i};	@;$;%;[o;&;'[ ;i};(["px;	@;)"
+220px;i‹o;&;'[ ;i};(["px;	@;)"
+120px;i}o;;["&-webkit-border-bottom-left-radius;i~;	@;i ;
+[ ;; ;o;#	;i~;	@;$;%;[o;&;'[ ;i~;(["px;	@;)"
+220px;i‹o;&;'[ ;i~;(["px;	@;)"
+120px;i}o;;["-moz-border-radius;i;	@;i ;
+[ ;; ;o;9
+;:o;&;'[ ;i;(["px;	@;)"
+220px;i‹;i;;;<;	@;=o;&;'[ ;i;(["px;	@;)"
+120px;i}o;;["border-radius;iÄ;	@;i ;
+[ ;; ;o;9
+;:o;&;'[ ;iÄ;(["px;	@;)"
+220px;i‹;iÄ;;;<;	@;=o;&;'[ ;iÄ;(["px;	@;)"
+120px;i}o;;[".oval-thought p;o;;" ;iÉ;[o;;[o;
+;@&;iÉ;o;;{ ;[o;;@&;["oval-thought;iÉ;0o;
+;@&;iÉ;o;;{ ;[o;7	;@&;["p;iÉ;80;0;iÉ;T;	@;i ;
+[o;;["font-size;iÉ;	@;i ;
+[ ;; ;o;!;;";	@;"1.25emo;
+;;;iÖ;	@;
+[ ;["$/* creates the larger circle */o;;[".oval-thought:before;o;;" ;iÜ;[o;;[o;
+;@G;iÜ;o;;{ ;[o;;@G;["oval-thought;iÜo;4
+;@G;["before;;5;iÜ;60;0;iÜ;T;	@;i ;
+[o;;["content;iá;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;ià;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["bottom;iâ;	@;i ;
+[ ;; ;o;!;;";	@;"
+-20pxo;;["	left;iä;	@;i ;
+[ ;; ;o;!;;";	@;"	50pxo;;["
+width;iã;	@;i ;
+[ ;; ;o;!;;";	@;"	30pxo;;["height;iå;	@;i ;
+[ ;; ;o;!;;";	@;"	30pxo;;["background;iç;	@;i ;
+[ ;; ;o;!;;";	@;"#075698o;
+;;;ié;	@;
+[ ;["/* css3 */o;;["-webkit-border-radius;iè;	@;i ;
+[ ;; ;o;!;;";	@;"	30pxo;;["-moz-border-radius;iê;	@;i ;
+[ ;; ;o;!;;";	@;"	30pxo;;["border-radius;ië;	@;i ;
+[ ;; ;o;!;;";	@;"	30pxo;
+;;;iî;	@;
+[ ;["%/* creates the smaller circle */o;;[".oval-thought:after;o;;" ;iï;[o;;[o;
+;@û;iï;o;;{ ;[o;;@û;["oval-thought;iïo;4
+;@û;["
+after;;5;iï;60;0;iï;T;	@;i ;
+[o;;["content;iñ;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;ió;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["bottom;iò;	@;i ;
+[ ;; ;o;!;;";	@;"
+-30pxo;;["	left;iô;	@;i ;
+[ ;; ;o;!;;";	@;"	30pxo;;["
+width;iö;	@;i ;
+[ ;; ;o;!;;";	@;"	15pxo;;["height;iõ;	@;i ;
+[ ;; ;o;!;;";	@;"	15pxo;;["background;iú;	@;i ;
+[ ;; ;o;!;;";	@;"#075698o;
+;;;iù;	@;
+[ ;["/* css3 */o;;["-webkit-border-radius;iû;	@;i ;
+[ ;; ;o;!;;";	@;"	15pxo;;["-moz-border-radius;iü;	@;i ;
+[ ;; ;o;!;;";	@;"	15pxo;;["border-radius;i†;	@;i ;
+[ ;; ;o;!;;";	@;"	15pxo;
+;;;i£;	@;
+[ ;["9/* ============================================================================================================================
+== OVAL SPEECH BUBBLE WITH QUOTATION MARKS (more CSS3)
+** ============================================================================================================================ */o;;[".oval-quotes;o;;" ;iß;[o;;[o;
+;@ı;iß;o;;{ ;[o;;@ı;["oval-quotes;iß;0;iß;T;	@;i ;
+[o;;["position;i®;	@;i ;
+[ ;; ;o;!;;";	@;"relativeo;;["
+width;i©;	@;i ;
+[ ;; ;o;!;;";	@;"
+400pxo;;["height;i™;	@;i ;
+[ ;; ;o;!;;";	@;"
+350pxo;;["margin;i´;	@;i ;
+[ ;; ;o;#	;i´;	@;$;%;[o;&;'[ ;i´;(["em;	@;)"2em;io;!	;;";i´;	@;"	autoo;&;'[ ;i´;(["px;	@;)"	10px;io;;["
+color;i¨;	@;i ;
+[ ;; ;o;!;;";	@;"	#000o;;["background;i≠;	@;i ;
+[ ;; ;o;!;;";	@;"#ffed26o;
+;;;iÆ;	@;
+[ ;["/* css3 */o;
+;;;iØ;	@;
+[ ;["4/*
+NOTES:
+-webkit-border-radius:Apx Bpx; // produces oval in safari 4 and chrome 4
+-webkit-border-radius:Apx / Bpx; // produces oval in chrome 4 (again!) but not supported in safari 4
+Not correct application of the current spec, therefore, using longhand to avoid future problems with webkit corrects this
+*/o;;["#-webkit-border-top-left-radius;iµ;	@;i ;
+[ ;; ;o;#	;iµ;	@;$;%;[o;&;'[ ;iµ;(["px;	@;)"
+400px;iêo;&;'[ ;iµ;(["px;	@;)"
+350px;i^o;;["$-webkit-border-top-right-radius;i∂;	@;i ;
+[ ;; ;o;#	;i∂;	@;$;%;[o;&;'[ ;i∂;(["px;	@;)"
+400px;iêo;&;'[ ;i∂;(["px;	@;)"
+350px;i^o;;["'-webkit-border-bottom-right-radius;i∑;	@;i ;
+[ ;; ;o;#	;i∑;	@;$;%;[o;&;'[ ;i∑;(["px;	@;)"
+400px;iêo;&;'[ ;i∑;(["px;	@;)"
+350px;i^o;;["&-webkit-border-bottom-left-radius;i∏;	@;i ;
+[ ;; ;o;#	;i∏;	@;$;%;[o;&;'[ ;i∏;(["px;	@;)"
+400px;iêo;&;'[ ;i∏;(["px;	@;)"
+350px;i^o;;["-moz-border-radius;iπ;	@;i ;
+[ ;; ;o;9
+;:o;&;'[ ;iπ;(["px;	@;)"
+400px;iê;iπ;;;<;	@;=o;&;'[ ;iπ;(["px;	@;)"
+350px;i^o;;["border-radius;i∫;	@;i ;
+[ ;; ;o;9
+;:o;&;'[ ;i∫;(["px;	@;)"
+400px;iê;i∫;;;<;	@;=o;&;'[ ;i∫;(["px;	@;)"
+350px;i^o;
+;;;iΩ;	@;
+[ ;[")/* creates opening quotation mark */o;;[".oval-quotes:before;o;;" ;iæ;[o;;[o;
+;@ü;iæ;o;;{ ;[o;;@ü;["oval-quotes;iæo;4
+;@ü;["before;;5;iæ;60;0;iæ;T;	@;i ;
+[o;;["content;iø;	@;i ;
+[ ;; ;o;!;;";	@;""\201C"o;;["position;i¿;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["z-index;i¡;	@;i ;
+[ ;; ;o;!;;";	@;"1o;;["top;i¬;	@;i ;
+[ ;; ;o;!;;";	@;"	20pxo;;["	left;i√;	@;i ;
+[ ;; ;o;!;;";	@;"	20pxo;;["	font;iƒ;	@;i ;
+[ ;; ;o;#	;iƒ;	@;$;>;[o;#	;iƒ;	@;$;%;[o;9
+;:o;&;'[ ;iƒ;(["px;	@;)"	80px;iU;iƒ;;;<;	@;=o;&;'@A;iƒ;([ ;	@;)"1;io;!	;;";iƒ;	@;"Georgiao;!	;;";iƒ;	@;"
+serifo;;["
+color;i≈;	@;i ;
+[ ;; ;o;!;;";	@;"#ffed26o;
+;;;i»;	@;
+[ ;[")/* creates closing quotation mark */o;;[".oval-quotes:after;o;;" ;i…;[o;;[o;
+;@Ô;i…;o;;{ ;[o;;@Ô;["oval-quotes;i…o;4
+;@Ô;["
+after;;5;i…;60;0;i…;T;	@;i ;
+[o;;["content;i ;	@;i ;
+[ ;; ;o;!;;";	@;""\201D"o;;["position;iÀ;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["z-index;iÃ;	@;i ;
+[ ;; ;o;!;;";	@;"1o;;["bottom;iÕ;	@;i ;
+[ ;; ;o;!;;";	@;"0o;;["
+right;iŒ;	@;i ;
+[ ;; ;o;!;;";	@;"	20pxo;;["	font;iœ;	@;i ;
+[ ;; ;o;#	;iœ;	@;$;>;[o;#	;iœ;	@;$;%;[o;9
+;:o;&;'[ ;iœ;(["px;	@;)"	80px;iU;iœ;;;<;	@;=o;&;'@A;iœ;([ ;	@;)"	0.25;f	0.25o;!	;;";iœ;	@;"Georgiao;!	;;";iœ;	@;"
+serifo;;["
+color;i–;	@;i ;
+[ ;; ;o;!;;";	@;"#ffed26o;;[".oval-quotes p;o;;" ;i”;[o;;[o;
+;@<;i”;o;;{ ;[o;;@<;["oval-quotes;i”;0o;
+;@<;i”;o;;{ ;[o;7	;@<;["p;i”;80;0;i”;T;	@;i ;
+[o;;["
+width;i‘;	@;i ;
+[ ;; ;o;!;;";	@;"
+250pxo;;["height;i’;	@;i ;
+[ ;; ;o;!;;";	@;"
+250pxo;;["padding;i÷;	@;i ;
+[ ;; ;o;#	;i÷;	@;$;%;[o;&;'[ ;i÷;(["px;	@;)"	50px;i7o;&;'@A;i÷;([ ;	@;)"0;i o;&;'@A;i÷;([ ;	@;)"0;i o;;["margin;i◊;	@;i ;
+[ ;; ;o;#	;i◊;	@;$;%;[o;&;'@A;i◊;([ ;	@;)"0;i o;!	;;";i◊;	@;"	autoo;;["text-align;iÿ;	@;i ;
+[ ;; ;o;!;;";	@;"centero;;["font-size;iŸ;	@;i ;
+[ ;; ;o;!;;";	@;"	35pxo;
+;;;i‹;	@;
+[ ;[" /* creates smaller curve */o;;[".oval-quotes p:before;o;;" ;i›;[o;;[o;
+;@ã;i›;o;;{ ;[o;;@ã;["oval-quotes;i›;0o;
+;@ã;i›;o;;{ ;[o;7	;@ã;["p;i›;80o;4
+;@ã;["before;;5;i›;60;0;i›;T;	@;i ;
+[o;;["content;iﬁ;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;iﬂ;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["z-index;i‡;	@;i ;
+[ ;; ;o;!;;";	@;"-1o;;["bottom;i·;	@;i ;
+[ ;; ;o;!;;";	@;"
+-30pxo;;["
+right;i‚;	@;i ;
+[ ;; ;o;!;;";	@;"55%o;;["
+width;i„;	@;i ;
+[ ;; ;o;!;;";	@;"
+180pxo;
+;;;i„;	@;
+[ ;["C/* wider than necessary to make it look a bit better in IE8 */o;;["height;i‰;	@;i ;
+[ ;; ;o;!;;";	@;"	60pxo;;["background;iÂ;	@;i ;
+[ ;; ;o;!;;";	@;"	#fffo;
+;;;iÂ;	@;
+[ ;["B/* need this for webkit - bug in handling of border-radius */o;
+;;;iÊ;	@;
+[ ;["/* css3 */o;;["'-webkit-border-bottom-right-radius;iÁ;	@;i ;
+[ ;; ;o;#	;iÁ;	@;$;%;[o;&;'[ ;iÁ;(["px;	@;)"	40px;i-o;&;'[ ;iÁ;(["px;	@;)"	50px;i7o;;["#-moz-border-radius-bottomright;iË;	@;i ;
+[ ;; ;o;#	;iË;	@;$;%;[o;&;'[ ;iË;(["px;	@;)"	40px;i-o;&;'[ ;iË;(["px;	@;)"	50px;i7o;;["border-bottom-right-radius;iÈ;	@;i ;
+[ ;; ;o;#	;iÈ;	@;$;%;[o;&;'[ ;iÈ;(["px;	@;)"	40px;i-o;&;'[ ;iÈ;(["px;	@;)"	50px;i7o;
+;;;iÍ;	@;
+[ ;["h/* using translate to avoid undesired appearance in CSS2.1-capabable but CSS3-incapable browsers */o;;["-webkit-transform;iÎ;	@;i ;
+[ ;; ;o;*;"translate;iÎ;+{ ;	@;,0;-[o;&;'[ ;iÎ;(["px;	@;)"
+-30px;i›o;&;'[ ;iÎ;(["px;	@;)"	-2px;i˘o;;["-moz-transform;iÏ;	@;i ;
+[ ;; ;o;*;"translate;iÏ;+{ ;	@;,0;-[o;&;'[ ;iÏ;(["px;	@;)"
+-30px;i›o;&;'[ ;iÏ;(["px;	@;)"	-2px;i˘o;;["-ms-transform;iÌ;	@;i ;
+[ ;; ;o;*;"translate;iÌ;+{ ;	@;,0;-[o;&;'[ ;iÌ;(["px;	@;)"
+-30px;i›o;&;'[ ;iÌ;(["px;	@;)"	-2px;i˘o;;["-o-transform;iÓ;	@;i ;
+[ ;; ;o;*;"translate;iÓ;+{ ;	@;,0;-[o;&;'[ ;iÓ;(["px;	@;)"
+-30px;i›o;&;'[ ;iÓ;(["px;	@;)"	-2px;i˘o;;["transform;iÔ;	@;i ;
+[ ;; ;o;*;"translate;iÔ;+{ ;	@;,0;-[o;&;'[ ;iÔ;(["px;	@;)"
+-30px;i›o;&;'[ ;iÔ;(["px;	@;)"	-2px;i˘o;
+;;;iÚ;	@;
+[ ;["/* creates larger curve */o;;[".oval-quotes p:after;o;;" ;iÛ;[o;;[o;
+;@s;iÛ;o;;{ ;[o;;@s;["oval-quotes;iÛ;0o;
+;@s;iÛ;o;;{ ;[o;7	;@s;["p;iÛ;80o;4
+;@s;["
+after;;5;iÛ;60;0;iÛ;T;	@;i ;
+[o;;["content;iÙ;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;iı;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["z-index;iˆ;	@;i ;
+[ ;; ;o;!;;";	@;"-2o;;["bottom;i˜;	@;i ;
+[ ;; ;o;!;;";	@;"
+-30pxo;;["
+right;i¯;	@;i ;
+[ ;; ;o;!;;";	@;"25%o;;["height;i˘;	@;i ;
+[ ;; ;o;!;;";	@;"	80pxo;;["border-right;i˙;	@;i ;
+[ ;; ;o;#	;i˙;	@;$;%;[o;&;'[ ;i˙;(["px;	@;)"
+200px;i»o;!	;;";i˙;	@;"
+solido;.	;i˙;/{	;0iˇ;1i;2iÌ;3i+;	@;0o;;["background;i˚;	@;i ;
+[ ;; ;o;!;;";	@;"#ffed26o;
+;;;i˚;	@;
+[ ;["B/* need this for webkit - bug in handling of border-radius */o;
+;;;i¸;	@;
+[ ;["/* css3 */o;;["'-webkit-border-bottom-right-radius;i˝;	@;i ;
+[ ;; ;o;#	;i˝;	@;$;%;[o;&;'[ ;i˝;(["px;	@;)"
+200px;i»o;&;'[ ;i˝;(["px;	@;)"
+100px;iio;;["#-moz-border-radius-bottomright;i˛;	@;i ;
+[ ;; ;o;#	;i˛;	@;$;%;[o;&;'[ ;i˛;(["px;	@;)"
+200px;i»o;&;'[ ;i˛;(["px;	@;)"
+100px;iio;;["border-bottom-right-radius;iˇ;	@;i ;
+[ ;; ;o;#	;iˇ;	@;$;%;[o;&;'[ ;iˇ;(["px;	@;)"
+200px;i»o;&;'[ ;iˇ;(["px;	@;)"
+100px;iio;
+;;;i ;	@;
+[ ;["h/* using translate to avoid undesired appearance in CSS2.1-capabable but CSS3-incapable browsers */o;;["-webkit-transform;i;	@;i ;
+[ ;; ;o;*;"translate;i;+{ ;	@;,0;-[o;&;'@A;i;([ ;	@;)"0;i o;&;'[ ;i;(["px;	@;)"	-2px;i˘o;;["-moz-transform;i;	@;i ;
+[ ;; ;o;*;"translate;i;+{ ;	@;,0;-[o;&;'@A;i;([ ;	@;)"0;i o;&;'[ ;i;(["px;	@;)"	-2px;i˘o;;["-ms-transform;i;	@;i ;
+[ ;; ;o;*;"translate;i;+{ ;	@;,0;-[o;&;'@A;i;([ ;	@;)"0;i o;&;'[ ;i;(["px;	@;)"	-2px;i˘o;;["-o-transform;i;	@;i ;
+[ ;; ;o;*;"translate;i;+{ ;	@;,0;-[o;&;'@A;i;([ ;	@;)"0;i o;&;'[ ;i;(["px;	@;)"	-2px;i˘o;;["transform;i;	@;i ;
+[ ;; ;o;*;"translate;i;+{ ;	@;,0;-[o;&;'@A;i;([ ;	@;)"0;i o;&;'[ ;i;(["px;	@;)"	-2px;i˘o;
+;;;i;	@;
+[ ;["%/* reduce the damage in FF3.0 */o;;["display;i;	@;i ;
+[ ;; ;o;!;;";	@;"
+blocko;;["
+width;i;	@;i ;
+[ ;; ;o;!;;";	@;"0o;;[".oval-quotes + p;o;;" ;i;[o;;[o;
+;@b;i;o;;{ ;[o;;@b;["oval-quotes;i;0"+o;
+;@b;i;o;;{ ;[o;7	;@b;["p;i;80;0;i;T;	@;i ;
+[o;;["position;i;	@;i ;
+[ ;; ;o;!;;";	@;"relativeo;
+;;;i;	@;
+[ ;["+/* part of the IE8 width compromise */o;;["
+width;i;	@;i ;
+[ ;; ;o;!;;";	@;"
+150pxo;;["margin;i;	@;i ;
+[ ;; ;o;#	;i;	@;$;%;[o;&;'@A;i;([ ;	@;)"0;i o;&;'@A;i;([ ;	@;)"0;i o;&;'[ ;i;(["em;	@;)"2em;io;;["font-size;i;	@;i ;
+[ ;; ;o;!;;";	@;"	18pxo;;["font-weight;i;	@;i ;
+[ ;; ;o;!;;";	@;"	boldo;
+;;;i;	@;
+[ ;["'/* ============================================================================================================================
+== RECTANGLE-BORDER STYLE WITH CURVE
+** ============================================================================================================================ */o;;[".rectangle-speech-border;o;;" ;i;[o;;[o;
+;@´;i;o;;{ ;[o;;@´;["rectangle-speech-border;i;0;i;T;	@;i ;
+[o;;["position;i;	@;i ;
+[ ;; ;o;!;;";	@;"relativeo;;["padding;i;	@;i ;
+[ ;; ;o;#	;i;	@;$;%;[o;&;'[ ;i;(["px;	@;)"	50px;i7o;&;'[ ;i;(["px;	@;)"	15px;io;;["margin;i;	@;i ;
+[ ;; ;o;#	;i;	@;$;%;[o;&;'[ ;i;(["em;	@;)"1em;io;&;'@A;i;([ ;	@;)"0;i o;&;'[ ;i;(["em;	@;)"3em;io;;["border;i;	@;i ;
+[ ;; ;o;#	;i;	@;$;%;[o;&;'[ ;i;(["px;	@;)"	10px;io;!	;;";i;	@;"
+solido;.	;i;/{	;0i_;1i;2iè;3i ;	@;0o;;["text-align;i;	@;i ;
+[ ;; ;o;!;;";	@;"centero;;["
+color;i;	@;i ;
+[ ;; ;o;!;;";	@;"	#333o;;["background;i;	@;i ;
+[ ;; ;o;!;;";	@;"	#fffo;
+;;;i ;	@;
+[ ;["/* css3 */o;;["-webkit-border-radius;i!;	@;i ;
+[ ;; ;o;!;;";	@;"	20pxo;;["-moz-border-radius;i";	@;i ;
+[ ;; ;o;!;;";	@;"	20pxo;;["border-radius;i#;	@;i ;
+[ ;; ;o;!;;";	@;"	20pxo;
+;;;i&;	@;
+[ ;["/* creates larger curve */o;;["$.rectangle-speech-border:before;o;;" ;i';[o;;[o;
+;@;i';o;;{ ;[o;;@;["rectangle-speech-border;i'o;4
+;@;["before;;5;i';60;0;i';T;	@;i ;
+[o;;["content;i(;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;i);	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["z-index;i*;	@;i ;
+[ ;; ;o;!;;";	@;"10o;;["bottom;i+;	@;i ;
+[ ;; ;o;!;;";	@;"
+-40pxo;;["	left;i,;	@;i ;
+[ ;; ;o;!;;";	@;"	50pxo;;["
+width;i-;	@;i ;
+[ ;; ;o;!;;";	@;"	50pxo;;["height;i.;	@;i ;
+[ ;; ;o;!;;";	@;"	30pxo;;["border-style;i/;	@;i ;
+[ ;; ;o;!;;";	@;"
+solido;;["border-width;i0;	@;i ;
+[ ;; ;o;#	;i0;	@;$;%;[	o;&;'@A;i0;([ ;	@;)"0;i o;&;'[ ;i0;(["px;	@;)"	10px;io;&;'[ ;i0;(["px;	@;)"	10px;io;&;'@A;i0;([ ;	@;)"0;i o;;["border-color;i1;	@;i ;
+[ ;; ;o;!;;";	@;"#5a8f00o;;["background;i2;	@;i ;
+[ ;; ;o;!;;";	@;"transparento;
+;;;i3;	@;
+[ ;["/* css3 */o;;["'-webkit-border-bottom-right-radius;i4;	@;i ;
+[ ;; ;o;#	;i4;	@;$;%;[o;&;'[ ;i4;(["px;	@;)"	80px;iUo;&;'[ ;i4;(["px;	@;)"	50px;i7o;;["#-moz-border-radius-bottomright;i5;	@;i ;
+[ ;; ;o;#	;i5;	@;$;%;[o;&;'[ ;i5;(["px;	@;)"	80px;iUo;&;'[ ;i5;(["px;	@;)"	50px;i7o;;["border-bottom-right-radius;i6;	@;i ;
+[ ;; ;o;#	;i6;	@;$;%;[o;&;'[ ;i6;(["px;	@;)"	80px;iUo;&;'[ ;i6;(["px;	@;)"	50px;i7o;
+;;;i7;	@;
+[ ;["%/* reduce the damage in FF3.0 */o;;["display;i8;	@;i ;
+[ ;; ;o;!;;";	@;"
+blocko;
+;;;i;;	@;
+[ ;[" /* creates smaller curve */o;;["#.rectangle-speech-border:after;o;;" ;i<;[o;;[o;
+;@∆;i<;o;;{ ;[o;;@∆;["rectangle-speech-border;i<o;4
+;@∆;["
+after;;5;i<;60;0;i<;T;	@;i ;
+[o;;["content;i=;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;i>;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["z-index;i?;	@;i ;
+[ ;; ;o;!;;";	@;"10o;;["bottom;i@;	@;i ;
+[ ;; ;o;!;;";	@;"
+-40pxo;;["	left;iA;	@;i ;
+[ ;; ;o;!;;";	@;"	50pxo;;["
+width;iB;	@;i ;
+[ ;; ;o;!;;";	@;"	20pxo;;["height;iC;	@;i ;
+[ ;; ;o;!;;";	@;"	30pxo;;["border-style;iD;	@;i ;
+[ ;; ;o;!;;";	@;"
+solido;;["border-width;iE;	@;i ;
+[ ;; ;o;#	;iE;	@;$;%;[	o;&;'@A;iE;([ ;	@;)"0;i o;&;'[ ;iE;(["px;	@;)"	10px;io;&;'[ ;iE;(["px;	@;)"	10px;io;&;'@A;iE;([ ;	@;)"0;i o;;["border-color;iF;	@;i ;
+[ ;; ;o;!;;";	@;"#5a8f00o;;["background;iG;	@;i ;
+[ ;; ;o;!;;";	@;"transparento;
+;;;iH;	@;
+[ ;["/* css3 */o;;["'-webkit-border-bottom-right-radius;iI;	@;i ;
+[ ;; ;o;#	;iI;	@;$;%;[o;&;'[ ;iI;(["px;	@;)"	40px;i-o;&;'[ ;iI;(["px;	@;)"	50px;i7o;;["#-moz-border-radius-bottomright;iJ;	@;i ;
+[ ;; ;o;#	;iJ;	@;$;%;[o;&;'[ ;iJ;(["px;	@;)"	40px;i-o;&;'[ ;iJ;(["px;	@;)"	50px;i7o;;["border-bottom-right-radius;iK;	@;i ;
+[ ;; ;o;#	;iK;	@;$;%;[o;&;'[ ;iK;(["px;	@;)"	40px;i-o;&;'[ ;iK;(["px;	@;)"	50px;i7o;
+;;;iL;	@;
+[ ;["%/* reduce the damage in FF3.0 */o;;["display;iM;	@;i ;
+[ ;; ;o;!;;";	@;"
+blocko;
+;;;iP;	@;
+[ ;["V/* creates a small circle to produce a rounded point where the two curves meet */o;;["3.rectangle-speech-border > :first-child:before;o;;" ;iQ;[o;;[o;
+;@m;iQ;o;;{ ;[o;;@m;["rectangle-speech-border;iQ;0">o;
+;@m;iQ;o;;{ ;[o;4
+;@m;["first-child;;5;iQ;60o;4
+;@m;["before;;5;iQ;60;0;iQ;T;	@;i ;
+[o;;["content;iR;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;iS;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["bottom;iT;	@;i ;
+[ ;; ;o;!;;";	@;"
+-40pxo;;["	left;iU;	@;i ;
+[ ;; ;o;!;;";	@;"	45pxo;;["
+width;iV;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;;["height;iW;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;;["background;iX;	@;i ;
+[ ;; ;o;!;;";	@;"#5a8f00o;
+;;;iY;	@;
+[ ;["/* css3 */o;;["-webkit-border-radius;iZ;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;;["-moz-border-radius;i[;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;;["border-radius;i\;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;
+;;;i_;	@;
+[ ;["D/* creates a white rectangle to cover part of the oval border*/o;;["2.rectangle-speech-border > :first-child:after;o;;" ;i`;[o;;[o;
+;@Ã;i`;o;;{ ;[o;;@Ã;["rectangle-speech-border;i`;0">o;
+;@Ã;i`;o;;{ ;[o;4
+;@Ã;["first-child;;5;i`;60o;4
+;@Ã;["
+after;;5;i`;60;0;i`;T;	@;i ;
+[o;;["content;ia;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;ib;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["bottom;ic;	@;i ;
+[ ;; ;o;!;;";	@;"
+-10pxo;;["	left;id;	@;i ;
+[ ;; ;o;!;;";	@;"	76pxo;;["
+width;ie;	@;i ;
+[ ;; ;o;!;;";	@;"	24pxo;;["height;if;	@;i ;
+[ ;; ;o;!;;";	@;"	15pxo;;["background;ig;	@;i ;
+[ ;; ;o;!;;";	@;"	#fffo;
+;;;ij;	@;
+[ ;["8/* ============================================================================================================================
+== OVER SPEECH BUBBLE, EMPTY, WITH BORDER (more CSS3)
+** ============================================================================================================================ */o;;[".oval-speech-border;o;;" ;in;[o;;[o;
+;@ ;in;o;;{ ;[o;;@ ;["oval-speech-border;in;0;in;T;	@;i ;
+[o;;["position;io;	@;i ;
+[ ;; ;o;!;;";	@;"relativeo;;["padding;ip;	@;i ;
+[ ;; ;o;#	;ip;	@;$;%;[o;&;'[ ;ip;(["px;	@;)"	70px;iKo;&;'[ ;ip;(["px;	@;)"	30px;i#o;;["margin;iq;	@;i ;
+[ ;; ;o;#	;iq;	@;$;%;[o;&;'[ ;iq;(["em;	@;)"1em;io;!	;;";iq;	@;"	autoo;&;'[ ;iq;(["px;	@;)"	60px;iAo;;["border;ir;	@;i ;
+[ ;; ;o;#	;ir;	@;$;%;[o;&;'[ ;ir;(["px;	@;)"	10px;io;!	;;";ir;	@;"
+solido;.	;ir;/{	;0iÛ;1i;2iñ;3i!;	@;0o;;["text-align;is;	@;i ;
+[ ;; ;o;!;;";	@;"centero;;["
+color;it;	@;i ;
+[ ;; ;o;!;;";	@;"	#333o;;["background;iu;	@;i ;
+[ ;; ;o;!;;";	@;"	#fffo;
+;;;iv;	@;
+[ ;["/* css3 */o;
+;;;iw;	@;
+[ ;["</*
+NOTES:
+-webkit-border-radius:240px 140px; // produces oval in safari 4 and chrome 4
+-webkit-border-radius:240px / 140px; // produces oval in chrome 4 (again!) but not supported in safari 4
+Not correct application of the current spec, therefore, using longhand to avoid future problems with webkit corrects this
+*/o;;["#-webkit-border-top-left-radius;i};	@;i ;
+[ ;; ;o;#	;i};	@;$;%;[o;&;'[ ;i};(["px;	@;)"
+240px;io;&;'[ ;i};(["px;	@;)"
+140px;iåo;;["$-webkit-border-top-right-radius;i~;	@;i ;
+[ ;; ;o;#	;i~;	@;$;%;[o;&;'[ ;i~;(["px;	@;)"
+240px;io;&;'[ ;i~;(["px;	@;)"
+140px;iåo;;["'-webkit-border-bottom-right-radius;i;	@;i ;
+[ ;; ;o;#	;i;	@;$;%;[o;&;'[ ;i;(["px;	@;)"
+240px;io;&;'[ ;i;(["px;	@;)"
+140px;iåo;;["&-webkit-border-bottom-left-radius;iÄ;	@;i ;
+[ ;; ;o;#	;iÄ;	@;$;%;[o;&;'[ ;iÄ;(["px;	@;)"
+240px;io;&;'[ ;iÄ;(["px;	@;)"
+140px;iåo;;["-moz-border-radius;iÅ;	@;i ;
+[ ;; ;o;9
+;:o;&;'[ ;iÅ;(["px;	@;)"
+240px;i;iÅ;;;<;	@;=o;&;'[ ;iÅ;(["px;	@;)"
+140px;iåo;;["border-radius;iÇ;	@;i ;
+[ ;; ;o;9
+;:o;&;'[ ;iÇ;(["px;	@;)"
+240px;i;iÇ;;;<;	@;=o;&;'[ ;iÇ;(["px;	@;)"
+140px;iåo;
+;;;iÖ;	@;
+[ ;["/* creates larger curve */o;;[".oval-speech-border:before;o;;" ;iÜ;[o;;[o;
+;@ÿ ;iÜ;o;;{ ;[o;;@ÿ ;["oval-speech-border;iÜo;4
+;@ÿ ;["before;;5;iÜ;60;0;iÜ;T;	@;i ;
+[o;;["content;iá;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;ià;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["z-index;iâ;	@;i ;
+[ ;; ;o;!;;";	@;"2o;;["bottom;iä;	@;i ;
+[ ;; ;o;!;;";	@;"
+-40pxo;;["
+right;iã;	@;i ;
+[ ;; ;o;!;;";	@;"50%o;;["
+width;iå;	@;i ;
+[ ;; ;o;!;;";	@;"	50pxo;;["height;iç;	@;i ;
+[ ;; ;o;!;;";	@;"	30pxo;;["border-style;ié;	@;i ;
+[ ;; ;o;!;;";	@;"
+solido;;["border-width;iè;	@;i ;
+[ ;; ;o;#	;iè;	@;$;%;[	o;&;'@A;iè;([ ;	@;)"0;i o;&;'[ ;iè;(["px;	@;)"	10px;io;&;'[ ;iè;(["px;	@;)"	10px;io;&;'@A;iè;([ ;	@;)"0;i o;;["border-color;iê;	@;i ;
+[ ;; ;o;!;;";	@;"#f3961co;;["margin-right;ië;	@;i ;
+[ ;; ;o;!;;";	@;"
+-10pxo;;["background;ií;	@;i ;
+[ ;; ;o;!;;";	@;"transparento;
+;;;iì;	@;
+[ ;["/* css3 */o;;["'-webkit-border-bottom-right-radius;iî;	@;i ;
+[ ;; ;o;#	;iî;	@;$;%;[o;&;'[ ;iî;(["px;	@;)"	80px;iUo;&;'[ ;iî;(["px;	@;)"	50px;i7o;;["#-moz-border-radius-bottomright;iï;	@;i ;
+[ ;; ;o;#	;iï;	@;$;%;[o;&;'[ ;iï;(["px;	@;)"	80px;iUo;&;'[ ;iï;(["px;	@;)"	50px;i7o;;["border-bottom-right-radius;iñ;	@;i ;
+[ ;; ;o;#	;iñ;	@;$;%;[o;&;'[ ;iñ;(["px;	@;)"	80px;iUo;&;'[ ;iñ;(["px;	@;)"	50px;i7o;
+;;;ió;	@;
+[ ;["%/* reduce the damage in FF3.0 */o;;["display;iò;	@;i ;
+[ ;; ;o;!;;";	@;"
+blocko;
+;;;iõ;	@;
+[ ;[" /* creates smaller curve */o;;[".oval-speech-border:after;o;;" ;iú;[o;;[o;
+;@Ö!;iú;o;;{ ;[o;;@Ö!;["oval-speech-border;iúo;4
+;@Ö!;["
+after;;5;iú;60;0;iú;T;	@;i ;
+[o;;["content;iù;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;iû;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["z-index;iü;	@;i ;
+[ ;; ;o;!;;";	@;"2o;;["bottom;i†;	@;i ;
+[ ;; ;o;!;;";	@;"
+-40pxo;;["
+right;i°;	@;i ;
+[ ;; ;o;!;;";	@;"50%o;;["
+width;i¢;	@;i ;
+[ ;; ;o;!;;";	@;"	20pxo;;["height;i£;	@;i ;
+[ ;; ;o;!;;";	@;"	31pxo;;["border-style;i§;	@;i ;
+[ ;; ;o;!;;";	@;"
+solido;;["border-width;i•;	@;i ;
+[ ;; ;o;#	;i•;	@;$;%;[	o;&;'@A;i•;([ ;	@;)"0;i o;&;'[ ;i•;(["px;	@;)"	10px;io;&;'[ ;i•;(["px;	@;)"	10px;io;&;'@A;i•;([ ;	@;)"0;i o;;["border-color;i¶;	@;i ;
+[ ;; ;o;!;;";	@;"#f3961co;;["margin-right;iß;	@;i ;
+[ ;; ;o;!;;";	@;"	20pxo;;["background;i®;	@;i ;
+[ ;; ;o;!;;";	@;"transparento;
+;;;i©;	@;
+[ ;["/* css3 */o;;["'-webkit-border-bottom-right-radius;i™;	@;i ;
+[ ;; ;o;#	;i™;	@;$;%;[o;&;'[ ;i™;(["px;	@;)"	40px;i-o;&;'[ ;i™;(["px;	@;)"	50px;i7o;;["#-moz-border-radius-bottomright;i´;	@;i ;
+[ ;; ;o;#	;i´;	@;$;%;[o;&;'[ ;i´;(["px;	@;)"	40px;i-o;&;'[ ;i´;(["px;	@;)"	50px;i7o;;["border-bottom-right-radius;i¨;	@;i ;
+[ ;; ;o;#	;i¨;	@;$;%;[o;&;'[ ;i¨;(["px;	@;)"	40px;i-o;&;'[ ;i¨;(["px;	@;)"	50px;i7o;
+;;;i≠;	@;
+[ ;["%/* reduce the damage in FF3.0 */o;;["display;iÆ;	@;i ;
+[ ;; ;o;!;;";	@;"
+blocko;
+;;;i±;	@;
+[ ;["V/* creates a small circle to produce a rounded point where the two curves meet */o;;["..oval-speech-border > :first-child:before;o;;" ;i≤;[o;;[o;
+;@2";i≤;o;;{ ;[o;;@2";["oval-speech-border;i≤;0">o;
+;@2";i≤;o;;{ ;[o;4
+;@2";["first-child;;5;i≤;60o;4
+;@2";["before;;5;i≤;60;0;i≤;T;	@;i ;
+[o;;["content;i≥;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;i¥;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["z-index;iµ;	@;i ;
+[ ;; ;o;!;;";	@;"1o;;["bottom;i∂;	@;i ;
+[ ;; ;o;!;;";	@;"
+-40pxo;;["
+right;i∑;	@;i ;
+[ ;; ;o;!;;";	@;"50%o;;["
+width;i∏;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;;["height;iπ;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;;["margin-right;i∫;	@;i ;
+[ ;; ;o;!;;";	@;"	45pxo;;["background;iª;	@;i ;
+[ ;; ;o;!;;";	@;"#f3961co;
+;;;iº;	@;
+[ ;["/* css3 */o;;["-webkit-border-radius;iΩ;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;;["-moz-border-radius;iæ;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;;["border-radius;iø;	@;i ;
+[ ;; ;o;!;;";	@;"	10pxo;
+;;;i¬;	@;
+[ ;["D/* creates a white rectangle to cover part of the oval border*/o;;["-.oval-speech-border > :first-child:after;o;;" ;i√;[o;;[o;
+;@ù";i√;o;;{ ;[o;;@ù";["oval-speech-border;i√;0">o;
+;@ù";i√;o;;{ ;[o;4
+;@ù";["first-child;;5;i√;60o;4
+;@ù";["
+after;;5;i√;60;0;i√;T;	@;i ;
+[o;;["content;iƒ;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;i≈;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["z-index;i∆;	@;i ;
+[ ;; ;o;!;;";	@;"1o;;["bottom;i«;	@;i ;
+[ ;; ;o;!;;";	@;"
+-10pxo;;["
+right;i»;	@;i ;
+[ ;; ;o;!;;";	@;"50%o;;["
+width;i…;	@;i ;
+[ ;; ;o;!;;";	@;"	30pxo;;["height;i ;	@;i ;
+[ ;; ;o;!;;";	@;"	15pxo;;["background;iÀ;	@;i ;
+[ ;; ;o;!;;";	@;"	#fffo;
+;;;iŒ;	@;
+[ ;["9/* ============================================================================================================================
+== OVER THOUGHT BUBBLE, EMPTY, WITH BORDER (more CSS3)
+** ============================================================================================================================ */o;;[".oval-thought-border;o;;" ;i“;[o;;[o;
+;@Ï";i“;o;;{ ;[o;;@Ï";["oval-thought-border;i“;0;i“;T;	@;i ;
+[o;;["position;i”;	@;i ;
+[ ;; ;o;!;;";	@;"relativeo;;["padding;i‘;	@;i ;
+[ ;; ;o;#	;i‘;	@;$;%;[o;&;'[ ;i‘;(["px;	@;)"	70px;iKo;&;'[ ;i‘;(["px;	@;)"	30px;i#o;;["margin;i’;	@;i ;
+[ ;; ;o;#	;i’;	@;$;%;[o;&;'[ ;i’;(["em;	@;)"1em;io;!	;;";i’;	@;"	autoo;&;'[ ;i’;(["px;	@;)"	80px;iUo;;["border;i÷;	@;i ;
+[ ;; ;o;#	;i÷;	@;$;%;[o;&;'[ ;i÷;(["px;	@;)"	10px;io;!	;;";i÷;	@;"
+solido;.	;i÷;/{	;0i»;1i;2i#;3i0;	@;0o;;["text-align;i◊;	@;i ;
+[ ;; ;o;!;;";	@;"centero;;["
+color;iÿ;	@;i ;
+[ ;; ;o;!;;";	@;"	#333o;;["background;iŸ;	@;i ;
+[ ;; ;o;!;;";	@;"	#fffo;
+;;;i⁄;	@;
+[ ;["/* css3 */o;
+;;;i€;	@;
+[ ;["</*
+NOTES:
+-webkit-border-radius:240px 140px; // produces oval in safari 4 and chrome 4
+-webkit-border-radius:240px / 140px; // produces oval in chrome 4 (again!) but not supported in safari 4
+Not correct application of the current spec, therefore, using longhand to avoid future problems with webkit corrects this
+*/o;;["#-webkit-border-top-left-radius;i·;	@;i ;
+[ ;; ;o;#	;i·;	@;$;%;[o;&;'[ ;i·;(["px;	@;)"
+240px;io;&;'[ ;i·;(["px;	@;)"
+140px;iåo;;["$-webkit-border-top-right-radius;i‚;	@;i ;
+[ ;; ;o;#	;i‚;	@;$;%;[o;&;'[ ;i‚;(["px;	@;)"
+240px;io;&;'[ ;i‚;(["px;	@;)"
+140px;iåo;;["'-webkit-border-bottom-right-radius;i„;	@;i ;
+[ ;; ;o;#	;i„;	@;$;%;[o;&;'[ ;i„;(["px;	@;)"
+240px;io;&;'[ ;i„;(["px;	@;)"
+140px;iåo;;["&-webkit-border-bottom-left-radius;i‰;	@;i ;
+[ ;; ;o;#	;i‰;	@;$;%;[o;&;'[ ;i‰;(["px;	@;)"
+240px;io;&;'[ ;i‰;(["px;	@;)"
+140px;iåo;;["-moz-border-radius;iÂ;	@;i ;
+[ ;; ;o;9
+;:o;&;'[ ;iÂ;(["px;	@;)"
+240px;i;iÂ;;;<;	@;=o;&;'[ ;iÂ;(["px;	@;)"
+140px;iåo;;["border-radius;iÊ;	@;i ;
+[ ;; ;o;9
+;:o;&;'[ ;iÊ;(["px;	@;)"
+240px;i;iÊ;;;<;	@;=o;&;'[ ;iÊ;(["px;	@;)"
+140px;iåo;
+;;;iÈ;	@;
+[ ;["$/* creates the larger circle */o;;[" .oval-thought-border:before;o;;" ;iÍ;[o;;[o;
+;@Ø#;iÍ;o;;{ ;[o;;@Ø#;["oval-thought-border;iÍo;4
+;@Ø#;["before;;5;iÍ;60;0;iÍ;T;	@;i ;
+[o;;["content;iÎ;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;iÏ;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["z-index;iÌ;	@;i ;
+[ ;; ;o;!;;";	@;"10o;;["bottom;iÓ;	@;i ;
+[ ;; ;o;!;;";	@;"
+-40pxo;;["
+right;iÔ;	@;i ;
+[ ;; ;o;!;;";	@;"
+100pxo;;["
+width;i;	@;i ;
+[ ;; ;o;!;;";	@;"	50pxo;;["height;iÒ;	@;i ;
+[ ;; ;o;!;;";	@;"	50pxo;;["border;iÚ;	@;i ;
+[ ;; ;o;#	;iÚ;	@;$;%;[o;&;'[ ;iÚ;(["px;	@;)"	10px;io;!	;;";iÚ;	@;"
+solido;.	;iÚ;/{	;0i»;1i;2i#;3i0;	@;0o;;["background;iÛ;	@;i ;
+[ ;; ;o;!;;";	@;"	#fffo;
+;;;iÙ;	@;
+[ ;["/* css3 */o;;["-webkit-border-radius;iı;	@;i ;
+[ ;; ;o;!;;";	@;"	50pxo;;["-moz-border-radius;iˆ;	@;i ;
+[ ;; ;o;!;;";	@;"	50pxo;;["border-radius;i˜;	@;i ;
+[ ;; ;o;!;;";	@;"	50pxo;
+;;;i¯;	@;
+[ ;["%/* reduce the damage in FF3.0 */o;;["display;i˘;	@;i ;
+[ ;; ;o;!;;";	@;"
+blocko;
+;;;i¸;	@;
+[ ;["%/* creates the smaller circle */o;;[".oval-thought-border:after;o;;" ;i˝;[o;;[o;
+;@%$;i˝;o;;{ ;[o;;@%$;["oval-thought-border;i˝o;4
+;@%$;["
+after;;5;i˝;60;0;i˝;T;	@;i ;
+[o;;["content;i˛;	@;i ;
+[ ;; ;o;!;;";	@;"""o;;["position;iˇ;	@;i ;
+[ ;; ;o;!;;";	@;"absoluteo;;["z-index;i ;	@;i ;
+[ ;; ;o;!;;";	@;"10o;;["bottom;i;	@;i ;
+[ ;; ;o;!;;";	@;"
+-60pxo;;["
+right;i;	@;i ;
+[ ;; ;o;!;;";	@;"	50pxo;;["
+width;i;	@;i ;
+[ ;; ;o;!;;";	@;"	25pxo;;["height;i;	@;i ;
+[ ;; ;o;!;;";	@;"	25pxo;;["border;i;	@;i ;
+[ ;; ;o;#	;i;	@;$;%;[o;&;'[ ;i;(["px;	@;)"	10px;io;!	;;";i;	@;"
+solido;.	;i;/{	;0i»;1i;2i#;3i0;	@;0o;;["background;i;	@;i ;
+[ ;; ;o;!;;";	@;"	#fffo;
+;;;i;	@;
+[ ;["/* css3 */o;;["-webkit-border-radius;i;	@;i ;
+[ ;; ;o;!;;";	@;"	25pxo;;["-moz-border-radius;i	;	@;i ;
+[ ;; ;o;!;;";	@;"	25pxo;;["border-radius;i
+;	@;i ;
+[ ;; ;o;!;;";	@;"	25pxo;
+;;;i;	@;
+[ ;["%/* reduce the damage in FF3.0 */o;;["display;i;	@;i ;
+[ ;; ;o;!;;";	@;"
+block

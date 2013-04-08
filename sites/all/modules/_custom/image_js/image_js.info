@@ -1,0 +1,4 @@
+name = "Image Service Javascript libraries"
+description = "Loads additional Javascript libraries"
+package = "Javascript"
+core = 7.x

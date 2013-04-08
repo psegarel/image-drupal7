@@ -13,3 +13,20 @@ function image_products_layout_ctools_plugin_api() {
     return array("version" => "3");
   }
 }
+
+/**
+ * Implements hook_node_info().
+ */
+function image_products_layout_node_info() {
+  $items = array(
+    'product' => array(
+      'name' => t('Product'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+  );
+  return $items;
+}

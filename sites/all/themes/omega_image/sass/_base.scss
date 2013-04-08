@@ -2,11 +2,14 @@
 @import "fancy-buttons";
 
 $imageblue: #3a64e9;
+/* $imageblue: #5675d7; */
+
+$darkblue: #1E2336;
 $brightgreen: #ceff00;
 
-$default-box-shadow-color : #888;
+$default-box-shadow-color : #222;
 
-button	{	@include fancy-button(#444 , 10px, 1px , 1px );
+button	{	@include fancy-button( );
 		}
 		
 		
@@ -18,7 +21,7 @@ $moz:true;
 $w3:true;
 $ms:true;
 
-@mixin lightborder	{	border: 1px solid #ccc;
+@mixin lightborder	{	border: 1px solid #ddd;
 					}
 
 
@@ -27,7 +30,6 @@ $ms:true;
 							font-size: 1em;
 							line-height: 160%;
 							color: #555;
-							margin: 20px 0 0 10px;
 						}
 
 //Gradient Mixin
