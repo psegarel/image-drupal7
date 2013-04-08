@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Image Products Layout feature.
- */
-
-include_once 'image_products_layout.features.inc';

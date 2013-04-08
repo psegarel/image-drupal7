@@ -1,10 +1,10 @@
 name = Image Frontpage Products
 core = 7.x
-package = Image service
-php = 5.2.4
-dependencies[] = better_exposed_filters
+package = Image Components
+dependencies[] = image
 dependencies[] = views
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:1
+features[image][] = small-product
 features[views_view][] = product
-features_exclude[dependencies][ctools] = ctools
+features_exclude[dependencies][better_exposed_filters] = better_exposed_filters
