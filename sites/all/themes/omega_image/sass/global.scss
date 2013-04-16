@@ -165,6 +165,8 @@ h2.block-title	{	font-size: 1.4em;
 														}			
 									
 										.view-filters	{	padding: 1em 0 0 2em;
+															@include background-image(linear-gradient(top, #777 , #555)); 
+															@include border-top-radius(10px);
 										
 															.form-item-sort-by	{	margin-left: 5em;
 																					padding-left: 2em;
@@ -521,7 +523,8 @@ h2.block-title	{	font-size: 1.4em;
 													}	
 							}
 
-#block-views-contact-block	{	float: right;
+#block-views-contact-block	{	color: #222;
+
 								.views-row	{	margin-bottom: 2em;
 												.views-field-title	{	color: $imageblue;;
 																		font-family: "Roboto", sans-serif;
