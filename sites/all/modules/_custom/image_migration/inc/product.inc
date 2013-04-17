@@ -15,6 +15,8 @@ class ProductMigration extends ImageNodeMigration
 			     ->defaultValue('MigrateFileFid');
 		$this->addFieldMapping('field_illustration:preserve_files')
 			     ->defaultValue(TRUE);
+			
+		$this->addFieldMapping('field_product_supplier', 'field_supplier');
 		
 		$this->addUnmigratedSources(array('field_illustration:list', 'field_illustration:data',
 		'field_notes:format', 'field_tasting_notes:format', 'field_product_data:format', 'teaser'));
