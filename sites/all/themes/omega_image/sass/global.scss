@@ -7,7 +7,9 @@ html, body	{	font-family: Tahoma, sans-serif;
 				background: url('../media/lightpaperfibers.png');
 			}
 			
-#zone-header-wrapper	{	@include background-image(linear-gradient(#555, #222 20%, #333 70%, #111));
+#zone-header-wrapper	{	/* @include background-image(linear-gradient(#555, #222 20%, #333 70%, #111)); */
+
+							@include background-image(linear-gradient(top, $darkblue, $darkblue));
 							/* border-bottom: 8px solid #eee; */
 							position: relative;
 							margin-bottom: 4em;
@@ -35,7 +37,8 @@ html, body	{	font-family: Tahoma, sans-serif;
 
 
 
-.context-about-us,
+.context-about,
+.context-legal,
 .context-products,
 .context-downloads,
 .context-contact,
@@ -51,30 +54,56 @@ html, body	{	font-family: Tahoma, sans-serif;
 												}
 					}					
 						
-#zone-preface-wrapper	{	padding: 4em 0;	
-							background: url('../media/lightpaperfibers.png');
-							/* border-top: 8px solid #eee; */
 
-							color: #fff;
+.context-suppliers	{
+					}
+
+
+#zone-preface-wrapper	{	color: #222;
+							font-family: "Roboto", sans-serif;
+							font-weight: 300;
+							line-height: 150%;
+							font-size: 1.1em;
+							padding-bottom: 6em;
+							
+							p  	{	padding: 6px 0;
+								}
+								
 							a 	{ color: #fff;
 								}
 						}
 
-#zone-postscript-wrapper		{		padding: 4em 0 10em 0;	
-										border-top: 8px solid #ccc;
-										background-color: $darkblue;
-										h2.block-title 			{	font-size: 1em;
+#zone-postscript-wrapper,
+#zone-footer-wrapper,		{		padding: 4em 0 6em 0;	
+									border-top: 8px solid #ccc;
+									background-color: $darkblue;
+									
+									h2.block-title 			{	font-size: 1em;
 																color: $brightgreen;
 																border-bottom: 1px solid $brightgreen;
 																display: block;
 																padding: 0 0 .4em 0;
 															}	
-									a	{	color: #fff;
-											font-size: .9em;
-											line-height: 160%;
-										}						
-								}
+								a	{	color: #fff;
+										font-size: .9em;
+										line-height: 160%;
+									}						
+							}
 
+#zone-footer-wrapper	{	border-top: 1px dotted #555;
+							text-align: center;
+							padding: 2em 0 4em 0;
+							@include background-image(linear-gradient(top, $darkblue , #111122));
+							
+							a 	{	padding: 1em 2em;
+									color: $brightgreen;
+								}
+								
+							#block-superfish-7	{	width: 500px;
+													margin-left: auto;
+													margin-right: auto;
+												}	
+						}
 h1.site-name,
 h2.site-name,
 h6.site-slogan			{	font-family: 'Roboto', sans-serif;
@@ -523,9 +552,17 @@ h2.block-title	{	font-size: 1.4em;
 													}	
 							}
 
-#block-views-contact-block	{	color: #222;
+#block-views-contact-block	{	color: #555;
 
 								.views-row	{	margin-bottom: 2em;
+								
+												.views-field-field-phone	{ 	padding-top: 8px;
+																				padding-bottom: 2px;
+																}
+								
+												.views-label	{	float: left;
+																}
+																
 												.views-field-title	{	color: $imageblue;;
 																		font-family: "Roboto", sans-serif;
 																		text-transform: uppercase;

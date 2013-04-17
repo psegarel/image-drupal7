@@ -51,6 +51,15 @@ function image_menus_menu()
 									'page callback' 	=> '_image_menus_basic',
 									'access callback' 	=> TRUE,	
 									'expanded' 			=> TRUE,
+								);						
+	// Legal 
+	$items['legal'] = array(		'title'				=> 'Legal Notice',
+									'description' 		=> 'Legal Notice',
+									'weight'			=> 9,
+									'menu_name'			=> 'menu-information',
+									'page callback' 	=> '_image_menus_basic',
+									'access callback' 	=> TRUE,	
+									'expanded' 			=> TRUE,
 								);
 								
 	return $items;
