@@ -36,7 +36,11 @@ html, body	{	font-family: Tahoma, sans-serif;
 
 
 
-
+.context-news	{	#zone-branding-wrapper	{	margin-bottom: 3em;	
+												border-bottom: 8px solid #eee;
+												@include background-image(linear-gradient(top, $imageblue, $imageblue));
+											}
+				}
 .context-about,
 .context-legal,
 .context-products,

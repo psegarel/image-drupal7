@@ -66,7 +66,7 @@ function image_header_views_default_views() {
   $handler->display->display_options['filters']['nid']['id'] = 'nid';
   $handler->display->display_options['filters']['nid']['table'] = 'node';
   $handler->display->display_options['filters']['nid']['field'] = 'nid';
-  $handler->display->display_options['filters']['nid']['value']['value'] = '3168';
+  $handler->display->display_options['filters']['nid']['value']['value'] = '1';
 
   /* Display: Grape pickers */
   $handler = $view->new_display('block', 'Grape pickers', 'block');

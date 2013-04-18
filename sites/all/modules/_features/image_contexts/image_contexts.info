@@ -1,6 +1,7 @@
 name = Image Contexts
 core = 7.x
 package = Structure & Layout
+php = 5.2.4
 dependencies[] = context
 dependencies[] = ctools
 dependencies[] = delta

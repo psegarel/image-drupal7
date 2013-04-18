@@ -17,15 +17,10 @@ function image_contexts_context_default_contexts() {
   $context->description = '';
   $context->tag = '';
   $context->conditions = array(
-    'menu' => array(
-      'values' => array(
-        'node/3174' => 'node/3174',
-      ),
-    ),
     'path' => array(
       'values' => array(
-        'about-us' => 'about-us',
-        'zh-hans/about-us' => 'zh-hans/about-us',
+        'about' => 'about',
+        'zh-hans/about' => 'zh-hans/about',
       ),
     ),
   );
@@ -35,14 +30,14 @@ function image_contexts_context_default_contexts() {
         'views-about-block' => array(
           'module' => 'views',
           'delta' => 'about-block',
-          'region' => 'header_first',
+          'region' => 'preface_first',
           'weight' => '-10',
         ),
         'views-contact-block' => array(
           'module' => 'views',
           'delta' => 'contact-block',
-          'region' => 'header_second',
-          'weight' => '-10',
+          'region' => 'preface_first',
+          'weight' => '-9',
         ),
       ),
     ),
@@ -50,30 +45,6 @@ function image_contexts_context_default_contexts() {
       'delta_template' => 'about',
     ),
     'region' => array(
-      'bartik' => array(
-        'disable' => array(
-          'header' => 0,
-          'help' => 0,
-          'page_top' => 0,
-          'page_bottom' => 0,
-          'highlighted' => 0,
-          'featured' => 0,
-          'content' => 0,
-          'sidebar_first' => 0,
-          'sidebar_second' => 0,
-          'triptych_first' => 0,
-          'triptych_middle' => 0,
-          'triptych_last' => 0,
-          'footer_firstcolumn' => 0,
-          'footer_secondcolumn' => 0,
-          'footer_thirdcolumn' => 0,
-          'footer_fourthcolumn' => 0,
-          'footer' => 0,
-          'dashboard_main' => 0,
-          'dashboard_sidebar' => 0,
-          'dashboard_inactive' => 0,
-        ),
-      ),
       'omega_image' => array(
         'disable' => array(
           'content' => 'content',
@@ -101,18 +72,6 @@ function image_contexts_context_default_contexts() {
           'dashboard_inactive' => 0,
         ),
       ),
-      'seven' => array(
-        'disable' => array(
-          'content' => 0,
-          'help' => 0,
-          'page_top' => 0,
-          'page_bottom' => 0,
-          'sidebar_first' => 0,
-          'dashboard_main' => 0,
-          'dashboard_sidebar' => 0,
-          'dashboard_inactive' => 0,
-        ),
-      ),
     ),
   );
   $context->condition_mode = 0;
@@ -125,11 +84,6 @@ function image_contexts_context_default_contexts() {
   $context->description = '';
   $context->tag = '';
   $context->conditions = array(
-    'menu' => array(
-      'values' => array(
-        'node/3165' => 'node/3165',
-      ),
-    ),
     'path' => array(
       'values' => array(
         'products' => 'products',
@@ -146,7 +100,7 @@ function image_contexts_context_default_contexts() {
         'views-all_products-block_3' => array(
           'module' => 'views',
           'delta' => 'all_products-block_3',
-          'region' => 'header_first',
+          'region' => 'header_second',
           'weight' => '-10',
         ),
       ),
@@ -155,30 +109,6 @@ function image_contexts_context_default_contexts() {
       'delta_template' => 'products',
     ),
     'region' => array(
-      'bartik' => array(
-        'disable' => array(
-          'header' => 0,
-          'help' => 0,
-          'page_top' => 0,
-          'page_bottom' => 0,
-          'highlighted' => 0,
-          'featured' => 0,
-          'content' => 0,
-          'sidebar_first' => 0,
-          'sidebar_second' => 0,
-          'triptych_first' => 0,
-          'triptych_middle' => 0,
-          'triptych_last' => 0,
-          'footer_firstcolumn' => 0,
-          'footer_secondcolumn' => 0,
-          'footer_thirdcolumn' => 0,
-          'footer_fourthcolumn' => 0,
-          'footer' => 0,
-          'dashboard_main' => 0,
-          'dashboard_sidebar' => 0,
-          'dashboard_inactive' => 0,
-        ),
-      ),
       'omega_image' => array(
         'disable' => array(
           'content' => 'content',
@@ -201,18 +131,6 @@ function image_contexts_context_default_contexts() {
           'postscript_fourth' => 0,
           'footer_first' => 0,
           'footer_second' => 0,
-          'dashboard_main' => 0,
-          'dashboard_sidebar' => 0,
-          'dashboard_inactive' => 0,
-        ),
-      ),
-      'seven' => array(
-        'disable' => array(
-          'content' => 0,
-          'help' => 0,
-          'page_top' => 0,
-          'page_bottom' => 0,
-          'sidebar_first' => 0,
           'dashboard_main' => 0,
           'dashboard_sidebar' => 0,
           'dashboard_inactive' => 0,
@@ -411,34 +329,9 @@ function image_contexts_context_default_contexts() {
       'delta_template' => 'homepage',
     ),
     'region' => array(
-      'bartik' => array(
-        'disable' => array(
-          'header' => 0,
-          'help' => 0,
-          'page_top' => 0,
-          'page_bottom' => 0,
-          'highlighted' => 0,
-          'featured' => 0,
-          'content' => 0,
-          'sidebar_first' => 0,
-          'sidebar_second' => 0,
-          'triptych_first' => 0,
-          'triptych_middle' => 0,
-          'triptych_last' => 0,
-          'footer_firstcolumn' => 0,
-          'footer_secondcolumn' => 0,
-          'footer_thirdcolumn' => 0,
-          'footer_fourthcolumn' => 0,
-          'footer' => 0,
-          'dashboard_main' => 0,
-          'dashboard_sidebar' => 0,
-          'dashboard_inactive' => 0,
-        ),
-      ),
       'omega_image' => array(
         'disable' => array(
           'content' => 'content',
-          'header_first' => 'header_first',
           'page_top' => 0,
           'page_bottom' => 0,
           'user_first' => 0,
@@ -447,6 +340,7 @@ function image_contexts_context_default_contexts() {
           'menu' => 0,
           'sidebar_first' => 0,
           'sidebar_second' => 0,
+          'header_first' => 0,
           'header_second' => 0,
           'preface_first' => 0,
           'preface_second' => 0,
@@ -457,18 +351,6 @@ function image_contexts_context_default_contexts() {
           'postscript_fourth' => 0,
           'footer_first' => 0,
           'footer_second' => 0,
-          'dashboard_main' => 0,
-          'dashboard_sidebar' => 0,
-          'dashboard_inactive' => 0,
-        ),
-      ),
-      'seven' => array(
-        'disable' => array(
-          'content' => 0,
-          'help' => 0,
-          'page_top' => 0,
-          'page_bottom' => 0,
-          'sidebar_first' => 0,
           'dashboard_main' => 0,
           'dashboard_sidebar' => 0,
           'dashboard_inactive' => 0,
@@ -612,40 +494,15 @@ function image_contexts_context_default_contexts() {
         'views-product-block_1' => array(
           'module' => 'views',
           'delta' => 'product-block_1',
-          'region' => 'header_second',
+          'region' => 'preface_first',
           'weight' => '-10',
         ),
       ),
     ),
     'region' => array(
-      'bartik' => array(
-        'disable' => array(
-          'header' => 0,
-          'help' => 0,
-          'page_top' => 0,
-          'page_bottom' => 0,
-          'highlighted' => 0,
-          'featured' => 0,
-          'content' => 0,
-          'sidebar_first' => 0,
-          'sidebar_second' => 0,
-          'triptych_first' => 0,
-          'triptych_middle' => 0,
-          'triptych_last' => 0,
-          'footer_firstcolumn' => 0,
-          'footer_secondcolumn' => 0,
-          'footer_thirdcolumn' => 0,
-          'footer_fourthcolumn' => 0,
-          'footer' => 0,
-          'dashboard_main' => 0,
-          'dashboard_sidebar' => 0,
-          'dashboard_inactive' => 0,
-        ),
-      ),
       'omega_image' => array(
         'disable' => array(
           'content' => 'content',
-          'header_first' => 'header_first',
           'page_top' => 0,
           'page_bottom' => 0,
           'user_first' => 0,
@@ -654,6 +511,7 @@ function image_contexts_context_default_contexts() {
           'menu' => 0,
           'sidebar_first' => 0,
           'sidebar_second' => 0,
+          'header_first' => 0,
           'header_second' => 0,
           'preface_first' => 0,
           'preface_second' => 0,
@@ -664,18 +522,6 @@ function image_contexts_context_default_contexts() {
           'postscript_fourth' => 0,
           'footer_first' => 0,
           'footer_second' => 0,
-          'dashboard_main' => 0,
-          'dashboard_sidebar' => 0,
-          'dashboard_inactive' => 0,
-        ),
-      ),
-      'seven' => array(
-        'disable' => array(
-          'content' => 0,
-          'help' => 0,
-          'page_top' => 0,
-          'page_bottom' => 0,
-          'sidebar_first' => 0,
           'dashboard_main' => 0,
           'dashboard_sidebar' => 0,
           'dashboard_inactive' => 0,
@@ -806,41 +652,35 @@ function image_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'locale-language' => array(
-          'module' => 'locale',
-          'delta' => 'language',
-          'region' => 'user_first',
-          'weight' => '-29',
-        ),
         'views-catchphrases-block' => array(
           'module' => 'views',
           'delta' => 'catchphrases-block',
           'region' => 'user_first',
-          'weight' => '-28',
+          'weight' => '-32',
         ),
         'delta_blocks-logo' => array(
           'module' => 'delta_blocks',
           'delta' => 'logo',
           'region' => 'user_first',
-          'weight' => '-27',
+          'weight' => '-31',
         ),
         'delta_blocks-site-name' => array(
           'module' => 'delta_blocks',
           'delta' => 'site-name',
           'region' => 'user_first',
-          'weight' => '-26',
+          'weight' => '-30',
         ),
         'delta_blocks-site-slogan' => array(
           'module' => 'delta_blocks',
           'delta' => 'site-slogan',
           'region' => 'user_first',
-          'weight' => '-25',
+          'weight' => '-29',
         ),
         'search-form' => array(
           'module' => 'search',
           'delta' => 'form',
           'region' => 'user_first',
-          'weight' => '-24',
+          'weight' => '-28',
         ),
         'views-illustrations-block' => array(
           'module' => 'views',
@@ -854,6 +694,18 @@ function image_contexts_context_default_contexts() {
           'region' => 'menu',
           'weight' => '-10',
         ),
+        'superfish-5' => array(
+          'module' => 'superfish',
+          'delta' => '5',
+          'region' => 'header_first',
+          'weight' => '-10',
+        ),
+        'locale-language' => array(
+          'module' => 'locale',
+          'delta' => 'language',
+          'region' => 'header_first',
+          'weight' => '-9',
+        ),
         'superfish-2' => array(
           'module' => 'superfish',
           'delta' => '2',
@@ -864,6 +716,24 @@ function image_contexts_context_default_contexts() {
           'module' => 'superfish',
           'delta' => '3',
           'region' => 'postscript_second',
+          'weight' => '-10',
+        ),
+        'superfish-4' => array(
+          'module' => 'superfish',
+          'delta' => '4',
+          'region' => 'postscript_third',
+          'weight' => '-10',
+        ),
+        'superfish-6' => array(
+          'module' => 'superfish',
+          'delta' => '6',
+          'region' => 'postscript_fourth',
+          'weight' => '-10',
+        ),
+        'superfish-7' => array(
+          'module' => 'superfish',
+          'delta' => '7',
+          'region' => 'footer_first',
           'weight' => '-10',
         ),
       ),

@@ -67,6 +67,71 @@ function image_pages_views_default_views() {
 
   /* Display: About Us */
   $handler = $view->new_display('block', 'About Us', 'block');
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'article' => 'article',
+  );
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
+  /* Filter criterion: Content: Tags (field_tags) */
+  $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
+  $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
+  $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
+  $handler->display->display_options['filters']['field_tags_tid']['value'] = array(
+    0 => '13',
+  );
+  $handler->display->display_options['filters']['field_tags_tid']['vocabulary'] = 'tags';
+
+  /* Display: Legal */
+  $handler = $view->new_display('block', 'Legal', 'block_1');
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'article' => 'article',
+  );
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
+  /* Filter criterion: Content: Tags (field_tags) */
+  $handler->display->display_options['filters']['field_tags_tid']['id'] = 'field_tags_tid';
+  $handler->display->display_options['filters']['field_tags_tid']['table'] = 'field_data_field_tags';
+  $handler->display->display_options['filters']['field_tags_tid']['field'] = 'field_tags_tid';
+  $handler->display->display_options['filters']['field_tags_tid']['value'] = array(
+    0 => '12',
+  );
+  $handler->display->display_options['filters']['field_tags_tid']['vocabulary'] = 'tags';
   $export['about'] = $view;
 
   $view = new view();
@@ -417,7 +482,27 @@ function image_pages_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'grid-4 alpha';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Google Map */
+  $handler->display->display_options['fields']['field_google_map']['id'] = 'field_google_map';
+  $handler->display->display_options['fields']['field_google_map']['table'] = 'field_data_field_google_map';
+  $handler->display->display_options['fields']['field_google_map']['field'] = 'field_google_map';
+  $handler->display->display_options['fields']['field_google_map']['label'] = '';
+  $handler->display->display_options['fields']['field_google_map']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_google_map']['type'] = 'simple_gmap';
+  $handler->display->display_options['fields']['field_google_map']['settings'] = array(
+    'include_map' => 1,
+    'iframe_width' => '380',
+    'iframe_height' => '200',
+    'include_link' => 1,
+    'link_text' => 'View larger map',
+    'zoom_level' => '14',
+    'information_bubble' => 0,
+    'include_text' => 0,
+    'map_type' => 'm',
+    'langcode' => 'page',
+  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -433,25 +518,26 @@ function image_pages_views_default_views() {
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  /* Field: Content: Google Map */
-  $handler->display->display_options['fields']['field_google_map']['id'] = 'field_google_map';
-  $handler->display->display_options['fields']['field_google_map']['table'] = 'field_data_field_google_map';
-  $handler->display->display_options['fields']['field_google_map']['field'] = 'field_google_map';
-  $handler->display->display_options['fields']['field_google_map']['label'] = '';
-  $handler->display->display_options['fields']['field_google_map']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_google_map']['type'] = 'simple_gmap';
-  $handler->display->display_options['fields']['field_google_map']['settings'] = array(
-    'include_map' => 1,
-    'iframe_width' => '350',
-    'iframe_height' => '200',
-    'include_link' => 1,
-    'link_text' => 'View larger map',
-    'zoom_level' => '14',
-    'information_bubble' => 0,
-    'include_text' => 0,
-    'map_type' => 'm',
-    'langcode' => 'page',
-  );
+  /* Field: Content: City */
+  $handler->display->display_options['fields']['field_city']['id'] = 'field_city';
+  $handler->display->display_options['fields']['field_city']['table'] = 'field_data_field_city';
+  $handler->display->display_options['fields']['field_city']['field'] = 'field_city';
+  $handler->display->display_options['fields']['field_city']['label'] = '';
+  $handler->display->display_options['fields']['field_city']['element_label_colon'] = FALSE;
+  /* Field: Content: Province */
+  $handler->display->display_options['fields']['field_province']['id'] = 'field_province';
+  $handler->display->display_options['fields']['field_province']['table'] = 'field_data_field_province';
+  $handler->display->display_options['fields']['field_province']['field'] = 'field_province';
+  $handler->display->display_options['fields']['field_province']['label'] = '';
+  $handler->display->display_options['fields']['field_province']['element_label_colon'] = FALSE;
+  /* Field: Content: Phone */
+  $handler->display->display_options['fields']['field_phone']['id'] = 'field_phone';
+  $handler->display->display_options['fields']['field_phone']['table'] = 'field_data_field_phone';
+  $handler->display->display_options['fields']['field_phone']['field'] = 'field_phone';
+  /* Field: Content: Fax */
+  $handler->display->display_options['fields']['field_fax']['id'] = 'field_fax';
+  $handler->display->display_options['fields']['field_fax']['table'] = 'field_data_field_fax';
+  $handler->display->display_options['fields']['field_fax']['field'] = 'field_fax';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
