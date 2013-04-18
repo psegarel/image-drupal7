@@ -7,10 +7,8 @@ html, body	{	font-family: Tahoma, sans-serif;
 				background: url('../media/lightpaperfibers.png');
 			}
 			
-#zone-header-wrapper	{	/* @include background-image(linear-gradient(#555, #222 20%, #333 70%, #111)); */
-
-							@include background-image(linear-gradient(top, $darkblue, $darkblue));
-							/* border-bottom: 8px solid #eee; */
+#zone-header-wrapper	{	@include background-image(linear-gradient(top, #555, $darkblue));
+							@include single-box-shadow;
 							position: relative;
 							margin-bottom: 4em;
 						}
@@ -29,16 +27,15 @@ html, body	{	font-family: Tahoma, sans-serif;
 
 
 #zone-branding-wrapper	{	margin-bottom: 3em;	
-							border-bottom: 8px solid #eee;
-							/* height: 480px; */
-							background: $imageblue;	
-						}			
+							border-bottom: 1px solid #ccc;
+							@include background-image(linear-gradient(top, #ececec, #eee));
+						}		
 
 
 
 .context-news	{	#zone-branding-wrapper	{	margin-bottom: 3em;	
-												border-bottom: 8px solid #eee;
-												@include background-image(linear-gradient(top, $imageblue, $imageblue));
+												border-bottom: 1px solid #ccc;
+												@include background-image(linear-gradient(top, #ececec, #eee));
 											}
 				}
 .context-about,
@@ -47,13 +44,19 @@ html, body	{	font-family: Tahoma, sans-serif;
 .context-downloads,
 .context-contact,
 .context-countries,
-.context-content,
-.context-suppliers	{	#zone-branding-wrapper	{	height: 1px;
+.context-suppliers,
+.context-taxonomy	{	#zone-branding-wrapper	{	height: 1px;
 													background: $darkblue;
 													border-bottom: 1px solid #eee;
 												}
 					}
 					
+.context-content	{	#zone-branding-wrapper	{	height: 1px;
+													background: #fff;
+													border-bottom: 1px solid #eee;
+												}
+					}
+
 .context-countries	{	#zone-content-wrapper	{	padding: 4em 0;
 												}
 					}					
@@ -198,7 +201,7 @@ h2.block-title	{	font-size: 1.4em;
 														}			
 									
 										.view-filters	{	padding: 1em 0 0 2em;
-															@include background-image(linear-gradient(top, #777 , #555)); 
+															@include background-image(linear-gradient(top, #f1f1f1 , #d1d1d1)); 
 															@include border-top-radius(10px);
 										
 															.form-item-sort-by	{	margin-left: 5em;
@@ -263,15 +266,48 @@ h2.block-title	{	font-size: 1.4em;
 								}
 
 
+#block-views-product-block-2	{	margin-top: 2em;
+									.views-field-field-illustration	{ 	margin-right: 6em;
+																		img 	{	border: 1px solid #ccc;
+																					background: #fff;
+																					padding: 20px;
+																				}
+																	}	
+																	
+									.views-field-title	{	font-family: "Roboto", sans-serif;
+															font-weight: 100;
+															font-size: 2em;
+															padding-bottom: .2em;
+															line-height: 110%;
+														}		
+																	
+									.field_title	{	font-family: "Roboto", sans-serif;
+														font-weight: 300;
+														font-size: 1.4em;
+														margin-top: 1em;
+														padding-bottom: .2em;
+													}
+													
+									.content	{	font-family: "Roboto", sans-serif;
+													font-weight: 100;
+													font-size: 1.2em;
+													line-height: 130%;
+													margin-bottom: 1em;
+												}													
+								}
+								
 #block-views-product-block-3	{	background: $imageblue;
 									padding: 1em 2em;
 									color: #fff;
 									width: 10.5%;
 									margin: 2em 0 0 0;
-									background: $imageblue;
+									@include background-image(linear-gradient(#c81634 , #620c1a));
 									
 									a 	{	color: #fff;
 											text-decoration: none;
+											
+											&:hover {	color: #ecbf09;
+													}
 										}
 								}
 
@@ -297,13 +333,13 @@ h2.block-title	{	font-size: 1.4em;
 										.views-field-title	{	display: block;
 																font-weight: 100;
 																font-size: 3.4em;
-																color: #fff;
+																color: #222;
 															}
 															
 										.views-field-body p { 	font-weight: 100;
 																font-size: 1.4em;
 																line-height: 140%;
-																color: #fff;
+																color: #555;
 																padding: 1em 0 0 0;
 															}	
 										
@@ -361,11 +397,11 @@ h2.block-title	{	font-size: 1.4em;
 								}
 								
 #block-views-news-block	{	font-family: 'Roboto', sans-serif;
-							color: #fff;
+							color: #777;
 							padding: 4em 0;
 							
-							.views-field-field-gallery-image img {	padding: 4px;
-																	background: #fff;
+							.views-field-field-gallery-image img {	padding: 1px;
+																	background: #ccc;
 																	@include single-box-shadow;
 																}
 
@@ -373,6 +409,7 @@ h2.block-title	{	font-size: 1.4em;
 													font-size: 1.6em;
 													padding-bottom: 1em;
 													font-family: 'Roboto Condensed', sans-serif;
+													color: #222;
 												}
 							
 							.views-field-body p {	font-weight: 100;
@@ -567,9 +604,10 @@ h2.block-title	{	font-size: 1.4em;
 												.views-label	{	float: left;
 																}
 																
-												.views-field-title	{	color: $imageblue;;
+												.views-field-title	{	color: #222;
 																		font-family: "Roboto", sans-serif;
-																		text-transform: uppercase;
+																		font-weight: bold;
+																		/* text-transform: uppercase; */
 																		margin-bottom: .5em;
 																	}
 														
@@ -582,14 +620,14 @@ h2.block-title	{	font-size: 1.4em;
 																	a 	{	color: #fff;
 																			text-decoration: none;
 																			text-transform: uppercase;
-																			background: $imageblue;
+																			@include background-image(linear-gradient(#c81634 , #620c1a));
 																			padding: 14px 10px 4px 10px;
 																			display: block;
 																			font-size: .7em;
 																			clear: both;
 																				
-																			&:hover	{	color: $brightgreen;
-																						background: #000;
+																			&:hover	{	color: #fff;
+																						@include background-image(linear-gradient(#620c1a , #c81634));
 																					}
 																		}
 																}					
@@ -618,19 +656,38 @@ ul.menu		{	padding: 2em 0;
 
 ul#superfish-1	{	position: absolute;
 					top: -35px;
+					@include background-image(linear-gradient(#390710, #67313a));  
 					
-				li 	{	@include background-image(linear-gradient(#000, #444)); 
+					
+					
+				li 	{	@include background-image(linear-gradient(#c81634 , #620c1a));
+						margin-left: 1px; 
 						
 						a 	{	color: #fff;
-								border-color: #555;
 								padding: 12px 30px;
 								text-transform: uppercase;
+								border: none;
 								font-size: .9em;
+								color: #eee;
 								
-								&:hover	{	@include background-image(linear-gradient(#444, #888)); 
+								&:hover	{	@include background-image(linear-gradient(#620c1a, #c81634)); 
+											color: #eee;
 										}
 							}
+						
+						a.active	{	@include background-image(linear-gradient( #bce609, #7f9b09)); 
+										color: #222;
+									}
+									
+						.last	{	a 	{	border: none;
+										}
+								}				
 					}
+					
+				li.sf-item-1	{	margin-left: 0; 
+									a 	{	border-left: none;
+										}
+								}	
 				}
 													
 ul.superfish-2	{	.sf-vertical, .sf-vertical li 	{	width: 30em;
@@ -638,19 +695,30 @@ ul.superfish-2	{	.sf-vertical, .sf-vertical li 	{	width: 30em;
 				}
 				
 #block-locale-language	{	position: absolute;
-							top: 0;
+							top: 13px;
 							right: 0;
-							padding: 8px 20px;
 							
-							@include background-image(linear-gradient(#fff, #bbb 20%, #ccc 70%, #ddd));
 							
 							ul 	{	li  {	display: inline;
 											float: left;
 											
 											a   {	text-decoration: none;
-													color: #222;
-													padding: 0 20px;
+													color: #aaa;
+													padding: 14px 20px;
+													@include background-image(linear-gradient(#eee, #ccc 20%, #eee 80%, #aaa));
 												}
+											
+											a:hover   {	text-decoration: none;
+														color: #aaa;
+														padding: 14px 20px;
+														@include background-image(linear-gradient(#ddd, #bbb 20%, #ddd 80%, #999));
+													}
+											
+											a.active 	{	text-decoration: none;
+															color: #222;
+															padding: 14px 20px;
+															@include background-image(linear-gradient(#fff, #bbb 20%, #ccc 80%, #ddd));
+														}
 										}
 								}
 						}									
@@ -659,7 +727,7 @@ ul.superfish-2	{	.sf-vertical, .sf-vertical li 	{	width: 30em;
 ul#superfish-5		{	
 
 						li  {	a 	{ 	color: #eee;
-										padding: 8px 30px;
+										padding: 14px 30px;
 										text-decoration: none;
 										border-left: 1px solid #888;
 									}

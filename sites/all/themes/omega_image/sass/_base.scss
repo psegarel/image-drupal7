@@ -7,7 +7,9 @@ $imageblue: #3a64e9;
 $darkblue: #1E2336;
 $brightgreen: #ceff00;
 
-$default-box-shadow-color : #222;
+$default-box-shadow-color : #888;
+$default-box-shadow-h-offset : 3px;
+$default-box-shadow-v-offset : 3px;
 
 button	{	@include fancy-button( );
 		}

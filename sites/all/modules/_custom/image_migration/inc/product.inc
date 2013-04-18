@@ -15,8 +15,6 @@ class ProductMigration extends ImageNodeMigration
 			     ->defaultValue('MigrateFileFid');
 		$this->addFieldMapping('field_illustration:preserve_files')
 			     ->defaultValue(TRUE);
-			
-		$this->addFieldMapping('field_product_supplier', 'field_supplier');
 		
 		$this->addUnmigratedSources(array('field_illustration:list', 'field_illustration:data',
 		'field_notes:format', 'field_tasting_notes:format', 'field_product_data:format', 'teaser'));
@@ -53,18 +51,31 @@ class ProductMigration extends ImageNodeMigration
 			
 	public function prepare($node, stdClass $row) 
 	{	
-		// Product Supplier entity reference
+		// Supplier taxonomy term
+		$voc = taxonomy_vocabulary_machine_name_load('suppliers');
+		$tree = taxonomy_get_tree($voc->vid);
+		
 		if(isset($row->field_supplier))
 		{
+			// We need to get the migrated value field_supplier
 			$db_result = db_query('SELECT m.destid1
 				FROM {migrate_map_supplier} m WHERE m.sourceid1 = :sid', array(':sid' => $row->field_supplier[0]));
-			
 			foreach($db_result as $record)
 				$supplier_nid = $record->destid1;
-
+					
 			if($supplier_nid)
 			{
-				$node->field_product_supplier['und'][0]['target_id'] = $supplier_nid*1;
+				$supplier = node_load($supplier_nid);
+				if($supplier)
+				{
+					foreach($tree as $t)
+					{
+						if($supplier->title == $t->name)
+						{
+							$node->field_supplier['und'][0]['tid'] = $t->tid;
+						}
+					}
+				}
 			}
 		}
 		
@@ -94,6 +105,8 @@ class ProductMigration extends ImageNodeMigration
 
 			if($row->field_saturated_acids  != NULL)
 				$node->body['und'][0]['value'] .= $row->field_saturated_acids ;
+				
+			$node->body['und'][0]['format'] = 'full_html';
 		
 		// Wine specific fields	
 		}elseif($this->arguments['machine_name'] == 'Wine')
@@ -106,7 +119,30 @@ class ProductMigration extends ImageNodeMigration
 					$node->field_product_category['und'][0]['tid'] = $term->tid;
 					break;
 				}
-			}	
+			}
+			
+			// Tasting Notes
+			if($row->field_tasting_notes != NULL && !is_array($row->field_tasting_notes))
+			{
+				$node->body['und'][0]['value']  .= '<div class="field_title">Tasting Notes</div>
+				<div class="content">'.$row->field_tasting_notes.'</div>';
+				
+			}elseif(is_array($row->field_tasting_notes)){
+				$node->body['und'][0]['value']  .= '<div class="field_title">Tasting Notes</div>
+				<div class="content">'.$row->field_tasting_notes[0].'</div>';
+			}
+			
+			// Product Data
+			if($row->field_product_data != NULL && !is_array($row->field_product_data))
+			{
+				$node->body['und'][0]['value']  .= '<div class="field_title">Product Data</div>
+				<div class="content">'.$row->field_product_data.'</div>';
+					
+			}elseif(is_array($row->field_product_data)){
+				$node->body['und'][0]['value']  .= '<div class="field_title">Product Data</div>
+				<div class="content">'.$row->field_product_data[0].'</div>';
+			}
+			$node->body['und'][0]['format'] = 'full_html';	
 		}
 	}	
 }
