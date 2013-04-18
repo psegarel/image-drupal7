@@ -52,33 +52,22 @@ class ProductMigration extends ImageNodeMigration
 	}
 			
 	public function prepare($node, stdClass $row) 
-	{
-		// Supplier taxonomy mapping
-		$legacy_supplier_tid = $row->field_supplier[0];
-				
-		$db_result = db_query('SELECT m.destid1
-			FROM {migrate_map_supplier} m WHERE m.sourceid1 = :sid', array(':sid' => $legacy_supplier_tid));
-
-		foreach($db_result as $record)
-			$supplier_tid = $record->destid1;
-
-		//In the Drupal 6 version , suppliers are content types, not taxonomy terms!
-		$legacy_supplier = node_load($supplier_tid);
-		$legacy_supplier_name = $legacy_supplier->title;
-		
-		$suppliers = taxonomy_vocabulary_machine_name_load('suppliers');
-		$terms = taxonomy_get_tree($suppliers->vid);
-		
-		foreach($terms as $term)
+	{	
+		// Product Supplier entity reference
+		if(isset($row->field_supplier))
 		{
-			if($term->name == $legacy_supplier_name)
+			$db_result = db_query('SELECT m.destid1
+				FROM {migrate_map_supplier} m WHERE m.sourceid1 = :sid', array(':sid' => $row->field_supplier[0]));
+			
+			foreach($db_result as $record)
+				$supplier_nid = $record->destid1;
+
+			if($supplier_nid)
 			{
-				$supplier_tid = $term->tid;
-				$node->field_supplier['und'][0]['tid'] = $supplier_tid;
-				break;
+				$node->field_product_supplier['und'][0]['target_id'] = $supplier_nid*1;
 			}
 		}
-
+		
 		// Product Category taxonomy mapping
 		$categories = taxonomy_vocabulary_machine_name_load('products');
 		$terms = taxonomy_get_tree($categories->vid);

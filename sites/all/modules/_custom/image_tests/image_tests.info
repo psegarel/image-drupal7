@@ -1,0 +1,4 @@
+name = "Image Tests"
+description = "Development tool"
+package = "Development"
+core = 7.x
