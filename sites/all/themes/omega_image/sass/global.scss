@@ -6,16 +6,21 @@ html, body	{	font-family: Tahoma, sans-serif;
 				font-size: 10pt;	
 				background: url('../media/lightpaperfibers.png');
 			}
-			
+
 #zone-header-wrapper	{	@include background-image(linear-gradient(top, #555, $darkblue));
 							@include single-box-shadow;
-							position: relative;
+							z-index: 1000;
 							margin-bottom: 4em;
+							width: 100%;
+							position: fixed;
 						}
-					
+
+#zone-header			{	
+						}
+											
 #zone-user-wrapper	{	position: relative;
 						color: #222;
-						padding: 1em 0;
+						padding: 4em 0;
 					}
 
 #zone-menu-wrapper		{	position: relative;
