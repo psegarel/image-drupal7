@@ -1,8 +1,8 @@
 @import "compass";
-@import "fancy-buttons";
 
 $imageblue: #3a64e9;
-/* $imageblue: #5675d7; */
+$purple : #491BB6;
+$purple_grey :	#635583;
 
 $darkblue: #1E2336;
 $brightgreen: #ceff00;
@@ -10,10 +10,6 @@ $brightgreen: #ceff00;
 $default-box-shadow-color : #888;
 $default-box-shadow-h-offset : 3px;
 $default-box-shadow-v-offset : 3px;
-
-button	{	@include fancy-button( );
-		}
-		
 		
 
 //Prefixes definition

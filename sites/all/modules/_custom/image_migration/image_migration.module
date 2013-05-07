@@ -123,6 +123,14 @@ function image_migration_register_migrations() {
 			'dependencies' => array('Files'),
 		),
 		array(
+			'class_name' => 'DownloadMigration',
+			'description' => t('Migration of downloadable items nodes from Drupal 6'),
+			'machine_name' => 'Download',
+			'source_type' => 'download_item',
+			'destination_type' => 'download_item',
+			'dependencies' => array('Files'),
+		),
+		array(
 			'class_name' => 'NewsMigration',
 			'description' => t('Migration of news nodes from Drupal 6'),
 			'machine_name' => 'News',

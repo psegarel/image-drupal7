@@ -32,7 +32,7 @@ function image_frontpage_news_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'grid-4 alpha';
+  $handler->display->display_options['style_options']['row_class'] = 'grid-4';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Content: Gallery Image */
   $handler->display->display_options['fields']['field_gallery_image']['id'] = 'field_gallery_image';

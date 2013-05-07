@@ -1,0 +1,9 @@
+name = Image Downloads
+core = 7.x
+package = Image Components
+dependencies[] = context
+dependencies[] = ctools
+dependencies[] = views
+features[context][] = downloads
+features[ctools][] = context:context:3
+features[features_api][] = api:1

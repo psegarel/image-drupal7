@@ -4,36 +4,32 @@
 
 html, body	{	font-family: Tahoma, sans-serif;
 				font-size: 10pt;	
-				background: url('../media/lightpaperfibers.png');
+				/* background: url('../media/lightpaperfibers.png'); */
 			}
 
 #zone-header-wrapper	{	@include background-image(linear-gradient(top, #555, $darkblue));
-							@include single-box-shadow;
 							z-index: 1000;
-							margin-bottom: 4em;
 							width: 100%;
 							position: fixed;
-						}
-
-#zone-header			{	
 						}
 											
 #zone-user-wrapper	{	position: relative;
 						color: #222;
-						padding: 4em 0;
+						padding: 8em 0 0 0;
+						background: $imageblue;
 					}
 
 #zone-menu-wrapper		{	position: relative;
-							margin-bottom: -17px;
+							background: $imageblue;
 
 							a 	{	text-decoration: none;
 								}	
 						}				
 
 
-#zone-branding-wrapper	{	margin-bottom: 3em;	
+#zone-branding-wrapper	{	margin-bottom: 3em;
 							border-bottom: 1px solid #ccc;
-							@include background-image(linear-gradient(top, #ececec, #eee));
+							@include background-image(linear-gradient(top, $darkblue, $darkblue));
 						}		
 
 
@@ -67,7 +63,12 @@ html, body	{	font-family: Tahoma, sans-serif;
 					}					
 						
 
-.context-suppliers	{
+.context-downloads	{	#zone-preface-wrapper	{	/* background: $darkblue; */
+													margin: 0;
+												}
+						#zone-branding-wrapper	{	margin-bottom: 0;
+													border: none;
+												}							
 					}
 
 
@@ -191,12 +192,45 @@ h2.block-title	{	font-size: 1.4em;
 								}
 						}
 						
+#block-views-downloads-block-1	{	color: #222;
+									font-weight: 300;
+									font-family: 'Roboto', sans-serif;
+									padding-top: 3em;
+									
+									.views-row-odd	{	background: #eee;
+													}
+									
+									.views-row-even	{	color: #222;
+													}
+									
+									.views-row	{	padding: 1em;
+													/* @include background-image(linear-gradient(top, $imageblue , $imageblue)); */
+												} 
+												
+									.views-field-title	{	text-transform: uppercase;
+														}
+																
+									.views-field-field-download	{	font-size: .9em;
+																	
+																	a  	{	color: #444;
+																			text-decoration: none;
+																			padding: 5px 24px;
+																			@include background-image(linear-gradient(top, #fff , #ccc));
+																			@include border-radius(8px);
+																			border: 1px solid #aaa;
+																			
+																			&:hover	{	@include background-image(linear-gradient(top, #ccc , #ddd ));
+																						color: #222;
+																					}
+																			
+																		}
+																}
+								}
 #block-views-product-block,
 #block-views-product-block-1,
 #block-views-all-products-block-3	{	position: relative;
 
-										.view-content	{	.views-row 	{	margin-right: 4px;
-																			position: inherit;
+										.view-content	{	.views-row 	{	position: inherit;
 																			
 																			a   {	text-decoration: none;
 																					font-family: 'Roboto Condensed', sans-serif;
@@ -206,8 +240,11 @@ h2.block-title	{	font-size: 1.4em;
 														}			
 									
 										.view-filters	{	padding: 1em 0 0 2em;
-															@include background-image(linear-gradient(top, #f1f1f1 , #d1d1d1)); 
-															@include border-top-radius(10px);
+															border: 1px solid #ccc;
+															margin-bottom: 10px;
+															/* @include background-image(linear-gradient(top, $imageblue , $imageblue)); */ 
+															/* @include border-top-radius(10px); */
+															color: #222;
 										
 															.form-item-sort-by	{	margin-left: 5em;
 																					padding-left: 2em;
@@ -230,10 +267,13 @@ h2.block-title	{	font-size: 1.4em;
 																					border-bottom-color: transparent;
 																					padding: 8px 0 2px 1em;
 																					margin: 0;
-																					@include background-image(linear-gradient(left, #eee , #f1f1f1)); 
+																					background: $purple; 
 																					
 																					a   {	font-family: "Roboto", sans-serif;
-																							color: $darkblue;
+																							color: #fff;
+																					
+																							&:hover	{	color: $brightgreen;
+																									}
 																						}
 																				}				
 											
@@ -251,11 +291,14 @@ h2.block-title	{	font-size: 1.4em;
 																			
 																		}
 																		
-										.views-field-field-country		{	@include background-image(linear-gradient(left, #eee , #f1f1f1)); 
+										.views-field-field-country		{	background: $imageblue;
 																			@include border-top-radius(5px);
 																			
 																			a   {	font-family: "Roboto", sans-serif;
-																					color: $darkblue;
+																					color: #fff;
+																					
+																					&:hover	{	color: $brightgreen;
+																							}
 																				}
 																		}
 																		
@@ -306,12 +349,12 @@ h2.block-title	{	font-size: 1.4em;
 									color: #fff;
 									width: 10.5%;
 									margin: 2em 0 0 0;
-									@include background-image(linear-gradient(#c81634 , #620c1a));
+									@include background-image(linear-gradient(top, $purple , $purple));
 									
 									a 	{	color: #fff;
 											text-decoration: none;
 											
-											&:hover {	color: #ecbf09;
+											&:hover {	color: $brightgreen;
 													}
 										}
 								}
@@ -322,13 +365,7 @@ h2.block-title	{	font-size: 1.4em;
 													}
 									}
 
-#block-views-catchphrases-block	{	margin: 4em 0 2em 0;
-									.views-field-body		{	font-weight: 100;
-																font-family: 'Roboto', sans-serif;
-																font-size: 2em;
-																color: #444;
-															}
-								}	
+	
 
 									
 #block-views-featured-product-block	{	font-family: 'Roboto', sans-serif;
@@ -338,13 +375,13 @@ h2.block-title	{	font-size: 1.4em;
 										.views-field-title	{	display: block;
 																font-weight: 100;
 																font-size: 3.4em;
-																color: #222;
+																color: $brightgreen;
 															}
 															
 										.views-field-body p { 	font-weight: 100;
 																font-size: 1.4em;
 																line-height: 140%;
-																color: #555;
+																color: #fff;
 																padding: 1em 0 0 0;
 															}	
 										
@@ -379,7 +416,6 @@ h2.block-title	{	font-size: 1.4em;
 							
 #block-views-country-block-1	{	.views-row	{	padding: 1em;
 													float: right;
-													/* border: 1px solid #ccc; */
 													margin-bottom: 10px;
 													.views-field-name	{	padding-top: 10px;
 													
@@ -528,18 +564,17 @@ h2.block-title	{	font-size: 1.4em;
 																			padding-right: 10px;
 																		}
 													
-													.views-field-title	{	margin-bottom: 10px;
-									
-															a			{	color: #222;
-																			font-size: 1.1em;
-																			text-decoration: none;
-																			font-family: "Roboto", sans-serif;
-																			text-transform: uppercase;
-																			font-weight: 300;
-																			
-																			&:hover	{	text-decoration: underline;
-																					}
-																		}
+													.views-field-title	{	margin-bottom: 10px;									
+																			a  {	color: #222;
+																					font-size: 1.1em;
+																					text-decoration: none;
+																					font-family: "Roboto", sans-serif;
+																					text-transform: uppercase;
+																					font-weight: 300;
+																					
+																					&:hover	{	text-decoration: underline;
+																							}
+																				}
 														}
 													
 														
@@ -612,7 +647,6 @@ h2.block-title	{	font-size: 1.4em;
 												.views-field-title	{	color: #222;
 																		font-family: "Roboto", sans-serif;
 																		font-weight: bold;
-																		/* text-transform: uppercase; */
 																		margin-bottom: .5em;
 																	}
 														
@@ -639,8 +673,17 @@ h2.block-title	{	font-size: 1.4em;
 																	
 											}
 							}
+							
 
-
+#block-views-catchphrases-block	{	margin: 4em 0 2em 0;
+									padding-top: 3em;
+									.views-field-body		{	font-weight: 100;
+																font-family: 'Roboto', sans-serif;
+																font-size: 2em;
+																color: #fff;
+															}
+								}
+								
 #block-search-form	{	position: absolute;
 						right: 0;
 						top:0;
@@ -650,55 +693,11 @@ h2.block-title	{	font-size: 1.4em;
 #block-views-illustrations-block	{	float: right;
 										position: relative;
 										margin-top: -10em;
+										margin-bottom: -2px;
 										z-index: 0;
 									}
 									
 
-
-ul.menu		{	padding: 2em 0;
-				z-index: 200;
-			}
-
-ul#superfish-1	{	position: absolute;
-					top: -35px;
-					@include background-image(linear-gradient(#390710, #67313a));  
-					
-					
-					
-				li 	{	@include background-image(linear-gradient(#c81634 , #620c1a));
-						margin-left: 1px; 
-						
-						a 	{	color: #fff;
-								padding: 12px 30px;
-								text-transform: uppercase;
-								border: none;
-								font-size: .9em;
-								color: #eee;
-								
-								&:hover	{	@include background-image(linear-gradient(#620c1a, #c81634)); 
-											color: #eee;
-										}
-							}
-						
-						a.active	{	@include background-image(linear-gradient( #bce609, #7f9b09)); 
-										color: #222;
-									}
-									
-						.last	{	a 	{	border: none;
-										}
-								}				
-					}
-					
-				li.sf-item-1	{	margin-left: 0; 
-									a 	{	border-left: none;
-										}
-								}	
-				}
-													
-ul.superfish-2	{	.sf-vertical, .sf-vertical li 	{	width: 30em;
-													}
-				}
-				
 #block-locale-language	{	position: absolute;
 							top: 13px;
 							right: 0;
@@ -727,7 +726,54 @@ ul.superfish-2	{	.sf-vertical, .sf-vertical li 	{	width: 30em;
 										}
 								}
 						}									
-			
+	
+	
+ul.menu		{	padding: 2em 0;
+				z-index: 200;
+			}
+
+ul#superfish-1	{	position: absolute;
+					top: -35px;
+					@include background-image(linear-gradient(top, #555, #ccc));
+
+					
+					
+					
+				li 	{	@include background-image(linear-gradient(top, $darkblue, #555));
+						margin-left: 1px; 
+						
+						a 	{	color: #fff;
+								padding: 12px 30px;
+								text-transform: uppercase;
+								border: none;
+								font-size: .9em;
+								color: #eee;
+								
+								&:hover	{	@include background-image(linear-gradient(top, #222, $darkblue)); 
+											color: #eee;
+										}
+							}
+						
+						a.active	{	@include background-image(linear-gradient(top, #555, $darkblue));
+										color: #fff;
+									}
+									
+						.last	{	a 	{	border: none;
+										}
+								}				
+					}
+					
+				li.sf-item-1	{	margin-left: 0; 
+									a 	{	border-left: none;
+										}
+								}	
+				}
+													
+ul.superfish-2	{	.sf-vertical, .sf-vertical li 	{	width: 30em;
+													}
+				}
+				
+		
 																									
 ul#superfish-5		{	
 

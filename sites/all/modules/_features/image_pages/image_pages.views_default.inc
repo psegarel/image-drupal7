@@ -678,9 +678,29 @@ function image_pages_views_default_views() {
     'image_style' => 'large',
     'image_link' => '',
   );
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['nid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['nid']['validate']['type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['validate_options']['types'] = array(
+    'news' => 'news',
+  );
+  $handler->display->display_options['arguments']['nid']['validate']['fail'] = 'ignore';
 
   /* Display: Other News */
   $handler = $view->new_display('block', 'Other News', 'block_1');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '0';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['row_class'] = 'grid-3 alpha';
@@ -722,6 +742,27 @@ function image_pages_views_default_views() {
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['exclude'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['nid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['nid']['validate']['fail'] = 'ignore';
+  $handler->display->display_options['arguments']['nid']['not'] = TRUE;
+
+  /* Display: News Item */
+  $handler = $view->new_display('block', 'News Item', 'block_2');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
   $export['news'] = $view;
 
   return $export;

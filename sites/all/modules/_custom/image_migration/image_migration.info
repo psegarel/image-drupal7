@@ -9,6 +9,7 @@ dependencies[] = migrate_d2d
 
 files[] = inc/catchphrase.inc
 files[] = inc/country.inc
+files[] = inc/download.inc
 files[] = inc/node.inc
 files[] = inc/news.inc
 files[] = inc/product.inc
