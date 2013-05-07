@@ -33,15 +33,6 @@ function image_legacy_types_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
@@ -53,20 +44,6 @@ function image_legacy_types_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: Content: Has taxonomy term ID */
-  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
-  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
-    'countries' => 'countries',
-  );
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -91,84 +68,14 @@ function image_legacy_types_views_default_views() {
 
   /* Display: Country Info */
   $handler = $view->new_display('block', 'Country Info', 'block');
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Language */
-  $handler->display->display_options['filters']['language']['id'] = 'language';
-  $handler->display->display_options['filters']['language']['table'] = 'node';
-  $handler->display->display_options['filters']['language']['field'] = 'language';
-  $handler->display->display_options['filters']['language']['value'] = array(
-    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
-  );
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'country' => 'country',
-  );
-
-  /* Display: Suppliers by Country */
-  $handler = $view->new_display('block', 'Suppliers by Country', 'block_1');
-  $handler->display->display_options['enabled'] = FALSE;
-  $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Content: Taxonomy terms on node */
-  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
-  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
-  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
-  $handler->display->display_options['relationships']['term_node_tid']['label'] = 'Suppliers';
-  $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
-    'suppliers' => 'suppliers',
-    'countries' => 0,
-    'features' => 0,
-    'grape_varieties' => 0,
-    'products' => 0,
-    'tags' => 0,
-  );
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Field: Logo */
-  $handler->display->display_options['fields']['field_logo']['id'] = 'field_logo';
-  $handler->display->display_options['fields']['field_logo']['table'] = 'field_data_field_logo';
-  $handler->display->display_options['fields']['field_logo']['field'] = 'field_logo';
-  $handler->display->display_options['fields']['field_logo']['relationship'] = 'term_node_tid';
-  $handler->display->display_options['fields']['field_logo']['label'] = '';
-  $handler->display->display_options['fields']['field_logo']['alter']['path'] = 'taxonomy/term/[term_node_tid]';
-  $handler->display->display_options['fields']['field_logo']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_logo']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_logo']['settings'] = array(
-    'image_style' => 'thumbnail',
-    'image_link' => 'content',
-  );
-  /* Field: Taxonomy term: Name */
-  $handler->display->display_options['fields']['name']['id'] = 'name';
-  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['fields']['name']['field'] = 'name';
-  $handler->display->display_options['fields']['name']['relationship'] = 'term_node_tid';
-  $handler->display->display_options['fields']['name']['label'] = '';
-  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Has taxonomy term ID */
-  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
-  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
-    'suppliers' => 'suppliers',
-  );
+  /* Field: Field: Country */
+  $handler->display->display_options['fields']['field_country']['id'] = 'field_country';
+  $handler->display->display_options['fields']['field_country']['table'] = 'field_data_field_country';
+  $handler->display->display_options['fields']['field_country']['field'] = 'field_country';
+  $handler->display->display_options['fields']['field_country']['label'] = '';
+  $handler->display->display_options['fields']['field_country']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_country']['type'] = 'i18n_taxonomy_term_reference_plain';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -178,13 +85,6 @@ function image_legacy_types_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'product' => 'product',
-  );
   /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';

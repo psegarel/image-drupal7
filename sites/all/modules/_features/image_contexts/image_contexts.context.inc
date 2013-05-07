@@ -232,45 +232,24 @@ function image_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-country-block' => array(
+        'views-country_terms-block' => array(
           'module' => 'views',
-          'delta' => 'country-block',
-          'region' => 'sidebar_first',
+          'delta' => 'country_terms-block',
+          'region' => 'preface_first',
           'weight' => '-10',
         ),
-        'views-country-block_1' => array(
+        'views-country_terms-block_1' => array(
           'module' => 'views',
-          'delta' => 'country-block_1',
-          'region' => 'sidebar_second',
+          'delta' => 'country_terms-block_1',
+          'region' => 'preface_second',
           'weight' => '-10',
         ),
       ),
     ),
+    'delta' => array(
+      'delta_template' => 'about',
+    ),
     'region' => array(
-      'bartik' => array(
-        'disable' => array(
-          'header' => 0,
-          'help' => 0,
-          'page_top' => 0,
-          'page_bottom' => 0,
-          'highlighted' => 0,
-          'featured' => 0,
-          'content' => 0,
-          'sidebar_first' => 0,
-          'sidebar_second' => 0,
-          'triptych_first' => 0,
-          'triptych_middle' => 0,
-          'triptych_last' => 0,
-          'footer_firstcolumn' => 0,
-          'footer_secondcolumn' => 0,
-          'footer_thirdcolumn' => 0,
-          'footer_fourthcolumn' => 0,
-          'footer' => 0,
-          'dashboard_main' => 0,
-          'dashboard_sidebar' => 0,
-          'dashboard_inactive' => 0,
-        ),
-      ),
       'omega_image' => array(
         'disable' => array(
           'content' => 'content',
@@ -293,18 +272,6 @@ function image_contexts_context_default_contexts() {
           'postscript_fourth' => 0,
           'footer_first' => 0,
           'footer_second' => 0,
-          'dashboard_main' => 0,
-          'dashboard_sidebar' => 0,
-          'dashboard_inactive' => 0,
-        ),
-      ),
-      'seven' => array(
-        'disable' => array(
-          'content' => 0,
-          'help' => 0,
-          'page_top' => 0,
-          'page_bottom' => 0,
-          'sidebar_first' => 0,
           'dashboard_main' => 0,
           'dashboard_sidebar' => 0,
           'dashboard_inactive' => 0,

@@ -171,7 +171,7 @@ h2.block-title	{	font-size: 1.4em;
 										&:hover	{	text-decoration: underline;
 												}
 									 }
-							}
+							}										
 															
 .views-field-created	{	text-transform: uppercase;
 							font-family: "Roboto", sans-serif;
@@ -191,7 +191,7 @@ h2.block-title	{	font-size: 1.4em;
 									font-size: .8em;
 								}
 						}
-						
+									
 #block-views-downloads-block-1	{	color: #222;
 									font-weight: 300;
 									font-family: 'Roboto', sans-serif;
@@ -761,11 +761,40 @@ h2.block-title	{	font-size: 1.4em;
 								}
 					}
 
-/*
-ul.menu		{	padding: 2em 0;
-				z-index: 200;
-			}
-*/
+
+
+#block-views-country-terms-block	{	.views-field-field-country	{	.field-content,
+																		.country-title	{	font-family: "Roboto", sans-serif;
+																							font-weight: 100;
+																							font-size: 3em;
+																							padding-bottom: .2em;
+																							margin-bottom: 1em;
+																							text-transform: capitalize;
+																						}
+																	}
+									}
+																
+#block-views-country-terms-block-1	{	.views-row	{	clear: both;
+														margin-bottom: 1em;
+														height: 120px;
+														border: 1px solid #ccc;
+														padding: 1em;
+													}
+																			
+													
+										.views-field-name	{	a 	{	color: #222;
+																		text-decoration: none;
+																		
+																		&:hover	{	text-decoration: underline;
+																				}
+																	}
+															}			
+													
+										.views-field-field-logo	img {	@include lightborder;
+																		margin: 0 10px 10px 0;
+																		float: left;
+																	}
+									}
 
 ul#superfish-1	{	position: absolute;
 					top: -35px;
