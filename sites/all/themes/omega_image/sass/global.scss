@@ -728,9 +728,44 @@ h2.block-title	{	font-size: 1.4em;
 						}									
 	
 	
+#block-user-login,
+#block-system-user-menu	{	margin-top: 4em;
+							color: #eee;
+							
+							ul.menu {	li 	{ 	list-style: none;
+												margin: 0;
+												padding: 0;
+											}
+									}
+						
+							form	{	div.form-item	{	display: inline;
+															float: left;
+															margin-right: 5px;
+															
+															label	{	padding-bottom: 10px;
+																	}
+													}
+													
+									.item-list	{	clear: both;
+													margin: 0;
+													padding: 0;
+													
+													ul	{	margin: 0;
+															padding: 0;
+															
+															li 	{	margin: 0;
+																	padding: 0;
+																}
+														}
+												}				
+								}
+					}
+
+/*
 ul.menu		{	padding: 2em 0;
 				z-index: 200;
 			}
+*/
 
 ul#superfish-1	{	position: absolute;
 					top: -35px;

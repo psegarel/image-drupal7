@@ -1023,13 +1023,57 @@ h2.block-title {
   background-image: linear-gradient(#ffffff, #bbbbbb 20%, #cccccc 80%, #dddddd);
 }
 
-/* line 731, ../sass/global.scss */
-ul.menu {
-  padding: 2em 0;
-  z-index: 200;
+/* line 732, ../sass/global.scss */
+#block-user-login,
+#block-system-user-menu {
+  margin-top: 4em;
+  color: #eee;
+}
+/* line 735, ../sass/global.scss */
+#block-user-login ul.menu li,
+#block-system-user-menu ul.menu li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 741, ../sass/global.scss */
+#block-user-login form div.form-item,
+#block-system-user-menu form div.form-item {
+  display: inline;
+  float: left;
+  margin-right: 5px;
+}
+/* line 745, ../sass/global.scss */
+#block-user-login form div.form-item label,
+#block-system-user-menu form div.form-item label {
+  padding-bottom: 10px;
+}
+/* line 749, ../sass/global.scss */
+#block-user-login form .item-list,
+#block-system-user-menu form .item-list {
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+/* line 753, ../sass/global.scss */
+#block-user-login form .item-list ul,
+#block-system-user-menu form .item-list ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 756, ../sass/global.scss */
+#block-user-login form .item-list ul li,
+#block-system-user-menu form .item-list ul li {
+  margin: 0;
+  padding: 0;
 }
 
-/* line 735, ../sass/global.scss */
+/*
+ul.menu		{	padding: 2em 0;
+				z-index: 200;
+			}
+*/
+/* line 770, ../sass/global.scss */
 ul#superfish-1 {
   position: absolute;
   top: -35px;
@@ -1039,7 +1083,7 @@ ul#superfish-1 {
   background-image: -o-linear-gradient(top, #555555, #cccccc);
   background-image: linear-gradient(top, #555555, #cccccc);
 }
-/* line 742, ../sass/global.scss */
+/* line 777, ../sass/global.scss */
 ul#superfish-1 li {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1e2336), color-stop(100%, #555555));
   background-image: -webkit-linear-gradient(top, #1e2336, #555555);
@@ -1048,7 +1092,7 @@ ul#superfish-1 li {
   background-image: linear-gradient(top, #1e2336, #555555);
   margin-left: 1px;
 }
-/* line 745, ../sass/global.scss */
+/* line 780, ../sass/global.scss */
 ul#superfish-1 li a {
   color: #fff;
   padding: 12px 30px;
@@ -1057,7 +1101,7 @@ ul#superfish-1 li a {
   font-size: .9em;
   color: #eee;
 }
-/* line 752, ../sass/global.scss */
+/* line 787, ../sass/global.scss */
 ul#superfish-1 li a:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #222222), color-stop(100%, #1e2336));
   background-image: -webkit-linear-gradient(top, #222222, #1e2336);
@@ -1066,7 +1110,7 @@ ul#superfish-1 li a:hover {
   background-image: linear-gradient(top, #222222, #1e2336);
   color: #eee;
 }
-/* line 757, ../sass/global.scss */
+/* line 792, ../sass/global.scss */
 ul#superfish-1 li a.active {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #555555), color-stop(100%, #1e2336));
   background-image: -webkit-linear-gradient(top, #555555, #1e2336);
@@ -1075,32 +1119,32 @@ ul#superfish-1 li a.active {
   background-image: linear-gradient(top, #555555, #1e2336);
   color: #fff;
 }
-/* line 761, ../sass/global.scss */
+/* line 796, ../sass/global.scss */
 ul#superfish-1 li .last a {
   border: none;
 }
-/* line 766, ../sass/global.scss */
+/* line 801, ../sass/global.scss */
 ul#superfish-1 li.sf-item-1 {
   margin-left: 0;
 }
-/* line 767, ../sass/global.scss */
+/* line 802, ../sass/global.scss */
 ul#superfish-1 li.sf-item-1 a {
   border-left: none;
 }
 
-/* line 772, ../sass/global.scss */
+/* line 807, ../sass/global.scss */
 ul.superfish-2 .sf-vertical, ul.superfish-2 .sf-vertical li {
   width: 30em;
 }
 
-/* line 780, ../sass/global.scss */
+/* line 815, ../sass/global.scss */
 ul#superfish-5 li a {
   color: #eee;
   padding: 14px 30px;
   text-decoration: none;
   border-left: 1px solid #888888;
 }
-/* line 786, ../sass/global.scss */
+/* line 821, ../sass/global.scss */
 ul#superfish-5 li a:hover,
 ul#superfish-5 li a.active {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(20%, #bbbbbb), color-stop(70%, #cccccc), color-stop(100%, #dddddd));
