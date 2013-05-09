@@ -100,7 +100,7 @@ function image_contexts_context_default_contexts() {
         'views-all_products-block_3' => array(
           'module' => 'views',
           'delta' => 'all_products-block_3',
-          'region' => 'header_second',
+          'region' => 'preface_first',
           'weight' => '-10',
         ),
       ),
@@ -228,26 +228,28 @@ function image_contexts_context_default_contexts() {
         'term_form' => '1',
       ),
     ),
+    'views' => array(
+      'values' => array(
+        'countries' => 'countries',
+      ),
+    ),
   );
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-country_terms-block' => array(
+        'views-country_by_suppliers-block' => array(
           'module' => 'views',
-          'delta' => 'country_terms-block',
-          'region' => 'preface_first',
-          'weight' => '-10',
+          'delta' => 'country_by_suppliers-block',
+          'region' => 'sidebar_first',
+          'weight' => '-9',
         ),
-        'views-country_terms-block_1' => array(
+        'views-country_by_suppliers-block_1' => array(
           'module' => 'views',
-          'delta' => 'country_terms-block_1',
-          'region' => 'preface_second',
+          'delta' => 'country_by_suppliers-block_1',
+          'region' => 'sidebar_second',
           'weight' => '-10',
         ),
       ),
-    ),
-    'delta' => array(
-      'delta_template' => 'about',
     ),
     'region' => array(
       'omega_image' => array(
@@ -279,7 +281,7 @@ function image_contexts_context_default_contexts() {
       ),
     ),
   );
-  $context->condition_mode = 1;
+  $context->condition_mode = 0;
   $export['country'] = $context;
 
   $context = new stdClass();

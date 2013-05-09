@@ -286,6 +286,40 @@ function image_contexts_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-suppliers-field_country_description'
+  $field_instances['taxonomy_term-suppliers-field_country_description'] = array(
+    'bundle' => 'suppliers',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_country_description',
+    'label' => 'Country Description',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-suppliers-field_logo'
   $field_instances['taxonomy_term-suppliers-field_logo'] = array(
     'bundle' => 'suppliers',
@@ -337,6 +371,7 @@ function image_contexts_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Body');
   t('Country');
+  t('Country Description');
   t('Features');
   t('Grape Varieties');
   t('Illustration');

@@ -17,14 +17,14 @@ function image_menus_menu()
 	
 	//------------------------  MAIN MENU ----------------------------------- 
 	// Products 
-	// $items['products'] = array(		'title'				=> 'Products',
-	// 								'description' 		=> 'Products',
-	// 								'weight'			=> 1,
-	// 								'menu_name'			=> 'main-menu',
-	// 								'page callback' 	=> '_image_menus_basic',
-	// 								'access callback' 	=> TRUE,	
-	// 								'expanded' 			=> TRUE,
-	// 							);
+	$items['products'] = array(		'title'				=> 'Products',
+									'description' 		=> 'Products',
+									'weight'			=> 1,
+									'menu_name'			=> 'main-menu',
+									'page callback' 	=> '_image_menus_basic',
+									'access callback' 	=> TRUE,	
+									'expanded' 			=> TRUE,
+								);
 	// News 
 	$items['news'] = array(			'title'				=> 'News',
 									'description' 		=> 'Image news and general information',

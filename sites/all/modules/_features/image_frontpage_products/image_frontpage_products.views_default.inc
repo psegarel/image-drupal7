@@ -486,6 +486,7 @@ function image_frontpage_products_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'grid-8 ';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -511,36 +512,34 @@ function image_frontpage_products_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_class'] = 'grid-5 omega';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Body */
-  $handler->display->display_options['fields']['body']['id'] = 'body';
-  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['label'] = '';
-  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  /* Field: Content: All taxonomy terms */
-  $handler->display->display_options['fields']['term_node_tid']['id'] = 'term_node_tid';
-  $handler->display->display_options['fields']['term_node_tid']['table'] = 'node';
-  $handler->display->display_options['fields']['term_node_tid']['field'] = 'term_node_tid';
-  $handler->display->display_options['fields']['term_node_tid']['label'] = '';
-  $handler->display->display_options['fields']['term_node_tid']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['term_node_tid']['limit'] = TRUE;
-  $handler->display->display_options['fields']['term_node_tid']['vocabularies'] = array(
-    'suppliers' => 'suppliers',
-    'countries' => 0,
-    'features' => 0,
-    'grape_varieties' => 0,
-    'products' => 0,
-    'tags' => 0,
-  );
+  /* Field: Content: Supplier */
+  $handler->display->display_options['fields']['field_supplier']['id'] = 'field_supplier';
+  $handler->display->display_options['fields']['field_supplier']['table'] = 'field_data_field_supplier';
+  $handler->display->display_options['fields']['field_supplier']['field'] = 'field_supplier';
+  $handler->display->display_options['fields']['field_supplier']['label'] = '';
+  $handler->display->display_options['fields']['field_supplier']['element_type'] = 'div';
+  $handler->display->display_options['fields']['field_supplier']['element_class'] = 'grid-4 omega';
+  $handler->display->display_options['fields']['field_supplier']['element_label_colon'] = FALSE;
   /* Field: Field: Country */
   $handler->display->display_options['fields']['field_country']['id'] = 'field_country';
   $handler->display->display_options['fields']['field_country']['table'] = 'field_data_field_country';
   $handler->display->display_options['fields']['field_country']['field'] = 'field_country';
   $handler->display->display_options['fields']['field_country']['relationship'] = 'term_node_tid';
   $handler->display->display_options['fields']['field_country']['label'] = '';
+  $handler->display->display_options['fields']['field_country']['element_type'] = 'div';
+  $handler->display->display_options['fields']['field_country']['element_class'] = 'grid-4 omega';
   $handler->display->display_options['fields']['field_country']['element_label_colon'] = FALSE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_type'] = 'div';
+  $handler->display->display_options['fields']['body']['element_class'] = 'grid-5 omega';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';

@@ -154,7 +154,7 @@ function image_pages_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '6';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'grid-2 alpha';
+  $handler->display->display_options['style_options']['row_class'] = 'grid-2';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Relationship: Content: Taxonomy terms on node */
   $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
@@ -316,8 +316,11 @@ function image_pages_views_default_views() {
     ),
   );
   $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '36';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '3';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Field: Country */
   $handler->display->display_options['fields']['field_country']['id'] = 'field_country';
@@ -335,7 +338,7 @@ function image_pages_views_default_views() {
   $handler->display->display_options['fields']['field_illustration']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_illustration']['settings'] = array(
     'image_style' => 'small-product',
-    'image_link' => '',
+    'image_link' => 'content',
   );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';

@@ -11,6 +11,5 @@ features[menu_custom][] = user-menu
 features[menu_links][] = user-menu:admin
 features[menu_links][] = user-menu:user
 features[menu_links][] = user-menu:user/logout
-features[views_view][] = countries
 features[views_view][] = suppliers
 features_exclude[dependencies][ctools] = ctools

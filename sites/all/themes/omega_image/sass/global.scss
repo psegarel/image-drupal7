@@ -15,28 +15,32 @@ html, body	{	font-family: Tahoma, sans-serif;
 											
 #zone-user-wrapper	{	position: relative;
 						color: #222;
-						padding: 8em 0 0 0;
-						background: $imageblue;
+						padding: 6em 0 0 0;
+						background: $purple_grey;
 					}
 
 #zone-menu-wrapper		{	position: relative;
-							background: $imageblue;
+							background: transparent;
 
 							a 	{	text-decoration: none;
 								}	
 						}				
 
 
+.front	{	#zone-menu-wrapper	{	background: #fff;
+								}	
+		}
+
 #zone-branding-wrapper	{	margin-bottom: 3em;
-							border-bottom: 1px solid #ccc;
-							@include background-image(linear-gradient(top, $darkblue, $darkblue));
+							border: none;
+							background: transparent;
 						}		
 
 
 
 .context-news	{	#zone-branding-wrapper	{	margin-bottom: 3em;	
-												border-bottom: 1px solid #ccc;
-												@include background-image(linear-gradient(top, #ececec, #eee));
+												border: none;
+												background: #fff;
 											}
 				}
 .context-about,
@@ -46,15 +50,11 @@ html, body	{	font-family: Tahoma, sans-serif;
 .context-contact,
 .context-countries,
 .context-suppliers,
-.context-taxonomy	{	#zone-branding-wrapper	{	height: 1px;
-													background: $darkblue;
-													border-bottom: 1px solid #eee;
+.context-taxonomy	{	#zone-branding-wrapper	{	border: none;
 												}
 					}
 					
-.context-content	{	#zone-branding-wrapper	{	height: 1px;
-													background: #fff;
-													border-bottom: 1px solid #eee;
+.context-content	{	#zone-branding-wrapper	{	border: none;
 												}
 					}
 
@@ -88,8 +88,8 @@ html, body	{	font-family: Tahoma, sans-serif;
 
 #zone-postscript-wrapper,
 #zone-footer-wrapper,		{		padding: 4em 0 6em 0;	
-									border-top: 8px solid #ccc;
-									background-color: $darkblue;
+									border-top: 8px solid $purple_grey;
+									background-color: $purple_dark;
 									
 									h2.block-title 			{	font-size: 1em;
 																color: $brightgreen;
@@ -106,7 +106,7 @@ html, body	{	font-family: Tahoma, sans-serif;
 #zone-footer-wrapper	{	border-top: 1px dotted #555;
 							text-align: center;
 							padding: 2em 0 4em 0;
-							@include background-image(linear-gradient(top, $darkblue , #111122));
+							@include background-image(linear-gradient(top, $purple_dark , #111122));
 							
 							a 	{	padding: 1em 2em;
 									color: $brightgreen;
@@ -122,7 +122,7 @@ h2.site-name,
 h6.site-slogan			{	font-family: 'Roboto', sans-serif;
 							font-weight: 100;
 							text-align: right;
-							color: #222;
+							color: #ddd;
 							margin-right: 80px;
 						}
 						
@@ -131,7 +131,7 @@ h2.site-name			{	font-size: 4em;
 							text-transform: uppercase;
 							
 							a   { 	text-decoration: none;
-									color: #222;
+									color: #ddd;
 								}
 						}
 h1.site-name,
@@ -267,7 +267,7 @@ h2.block-title	{	font-size: 1.4em;
 																					border-bottom-color: transparent;
 																					padding: 8px 0 2px 1em;
 																					margin: 0;
-																					background: $purple; 
+																					background: $purple_grey; 
 																					
 																					a   {	font-family: "Roboto", sans-serif;
 																							color: #fff;
@@ -291,7 +291,7 @@ h2.block-title	{	font-size: 1.4em;
 																			
 																		}
 																		
-										.views-field-field-country		{	background: $imageblue;
+										.views-field-field-country		{	background: $greyblue;
 																			@include border-top-radius(5px);
 																			
 																			a   {	font-family: "Roboto", sans-serif;
@@ -314,42 +314,55 @@ h2.block-title	{	font-size: 1.4em;
 								}
 
 
-#block-views-product-block-2	{	margin-top: 2em;
-									.views-field-field-illustration	{ 	margin-right: 6em;
-																		img 	{	border: 1px solid #ccc;
+#block-views-product-block-2	{	margin: 2em 0;
+									font-family: "Roboto", sans-serif;
+
+									.views-field-field-illustration	{ 	img 	{	border: 1px solid #ccc;
 																					background: #fff;
 																					padding: 20px;
 																				}
 																	}	
 																	
-									.views-field-title	{	font-family: "Roboto", sans-serif;
-															font-weight: 100;
+									.views-field-title	{	font-weight: 300;
 															font-size: 2em;
-															padding-bottom: .2em;
 															line-height: 110%;
-														}		
+															margin-bottom: 1.2em;
+														}	
+														
+									.views-field-body	{	font-size: 1.4em;
+															font-weight: 300;
+															line-height: 160%;
+														}						
 																	
-									.field_title	{	font-family: "Roboto", sans-serif;
-														font-weight: 300;
-														font-size: 1.4em;
-														margin-top: 1em;
+									.field_title	{	font-weight: 300;
+														font-size: 1em;
+														margin-top: 4em;
 														padding-bottom: .2em;
+														border-bottom: 1px dotted #aaa;
+														margin-bottom: 20px;
 													}
 													
-									.content	{	font-family: "Roboto", sans-serif;
-													font-weight: 100;
-													font-size: 1.2em;
-													line-height: 130%;
-													margin-bottom: 1em;
-												}													
+												
+									.views-field-field-supplier,
+									.views-field-field-country	{	.field-content 	{	font-size: 1.1em;
+																						font-weight: 300;
+																						margin-bottom: 10px;
+									
+																						a 	{	color: $purple_dark;
+																								text-decoration: none;
+																								&:hover	{	text-decoration: underline;
+																										}
+																							}	
+																					}
+																}																						
 								}
 								
-#block-views-product-block-3	{	background: $imageblue;
+#block-views-product-block-3	{	background: $purple_dark;
+									@include border-radius(8px);
 									padding: 1em 2em;
 									color: #fff;
 									width: 10.5%;
 									margin: 2em 0 0 0;
-									@include background-image(linear-gradient(top, $purple , $purple));
 									
 									a 	{	color: #fff;
 											text-decoration: none;
@@ -369,19 +382,18 @@ h2.block-title	{	font-size: 1.4em;
 
 									
 #block-views-featured-product-block	{	font-family: 'Roboto', sans-serif;
-										padding: 6em 0 8em 0;
-										min-height: 300px;
+										padding: 3em 0 8em 0;
 										
 										.views-field-title	{	display: block;
 																font-weight: 100;
 																font-size: 3.4em;
-																color: $brightgreen;
+																color: #222;
 															}
 															
 										.views-field-body p { 	font-weight: 100;
 																font-size: 1.4em;
-																line-height: 140%;
-																color: #fff;
+																line-height: 160%;
+																color: #222;
 																padding: 1em 0 0 0;
 															}	
 										
@@ -391,29 +403,60 @@ h2.block-title	{	font-size: 1.4em;
 																				}
 																		}									
 									}
-									
-#block-views-country-block	{	font-family: 'Roboto', sans-serif;
-								color: #222;	
-								
-								.field-title	{	font-family: 'Roboto Condensed', sans-serif;
-													font-size: 1.2em;
-													margin-top: 2em;
-													padding: .5em 0;
-													font-weight: bold;
-												}
-								
-								.views-field-title {	font-size: 3em;
-														font-weight: 300;
-														color: #444;
-													}
-								
-								.views-field-body	{	font-size: 1.4em;
-														font-weight: 100;
-														color: #444;
-														line-height: 140%;
-													}
+#block-views-country-by-suppliers-block	{	font-family: 'Roboto', sans-serif;
+											color: #222;	
+											margin-bottom: 6em;
+											
+											.views-field-field-country {	font-size: 3em;
+																	font-weight: 300;
+																	color: #444;
+																}
+											
+											.views-field-description-i18n	{	font-size: 1.4em;
+																				font-weight: 100;
+																				color: #444;
+																				line-height: 140%;
+																				
+																				p  	{ padding-bottom: 1em;
+																					}
+																			}
 							}
 							
+#block-views-country-by-suppliers-block-1	{	margin-top: 3em;
+
+												.views-row	{	clear: both;
+																margin-bottom: 2em;
+																font-family: 'Roboto Condensed', sans-serif;
+															}
+															
+												.views-field-name-i18n	{	padding-bottom: 10px;
+																			a 	{	font-family: 'Roboto Condensed', sans-serif;
+																					font-size: 1.4em;
+																					font-weight: 300;
+																					color: #222;
+																					text-decoration: none;
+																					
+																					&:hover	{	text-decoration: underline;
+																							}
+																				}
+																		}
+																		
+												.views-field-field-logo	{	float: left;
+																			margin: 0 10px 10px 0;
+												
+																			img {	padding: 10px;
+																					border: 1px solid #ccc;
+																				}
+																		}
+												
+												.views-field-description-i18n	{	line-height: 140%;
+																					color: #777;
+																					font-size: 1.1em;
+																					font-weight: 100;
+																				}						
+											}
+											
+
 #block-views-country-block-1	{	.views-row	{	padding: 1em;
 													float: right;
 													margin-bottom: 10px;
@@ -659,14 +702,15 @@ h2.block-title	{	font-size: 1.4em;
 																	a 	{	color: #fff;
 																			text-decoration: none;
 																			text-transform: uppercase;
-																			@include background-image(linear-gradient(#c81634 , #620c1a));
+																			background: $purple_grey;
 																			padding: 14px 10px 4px 10px;
 																			display: block;
 																			font-size: .7em;
 																			clear: both;
+																			@include border-bottom-radius(8px);
 																				
 																			&:hover	{	color: #fff;
-																						@include background-image(linear-gradient(#620c1a , #c81634));
+																						background: $purple_dark;
 																					}
 																		}
 																}					
@@ -675,7 +719,7 @@ h2.block-title	{	font-size: 1.4em;
 							}
 							
 
-#block-views-catchphrases-block	{	margin: 4em 0 2em 0;
+#block-views-catchphrases-block	{	margin: 3em 0 2em 0;
 									padding-top: 3em;
 									.views-field-body		{	font-weight: 100;
 																font-family: 'Roboto', sans-serif;
@@ -796,52 +840,52 @@ h2.block-title	{	font-size: 1.4em;
 																	}
 									}
 
-ul#superfish-1	{	position: absolute;
-					top: -35px;
-					@include background-image(linear-gradient(top, #555, #ccc));
-
-					
-					
-					
-				li 	{	@include background-image(linear-gradient(top, $darkblue, #555));
-						margin-left: 1px; 
-						
-						a 	{	color: #fff;
-								padding: 12px 30px;
-								text-transform: uppercase;
-								border: none;
-								font-size: .9em;
-								color: #eee;
-								
-								&:hover	{	@include background-image(linear-gradient(top, #222, $darkblue)); 
-											color: #eee;
-										}
-							}
-						
-						a.active	{	@include background-image(linear-gradient(top, #555, $darkblue));
-										color: #fff;
-									}
+ul#superfish-1	{	li 	{	@include border-bottom-radius(8px);
+							margin-left: 1px; 
+							background: $purple_grey;
+							
+							a 	{	color: #fff;
+									padding: 20px 20px 8px 20px;
+									text-transform: uppercase;
+									border: none;
+									font-size: .9em;
+									@include border-bottom-radius(8px);
 									
-						.last	{	a 	{	border: none;
+									&:hover	{	color: #eee;
+												background: $greyblue;
+												border-top: 1px solid #fff;
+											}
+								}
+							
+							a.active	{	color: #fff;
+											background: $greyblue;
+											border-top: 1px solid #fff;
 										}
-								}				
-					}
-					
-				li.sf-item-1	{	margin-left: 0; 
-									a 	{	border-left: none;
-										}
-								}	
+										
+							.last	{	a 	{	border: none;
+											}
+									}				
+						}
+						
+					li.sf-item-1	{	margin-left: 0; 
+										a 	{	border-left: none;
+											}
+									}	
 				}
 													
+.sf-menu.sf-style-default {
+    float: left;
+    margin-bottom: 0;
+    padding: 0px;
+}
+
 ul.superfish-2	{	.sf-vertical, .sf-vertical li 	{	width: 30em;
 													}
 				}
 				
 		
 																									
-ul#superfish-5		{	
-
-						li  {	a 	{ 	color: #eee;
+ul#superfish-5		{	li  {	a 	{ 	color: #eee;
 										padding: 14px 30px;
 										text-decoration: none;
 										border-left: 1px solid #888;

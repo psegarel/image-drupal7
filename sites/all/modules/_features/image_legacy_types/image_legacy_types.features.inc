@@ -16,14 +16,6 @@ function image_legacy_types_views_api() {
  */
 function image_legacy_types_node_info() {
   $items = array(
-    'country' => array(
-      'name' => t('Country'),
-      'base' => 'node_content',
-      'description' => '',
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
     'download_item' => array(
       'name' => t('Downloadable Item'),
       'base' => 'node_content',
@@ -34,14 +26,6 @@ function image_legacy_types_node_info() {
     ),
     'image_detail' => array(
       'name' => t('Image Detail'),
-      'base' => 'node_content',
-      'description' => '',
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
-    'supplier' => array(
-      'name' => t('Supplier'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',

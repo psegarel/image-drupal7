@@ -1,7 +1,8 @@
 name = Image Countries
 core = 7.x
 package = Image Components
+php = 5.2.4
 dependencies[] = views
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:1
-features[views_view][] = country_terms
+features[views_view][] = countries
