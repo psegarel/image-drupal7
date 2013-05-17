@@ -334,10 +334,15 @@ function image_frontpage_products_views_default_views() {
     'products' => 0,
     'tags' => 0,
   );
+  /* Relationship: Content translation: Source translation */
+  $handler->display->display_options['relationships']['tnid']['id'] = 'tnid';
+  $handler->display->display_options['relationships']['tnid']['table'] = 'node';
+  $handler->display->display_options['relationships']['tnid']['field'] = 'tnid';
   /* Relationship: Nodequeue: Queue */
   $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
   $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['relationship'] = 'tnid';
   $handler->display->display_options['relationships']['nodequeue_rel']['label'] = 'Wines';
   $handler->display->display_options['relationships']['nodequeue_rel']['required'] = TRUE;
   $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = 1;
