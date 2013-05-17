@@ -169,6 +169,15 @@ function image_pages_views_default_views() {
     'products' => 0,
     'tags' => 0,
   );
+  /* Relationship: Nodequeue: Queue */
+  $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['label'] = 'Wines';
+  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = 1;
+  $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
+    'wines_english_' => 'wines_english_',
+  );
   /* Field: Content: All taxonomy terms */
   $handler->display->display_options['fields']['term_node_tid_1']['id'] = 'term_node_tid_1';
   $handler->display->display_options['fields']['term_node_tid_1']['table'] = 'node';
@@ -363,6 +372,11 @@ function image_pages_views_default_views() {
     'tags' => 0,
   );
   $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Nodequeue: Position */
+  $handler->display->display_options['sorts']['position']['id'] = 'position';
+  $handler->display->display_options['sorts']['position']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['sorts']['position']['field'] = 'position';
+  $handler->display->display_options['sorts']['position']['relationship'] = 'nodequeue_rel';
   /* Sort criterion: Field: Country (field_country) */
   $handler->display->display_options['sorts']['field_country_tid']['id'] = 'field_country_tid';
   $handler->display->display_options['sorts']['field_country_tid']['table'] = 'field_data_field_country';
