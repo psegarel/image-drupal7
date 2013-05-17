@@ -465,9 +465,9 @@ function image_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-product-block_1' => array(
+        'views-all_products-block_3' => array(
           'module' => 'views',
-          'delta' => 'product-block_1',
+          'delta' => 'all_products-block_3',
           'region' => 'preface_first',
           'weight' => '-10',
         ),
