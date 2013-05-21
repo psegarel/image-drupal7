@@ -128,6 +128,13 @@ function image_featured_product_views_default_views() {
     'featured_product' => 'featured_product',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
 
   /* Display: Frontpage Featured Product */
   $handler = $view->new_display('block', 'Frontpage Featured Product', 'block');
