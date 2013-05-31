@@ -887,13 +887,19 @@ ul.superfish-2	{	.sf-vertical, .sf-vertical li 	{	width: 30em;
 				
 		
 																									
-ul#superfish-5		{	li  {	a 	{ 	color: #eee;
+ul#superfish-5		{	li  {	margin: 0;
+								padding: 0;
+								
+								a 	{ 	color: #eee;
 										padding: 14px 30px;
 										text-decoration: none;
+										border: none;
 										border-left: 1px solid #888;
 									}
+									
 								a:hover , 
 								a.active	{	@include background-image(linear-gradient(#fff, #bbb 20%, #ccc 70%, #ddd));
+												padding: 14px 30px;
 												color: #222; 
 											}	
 							}

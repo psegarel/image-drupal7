@@ -1240,13 +1240,19 @@ ul.superfish-2 .sf-vertical, ul.superfish-2 .sf-vertical li {
 }
 
 /* line 890, ../sass/global.scss */
+ul#superfish-5 li {
+  margin: 0;
+  padding: 0;
+}
+/* line 893, ../sass/global.scss */
 ul#superfish-5 li a {
   color: #eee;
   padding: 14px 30px;
   text-decoration: none;
+  border: none;
   border-left: 1px solid #888888;
 }
-/* line 896, ../sass/global.scss */
+/* line 901, ../sass/global.scss */
 ul#superfish-5 li a:hover,
 ul#superfish-5 li a.active {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(20%, #bbbbbb), color-stop(70%, #cccccc), color-stop(100%, #dddddd));
@@ -1254,5 +1260,6 @@ ul#superfish-5 li a.active {
   background-image: -moz-linear-gradient(#ffffff, #bbbbbb 20%, #cccccc 70%, #dddddd);
   background-image: -o-linear-gradient(#ffffff, #bbbbbb 20%, #cccccc 70%, #dddddd);
   background-image: linear-gradient(#ffffff, #bbbbbb 20%, #cccccc 70%, #dddddd);
+  padding: 14px 30px;
   color: #222;
 }
