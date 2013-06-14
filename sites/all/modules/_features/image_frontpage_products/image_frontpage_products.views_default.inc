@@ -571,6 +571,23 @@ function image_frontpage_products_views_default_views() {
   $handler->display->display_options['fields']['field_country']['element_class'] = 'grid-4 omega';
   $handler->display->display_options['fields']['field_country']['element_label_colon'] = FALSE;
   /* Field: Content: Body */
+  $handler->display->display_options['fields']['body_1']['id'] = 'body_1';
+  $handler->display->display_options['fields']['body_1']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body_1']['field'] = 'body';
+  $handler->display->display_options['fields']['body_1']['label'] = '';
+  $handler->display->display_options['fields']['body_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['body_1']['alter']['text'] = '<div class="field_title">Notes</div>
+<div class="field-content">[body_1-summary]</div>
+';
+  $handler->display->display_options['fields']['body_1']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['body_1']['element_type'] = 'div';
+  $handler->display->display_options['fields']['body_1']['element_class'] = 'grid-5 omega';
+  $handler->display->display_options['fields']['body_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body_1']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body_1']['settings'] = array(
+    'trim_length' => '600',
+  );
+  /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';

@@ -330,14 +330,15 @@ h2.block-title	{	font-size: 1.4em;
 															margin-bottom: 1.2em;
 														}	
 														
-									.views-field-body	{	font-size: 1.4em;
+									.views-field-body,
+									.views-field-body-1	{	font-size: 1.4em;
 															font-weight: 300;
 															line-height: 160%;
-														}						
+														}										
 																	
 									.field_title	{	font-weight: 300;
 														font-size: 1em;
-														margin-top: 4em;
+														margin-top: 2em;
 														padding-bottom: .2em;
 														border-bottom: 1px dotted #aaa;
 														margin-bottom: 20px;
