@@ -1,0 +1,20 @@
+name = "Image Service D6 to D7 migration"
+description = "Migrate content from D6 site to D7"
+package = "Development"
+core = 7.x
+#hidden = TRUE
+
+dependencies[] = migrate
+dependencies[] = migrate_d2d
+
+files[] = inc/catchphrase.inc
+files[] = inc/country.inc
+files[] = inc/download.inc
+files[] = inc/node.inc
+files[] = inc/news.inc
+files[] = inc/product.inc
+files[] = inc/supplier.inc
+
+files[] = inc/term.inc
+
+

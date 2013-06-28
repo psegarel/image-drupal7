@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Image Catchphrases feature.
+ */
+
+include_once 'image_catchphrases.features.inc';

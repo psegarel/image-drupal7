@@ -1,0 +1,68 @@
+@import "compass";
+
+$imageblue: 		#3a64e9;
+$purple : 			#491BB6;
+$purple_grey :		#635583;
+$purple_dark: 		#342C43;
+$mustard_light :	#B6691B;
+$olive_dark: 		#50472C;
+$olive_grey: 		#8A887D;
+$sand:				#D6D6D6;
+$greyblue:			#465157;
+
+$darkblue: #1E2336;
+$brightgreen: #7ECF8C;
+
+$default-box-shadow-color : #888;
+$default-box-shadow-h-offset : 3px;
+$default-box-shadow-v-offset : 3px;
+		
+
+//Prefixes definition
+$webkit:true;
+$o:true;
+$moz:true;
+$w3:true;
+$ms:true;
+
+@mixin lightborder	{	border: 1px solid #ddd;
+					}
+
+
+@mixin small-body	 	{	font-family: "Tahoma", "Lucida Grande", sans-serif;
+							font-weight: 200;
+							font-size: 1em;
+							line-height: 160%;
+							color: #555;
+						}
+
+//Gradient Mixin
+@mixin gradient($mode,$direction,$from,$to,$oldDirection:null){
+
+    @if $webkit == true {
+        @if($oldDirection != null){
+            background-image: -webkit-gradient($mode, #{$oldDirection}, from($from),to($to));
+        }
+        background-image: -webkit-#{$mode}-gradient($direction, $from, $to);
+    }
+    @if $moz == true {
+        background-image: -moz-#{$mode}-gradient($direction, $from, $to);
+    }
+    @if $o == true {
+        background-image: -o-#{$mode}-gradient($direction, $from, $to);
+    }
+    @if $ms == true {
+        background-image: -ms-#{$mode}-gradient($direction, $from, $to);
+    }
+    @if $w3 == true {
+        background-image: #{$mode}-gradient($direction, $from, $to);
+    }
+}
+
+@mixin gradientDark {	background-color: #222222;
+@include gradient(linear,top,rgb(34, 34, 34),rgb(0, 0, 0),'left top, left bottom');
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#222222', EndColorStr='#000000');
+
+
+
+					}

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the image_countries feature.
+ */
+
+include_once 'image_countries.features.inc';

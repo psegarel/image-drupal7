@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Image Legacy Types feature.
+ */
+
+include_once 'image_legacy_types.features.inc';

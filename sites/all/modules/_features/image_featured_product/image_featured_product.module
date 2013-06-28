@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Image Featured Product feature.
+ */
+
+include_once 'image_featured_product.features.inc';

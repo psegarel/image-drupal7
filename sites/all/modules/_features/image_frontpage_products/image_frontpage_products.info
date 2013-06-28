@@ -1,0 +1,11 @@
+name = Image Frontpage Products
+core = 7.x
+package = Image Components
+php = 5.2.4
+dependencies[] = image
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[image][] = small-product
+features[views_view][] = product
+features_exclude[dependencies][better_exposed_filters] = better_exposed_filters

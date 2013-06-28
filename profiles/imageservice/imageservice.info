@@ -22,8 +22,9 @@ dependencies[] = taxonomy
 dependencies[] = dblog
 dependencies[] = search
 dependencies[] = shortcut
-dependencies[] = toolbar
-dependencies[] = overlay
+#dependencies[] = toolbar
+dependencies[] = translation
+#dependencies[] = overlay
 dependencies[] = field_ui
 dependencies[] = file
 dependencies[] = rdf
@@ -61,6 +62,9 @@ dependencies[] = features
 # FIELDS
 dependencies[] = entityreference
 
+# IMAGE
+dependencies[] = smartcrop
+
 
 # MULTILANGUAGE
 dependencies[] = admin_language
@@ -73,20 +77,32 @@ dependencies[] = i18n
 dependencies[] = i18n_block
 dependencies[] = i18n_contact
 dependencies[] = i18n_menu
-dependencies[] = i18n_string
+dependencies[] = i18n_node
 dependencies[] = i18n_select
+dependencies[] = i18n_string
+dependencies[] = i18n_sync
+dependencies[] = i18n_taxonomy
+dependencies[] = i18n_translation
 dependencies[] = i18nviews
+dependencies[] = languageicons
 
 # NODEQUEUE
 dependencies[] = nodequeue
 
 # OTHER
+dependencies[] = adaptive_image
 dependencies[] = backup_migrate
 dependencies[] = entity
 dependencies[] = faq
+dependencies[] = imagefield_focus
+dependencies[] = libraries
 dependencies[] = pathauto
+dependencies[] = simple_gmap
 dependencies[] = token
 dependencies[] = transliteration
+
+# TAXONOMY MENU
+dependencies[] = taxonomy_menu
 
 # THEME TOOLS
 dependencies[] = delta
@@ -99,6 +115,9 @@ dependencies[] = omega_tools
 dependencies[] = variable
 
 # VIEWS 
+dependencies[] = better_exposed_filters
 dependencies[] = views
+dependencies[] = views_slideshow
+dependencies[] = views_slideshow_cycle
 dependencies[] = views_ui
 
