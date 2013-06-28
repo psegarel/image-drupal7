@@ -181,6 +181,46 @@ function image_contexts_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-product-field_notes'
+  $field_instances['node-product-field_notes'] = array(
+    'bundle' => 'product',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 16,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_notes',
+    'label' => 'Notes',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 7,
+    ),
+  );
+
   // Exported field_instance: 'node-product-field_product_category'
   $field_instances['node-product-field_product_category'] = array(
     'bundle' => 'product',
@@ -376,6 +416,7 @@ function image_contexts_field_default_field_instances() {
   t('Grape Varieties');
   t('Illustration');
   t('Logo');
+  t('Notes');
   t('Product Category');
   t('Supplier');
 
