@@ -376,6 +376,21 @@ function image_pages_views_default_views() {
     'products' => 0,
     'tags' => 0,
   );
+  /* Field: Content: All taxonomy terms */
+  $handler->display->display_options['fields']['term_node_tid_1']['id'] = 'term_node_tid_1';
+  $handler->display->display_options['fields']['term_node_tid_1']['table'] = 'node';
+  $handler->display->display_options['fields']['term_node_tid_1']['field'] = 'term_node_tid';
+  $handler->display->display_options['fields']['term_node_tid_1']['label'] = '';
+  $handler->display->display_options['fields']['term_node_tid_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['term_node_tid_1']['limit'] = TRUE;
+  $handler->display->display_options['fields']['term_node_tid_1']['vocabularies'] = array(
+    'products' => 'products',
+    'countries' => 0,
+    'features' => 0,
+    'grape_varieties' => 0,
+    'suppliers' => 0,
+    'tags' => 0,
+  );
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Field: Country (field_country) */
   $handler->display->display_options['sorts']['field_country_tid']['id'] = 'field_country_tid';
@@ -936,7 +951,7 @@ function image_pages_views_default_views() {
   $handler->display->display_options['fields']['field_gallery_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_gallery_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_gallery_image']['settings'] = array(
-    'image_style' => 'large',
+    'image_style' => 'large_adaptive',
     'image_link' => '',
   );
   $handler->display->display_options['defaults']['arguments'] = FALSE;
@@ -961,7 +976,7 @@ function image_pages_views_default_views() {
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '0';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['offset'] = '1';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['row_class'] = 'grid-3 alpha';
@@ -978,7 +993,7 @@ function image_pages_views_default_views() {
   $handler->display->display_options['fields']['field_gallery_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_gallery_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_gallery_image']['settings'] = array(
-    'image_style' => 'medium',
+    'image_style' => 'medium_adaptive',
     'image_link' => 'content',
   );
   /* Field: Content: Title */

@@ -88,7 +88,7 @@ function image_contexts_delta_default_templates() {
       'favicon_path' => 'public://flower_0.png',
       'favicon_upload' => '',
       'alpha_grid' => 'alpha_default',
-      'alpha_responsive' => 0,
+      'alpha_responsive' => 1,
       'alpha_viewport' => 1,
       'alpha_viewport_initial_scale' => '1',
       'alpha_viewport_min_scale' => '1',
@@ -115,6 +115,7 @@ function image_contexts_delta_default_templates() {
         'omega_mediaqueries' => 'omega_mediaqueries',
         'omega_formalize' => 0,
         'omega_equalheights' => 0,
+        'omega_image' => 0,
       ),
       'alpha_css' => array(
         'alpha-reset.css' => 'alpha-reset.css',

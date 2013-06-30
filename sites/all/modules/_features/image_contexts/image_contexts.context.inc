@@ -324,18 +324,28 @@ function image_contexts_context_default_contexts() {
           'region' => 'preface_first',
           'weight' => '-9',
         ),
-        'superfish-2' => array(
-          'module' => 'superfish',
-          'delta' => '2',
-          'region' => 'postscript_first',
-          'weight' => '-10',
-        ),
       ),
     ),
     'delta' => array(
       'delta_template' => 'homepage',
     ),
     'region' => array(
+      'garland' => array(
+        'disable' => array(
+          'sidebar_first' => 0,
+          'sidebar_second' => 0,
+          'content' => 0,
+          'header' => 0,
+          'footer' => 0,
+          'highlighted' => 0,
+          'help' => 0,
+          'page_top' => 0,
+          'page_bottom' => 0,
+          'dashboard_main' => 0,
+          'dashboard_sidebar' => 0,
+          'dashboard_inactive' => 0,
+        ),
+      ),
       'omega_image' => array(
         'disable' => array(
           'content' => 'content',
@@ -642,7 +652,7 @@ function image_contexts_context_default_contexts() {
           'module' => 'locale',
           'delta' => 'language',
           'region' => 'header_first',
-          'weight' => '-8',
+          'weight' => '-9',
         ),
         'superfish-2' => array(
           'module' => 'superfish',

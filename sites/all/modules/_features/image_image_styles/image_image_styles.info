@@ -1,0 +1,7 @@
+name = image_image_styles
+core = 7.x
+package = Features
+dependencies[] = image
+features[features_api][] = api:2
+features[image][] = large_adaptive
+features[image][] = medium_adaptive
