@@ -4,3 +4,11 @@
  *  and widescreen CSS files as appropriate. */
  @import "base";
  
+ul#superfish-5		{	li  {	a 	{ 	padding: 1em 1em;
+									}
+									
+								a:hover , 
+								a.active	{	padding: 1em 1em;
+											}	
+							}
+					}

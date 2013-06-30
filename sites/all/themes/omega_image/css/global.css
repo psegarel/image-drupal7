@@ -1102,14 +1102,13 @@ h2.block-title {
   position: absolute;
   top: 13px;
   right: 0;
-  display: none;
 }
-/* line 794, ../sass/global.scss */
+/* line 793, ../sass/global.scss */
 #block-locale-language ul li {
   display: inline;
   float: left;
 }
-/* line 797, ../sass/global.scss */
+/* line 796, ../sass/global.scss */
 #block-locale-language ul li a {
   text-decoration: none;
   color: #aaa;
@@ -1120,7 +1119,7 @@ h2.block-title {
   background-image: -o-linear-gradient(#eeeeee, #cccccc 20%, #eeeeee 80%, #aaaaaa);
   background-image: linear-gradient(#eeeeee, #cccccc 20%, #eeeeee 80%, #aaaaaa);
 }
-/* line 803, ../sass/global.scss */
+/* line 802, ../sass/global.scss */
 #block-locale-language ul li a:hover {
   text-decoration: none;
   color: #aaa;
@@ -1131,7 +1130,7 @@ h2.block-title {
   background-image: -o-linear-gradient(#dddddd, #bbbbbb 20%, #dddddd 80%, #999999);
   background-image: linear-gradient(#dddddd, #bbbbbb 20%, #dddddd 80%, #999999);
 }
-/* line 809, ../sass/global.scss */
+/* line 808, ../sass/global.scss */
 #block-locale-language ul li a.active {
   text-decoration: none;
   color: #222;
@@ -1143,52 +1142,52 @@ h2.block-title {
   background-image: linear-gradient(#ffffff, #bbbbbb 20%, #cccccc 80%, #dddddd);
 }
 
-/* line 820, ../sass/global.scss */
+/* line 819, ../sass/global.scss */
 #block-user-login,
 #block-system-user-menu {
   margin-top: 4em;
   color: #eee;
 }
-/* line 823, ../sass/global.scss */
+/* line 822, ../sass/global.scss */
 #block-user-login ul.menu li,
 #block-system-user-menu ul.menu li {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 829, ../sass/global.scss */
+/* line 828, ../sass/global.scss */
 #block-user-login form div.form-item,
 #block-system-user-menu form div.form-item {
   display: inline;
   float: left;
   margin-right: 5px;
 }
-/* line 833, ../sass/global.scss */
+/* line 832, ../sass/global.scss */
 #block-user-login form div.form-item label,
 #block-system-user-menu form div.form-item label {
   padding-bottom: 10px;
 }
-/* line 837, ../sass/global.scss */
+/* line 836, ../sass/global.scss */
 #block-user-login form .item-list,
 #block-system-user-menu form .item-list {
   clear: both;
   margin: 0;
   padding: 0;
 }
-/* line 841, ../sass/global.scss */
+/* line 840, ../sass/global.scss */
 #block-user-login form .item-list ul,
 #block-system-user-menu form .item-list ul {
   margin: 0;
   padding: 0;
 }
-/* line 844, ../sass/global.scss */
+/* line 843, ../sass/global.scss */
 #block-user-login form .item-list ul li,
 #block-system-user-menu form .item-list ul li {
   margin: 0;
   padding: 0;
 }
 
-/* line 855, ../sass/global.scss */
+/* line 854, ../sass/global.scss */
 #block-views-country-terms-block .views-field-field-country .field-content,
 #block-views-country-terms-block .views-field-field-country .country-title {
   font-family: "Roboto", sans-serif;
@@ -1199,7 +1198,7 @@ h2.block-title {
   text-transform: capitalize;
 }
 
-/* line 865, ../sass/global.scss */
+/* line 864, ../sass/global.scss */
 #block-views-country-terms-block-1 .views-row {
   clear: both;
   margin-bottom: 1em;
@@ -1207,23 +1206,23 @@ h2.block-title {
   border: 1px solid #ccc;
   padding: 1em;
 }
-/* line 873, ../sass/global.scss */
+/* line 872, ../sass/global.scss */
 #block-views-country-terms-block-1 .views-field-name a {
   color: #222;
   text-decoration: none;
 }
-/* line 876, ../sass/global.scss */
+/* line 875, ../sass/global.scss */
 #block-views-country-terms-block-1 .views-field-name a:hover {
   text-decoration: underline;
 }
-/* line 881, ../sass/global.scss */
+/* line 880, ../sass/global.scss */
 #block-views-country-terms-block-1 .views-field-field-logo img {
   border: 1px solid #ddd;
   margin: 0 10px 10px 0;
   float: left;
 }
 
-/* line 887, ../sass/global.scss */
+/* line 886, ../sass/global.scss */
 ul#superfish-1 li {
   -moz-border-radius-bottomleft: 8px;
   -webkit-border-bottom-left-radius: 8px;
@@ -1234,7 +1233,7 @@ ul#superfish-1 li {
   margin-left: 1px;
   background: #635583;
 }
-/* line 891, ../sass/global.scss */
+/* line 890, ../sass/global.scss */
 ul#superfish-1 li a {
   color: #fff;
   padding: 20px 20px 8px 20px;
@@ -1248,56 +1247,56 @@ ul#superfish-1 li a {
   -webkit-border-bottom-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
-/* line 898, ../sass/global.scss */
+/* line 897, ../sass/global.scss */
 ul#superfish-1 li a:hover {
   color: #eee;
   background: #465157;
   border-top: 1px solid #fff;
 }
-/* line 904, ../sass/global.scss */
+/* line 903, ../sass/global.scss */
 ul#superfish-1 li a.active {
   color: #fff;
   background: #465157;
   border-top: 1px solid #fff;
 }
-/* line 909, ../sass/global.scss */
+/* line 908, ../sass/global.scss */
 ul#superfish-1 li .last a {
   border: none;
 }
-/* line 914, ../sass/global.scss */
+/* line 913, ../sass/global.scss */
 ul#superfish-1 li.sf-item-1 {
   margin-left: 0;
 }
-/* line 915, ../sass/global.scss */
+/* line 914, ../sass/global.scss */
 ul#superfish-1 li.sf-item-1 a {
   border-left: none;
 }
 
-/* line 920, ../sass/global.scss */
+/* line 919, ../sass/global.scss */
 .sf-menu.sf-style-default {
   float: left;
   margin-bottom: 0;
   padding: 0px;
 }
 
-/* line 926, ../sass/global.scss */
+/* line 925, ../sass/global.scss */
 ul.superfish-2 .sf-vertical, ul.superfish-2 .sf-vertical li {
   width: 30em;
 }
 
-/* line 932, ../sass/global.scss */
+/* line 931, ../sass/global.scss */
 ul#superfish-5 li {
   margin: 0;
   padding: 0;
 }
-/* line 935, ../sass/global.scss */
+/* line 934, ../sass/global.scss */
 ul#superfish-5 li a {
   color: #eee;
-  padding: 14px 30px;
+  padding: 1em 2em;
   text-decoration: none;
   border: none;
 }
-/* line 942, ../sass/global.scss */
+/* line 941, ../sass/global.scss */
 ul#superfish-5 li a:hover,
 ul#superfish-5 li a.active {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(20%, #bbbbbb), color-stop(70%, #cccccc), color-stop(100%, #dddddd));
@@ -1305,6 +1304,6 @@ ul#superfish-5 li a.active {
   background-image: -moz-linear-gradient(#ffffff, #bbbbbb 20%, #cccccc 70%, #dddddd);
   background-image: -o-linear-gradient(#ffffff, #bbbbbb 20%, #cccccc 70%, #dddddd);
   background-image: linear-gradient(#ffffff, #bbbbbb 20%, #cccccc 70%, #dddddd);
-  padding: 14px 30px;
+  padding: 1em 2em;
   color: #222;
 }

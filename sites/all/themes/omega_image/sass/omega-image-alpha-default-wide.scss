@@ -1,3 +1,11 @@
 /* This file will hold styles that are loaded using the same media query as the wide grid. */
 @import "base";
 
+ul#superfish-5		{	li  {	a 	{ 	padding: 1em 2em;
+									}
+									
+								a:hover , 
+								a.active	{	padding: 1em 2em;
+											}	
+							}
+					}

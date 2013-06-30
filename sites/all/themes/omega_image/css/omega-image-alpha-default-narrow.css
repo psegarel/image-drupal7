@@ -2,3 +2,12 @@
 /* If you are using the default media queries provided by Omega, these styles will also
  *  apply to the normal and widescreen layouts. You may override these styles in the normal 
  *  and widescreen CSS files as appropriate. */
+/* line 7, ../sass/omega-image-alpha-default-narrow.scss */
+ul#superfish-5 li a {
+  padding: 1em 1em;
+}
+/* line 11, ../sass/omega-image-alpha-default-narrow.scss */
+ul#superfish-5 li a:hover,
+ul#superfish-5 li a.active {
+  padding: 1em 1em;
+}
