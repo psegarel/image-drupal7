@@ -28,3 +28,28 @@ nav li a {
 nav a#pull {
   display: none;
 }
+
+/* line 27, ../sass/omega-image-alpha-default.scss */
+ul#superfish-5 li {
+  margin: 0;
+  padding: 0;
+}
+/* line 30, ../sass/omega-image-alpha-default.scss */
+ul#superfish-5 li a {
+  color: #eee;
+  padding: 14px 30px;
+  text-decoration: none;
+  border: none;
+  border-left: 1px solid #888;
+}
+/* line 38, ../sass/omega-image-alpha-default.scss */
+ul#superfish-5 li a:hover,
+ul#superfish-5 li a.active {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(20%, #bbbbbb), color-stop(70%, #cccccc), color-stop(100%, #dddddd));
+  background-image: -webkit-linear-gradient(#ffffff, #bbbbbb 20%, #cccccc 70%, #dddddd);
+  background-image: -moz-linear-gradient(#ffffff, #bbbbbb 20%, #cccccc 70%, #dddddd);
+  background-image: -o-linear-gradient(#ffffff, #bbbbbb 20%, #cccccc 70%, #dddddd);
+  background-image: linear-gradient(#ffffff, #bbbbbb 20%, #cccccc 70%, #dddddd);
+  padding: 14px 30px;
+  color: #222;
+}
