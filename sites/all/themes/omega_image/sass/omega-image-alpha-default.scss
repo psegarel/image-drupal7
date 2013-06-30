@@ -1,2 +1,25 @@
 /* This file will hold styles for all layouts using the alpha grid (i.e. not the mobile layout). */
 @import "base";
+
+#block-views-featured-product-block	{	.views-field-field-illustration {	img	{	display: block;
+																				}
+																		}
+									}								
+nav {	border-bottom: 0; 
+
+		ul	{	display: block;  
+        		height: auto;
+			} 
+			
+		li 	{	display: block;  
+        		float: left;  
+        		display: inline;
+        		width: auto; 
+        		
+        		a 	{  border-bottom: 1px solid #576979;  
+    				}  
+    		}  	
+    				
+		a#pull 	{	display: none;   
+			    }	     	
+	} 

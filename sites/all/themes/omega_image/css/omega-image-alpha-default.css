@@ -1,1 +1,30 @@
 /* This file will hold styles for all layouts using the alpha grid (i.e. not the mobile layout). */
+/* line 4, ../sass/omega-image-alpha-default.scss */
+#block-views-featured-product-block .views-field-field-illustration img {
+  display: block;
+}
+
+/* line 8, ../sass/omega-image-alpha-default.scss */
+nav {
+  border-bottom: 0;
+}
+/* line 10, ../sass/omega-image-alpha-default.scss */
+nav ul {
+  display: block;
+  height: auto;
+}
+/* line 14, ../sass/omega-image-alpha-default.scss */
+nav li {
+  display: block;
+  float: left;
+  display: inline;
+  width: auto;
+}
+/* line 19, ../sass/omega-image-alpha-default.scss */
+nav li a {
+  border-bottom: 1px solid #576979;
+}
+/* line 23, ../sass/omega-image-alpha-default.scss */
+nav a#pull {
+  display: none;
+}

@@ -2,9 +2,50 @@
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
 @import "base";
 
+
+/* Responsive Menu Mobile version
+*/ 
+
+nav {	border-bottom: 0; 
+
+		ul	{	display: none;  
+        		height: auto;
+			} 
+			
+		li 	{	display: block;  
+        		float: none;  
+        		width: 100%; 
+        		
+        		a 	{  border-bottom: 1px solid #576979;  
+    				}  
+    		}  	
+    				
+		a#pull 	{	display: block;   
+			        width: 100%;  
+			        position: relative; 
+			       	color: #eee;
+					padding: 14px 30px;
+					text-decoration: none;
+					border: none;
+					border-left: 1px solid #888;
+			    }
+			    
+		a#pull:after {	content:"";  
+				        /* background: url('nav-icon.png') no-repeat;  */ 
+				        width: 30px;  
+				        height: 30px;  
+				        display: inline-block;  
+				        position: absolute;  
+				        rightright: 15px;  
+				        top: 10px;  
+				    }		     	
+	}    
+	
+/* End responsive menu */
+
+
 html, body	{	font-family: Tahoma, sans-serif;
 				font-size: 10pt;	
-				/* background: url('../media/lightpaperfibers.png'); */
 			}
 
 #zone-header-wrapper	{	@include background-image(linear-gradient(top, #555, $darkblue));
@@ -63,8 +104,7 @@ html, body	{	font-family: Tahoma, sans-serif;
 					}					
 						
 
-.context-downloads	{	#zone-preface-wrapper	{	/* background: $darkblue; */
-													margin: 0;
+.context-downloads	{	#zone-preface-wrapper	{	margin: 0;
 												}
 						#zone-branding-wrapper	{	margin-bottom: 0;
 													border: none;
@@ -204,7 +244,6 @@ h2.block-title	{	font-size: 1.4em;
 													}
 									
 									.views-row	{	padding: 1em;
-													/* @include background-image(linear-gradient(top, $imageblue , $imageblue)); */
 												} 
 												
 									.views-field-title	{	text-transform: uppercase;
@@ -243,8 +282,6 @@ h2.block-title	{	font-size: 1.4em;
 										.view-filters	{	padding: 1em 0 0 2em;
 															border: 1px solid #ccc;
 															margin-bottom: 10px;
-															/* @include background-image(linear-gradient(top, $imageblue , $imageblue)); */ 
-															/* @include border-top-radius(10px); */
 															color: #222;
 										
 															.form-item-sort-by	{	margin-left: 5em;
@@ -380,13 +417,12 @@ h2.block-title	{	font-size: 1.4em;
 														height: 400px;
 													}
 									}
-
-	
-
 									
 #block-views-featured-product-block	{	font-family: 'Roboto', sans-serif;
 										padding: 3em 0 8em 0;
 										min-height: 250px;
+										
+										
 										
 										.views-field-title	{	display: block;
 																font-weight: 100;
@@ -402,11 +438,14 @@ h2.block-title	{	font-size: 1.4em;
 															}	
 										
 										.views-field-field-illustration {	position: relative;
+																			
 																			img	{	position: absolute;
 																					right: 0;
+																					display: none;
 																				}
-																		}									
+																		}								
 									}
+									
 #block-views-country-by-suppliers-block	{	font-family: 'Roboto', sans-serif;
 											color: #222;	
 											margin-bottom: 6em;
@@ -663,7 +702,8 @@ h2.block-title	{	font-size: 1.4em;
 																	margin: 5px 0;	
 																}	
 																
-										.views-field-field-gallery-image	{ 	@include single-box-shadow;
+										.views-field-field-gallery-image	{ 	img { @include single-box-shadow;
+																					}
 																				padding: 3px;
 																				margin-bottom: 2em;
 																			}										
@@ -749,6 +789,7 @@ h2.block-title	{	font-size: 1.4em;
 #block-locale-language	{	position: absolute;
 							top: 13px;
 							right: 0;
+							display: none;
 							
 							
 							ul 	{	li  {	display: inline;

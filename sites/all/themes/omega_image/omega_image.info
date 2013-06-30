@@ -4,6 +4,13 @@ core = '7.x'
 engine = 'phptemplate'
 screenshot = 'screenshot.png'
 base theme = 'omega'
+
+libraries[omega_image][name] = Menu Slide
+libraries[omega_image][description] = Responsive Menu Slide, mobile display
+libraries[omega_image][js][0][file] = menuslide.js
+libraries[omega_image][js][0][options][weight] = 15
+
+
 regions[page_top] = 'Page Top'
 regions[page_bottom] = 'Page Bottom'
 regions[content] = 'Content'

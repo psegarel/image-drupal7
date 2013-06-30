@@ -1,0 +1,4 @@
+name = Image Service 
+description = Development menu
+package = Image Service
+core = 7.x
