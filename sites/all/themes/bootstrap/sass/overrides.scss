@@ -1,0 +1,252 @@
+@import 'base';
+
+
+h1.page-header	{	display: none;
+				}
+
+html, body			{	background: #fff;
+					}
+
+#main-content		{	background: #fff;
+						padding: 2em 0;
+					}
+					
+#highlighted		{	position: relative;
+						color: #222;
+						padding-top: 40px;
+					}
+
+#footer		{	border-top: 8px solid $purple_grey;
+				background-color: $purple_dark;	
+				font-weight: 300;
+				font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+				
+				h2.block-title 			{	font-size: 1em;
+											color: $brightgreen;
+											border-bottom: 1px solid $brightgreen;
+											display: block;
+											padding: 0 0 .4em 0;
+										}	
+
+				a	{	color: #fff;
+						font-size: .9em;
+						line-height: 160%;
+						font-family: 'Roboto', sans-serif;
+						&:hover	{	background: none;
+									text-decoration: underline;
+								}
+					}
+			}
+
+#footer-bottom	{	border-top: 1px dotted #555;
+					text-align: center;
+					@include background-image(linear-gradient(top, $purple_dark , #111122));
+					font-weight: 300;
+					font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+
+					
+					a 	{	padding: 1em 2em;
+							color: $brightgreen;
+						}
+						
+					#block-superfish-7	{	width: 500px;
+											margin-left: auto;
+											margin-right: auto;
+										}	
+				}
+
+#block-locale-language	{	ul.language-switcher-locale-url	{	list-style: none;
+																float: right;
+																
+																li  {	display: inline;
+																		float: left;
+																		a 	{	color: #fff;
+																				padding: 0 1em;
+																			}
+																	}
+															}
+						}					
+
+#views_slideshow_cycle_main_catchphrases-default	{	margin: 3em 0 2em 0;
+														padding-top: 3em;
+														.views-field-body		{	font-weight: 100;
+																					font-family: 'Roboto', sans-serif;
+																					font-size: 1.9em;
+																					line-height: 140%;
+																					color: #fff;
+																				}
+													}	
+
+
+#block-views-product-block,
+#block-views-product-block-1,
+#block-views-all-products-block-3,
+#block-views-all-products-block-1	{	position: relative;
+
+										.view-content	{	.views-row 	{	position: inherit;
+																			
+																			a   {	text-decoration: none;
+																					font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+																					font-weight: 400;
+																				}
+																		}
+														}			
+									
+										.view-filters	{	padding: 1em 0 0 2em;
+															border: 1px solid #ccc;
+															margin-bottom: 10px;
+															color: #222;
+										
+															.form-item-sort-by	{	margin-left: 5em;
+																					padding-left: 2em;
+																					border-left: 1px solid #444;
+																				}
+																				
+															.views-exposed-widget	{	margin: 0 2em 2em 0;
+																						
+																						label,
+																						option	{ 	font-family: 'Roboto', sans-serif;
+																									margin-bottom: 5px;
+																									font-weight: 300;
+																								}
+																					}
+														}
+													
+										.views-field-term-node-tid-1,		
+										.views-field-field-product-categories,
+										.views-field-field-country				{	@include lightborder;
+																					border-bottom-color: transparent;
+																					padding: 8px 0 2px 1em;
+																					margin: 0;
+																					background: $purple_grey; 
+																					
+																					a   {	font-family: "Roboto", sans-serif;
+																							color: #fff;
+																					
+																							&:hover	{	color: $brightgreen;
+																									}
+																						}
+																				}				
+											
+										.views-field-field-illustration	{	padding: 1em 0;
+																			@include lightborder;
+																			margin-bottom: 10px;
+																			background: #fff;
+																		}
+										.views-field-title,
+										.views-field-field-supplier,
+										.views-field-term-node-tid		{	padding: 5px;
+																			a   {	font-family: "Roboto", sans-serif;
+																					color: #111;
+																				}
+																			
+																		}
+																		
+										.views-field-field-country		{	background: $greyblue;
+																			@include border-top-radius(5px);
+																			
+																			a   {	font-family: "Roboto", sans-serif;
+																					color: #fff;
+																					
+																					&:hover	{	color: $brightgreen;
+																							}
+																				}
+																		}
+																		
+										.views-field-title	a			{	color: #222;
+																			font-size: 1.1em;
+																			font-weight: 300;
+																		}
+																		
+										.views-field-field-country		{	text-transform: uppercase;
+																		}
+																			
+																							
+								}
+							
+.view-frontpage-news	{	margin: 9em 0 0 0;
+							.views-row	{	padding: 1em 0;
+										}
+										
+							.views-field-title	{	margin: 5px 0;
+													a	{	color: #222;
+															font-size: 1.2em;
+															text-decoration: none;
+															font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+															text-transform: uppercase;
+															font-weight: 400;
+														}
+												}
+											
+							.views-field-body	p,
+							.views-field-body	 	{	@include small-body;
+														margin: 5px 0;	
+													}	
+													
+							.views-field-field-gallery-image	{ 	img { @include single-box-shadow;
+																		}
+																	padding: 3px;
+																	margin-bottom: 2em;
+																}	
+						}
+						
+.view-featured-product	{	font-family: 'Roboto', sans-serif;
+										padding: 3em 0 8em 0;
+										min-height: 250px;
+										
+										
+										
+										.views-field-title	{	display: block;
+																font-weight: 100;
+																font-size: 3.4em;
+																line-height: 140%;
+																color: #222;
+															}
+															
+										.views-field-body p { 	font-weight: 100;
+																font-size: 1.4em;
+																line-height: 160%;
+																color: #222;
+																padding: 1em 0 0 0;
+															}	
+										
+										.views-field-field-illustration {	img	{	margin-top: -80px;
+																				}
+																		}	
+						}
+						
+						
+.views-field-field-country	{	text-transform: uppercase;
+								font-family: "Roboto", sans-serif;
+								font-size: 1em;
+								margin: 1em 0;
+								
+								
+								a    {	color: #444;
+										text-decoration: none;
+										&:hover	{	text-decoration: underline;
+												}
+									 }
+							}
+
+.views-field-created	{	text-transform: uppercase;
+							font-family: "Roboto", sans-serif;
+							font-size: .9em;
+							color: #444;
+						}
+						
+.views-field-view-node	{	margin: 0;
+							padding-bottom: 6em;
+												
+							a   {	text-decoration: none;
+									font-family: 'Century Gothic', sans-serif;
+									font-weight: 300;
+									color: #222;
+									text-transform: uppercase;
+									font-size: .8em;
+								}
+						}
+						
+#grapepickers	{	img { float: right;
+						}
+				}																	
