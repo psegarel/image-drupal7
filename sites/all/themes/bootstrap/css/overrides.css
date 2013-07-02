@@ -503,13 +503,135 @@ html, body {
 }
 
 /* line 19, ../sass/overrides.scss */
+.product-spacer {
+  min-height: 80px;
+}
+
+/* line 22, ../sass/overrides.scss */
+ul#superfish-1 {
+  margin-top: -2em;
+}
+/* line 23, ../sass/overrides.scss */
+ul#superfish-1 li {
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin-left: 1px;
+  background: #635583;
+}
+/* line 27, ../sass/overrides.scss */
+ul#superfish-1 li a {
+  color: #fff;
+  padding: 20px 20px 8px 20px;
+  text-transform: uppercase;
+  border: none;
+  font-size: .9em;
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+/* line 34, ../sass/overrides.scss */
+ul#superfish-1 li a:hover {
+  color: #eee;
+  background: #465157;
+  border-top: 1px solid #fff;
+}
+/* line 40, ../sass/overrides.scss */
+ul#superfish-1 li a.active {
+  color: #fff;
+  background: #465157;
+  border-top: 1px solid #fff;
+}
+/* line 45, ../sass/overrides.scss */
+ul#superfish-1 li .last a {
+  border: none;
+}
+/* line 50, ../sass/overrides.scss */
+ul#superfish-1 li.sf-item-1 {
+  margin-left: 0;
+}
+/* line 51, ../sass/overrides.scss */
+ul#superfish-1 li.sf-item-1 a {
+  border-left: none;
+}
+
+/* line 56, ../sass/overrides.scss */
+.sf-menu.sf-style-default {
+  float: left;
+  margin-bottom: 0;
+  padding: 0px;
+}
+
+/* line 63, ../sass/overrides.scss */
+#block-views-news-block {
+  font-family: 'Roboto', sans-serif;
+  color: #777;
+}
+/* line 66, ../sass/overrides.scss */
+#block-views-news-block .views-field-field-gallery-image img {
+  padding: 1px;
+  background: #ccc;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+}
+/* line 71, ../sass/overrides.scss */
+#block-views-news-block .views-field-title {
+  font-weight: 400;
+  font-size: 1.6em;
+  line-height: 140%;
+  padding-bottom: 3em;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #222;
+}
+/* line 79, ../sass/overrides.scss */
+#block-views-news-block .views-field-body p {
+  font-weight: 100;
+  font-size: 1.4em;
+  padding-bottom: 1.4em;
+  line-height: 140%;
+}
+
+/* line 86, ../sass/overrides.scss */
+#block-views-news-block-1 {
+  font-family: 'Roboto', sans-serif;
+  color: #222;
+}
+/* line 89, ../sass/overrides.scss */
+#block-views-news-block-1 .views-field-title {
+  font-weight: 300;
+  font-size: 1em;
+  padding: 5px 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+/* line 94, ../sass/overrides.scss */
+#block-views-news-block-1 .views-field-title a {
+  color: #222;
+  text-decoration: none;
+}
+/* line 99, ../sass/overrides.scss */
+#block-views-news-block-1 .views-field-field-gallery-image img {
+  padding: 4px;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+}
+
+/* line 105, ../sass/overrides.scss */
 #footer {
   border-top: 8px solid #635583;
   background-color: #342c43;
   font-weight: 300;
   font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
 }
-/* line 24, ../sass/overrides.scss */
+/* line 110, ../sass/overrides.scss */
 #footer h2.block-title {
   font-size: 1em;
   color: #7ecf8c;
@@ -517,20 +639,20 @@ html, body {
   display: block;
   padding: 0 0 .4em 0;
 }
-/* line 31, ../sass/overrides.scss */
+/* line 117, ../sass/overrides.scss */
 #footer a {
   color: #fff;
   font-size: .9em;
   line-height: 160%;
   font-family: 'Roboto', sans-serif;
 }
-/* line 35, ../sass/overrides.scss */
+/* line 121, ../sass/overrides.scss */
 #footer a:hover {
   background: none;
   text-decoration: underline;
 }
 
-/* line 41, ../sass/overrides.scss */
+/* line 127, ../sass/overrides.scss */
 #footer-bottom {
   border-top: 1px dotted #555;
   text-align: center;
@@ -542,40 +664,40 @@ html, body {
   font-weight: 300;
   font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
 }
-/* line 48, ../sass/overrides.scss */
+/* line 134, ../sass/overrides.scss */
 #footer-bottom a {
   padding: 1em 2em;
   color: #7ecf8c;
 }
-/* line 52, ../sass/overrides.scss */
+/* line 138, ../sass/overrides.scss */
 #footer-bottom #block-superfish-7 {
   width: 500px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 58, ../sass/overrides.scss */
+/* line 144, ../sass/overrides.scss */
 #block-locale-language ul.language-switcher-locale-url {
   list-style: none;
   float: right;
 }
-/* line 61, ../sass/overrides.scss */
+/* line 147, ../sass/overrides.scss */
 #block-locale-language ul.language-switcher-locale-url li {
   display: inline;
   float: left;
 }
-/* line 63, ../sass/overrides.scss */
+/* line 149, ../sass/overrides.scss */
 #block-locale-language ul.language-switcher-locale-url li a {
   color: #fff;
   padding: 0 1em;
 }
 
-/* line 70, ../sass/overrides.scss */
+/* line 156, ../sass/overrides.scss */
 #views_slideshow_cycle_main_catchphrases-default {
   margin: 3em 0 2em 0;
   padding-top: 3em;
 }
-/* line 72, ../sass/overrides.scss */
+/* line 158, ../sass/overrides.scss */
 #views_slideshow_cycle_main_catchphrases-default .views-field-body {
   font-weight: 100;
   font-family: 'Roboto', sans-serif;
@@ -584,78 +706,46 @@ html, body {
   color: #fff;
 }
 
-/* line 84, ../sass/overrides.scss */
+/* line 168, ../sass/overrides.scss */
 #block-views-product-block,
 #block-views-product-block-1,
-#block-views-all-products-block-3,
 #block-views-all-products-block-1 {
   position: relative;
+  /*
+  									
+  										.view-filters	{	margin-left: 3em;
+  															color: #222;
+  										
+  															.views-exposed-widget	{	label,
+  																						option	{ 	font-family: 'Roboto', sans-serif;
+  																									margin-bottom: 5px;
+  																									font-weight: 300;
+  																								}
+  																					}
+  														}
+  */
 }
-/* line 86, ../sass/overrides.scss */
+/* line 170, ../sass/overrides.scss */
 #block-views-product-block .view-content .views-row,
 #block-views-product-block-1 .view-content .views-row,
-#block-views-all-products-block-3 .view-content .views-row,
 #block-views-all-products-block-1 .view-content .views-row {
   position: inherit;
 }
-/* line 88, ../sass/overrides.scss */
+/* line 172, ../sass/overrides.scss */
 #block-views-product-block .view-content .views-row a,
 #block-views-product-block-1 .view-content .views-row a,
-#block-views-all-products-block-3 .view-content .views-row a,
 #block-views-all-products-block-1 .view-content .views-row a {
   text-decoration: none;
   font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
   font-weight: 400;
 }
-/* line 95, ../sass/overrides.scss */
-#block-views-product-block .view-filters,
-#block-views-product-block-1 .view-filters,
-#block-views-all-products-block-3 .view-filters,
-#block-views-all-products-block-1 .view-filters {
-  padding: 1em 0 0 2em;
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
-  color: #222;
-}
-/* line 100, ../sass/overrides.scss */
-#block-views-product-block .view-filters .form-item-sort-by,
-#block-views-product-block-1 .view-filters .form-item-sort-by,
-#block-views-all-products-block-3 .view-filters .form-item-sort-by,
-#block-views-all-products-block-1 .view-filters .form-item-sort-by {
-  margin-left: 5em;
-  padding-left: 2em;
-  border-left: 1px solid #444;
-}
-/* line 105, ../sass/overrides.scss */
-#block-views-product-block .view-filters .views-exposed-widget,
-#block-views-product-block-1 .view-filters .views-exposed-widget,
-#block-views-all-products-block-3 .view-filters .views-exposed-widget,
-#block-views-all-products-block-1 .view-filters .views-exposed-widget {
-  margin: 0 2em 2em 0;
-}
-/* line 108, ../sass/overrides.scss */
-#block-views-product-block .view-filters .views-exposed-widget label,
-#block-views-product-block .view-filters .views-exposed-widget option,
-#block-views-product-block-1 .view-filters .views-exposed-widget label,
-#block-views-product-block-1 .view-filters .views-exposed-widget option,
-#block-views-all-products-block-3 .view-filters .views-exposed-widget label,
-#block-views-all-products-block-3 .view-filters .views-exposed-widget option,
-#block-views-all-products-block-1 .view-filters .views-exposed-widget label,
-#block-views-all-products-block-1 .view-filters .views-exposed-widget option {
-  font-family: 'Roboto', sans-serif;
-  margin-bottom: 5px;
-  font-weight: 300;
-}
-/* line 117, ../sass/overrides.scss */
+/* line 194, ../sass/overrides.scss */
 #block-views-product-block .views-field-term-node-tid-1,
 #block-views-product-block .views-field-field-product-categories,
 #block-views-product-block .views-field-field-country,
 #block-views-product-block-1 .views-field-term-node-tid-1,
 #block-views-product-block-1 .views-field-field-product-categories,
 #block-views-product-block-1 .views-field-field-country,
-#block-views-all-products-block-3 .views-field-term-node-tid-1,
-#block-views-all-products-block-3 .views-field-field-product-categories,
-#block-views-all-products-block-3 .views-field-field-country,
 #block-views-all-products-block-1 .views-field-term-node-tid-1,
 #block-views-all-products-block-1 .views-field-field-product-categories,
 #block-views-all-products-block-1 .views-field-field-country {
@@ -665,82 +755,68 @@ html, body {
   margin: 0;
   background: #635583;
 }
-/* line 123, ../sass/overrides.scss */
+/* line 200, ../sass/overrides.scss */
 #block-views-product-block .views-field-term-node-tid-1 a,
 #block-views-product-block .views-field-field-product-categories a,
 #block-views-product-block .views-field-field-country a,
 #block-views-product-block-1 .views-field-term-node-tid-1 a,
 #block-views-product-block-1 .views-field-field-product-categories a,
 #block-views-product-block-1 .views-field-field-country a,
-#block-views-all-products-block-3 .views-field-term-node-tid-1 a,
-#block-views-all-products-block-3 .views-field-field-product-categories a,
-#block-views-all-products-block-3 .views-field-field-country a,
 #block-views-all-products-block-1 .views-field-term-node-tid-1 a,
 #block-views-all-products-block-1 .views-field-field-product-categories a,
 #block-views-all-products-block-1 .views-field-field-country a {
   font-family: "Roboto", sans-serif;
   color: #fff;
 }
-/* line 126, ../sass/overrides.scss */
+/* line 203, ../sass/overrides.scss */
 #block-views-product-block .views-field-term-node-tid-1 a:hover,
 #block-views-product-block .views-field-field-product-categories a:hover,
 #block-views-product-block .views-field-field-country a:hover,
 #block-views-product-block-1 .views-field-term-node-tid-1 a:hover,
 #block-views-product-block-1 .views-field-field-product-categories a:hover,
 #block-views-product-block-1 .views-field-field-country a:hover,
-#block-views-all-products-block-3 .views-field-term-node-tid-1 a:hover,
-#block-views-all-products-block-3 .views-field-field-product-categories a:hover,
-#block-views-all-products-block-3 .views-field-field-country a:hover,
 #block-views-all-products-block-1 .views-field-term-node-tid-1 a:hover,
 #block-views-all-products-block-1 .views-field-field-product-categories a:hover,
 #block-views-all-products-block-1 .views-field-field-country a:hover {
   color: #7ecf8c;
 }
-/* line 131, ../sass/overrides.scss */
+/* line 208, ../sass/overrides.scss */
 #block-views-product-block .views-field-field-illustration,
 #block-views-product-block-1 .views-field-field-illustration,
-#block-views-all-products-block-3 .views-field-field-illustration,
 #block-views-all-products-block-1 .views-field-field-illustration {
   padding: 1em 0;
   border: 1px solid #ddd;
   margin-bottom: 10px;
   background: #fff;
 }
-/* line 138, ../sass/overrides.scss */
+/* line 215, ../sass/overrides.scss */
 #block-views-product-block .views-field-title,
 #block-views-product-block .views-field-field-supplier,
 #block-views-product-block .views-field-term-node-tid,
 #block-views-product-block-1 .views-field-title,
 #block-views-product-block-1 .views-field-field-supplier,
 #block-views-product-block-1 .views-field-term-node-tid,
-#block-views-all-products-block-3 .views-field-title,
-#block-views-all-products-block-3 .views-field-field-supplier,
-#block-views-all-products-block-3 .views-field-term-node-tid,
 #block-views-all-products-block-1 .views-field-title,
 #block-views-all-products-block-1 .views-field-field-supplier,
 #block-views-all-products-block-1 .views-field-term-node-tid {
   padding: 5px;
 }
-/* line 139, ../sass/overrides.scss */
+/* line 216, ../sass/overrides.scss */
 #block-views-product-block .views-field-title a,
 #block-views-product-block .views-field-field-supplier a,
 #block-views-product-block .views-field-term-node-tid a,
 #block-views-product-block-1 .views-field-title a,
 #block-views-product-block-1 .views-field-field-supplier a,
 #block-views-product-block-1 .views-field-term-node-tid a,
-#block-views-all-products-block-3 .views-field-title a,
-#block-views-all-products-block-3 .views-field-field-supplier a,
-#block-views-all-products-block-3 .views-field-term-node-tid a,
 #block-views-all-products-block-1 .views-field-title a,
 #block-views-all-products-block-1 .views-field-field-supplier a,
 #block-views-all-products-block-1 .views-field-term-node-tid a {
   font-family: "Roboto", sans-serif;
   color: #111;
 }
-/* line 145, ../sass/overrides.scss */
+/* line 222, ../sass/overrides.scss */
 #block-views-product-block .views-field-field-country,
 #block-views-product-block-1 .views-field-field-country,
-#block-views-all-products-block-3 .views-field-field-country,
 #block-views-all-products-block-1 .views-field-field-country {
   background: #465157;
   -moz-border-radius-topleft: 5px;
@@ -750,51 +826,515 @@ html, body {
   -webkit-border-top-right-radius: 5px;
   border-top-right-radius: 5px;
 }
-/* line 148, ../sass/overrides.scss */
+/* line 225, ../sass/overrides.scss */
 #block-views-product-block .views-field-field-country a,
 #block-views-product-block-1 .views-field-field-country a,
-#block-views-all-products-block-3 .views-field-field-country a,
 #block-views-all-products-block-1 .views-field-field-country a {
   font-family: "Roboto", sans-serif;
   color: #fff;
 }
-/* line 151, ../sass/overrides.scss */
+/* line 228, ../sass/overrides.scss */
 #block-views-product-block .views-field-field-country a:hover,
 #block-views-product-block-1 .views-field-field-country a:hover,
-#block-views-all-products-block-3 .views-field-field-country a:hover,
 #block-views-all-products-block-1 .views-field-field-country a:hover {
   color: #7ecf8c;
 }
-/* line 156, ../sass/overrides.scss */
+/* line 233, ../sass/overrides.scss */
 #block-views-product-block .views-field-title a,
 #block-views-product-block-1 .views-field-title a,
-#block-views-all-products-block-3 .views-field-title a,
 #block-views-all-products-block-1 .views-field-title a {
   color: #222;
   font-size: 1.1em;
   font-weight: 300;
 }
-/* line 161, ../sass/overrides.scss */
+/* line 238, ../sass/overrides.scss */
 #block-views-product-block .views-field-field-country,
 #block-views-product-block-1 .views-field-field-country,
-#block-views-all-products-block-3 .views-field-field-country,
 #block-views-all-products-block-1 .views-field-field-country {
   text-transform: uppercase;
 }
 
-/* line 167, ../sass/overrides.scss */
+/* line 244, ../sass/overrides.scss */
+#block-views-all-products-block-3 {
+  position: relative;
+}
+/* line 246, ../sass/overrides.scss */
+#block-views-all-products-block-3 .view-content {
+  margin-top: -60px;
+}
+/* line 247, ../sass/overrides.scss */
+#block-views-all-products-block-3 .view-content .views-row {
+  position: inherit;
+}
+/* line 249, ../sass/overrides.scss */
+#block-views-all-products-block-3 .view-content .views-row a {
+  text-decoration: none;
+  font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+  font-weight: 400;
+}
+/* line 256, ../sass/overrides.scss */
+#block-views-all-products-block-3 .view-filters {
+  margin-left: 3em;
+  color: #222;
+}
+/* line 260, ../sass/overrides.scss */
+#block-views-all-products-block-3 .view-filters .views-exposed-widget label,
+#block-views-all-products-block-3 .view-filters .views-exposed-widget option {
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 5px;
+  font-weight: 300;
+}
+/* line 269, ../sass/overrides.scss */
+#block-views-all-products-block-3 .views-field-term-node-tid-1,
+#block-views-all-products-block-3 .views-field-field-product-categories,
+#block-views-all-products-block-3 .views-field-field-country {
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+  padding: 8px 0 2px 1em;
+  margin: 0;
+  background: #635583;
+}
+/* line 275, ../sass/overrides.scss */
+#block-views-all-products-block-3 .views-field-term-node-tid-1 a,
+#block-views-all-products-block-3 .views-field-field-product-categories a,
+#block-views-all-products-block-3 .views-field-field-country a {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+/* line 278, ../sass/overrides.scss */
+#block-views-all-products-block-3 .views-field-term-node-tid-1 a:hover,
+#block-views-all-products-block-3 .views-field-field-product-categories a:hover,
+#block-views-all-products-block-3 .views-field-field-country a:hover {
+  color: #7ecf8c;
+}
+/* line 283, ../sass/overrides.scss */
+#block-views-all-products-block-3 .views-field-field-illustration {
+  padding: 1em 0;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  background: #fff;
+}
+/* line 290, ../sass/overrides.scss */
+#block-views-all-products-block-3 .views-field-title,
+#block-views-all-products-block-3 .views-field-field-supplier,
+#block-views-all-products-block-3 .views-field-term-node-tid {
+  padding: 5px;
+}
+/* line 291, ../sass/overrides.scss */
+#block-views-all-products-block-3 .views-field-title a,
+#block-views-all-products-block-3 .views-field-field-supplier a,
+#block-views-all-products-block-3 .views-field-term-node-tid a {
+  font-family: "Roboto", sans-serif;
+  color: #111;
+}
+/* line 297, ../sass/overrides.scss */
+#block-views-all-products-block-3 .views-field-field-country {
+  background: #465157;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+/* line 300, ../sass/overrides.scss */
+#block-views-all-products-block-3 .views-field-field-country a {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+/* line 303, ../sass/overrides.scss */
+#block-views-all-products-block-3 .views-field-field-country a:hover {
+  color: #7ecf8c;
+}
+/* line 308, ../sass/overrides.scss */
+#block-views-all-products-block-3 .views-field-title a {
+  color: #222;
+  font-size: 1.1em;
+  font-weight: 300;
+}
+/* line 313, ../sass/overrides.scss */
+#block-views-all-products-block-3 .views-field-field-country {
+  text-transform: uppercase;
+}
+
+/* line 319, ../sass/overrides.scss */
+#block-views-about-block {
+  padding: 2em 0;
+}
+/* line 320, ../sass/overrides.scss */
+#block-views-about-block .views-field-body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 1.6em;
+  line-height: 160%;
+  color: #444;
+}
+
+/* line 328, ../sass/overrides.scss */
+#block-views-contact-block {
+  color: #555;
+}
+/* line 330, ../sass/overrides.scss */
+#block-views-contact-block .views-row {
+  margin-bottom: 2em;
+}
+/* line 332, ../sass/overrides.scss */
+#block-views-contact-block .views-row .views-field-field-phone {
+  padding-top: 8px;
+  padding-bottom: 2px;
+}
+/* line 336, ../sass/overrides.scss */
+#block-views-contact-block .views-row .views-label {
+  float: left;
+}
+/* line 339, ../sass/overrides.scss */
+#block-views-contact-block .views-row .views-field-title {
+  color: #222;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin-bottom: .5em;
+}
+/* line 346, ../sass/overrides.scss */
+#block-views-contact-block .views-row .views-field-body p,
+#block-views-contact-block .views-row .views-field-body {
+  font-family: "Tahoma", "Lucida Grande", sans-serif;
+  font-weight: 200;
+  font-size: 1em;
+  line-height: 160%;
+  color: #555;
+}
+/* line 349, ../sass/overrides.scss */
+#block-views-contact-block .views-row .views-field-field-google-map {
+  padding: 1em 0;
+}
+/* line 351, ../sass/overrides.scss */
+#block-views-contact-block .views-row .views-field-field-google-map a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #635583;
+  padding: 14px 10px 4px 10px;
+  display: block;
+  font-size: .7em;
+  clear: both;
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+/* line 361, ../sass/overrides.scss */
+#block-views-contact-block .views-row .views-field-field-google-map a:hover {
+  color: #fff;
+  background: #342c43;
+}
+
+/* line 371, ../sass/overrides.scss */
+.term-listing-heading h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 3em;
+  margin-bottom: .4em;
+  text-transform: capitalize;
+}
+
+/* line 379, ../sass/overrides.scss */
+.taxonomy-term-description p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1.3em;
+  padding-bottom: .2em;
+  margin-bottom: 1em;
+  line-height: 140%;
+}
+
+/* line 389, ../sass/overrides.scss */
+#block-views-country-terms-block .views-field-field-country .field-content,
+#block-views-country-terms-block .views-field-field-country .country-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 3em;
+  padding-bottom: .2em;
+  margin-bottom: 1em;
+  text-transform: capitalize;
+}
+
+/* line 399, ../sass/overrides.scss */
+#block-views-country-by-suppliers-block-1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+/* line 402, ../sass/overrides.scss */
+#block-views-country-by-suppliers-block-1 .views-row {
+  clear: both;
+  margin-bottom: 40px;
+}
+/* line 407, ../sass/overrides.scss */
+#block-views-country-by-suppliers-block-1 .views-field-name-i18n {
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 1.2em;
+}
+/* line 411, ../sass/overrides.scss */
+#block-views-country-by-suppliers-block-1 .views-field-name-i18n a {
+  color: #222;
+  text-decoration: none;
+}
+/* line 414, ../sass/overrides.scss */
+#block-views-country-by-suppliers-block-1 .views-field-name-i18n a:hover {
+  text-decoration: underline;
+}
+/* line 419, ../sass/overrides.scss */
+#block-views-country-by-suppliers-block-1 .views-field-field-logo img {
+  border: 1px solid #ddd;
+  margin: 0 10px 10px 0;
+  float: left;
+}
+
+/* line 426, ../sass/overrides.scss */
+#block-views-suppliers-block-1 .views-field-description-i18n {
+  font-family: "Tahoma", "Lucida Grande", sans-serif;
+  font-weight: 200;
+  font-size: 1em;
+  line-height: 160%;
+  color: #555;
+  margin-top: 0;
+}
+/* line 430, ../sass/overrides.scss */
+#block-views-suppliers-block-1 .views-field-field-logo img {
+  padding: 1em;
+  border: 1px solid #ccc;
+  float: left;
+  margin-right: 20px;
+}
+/* line 436, ../sass/overrides.scss */
+#block-views-suppliers-block-1 .views-label-field-country {
+  float: left;
+  padding-right: 20px;
+}
+
+/* line 442, ../sass/overrides.scss */
+#block-views-suppliers-block-2 {
+  font-size: .8em;
+}
+/* line 445, ../sass/overrides.scss */
+#block-views-suppliers-block-2 .pagination,
+#block-views-suppliers-block-2 .pagination-centered {
+  display: none;
+}
+/* line 446, ../sass/overrides.scss */
+#block-views-suppliers-block-2 .pagination ul,
+#block-views-suppliers-block-2 .pagination-centered ul {
+  display: none;
+}
+/* line 450, ../sass/overrides.scss */
+#block-views-suppliers-block-2 h3 {
+  display: none;
+}
+/* line 453, ../sass/overrides.scss */
+#block-views-suppliers-block-2 .views-row {
+  height: 390px;
+  background: #fff;
+  margin-bottom: 1em;
+}
+/* line 457, ../sass/overrides.scss */
+#block-views-suppliers-block-2 .views-row .views-field {
+  border: 1px solid #ddd;
+}
+/* line 460, ../sass/overrides.scss */
+#block-views-suppliers-block-2 .views-row .views-field-field-illustration {
+  padding: 20px;
+  border-bottom: none;
+}
+/* line 466, ../sass/overrides.scss */
+#block-views-suppliers-block-2 .views-row .views-field-title,
+#block-views-suppliers-block-2 .views-row .views-field-body {
+  padding: 10px;
+}
+/* line 469, ../sass/overrides.scss */
+#block-views-suppliers-block-2 .views-row .views-field-title {
+  margin-bottom: 10px;
+}
+/* line 471, ../sass/overrides.scss */
+#block-views-suppliers-block-2 .views-row .views-field-title a {
+  color: #222;
+  font-size: 1.1em;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+/* line 478, ../sass/overrides.scss */
+#block-views-suppliers-block-2 .views-row .views-field-title a:hover {
+  text-decoration: underline;
+}
+/* line 484, ../sass/overrides.scss */
+#block-views-suppliers-block-2 .views-row .views-field-body {
+  font-family: "Tahoma", "Lucida Grande", sans-serif;
+  font-weight: 200;
+  font-size: 1em;
+  line-height: 160%;
+  color: #444;
+  margin: 20px 0 0 10px;
+}
+/* line 492, ../sass/overrides.scss */
+#block-views-suppliers-block-2 .views-row .views-field-field-grape-varieties {
+  text-transform: uppercase;
+  border-bottom: none;
+  padding: 6px 10px;
+}
+/* line 496, ../sass/overrides.scss */
+#block-views-suppliers-block-2 .views-row .views-field-field-grape-varieties a {
+  color: #3a64e9;
+  text-decoration: none;
+}
+
+/* line 504, ../sass/overrides.scss */
+#block-views-product-block-2 {
+  margin: 2em 0;
+  font-family: "Roboto", sans-serif;
+}
+/* line 507, ../sass/overrides.scss */
+#block-views-product-block-2 table.acids-table {
+  width: 100%;
+}
+/* line 508, ../sass/overrides.scss */
+#block-views-product-block-2 table.acids-table td {
+  width: 50%;
+  padding: 5px;
+}
+/* line 513, ../sass/overrides.scss */
+#block-views-product-block-2 h2.acids-table-name {
+  font-size: 1em;
+}
+/* line 516, ../sass/overrides.scss */
+#block-views-product-block-2 .views-field-field-illustration img {
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20em;
+}
+/* line 523, ../sass/overrides.scss */
+#block-views-product-block-2 .views-field-title {
+  font-weight: 300;
+  font-size: 2em;
+  line-height: 110%;
+  margin-bottom: 1.2em;
+}
+/* line 530, ../sass/overrides.scss */
+#block-views-product-block-2 .views-field-body,
+#block-views-product-block-2 .views-field-body-1 {
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 160%;
+}
+/* line 535, ../sass/overrides.scss */
+#block-views-product-block-2 .field_title {
+  font-weight: 300;
+  font-size: 1em;
+  margin-top: 2em;
+  padding-bottom: .2em;
+  border-bottom: 1px dotted #aaa;
+  /* margin-bottom: 20px; */
+}
+/* line 545, ../sass/overrides.scss */
+#block-views-product-block-2 .views-field-field-supplier .field-content,
+#block-views-product-block-2 .views-field-field-country .field-content {
+  font-size: 1.1em;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+/* line 549, ../sass/overrides.scss */
+#block-views-product-block-2 .views-field-field-supplier .field-content a,
+#block-views-product-block-2 .views-field-field-country .field-content a {
+  color: #342c43;
+  text-decoration: none;
+}
+/* line 551, ../sass/overrides.scss */
+#block-views-product-block-2 .views-field-field-supplier .field-content a:hover,
+#block-views-product-block-2 .views-field-field-country .field-content a:hover {
+  text-decoration: underline;
+}
+
+/* line 559, ../sass/overrides.scss */
+#block-views-about-block-1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 140%;
+}
+
+/* line 565, ../sass/overrides.scss */
+.view-id-downloads {
+  color: #222;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+}
+/* line 569, ../sass/overrides.scss */
+.view-id-downloads .views-row-odd {
+  background: #eee;
+}
+/* line 572, ../sass/overrides.scss */
+.view-id-downloads .views-row-even {
+  color: #222;
+}
+/* line 575, ../sass/overrides.scss */
+.view-id-downloads .views-row {
+  padding: 2em 0;
+}
+/* line 578, ../sass/overrides.scss */
+.view-id-downloads .views-field-title {
+  text-transform: uppercase;
+  padding-bottom: 1em;
+  padding-left: 1em;
+}
+/* line 583, ../sass/overrides.scss */
+.view-id-downloads .views-field-field-download {
+  font-size: .9em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+}
+/* line 587, ../sass/overrides.scss */
+.view-id-downloads .views-field-field-download a {
+  color: #444;
+  text-decoration: none;
+  padding: 5px 24px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #cccccc));
+  background-image: -webkit-linear-gradient(top, #ffffff, #cccccc);
+  background-image: -moz-linear-gradient(top, #ffffff, #cccccc);
+  background-image: -o-linear-gradient(top, #ffffff, #cccccc);
+  background-image: linear-gradient(top, #ffffff, #cccccc);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+}
+/* line 594, ../sass/overrides.scss */
+.view-id-downloads .views-field-field-download a:hover {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #dddddd));
+  background-image: -webkit-linear-gradient(top, #cccccc, #dddddd);
+  background-image: -moz-linear-gradient(top, #cccccc, #dddddd);
+  background-image: -o-linear-gradient(top, #cccccc, #dddddd);
+  background-image: linear-gradient(top, #cccccc, #dddddd);
+  color: #222;
+}
+
+/* line 602, ../sass/overrides.scss */
 .view-frontpage-news {
   margin: 9em 0 0 0;
 }
-/* line 168, ../sass/overrides.scss */
+/* line 603, ../sass/overrides.scss */
 .view-frontpage-news .views-row {
   padding: 1em 0;
 }
-/* line 171, ../sass/overrides.scss */
+/* line 606, ../sass/overrides.scss */
 .view-frontpage-news .views-field-title {
   margin: 5px 0;
 }
-/* line 172, ../sass/overrides.scss */
+/* line 607, ../sass/overrides.scss */
 .view-frontpage-news .views-field-title a {
   color: #222;
   font-size: 1.2em;
@@ -803,7 +1343,7 @@ html, body {
   text-transform: uppercase;
   font-weight: 400;
 }
-/* line 182, ../sass/overrides.scss */
+/* line 617, ../sass/overrides.scss */
 .view-frontpage-news .views-field-body p,
 .view-frontpage-news .views-field-body {
   font-family: "Tahoma", "Lucida Grande", sans-serif;
@@ -813,25 +1353,25 @@ html, body {
   color: #555;
   margin: 5px 0;
 }
-/* line 186, ../sass/overrides.scss */
+/* line 621, ../sass/overrides.scss */
 .view-frontpage-news .views-field-field-gallery-image {
   padding: 3px;
   margin-bottom: 2em;
 }
-/* line 186, ../sass/overrides.scss */
+/* line 621, ../sass/overrides.scss */
 .view-frontpage-news .views-field-field-gallery-image img {
   -webkit-box-shadow: 0px 0px 5px #333333;
   -moz-box-shadow: 0px 0px 5px #333333;
   box-shadow: 0px 0px 5px #333333;
 }
 
-/* line 193, ../sass/overrides.scss */
+/* line 628, ../sass/overrides.scss */
 .view-featured-product {
   font-family: 'Roboto', sans-serif;
   padding: 3em 0 8em 0;
   min-height: 250px;
 }
-/* line 199, ../sass/overrides.scss */
+/* line 634, ../sass/overrides.scss */
 .view-featured-product .views-field-title {
   display: block;
   font-weight: 100;
@@ -839,7 +1379,7 @@ html, body {
   line-height: 140%;
   color: #222;
 }
-/* line 206, ../sass/overrides.scss */
+/* line 641, ../sass/overrides.scss */
 .view-featured-product .views-field-body p {
   font-weight: 100;
   font-size: 1.4em;
@@ -847,29 +1387,29 @@ html, body {
   color: #222;
   padding: 1em 0 0 0;
 }
-/* line 213, ../sass/overrides.scss */
+/* line 648, ../sass/overrides.scss */
 .view-featured-product .views-field-field-illustration img {
   margin-top: -80px;
 }
 
-/* line 219, ../sass/overrides.scss */
+/* line 654, ../sass/overrides.scss */
 .views-field-field-country {
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
   font-size: 1em;
   margin: 1em 0;
 }
-/* line 225, ../sass/overrides.scss */
+/* line 660, ../sass/overrides.scss */
 .views-field-field-country a {
   color: #444;
   text-decoration: none;
 }
-/* line 227, ../sass/overrides.scss */
+/* line 662, ../sass/overrides.scss */
 .views-field-field-country a:hover {
   text-decoration: underline;
 }
 
-/* line 232, ../sass/overrides.scss */
+/* line 667, ../sass/overrides.scss */
 .views-field-created {
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
@@ -877,12 +1417,12 @@ html, body {
   color: #444;
 }
 
-/* line 238, ../sass/overrides.scss */
+/* line 673, ../sass/overrides.scss */
 .views-field-view-node {
   margin: 0;
   padding-bottom: 6em;
 }
-/* line 241, ../sass/overrides.scss */
+/* line 676, ../sass/overrides.scss */
 .views-field-view-node a {
   text-decoration: none;
   font-family: 'Century Gothic', sans-serif;
@@ -892,7 +1432,7 @@ html, body {
   font-size: .8em;
 }
 
-/* line 250, ../sass/overrides.scss */
+/* line 685, ../sass/overrides.scss */
 #grapepickers img {
   float: right;
 }

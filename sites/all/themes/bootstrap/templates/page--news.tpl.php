@@ -83,7 +83,9 @@
 <!-- Main section -->
 <section id="main-content">
 	<div class="main-container container">
-	
+		<div class="span12">
+			<?php if(!empty($variables['products-submenu'])){ print $variables['products-submenu'];} ?>
+		</div>
 	  <header role="banner" id="page-header">
 	    <?php if (!empty($site_slogan)): ?>
 	      <p class="lead"><?php /* print $site_slogan; */ ?></p>
@@ -92,11 +94,20 @@
 	    <?php print render($page['header']); ?>
 	  </header> <!-- /#header -->
 	
-	  <div class="row">
-	  <?php   $latest_block = block_load('views', 'news-block');      
-  			  $latest = drupal_render(_block_get_renderable_array(_block_render_blocks(array($latest_block))));
-  			  if(!empty($latest)){ print $latest; } ?>
-	  </div>
+		<!-- latest news -->
+		<div class="row">
+		  <?php $latest_block = block_load('views', 'news-block');      
+				$latest = drupal_render(_block_get_renderable_array(_block_render_blocks(array($latest_block))));
+				if(!empty($latest)){ print $latest; } ?>
+		</div>
+	
+		<!-- other news -->
+		<div class="row">
+			<div class="span12"><hr /></div>
+		  <?php $others_block = block_load('views', 'news-block_1');      
+				$others = drupal_render(_block_get_renderable_array(_block_render_blocks(array($others_block))));
+				if(!empty($others)){ print $others; } ?>
+		</div>
 	</div>
 </section>
 <!-- end Main section -->

@@ -21,7 +21,6 @@
     hide($content['comments']);
     hide($content['links']);
     hide($content['field_tags']);
-    print 'Product Node';
     print render($content);
   ?>
 

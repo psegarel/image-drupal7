@@ -61,7 +61,16 @@
 			<div class="span12">
 				<?php 	$catchphrases = views_embed_view('catchphrases') ;
 						print $catchphrases; ?>
-			</div>			
+			</div>	
+			
+			<!-- Site information -->
+			<div id="site-information" class="span12">
+				<div class="pull-right">
+				<?php  print $logo; ?>
+				</div>
+			</div>	
+			<!-- end Site information -->
+				
 			<div id="grapepickers" class="span12">	
 				
 				<header role="banner" id="page-header">
@@ -83,7 +92,9 @@
 <!-- Main section -->
 <section id="main-content">
 	<div class="main-container container">
-	
+		<div class="span12">
+			<?php if(!empty($variables['products-submenu'])){ print $variables['products-submenu'];} ?>
+		</div>
 	  <header role="banner" id="page-header">
 	    <?php if (!empty($site_slogan)): ?>
 	      <p class="lead"><?php /* print $site_slogan; */ ?></p>
@@ -92,7 +103,7 @@
 	    <?php print render($page['header']); ?>
 	  </header> <!-- /#header -->
 	
-	  <div class="row-fluid">
+	  <div class="row">
 	
 	    <?php if (!empty($page['sidebar_first'])): ?>
 	      <aside class="span3" role="complementary">
