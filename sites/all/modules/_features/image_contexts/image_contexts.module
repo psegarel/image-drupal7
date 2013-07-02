@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Image Contexts feature.
- */
-
-include_once 'image_contexts.features.inc';

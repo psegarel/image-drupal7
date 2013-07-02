@@ -31,7 +31,6 @@ function image_legacy_types_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'grid-12 alpha';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -41,7 +40,7 @@ function image_legacy_types_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_type'] = 'div';
-  $handler->display->display_options['fields']['title']['element_class'] = 'grid-10 alpha';
+  $handler->display->display_options['fields']['title']['element_class'] = 'span8';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Download */
@@ -52,7 +51,7 @@ function image_legacy_types_views_default_views() {
   $handler->display->display_options['fields']['field_download']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_download']['alter']['text'] = '<a href="[field_download]">Download</a>';
   $handler->display->display_options['fields']['field_download']['element_type'] = 'div';
-  $handler->display->display_options['fields']['field_download']['element_class'] = 'grid-2 omega';
+  $handler->display->display_options['fields']['field_download']['element_class'] = 'span2 offset1';
   $handler->display->display_options['fields']['field_download']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_download']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_download']['type'] = 'file_url_plain';

@@ -31,7 +31,7 @@ function image_frontpage_products_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '6';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'grid-2 alpha';
+  $handler->display->display_options['style_options']['row_class'] = 'span2';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Relationship: Content: Taxonomy terms on node */
   $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
@@ -125,17 +125,11 @@ function image_frontpage_products_views_default_views() {
 
   /* Display: Frontpage Products */
   $handler = $view->new_display('block', 'Frontpage Products', 'block');
+  $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '6';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'grid-2';
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Content: Taxonomy terms on node */
   $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
@@ -319,7 +313,7 @@ function image_frontpage_products_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'grid-2';
+  $handler->display->display_options['style_options']['row_class'] = 'span2';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -518,13 +512,13 @@ function image_frontpage_products_views_default_views() {
 
   /* Display: Single Product */
   $handler = $view->new_display('block', 'Single Product', 'block_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'grid-8 ';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -535,8 +529,6 @@ function image_frontpage_products_views_default_views() {
   $handler->display->display_options['fields']['field_illustration']['table'] = 'field_data_field_illustration';
   $handler->display->display_options['fields']['field_illustration']['field'] = 'field_illustration';
   $handler->display->display_options['fields']['field_illustration']['label'] = '';
-  $handler->display->display_options['fields']['field_illustration']['element_type'] = 'div';
-  $handler->display->display_options['fields']['field_illustration']['element_class'] = 'grid-3 alpha';
   $handler->display->display_options['fields']['field_illustration']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_illustration']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_illustration']['settings'] = array(
@@ -550,7 +542,6 @@ function image_frontpage_products_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_class'] = 'grid-5 omega';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Supplier */
@@ -558,8 +549,6 @@ function image_frontpage_products_views_default_views() {
   $handler->display->display_options['fields']['field_supplier']['table'] = 'field_data_field_supplier';
   $handler->display->display_options['fields']['field_supplier']['field'] = 'field_supplier';
   $handler->display->display_options['fields']['field_supplier']['label'] = '';
-  $handler->display->display_options['fields']['field_supplier']['element_type'] = 'div';
-  $handler->display->display_options['fields']['field_supplier']['element_class'] = 'grid-4 omega';
   $handler->display->display_options['fields']['field_supplier']['element_label_colon'] = FALSE;
   /* Field: Field: Country */
   $handler->display->display_options['fields']['field_country']['id'] = 'field_country';
@@ -567,8 +556,6 @@ function image_frontpage_products_views_default_views() {
   $handler->display->display_options['fields']['field_country']['field'] = 'field_country';
   $handler->display->display_options['fields']['field_country']['relationship'] = 'term_node_tid';
   $handler->display->display_options['fields']['field_country']['label'] = '';
-  $handler->display->display_options['fields']['field_country']['element_type'] = 'div';
-  $handler->display->display_options['fields']['field_country']['element_class'] = 'grid-4 omega';
   $handler->display->display_options['fields']['field_country']['element_label_colon'] = FALSE;
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body_1']['id'] = 'body_1';
@@ -580,8 +567,6 @@ function image_frontpage_products_views_default_views() {
 <div class="field-content">[body_1-summary]</div>
 ';
   $handler->display->display_options['fields']['body_1']['alter']['trim'] = TRUE;
-  $handler->display->display_options['fields']['body_1']['element_type'] = 'div';
-  $handler->display->display_options['fields']['body_1']['element_class'] = 'grid-5 omega';
   $handler->display->display_options['fields']['body_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body_1']['type'] = 'text_summary_or_trimmed';
   $handler->display->display_options['fields']['body_1']['settings'] = array(
@@ -592,8 +577,6 @@ function image_frontpage_products_views_default_views() {
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
-  $handler->display->display_options['fields']['body']['element_type'] = 'div';
-  $handler->display->display_options['fields']['body']['element_class'] = 'grid-5 omega';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Nid */

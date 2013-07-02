@@ -4,6 +4,7 @@ package = Image Components
 php = 5.2.4
 dependencies[] = better_exposed_filters
 dependencies[] = context
+dependencies[] = image_frontpage_news
 dependencies[] = simple_gmap
 dependencies[] = text
 dependencies[] = views

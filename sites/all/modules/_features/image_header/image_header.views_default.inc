@@ -40,7 +40,7 @@ function image_header_views_default_views() {
   $handler->display->display_options['fields']['field_illustration']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_illustration']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_illustration']['settings'] = array(
-    'image_style' => '',
+    'image_style' => 'header_adaptive',
     'image_link' => '',
   );
   /* Sort criterion: Content: Post date */
