@@ -151,6 +151,11 @@ function bootstrap_preprocess_page(&$variables) {
 	if( isset($variables['node']->type) && $variables['node']->type == 'product' )
 	{
 		$variables['theme_hook_suggestions'][] = 'page__node_product';
+	}
+	
+	if( isset($variables['node']->type) && $variables['node']->type == 'news' )
+	{
+		$variables['theme_hook_suggestions'][] = 'page__node_news';
 		/* kpr($variables['theme_hook_suggestions']); */
 	}
 	
