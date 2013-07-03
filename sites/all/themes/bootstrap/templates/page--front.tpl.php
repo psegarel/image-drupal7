@@ -69,6 +69,8 @@
 		<div class="span12">
 			<?php if(!empty($variables['products-submenu'])){ print $variables['products-submenu'];} ?>
 		</div>
+		<p>&nbsp;</p>	
+		<p>&nbsp;</p>
 		<div class="row">
 		<?php 	$featured_product = views_embed_view('featured_product') ;
 				print $featured_product; ?>

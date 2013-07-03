@@ -85,6 +85,8 @@
 		<div class="span12">
 			<?php if(!empty($variables['products-submenu'])){ print $variables['products-submenu'];} ?>
 		</div>
+		<p>&nbsp;</p>	
+		<p>&nbsp;</p>
 	  <header role="banner" id="page-header">
 	    <?php if (!empty($site_slogan)): ?>
 	      <p class="lead"><?php /* print $site_slogan; */ ?></p>
