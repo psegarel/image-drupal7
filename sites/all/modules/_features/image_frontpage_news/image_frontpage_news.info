@@ -1,7 +1,6 @@
 name = Image Frontpage News
 core = 7.x
 package = Image Components
-php = 5.2.4
 dependencies[] = text
 dependencies[] = views
 features[ctools][] = views:views_default:3.0

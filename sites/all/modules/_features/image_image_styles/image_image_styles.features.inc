@@ -49,6 +49,7 @@ function image_image_styles_image_default_styles() {
         'weight' => 2,
       ),
     ),
+    'label' => 'header_adaptive',
   );
 
   // Exported image style: large_adaptive.
@@ -89,6 +90,7 @@ function image_image_styles_image_default_styles() {
         'weight' => 2,
       ),
     ),
+    'label' => 'large_adaptive',
   );
 
   // Exported image style: medium_adaptive.
@@ -130,6 +132,7 @@ function image_image_styles_image_default_styles() {
         'weight' => 2,
       ),
     ),
+    'label' => 'medium_adaptive',
   );
 
   return $styles;

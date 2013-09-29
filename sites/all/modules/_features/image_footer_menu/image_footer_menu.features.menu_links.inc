@@ -27,6 +27,8 @@ function image_footer_menu_menu_default_menu_links() {
     'has_children' => 0,
     'expanded' => 0,
     'weight' => -50,
+    'language' => 'und',
+    'customized' => 0,
   );
   // Exported menu link: user-menu:user
   $menu_links['user-menu:user'] = array(
@@ -38,11 +40,13 @@ function image_footer_menu_menu_default_menu_links() {
       'alter' => TRUE,
     ),
     'module' => 'system',
-    'hidden' => 1,
+    'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -48,
+    'weight' => -10,
+    'language' => 'und',
+    'customized' => 0,
   );
   // Exported menu link: user-menu:user/logout
   $menu_links['user-menu:user/logout'] = array(
@@ -58,7 +62,9 @@ function image_footer_menu_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -49,
+    'weight' => 10,
+    'language' => 'und',
+    'customized' => 0,
   );
   // Translatables
   // Included for use with string extractors like potx.

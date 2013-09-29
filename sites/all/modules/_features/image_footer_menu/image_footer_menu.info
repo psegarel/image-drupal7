@@ -1,7 +1,6 @@
 name = Image Footer Menu
 core = 7.x
 package = Image Components
-php = 5.2.4
 dependencies[] = features
 dependencies[] = menu
 dependencies[] = views
