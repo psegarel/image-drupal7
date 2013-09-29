@@ -1,14 +1,20 @@
 <?php
 
-function image_service_preprocess_block(&$variables)
+// Fixes the translation problem in Views Exposed Form
+function image_service_form_alter(&$form, &$form_state, $form_id)
 {
-	// 		kpr($variables);
-	// if($variables['block_html_id'] == 'block-views-product-block'){
-	// 	//kpr($variables);
-	// }
-}
-
-function image_service_menu_alter(&$items)
-{
-	// kpr($items);
+	global $language;
+	
+	if($form_id == 'views_exposed_form'){
+		foreach( $form['field_country_tid']['#options'] as $key=>$value){
+			if($key != 'All'){
+				$term = taxonomy_term_load($key);
+				if (module_exists('i18n_taxonomy')) {
+				    module_load_include('inc', 'i18n', 'i18n_taxonomy.pages');
+				    $term = i18n_taxonomy_localize_terms($term);
+					$form['field_country_tid']['#options'][$key] = $term->name;
+				}
+			}
+		}
+	}
 }
