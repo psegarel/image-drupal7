@@ -632,15 +632,13 @@ function image_frontpage_products_views_default_views() {
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
-  /* Filter criterion: Content: Promoted to front page */
-  $handler->display->display_options['filters']['promote']['id'] = 'promote';
-  $handler->display->display_options['filters']['promote']['table'] = 'node';
-  $handler->display->display_options['filters']['promote']['field'] = 'promote';
-  $handler->display->display_options['filters']['promote']['value'] = '1';
   /* Filter criterion: Content: Nid */
   $handler->display->display_options['filters']['nid']['id'] = 'nid';
   $handler->display->display_options['filters']['nid']['table'] = 'node';
   $handler->display->display_options['filters']['nid']['field'] = 'nid';
+  $handler->display->display_options['filters']['nid']['operator'] = 'between';
+  $handler->display->display_options['filters']['nid']['value']['min'] = '148';
+  $handler->display->display_options['filters']['nid']['value']['max'] = '149';
   $handler->display->display_options['filters']['nid']['value']['value'] = '148';
   $export['product'] = $view;
 
