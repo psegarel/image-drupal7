@@ -88,7 +88,9 @@
 			<div class="span2 offset10">
 				<p>&nbsp;</p>
 				<p>&nbsp;</p>
-				<a href="/products"><button class="btn btn-large btn-inverse" type="button">View More Products</button></a>
+				
+				<?php 	$view_more_products = views_embed_view('product', 'view_more_products') ;
+						print $view_more_products; ?>
 				<p>&nbsp;</p>
 			</div>
 		</div>
