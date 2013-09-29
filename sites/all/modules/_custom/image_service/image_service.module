@@ -5,14 +5,17 @@ function image_service_form_alter(&$form, &$form_state, $form_id)
 {
 	global $language;
 	
-	if($form_id == 'views_exposed_form'){
-		foreach( $form['field_country_tid']['#options'] as $key=>$value){
-			if($key != 'All'){
-				$term = taxonomy_term_load($key);
-				if (module_exists('i18n_taxonomy')) {
-				    module_load_include('inc', 'i18n', 'i18n_taxonomy.pages');
-				    $term = i18n_taxonomy_localize_terms($term);
-					$form['field_country_tid']['#options'][$key] = $term->name;
+	// Only do this if the page is not in English
+	if($language->language != 'en'){
+		if($form_id == 'views_exposed_form'){
+			foreach( $form['field_country_tid']['#options'] as $key=>$value){
+				if($key != 'All'){
+					$term = taxonomy_term_load($key);
+					if (module_exists('i18n_taxonomy')) {
+					    module_load_include('inc', 'i18n', 'i18n_taxonomy.pages');
+					    $term = i18n_taxonomy_localize_terms($term);
+						$form['field_country_tid']['#options'][$key] = $term->name;
+					}
 				}
 			}
 		}
