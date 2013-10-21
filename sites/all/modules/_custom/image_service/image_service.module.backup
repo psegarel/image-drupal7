@@ -1,0 +1,69 @@
+<?php
+
+function image_service_preprocess_page(&$variables)
+{
+	if(empty($variables['latest_news'])){
+		$latest_block = block_load('views', 'news-block');      
+		$latest_build = _block_get_renderable_array(_block_render_blocks(array($latest_block)));
+		$latest_news = drupal_render($latest_build);
+		$variables['latest_news'] = $latest_news;
+	}
+	
+	if(empty($variables['more_news'])){
+		$more_news_block = block_load('views', 'news-block_1');      
+		$more_news_build = _block_get_renderable_array(_block_render_blocks(array($more_news_block)));
+		$more_news = drupal_render($more_news_build);
+		$variables['more_news'] = $more_news;
+	}
+
+	if(empty($variables['single_product'])){
+		$single_product_block = block_load('views', 'product-block_2');      
+		$single_product_build = _block_get_renderable_array(_block_render_blocks(array($single_product_block)));
+		$single_product = drupal_render($single_product_build);
+		$variables['single_product'] = $single_product;
+	}
+	
+	if(empty($variables['all_products'])){
+		$all_products_block = block_load('views', 'all_products-block_3');      
+		$all_products_build = _block_get_renderable_array(_block_render_blocks(array($all_products_block)));
+		$all_products = drupal_render($all_products_build);
+		$variables['all_products'] = $all_products;
+	}
+	
+	if( isset($variables['node'] )){
+		$node = $variables['node'];
+			
+			switch($node->type){
+				case 'news':
+					$variables['theme_hook_suggestions'][] = 'page__news';
+					break;
+					
+				case 'product':
+					$variables['theme_hook_suggestions'][] = 'page__node_product';
+					break;
+			}
+			//kpr($variables);
+	}
+}
+
+// Fixes the translation problem in Views Exposed Form
+function image_service_form_alter(&$form, &$form_state, $form_id)
+{
+	global $language;
+	
+	// Only do this if the page is not in English
+	if($language->language != 'en'){
+		if($form_id == 'views_exposed_form'){
+			foreach( $form['field_country_tid']['#options'] as $key=>$value){
+				if($key != 'All'){
+					$term = taxonomy_term_load($key);
+					if (module_exists('i18n_taxonomy')) {
+					    module_load_include('inc', 'i18n', 'i18n_taxonomy.pages');
+					    $term = i18n_taxonomy_localize_terms($term);
+						$form['field_country_tid']['#options'][$key] = $term->name;
+					}
+				}
+			}
+		}
+	}
+}

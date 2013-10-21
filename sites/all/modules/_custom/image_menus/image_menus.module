@@ -1,17 +1,5 @@
 <?php
 
-function image_menus_taxonomy_term_load($terms)
-{
-	// foreach($terms as $term)
-	// 	if($term->vocabulary_machine_name == 'products')
-	// 		dsm($term);
-}
-
-function image_menus_taxonomy_vocabulary_load($vocabularies)
-{
-	//dsm($vocabularies);
-}
-
 function image_menus_menu()
 {
 	
