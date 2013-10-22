@@ -28,7 +28,6 @@
   </div>
 </header>
 
-<?php /* kpr($variables); */ ?>
 <!-- Highlighted section -->
 <div id="highlighted" class="jumbotron">
 	<div class="container">
@@ -65,7 +64,7 @@
 <section id="main-content">
 	<div class="main-container container">
 		<div class="span12">
-			<?php if(!empty($variables['products-submenu'])){ print $variables['products-submenu'];} ?>
+			<?php if(!empty($variables['products-submenu'])) print $variables['products-submenu']; ?>
 		</div>
 		<p>&nbsp;</p>	
 		<p>&nbsp;</p>

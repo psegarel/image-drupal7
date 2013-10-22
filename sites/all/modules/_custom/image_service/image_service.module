@@ -36,6 +36,51 @@ function image_service_preprocess_page(&$variables)
 		$variables['grapepickers'] = $grapepickers;
 	}
 	
+	//Search form
+	if(empty($variables['search_box'])){
+		$search_box = drupal_get_form('search_form');
+		$variables['search_box'] = drupal_render($search_box);
+	}
+
+	//Suppliers Menu
+	if(empty($variables['suppliers-menu'])){
+		$suppliers_block = block_load('menu', 'menu-suppliers');
+		$suppliers_build =  _block_get_renderable_array(_block_render_blocks(array($suppliers_block)));
+		$variables['suppliers-menu'] = drupal_render($suppliers_build);
+	}
+
+	//Countries Menu
+	if(empty($variables['countries-menu'])){
+		$countries_block = block_load('menu', 'menu-countries'); 
+		$countries_build = _block_get_renderable_array(_block_render_blocks(array($countries_block)));     
+		$variables['countries-menu'] = drupal_render($countries_build);
+	}
+
+	//Products Menu
+	if(empty($variables['products-menu'])){
+		$products_block = block_load('menu', 'menu-products'); 
+		$products_build = _block_get_renderable_array(_block_render_blocks(array($products_block)));     
+		$variables['products-menu'] = drupal_render($products_build);
+	}
+
+	//Main Menu
+	$main_menu_block = block_load('system', 'main-menu');      
+	$variables['menu-main'] = drupal_render(_block_get_renderable_array(_block_render_blocks(array($main_menu_block)))); 
+
+	//User Menu
+	$user_menu_block = block_load('system', 'user-menu');      
+	$variables['menu-user'] = drupal_render(_block_get_renderable_array(_block_render_blocks(array($user_menu_block)))); 
+
+	//Products Sub Menu
+	$products_menu_block = block_load('superfish', '1');      
+	$variables['products-submenu'] = drupal_render(_block_get_renderable_array(_block_render_blocks(array($products_menu_block)))); 
+
+
+	//Info Menu
+	$info_menu_block = block_load('superfish', '7');      
+	$variables['menu-info'] = drupal_render(_block_get_renderable_array(_block_render_blocks(array($info_menu_block))));
+
+	
 	//FRONT PAGE
 	if($variables['is_front']){
 		

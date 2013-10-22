@@ -192,38 +192,7 @@ function bootstrap_preprocess_page(&$variables) {
     $variables['secondary_nav']['#theme_wrappers'] = array('menu_tree__secondary');
   }
   
-  //Search form
-  $search_box = drupal_render(drupal_get_form('search_form'));
-  $variables['search_box'] = $search_box;
-  
-  //Suppliers Menu
-  $suppliers_block = block_load('menu', 'menu-suppliers');      
-  $variables['suppliers-menu'] = drupal_render(_block_get_renderable_array(_block_render_blocks(array($suppliers_block)))); 
-  
-  //Countries Menu
-  $countries_block = block_load('menu', 'menu-countries');      
-  $variables['countries-menu'] = drupal_render(_block_get_renderable_array(_block_render_blocks(array($countries_block)))); 
-  
-  //Products Menu
-  $products_block = block_load('menu', 'menu-products');      
-  $variables['products-menu'] = drupal_render(_block_get_renderable_array(_block_render_blocks(array($products_block)))); 
-  
-  //Main Menu
-  $main_menu_block = block_load('system', 'main-menu');      
-  $variables['menu-main'] = drupal_render(_block_get_renderable_array(_block_render_blocks(array($main_menu_block)))); 
-  
-  //User Menu
-  $user_menu_block = block_load('system', 'user-menu');      
-  $variables['menu-user'] = drupal_render(_block_get_renderable_array(_block_render_blocks(array($user_menu_block)))); 
-  
-  //Products Sub Menu
-  $products_menu_block = block_load('superfish', '1');      
-  $variables['products-submenu'] = drupal_render(_block_get_renderable_array(_block_render_blocks(array($products_menu_block)))); 
 
-  
-  //Info Menu
-  $info_menu_block = block_load('superfish', '7');      
-  $variables['menu-info'] = drupal_render(_block_get_renderable_array(_block_render_blocks(array($info_menu_block)))); 
 }
 
 /**
