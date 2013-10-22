@@ -58,8 +58,7 @@
 				</div>
 			</div>
 			<div class="span12">
-				<?php 	$catchphrases = views_embed_view('catchphrases') ;
-						print $catchphrases; ?>
+				<?php 	if($catchphrases) print $catchphrases; ?>
 			</div>			
 			<div id="grapepickers" class="span12">	
 				
@@ -70,9 +69,7 @@
 					
 					<?php print render($page['header']); ?>
 				</header> <!-- /#header -->			
-				<?php	$grapepickers = views_embed_view('illustrations') ;
-						print $grapepickers;
-				?>
+				<?php if($grapepickers) print $grapepickers;	?>
 			</div>
 		</div>
 	</div>

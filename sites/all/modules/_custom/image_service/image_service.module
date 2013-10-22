@@ -21,3 +21,42 @@ function image_service_form_alter(&$form, &$form_state, $form_id)
 		}
 	}
 }
+
+function image_service_preprocess_page(&$variables)
+{
+	// SITEWIDE
+	if(empty($variables['catchphrases']))
+	{
+		$catchphrases = views_embed_view('catchphrases');
+		$variables['catchphrases'] = $catchphrases;
+	}
+	
+	if(empty($variables['grapepickers'])){
+		$grapepickers = views_embed_view('illustrations') ;
+		$variables['grapepickers'] = $grapepickers;
+	}
+	
+	//FRONT PAGE
+	if($variables['is_front']){
+		
+		if(empty($variables['featured_product'])){
+			$featured_product = views_embed_view('featured_product') ;
+			$variables['featured_product'] = $featured_product;
+		}
+
+		if(empty($variables['frontpage_news'])){
+			$frontpage_news = views_embed_view('frontpage_news') ;
+			$variables['frontpage_news'] = $frontpage_news;
+		}
+
+		if(empty($variables['frontpage_products'])){
+			$frontpage_products_block = block_load('views', 'product-block');      
+			$frontpage_products_build = _block_get_renderable_array(_block_render_blocks(array($frontpage_products_block)));
+			$variables['frontpage_products'] = drupal_render($frontpage_products_build);
+		}
+
+		if(empty($variables['view_more_products'])){
+			$variables['view_more_products'] = views_embed_view('product', 'view_more_products') ;
+		}
+	}
+}

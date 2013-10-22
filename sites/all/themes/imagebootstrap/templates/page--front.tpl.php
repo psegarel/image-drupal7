@@ -48,13 +48,11 @@
 				</div>
 			</div>
 			<div class="span12">
-				<?php 	$catchphrases = views_embed_view('catchphrases') ;
-						print $catchphrases; ?>									
+				<?php 	if($catchphrases) print $catchphrases; ?>									
 				<div class="row">					
 							
 					<div id="grapepickers" class="span6 pull-right">		
-						<?php	$grapepickers = views_embed_view('illustrations') ;
-								print $grapepickers;	?>
+						<?php if($grapepickers) print $grapepickers;	?>
 					</div>
 				</div>
 			</div>		
@@ -72,25 +70,19 @@
 		<p>&nbsp;</p>	
 		<p>&nbsp;</p>
 		<div class="row">
-		<?php 	$featured_product = views_embed_view('featured_product') ;
-				print $featured_product; ?>
+			<?php 	if($featured_product) print $featured_product; ?>
 		</div>
 		<div class="row">
-		<?php 	$frontpage_news = views_embed_view('frontpage_news') ;
-				print $frontpage_news; ?>
+			<?php if($frontpage_news)	print $frontpage_news; ?>
 		</div>
 		<div class="row">
-		<?php 	$frontpage_products_block = block_load('views', 'product-block');      
-				$frontpage_products = drupal_render(_block_get_renderable_array(_block_render_blocks(array($frontpage_products_block))));        
-				print $frontpage_products; ?>
+			<?php 	if($frontpage_products)  print $frontpage_products; ?>
 		</div>
 		<div class="row">
 			<div class="span2 offset10">
 				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-				
-				<?php 	$view_more_products = views_embed_view('product', 'view_more_products') ;
-						print $view_more_products; ?>
+				<p>&nbsp;</p>				
+				<?php if($view_more_products) print $view_more_products; ?>
 				<p>&nbsp;</p>
 			</div>
 		</div>
