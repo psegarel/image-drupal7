@@ -125,41 +125,12 @@ function bootstrap_process_html_tag(&$variables) {
   }
 }
 
-function bootstrap_preprocess_taxonomy_term(&$variables)
-{
-	/* kpr($variables); */
-}
-
-
 /**
  * Preprocess variables for page.tpl.php
  *
  * @see page.tpl.php
  */
 function bootstrap_preprocess_page(&$variables) {
-
-	if(isset($variables['page']['content']['system_main']['no_content']))
-	{
-		$variables['page']['content']['system_main']['no_content']['#markup'] = '';
-	}
-	
-	if(isset($variables['page']['content']['system_main']['nodes']))
-	{
-		unset($variables['page']['content']['system_main']['nodes']);
-	}	
-	
-	if( isset($variables['node']->type) && $variables['node']->type == 'product' )
-	{
-		$variables['theme_hook_suggestions'][] = 'page__node_product';
-	}
-	
-	if( isset($variables['node']->type) && $variables['node']->type == 'news' )
-	{
-		$variables['theme_hook_suggestions'][] = 'page__node_news';
-		/* kpr($variables['theme_hook_suggestions']); */
-	}
-	
-
   // Add information about the number of sidebars.
   if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
     $variables['columns'] = 3;
@@ -191,7 +162,6 @@ function bootstrap_preprocess_page(&$variables) {
     // Provide default theme wrapper function
     $variables['secondary_nav']['#theme_wrappers'] = array('menu_tree__secondary');
   }
-  
 
 }
 
@@ -286,7 +256,6 @@ function bootstrap_preprocess_block(&$variables, $hook) {
     $variables['theme_hook_suggestions'][] = 'block__no_wrapper';
   }
   $variables['title_attributes_array']['class'][] = 'block-title';
-
 }
 
 /**
