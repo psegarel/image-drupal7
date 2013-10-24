@@ -27,13 +27,11 @@ function image_service_preprocess_page(&$variables)
 	// SITEWIDE
 	if(empty($variables['catchphrases']))
 	{
-		$catchphrases = views_embed_view('catchphrases');
-		$variables['catchphrases'] = $catchphrases;
+		$variables['catchphrases'] = _image_service_render_block(block_load('views', 'catchphrases-block'));
 	}
 	
 	if(empty($variables['grapepickers'])){
-		$grapepickers = views_embed_view('illustrations') ;
-		$variables['grapepickers'] = $grapepickers;
+		$variables['grapepickers'] = _image_service_render_block( block_load('views', 'illustrations-block') );
 	}
 	
 	//Search form
@@ -57,51 +55,46 @@ function image_service_preprocess_page(&$variables)
 	}
 
 	//Products Menu
-	if(empty($variables['products-menu'])){
-		$products_block = block_load('menu', 'menu-products'); 
-		$products_build = _block_get_renderable_array(_block_render_blocks(array($products_block)));     
-		$variables['products-menu'] = drupal_render($products_build);
+	if(empty($variables['products-menu'])){    
+		$variables['products-menu'] = _image_service_render_block(block_load('menu', 'menu-products'));
 	}
 
 	//Main Menu
-	$main_menu_block = block_load('system', 'main-menu');      
-	$variables['menu-main'] = drupal_render(_block_get_renderable_array(_block_render_blocks(array($main_menu_block)))); 
+	$variables['menu-main'] = _image_service_render_block( block_load('system', 'main-menu') );
 
 	//User Menu
-	$user_menu_block = block_load('system', 'user-menu');      
-	$variables['menu-user'] = drupal_render(_block_get_renderable_array(_block_render_blocks(array($user_menu_block)))); 
+	$user_menu_block = block_load('system', 'user-menu'); 
+	$variables['menu-user'] = _image_service_render_block($user_menu_block);
 
 	//Products Sub Menu
-	$products_menu_block = block_load('superfish', '1');      
-	$variables['products-submenu'] = drupal_render(_block_get_renderable_array(_block_render_blocks(array($products_menu_block)))); 
+	$products_menu_block = block_load('superfish', '1');   
+	$variables['products-submenu'] = _image_service_render_block($products_menu_block);
 
 
 	//Info Menu
 	$info_menu_block = block_load('superfish', '7');      
-	$variables['menu-info'] = drupal_render(_block_get_renderable_array(_block_render_blocks(array($info_menu_block))));
+	$variables['menu-info'] = _image_service_render_block($info_menu_block);
 
 	
 	//FRONT PAGE
 	if($variables['is_front']){
 		
 		if(empty($variables['featured_product'])){
-			$featured_product = views_embed_view('featured_product') ;
-			$variables['featured_product'] = $featured_product;
+			$featured_product_block = block_load('views' , 'featured_product-block');
+			$variables['featured_product'] = _image_service_render_block($featured_product_block);
 		}
 
 		if(empty($variables['frontpage_news'])){
-			$frontpage_news = views_embed_view('frontpage_news') ;
-			$variables['frontpage_news'] = $frontpage_news;
+			$variables['frontpage_news'] = _image_service_render_block( block_load('views', 'frontpage_news-block') );
 		}
 
 		if(empty($variables['frontpage_products'])){
 			$frontpage_products_block = block_load('views', 'product-block');      
-			$frontpage_products_build = _block_get_renderable_array(_block_render_blocks(array($frontpage_products_block)));
-			$variables['frontpage_products'] = drupal_render($frontpage_products_build);
+			$variables['frontpage_products'] = _image_service_render_block($frontpage_products_block);
 		}
 
 		if(empty($variables['view_more_products'])){
-			$variables['view_more_products'] = views_embed_view('product', 'view_more_products') ;
+			$variables['view_more_products'] = _image_service_render_block( block_load('views', 'product-view_more_products') );
 		}
 	}
 	
@@ -125,4 +118,11 @@ function image_service_preprocess_page(&$variables)
 	{
 		$variables['theme_hook_suggestions'][] = 'page__node_news';
 	}	
+}
+
+function _image_service_render_block($block)
+{
+	$build = _block_get_renderable_array(_block_render_blocks(array($block)));
+	$render = drupal_render($build);
+	return $render;
 }
