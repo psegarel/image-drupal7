@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the image_context feature.
+ */
+
+include_once 'image_context.features.inc';
