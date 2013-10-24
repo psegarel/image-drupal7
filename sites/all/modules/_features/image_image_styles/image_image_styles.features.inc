@@ -55,8 +55,9 @@ function image_image_styles_image_default_styles() {
   // Exported image style: large_adaptive.
   $styles['large_adaptive'] = array(
     'name' => 'large_adaptive',
+    'label' => 'large_adaptive',
     'effects' => array(
-      5 => array(
+      4 => array(
         'label' => 'Adaptive',
         'help' => 'Adaptive image scale according to client resolution.',
         'effect callback' => 'image_scale_effect',
@@ -74,7 +75,7 @@ function image_image_styles_image_default_styles() {
         ),
         'weight' => 1,
       ),
-      6 => array(
+      5 => array(
         'label' => 'Scale and Smart Crop',
         'help' => 'Similar to "Scale And Crop", but preserves the portion of the image with the most entropy.',
         'effect callback' => 'smartcrop_scale_effect',
@@ -90,7 +91,6 @@ function image_image_styles_image_default_styles() {
         'weight' => 2,
       ),
     ),
-    'label' => 'large_adaptive',
   );
 
   // Exported image style: medium_adaptive.
