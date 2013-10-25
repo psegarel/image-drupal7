@@ -120,8 +120,9 @@ function image_service_preprocess_page(&$variables)
 	}	
 }
 
-function _image_service_render_block($block)
+function _image_service_render_block($block , $title = '<none>')
 {
+	$block->title = $title;
 	$build = _block_get_renderable_array(_block_render_blocks(array($block)));
 	$render = drupal_render($build);
 	return $render;
