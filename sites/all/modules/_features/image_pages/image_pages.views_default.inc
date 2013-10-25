@@ -349,6 +349,21 @@ function image_pages_views_default_views() {
   $handler->display->display_options['fields']['field_country']['relationship'] = 'term_node_tid';
   $handler->display->display_options['fields']['field_country']['label'] = '';
   $handler->display->display_options['fields']['field_country']['element_label_colon'] = FALSE;
+  /* Field: Content: All taxonomy terms */
+  $handler->display->display_options['fields']['term_node_tid_1']['id'] = 'term_node_tid_1';
+  $handler->display->display_options['fields']['term_node_tid_1']['table'] = 'node';
+  $handler->display->display_options['fields']['term_node_tid_1']['field'] = 'term_node_tid';
+  $handler->display->display_options['fields']['term_node_tid_1']['label'] = '';
+  $handler->display->display_options['fields']['term_node_tid_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['term_node_tid_1']['limit'] = TRUE;
+  $handler->display->display_options['fields']['term_node_tid_1']['vocabularies'] = array(
+    'products' => 'products',
+    'countries' => 0,
+    'features' => 0,
+    'grape_varieties' => 0,
+    'suppliers' => 0,
+    'tags' => 0,
+  );
   /* Field: Content: Illustration */
   $handler->display->display_options['fields']['field_illustration']['id'] = 'field_illustration';
   $handler->display->display_options['fields']['field_illustration']['table'] = 'field_data_field_illustration';
@@ -380,21 +395,6 @@ function image_pages_views_default_views() {
     'features' => 0,
     'grape_varieties' => 0,
     'products' => 0,
-    'tags' => 0,
-  );
-  /* Field: Content: All taxonomy terms */
-  $handler->display->display_options['fields']['term_node_tid_1']['id'] = 'term_node_tid_1';
-  $handler->display->display_options['fields']['term_node_tid_1']['table'] = 'node';
-  $handler->display->display_options['fields']['term_node_tid_1']['field'] = 'term_node_tid';
-  $handler->display->display_options['fields']['term_node_tid_1']['label'] = '';
-  $handler->display->display_options['fields']['term_node_tid_1']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['term_node_tid_1']['limit'] = TRUE;
-  $handler->display->display_options['fields']['term_node_tid_1']['vocabularies'] = array(
-    'products' => 'products',
-    'countries' => 0,
-    'features' => 0,
-    'grape_varieties' => 0,
-    'suppliers' => 0,
     'tags' => 0,
   );
   $handler->display->display_options['defaults']['sorts'] = FALSE;
