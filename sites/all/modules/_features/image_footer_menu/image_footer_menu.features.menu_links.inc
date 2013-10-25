@@ -17,6 +17,7 @@ function image_footer_menu_menu_default_menu_links() {
     'router_path' => 'user/logout',
     'link_title' => 'Log out',
     'options' => array(
+      'alter' => TRUE,
       'identifier' => 'user-menu_log-out:user/logout',
     ),
     'module' => 'system',

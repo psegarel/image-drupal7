@@ -27,11 +27,11 @@ function image_service_preprocess_page(&$variables)
 	// SITEWIDE
 	if(empty($variables['catchphrases']))
 	{
-		$variables['catchphrases'] = _image_service_render_block(block_load('views', 'catchphrases-block'));
+		$variables['catchphrases'] = _image_service_render_block(block_load('views', 'catchphrases-block'), '<none>');
 	}
 	
 	if(empty($variables['grapepickers'])){
-		$variables['grapepickers'] = _image_service_render_block( block_load('views', 'illustrations-block') );
+		$variables['grapepickers'] = _image_service_render_block( block_load('views', 'illustrations-block') , '<none>');
 	}
 	
 	//Search form
@@ -42,16 +42,12 @@ function image_service_preprocess_page(&$variables)
 
 	//Suppliers Menu
 	if(empty($variables['suppliers-menu'])){
-		$suppliers_block = block_load('menu', 'menu-suppliers');
-		$suppliers_build =  _block_get_renderable_array(_block_render_blocks(array($suppliers_block)));
-		$variables['suppliers-menu'] = drupal_render($suppliers_build);
+		$variables['suppliers-menu'] = _image_service_render_block( block_load('menu', 'menu-suppliers') );
 	}
 
 	//Countries Menu
-	if(empty($variables['countries-menu'])){
-		$countries_block = block_load('menu', 'menu-countries'); 
-		$countries_build = _block_get_renderable_array(_block_render_blocks(array($countries_block)));     
-		$variables['countries-menu'] = drupal_render($countries_build);
+	if(empty($variables['countries-menu'])){   
+		$variables['countries-menu'] =  _image_service_render_block( block_load('menu', 'menu-countries') );
 	}
 
 	//Products Menu
@@ -81,20 +77,20 @@ function image_service_preprocess_page(&$variables)
 		
 		if(empty($variables['featured_product'])){
 			$featured_product_block = block_load('views' , 'featured_product-block');
-			$variables['featured_product'] = _image_service_render_block($featured_product_block);
+			$variables['featured_product'] = _image_service_render_block($featured_product_block , '<none>');
 		}
 
 		if(empty($variables['frontpage_news'])){
-			$variables['frontpage_news'] = _image_service_render_block( block_load('views', 'frontpage_news-block') );
+			$variables['frontpage_news'] = _image_service_render_block( block_load('views', 'frontpage_news-block'), '<none>' );
 		}
 
 		if(empty($variables['frontpage_products'])){
 			$frontpage_products_block = block_load('views', 'product-block');      
-			$variables['frontpage_products'] = _image_service_render_block($frontpage_products_block);
+			$variables['frontpage_products'] = _image_service_render_block($frontpage_products_block , '<none>');
 		}
 
 		if(empty($variables['view_more_products'])){
-			$variables['view_more_products'] = _image_service_render_block( block_load('views', 'product-view_more_products') );
+			$variables['view_more_products'] = _image_service_render_block( block_load('views', 'product-view_more_products') , '<none>');
 		}
 	}
 	
@@ -120,9 +116,11 @@ function image_service_preprocess_page(&$variables)
 	}	
 }
 
-function _image_service_render_block($block , $title = '<none>')
+function _image_service_render_block($block , $title)
 {
-	$block->title = $title;
+	if($title)
+		$block->title = $title;
+	
 	$build = _block_get_renderable_array(_block_render_blocks(array($block)));
 	$render = drupal_render($build);
 	return $render;

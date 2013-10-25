@@ -268,7 +268,6 @@ function image_pages_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
   $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'Ascending';
   $handler->display->display_options['exposed_form']['options']['sort_desc_label'] = 'Descending';
-  $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
   $handler->display->display_options['exposed_form']['options']['bef'] = array(
     'general' => array(
       'allow_secondary' => 0,
