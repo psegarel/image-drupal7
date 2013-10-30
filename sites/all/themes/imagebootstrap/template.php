@@ -10,11 +10,26 @@ function imagebootstrap_js_alter(&$javascript)
 
 function imagebootstrap_preprocess_taxonomy_term(&$variables)
 {
-	// $illustrations = views_embed_view('suppliers', 'block_3' , $variables['tid']);
-	// 
-	$illustrations_block = block_load('views', 'suppliers-block_3');
-	$illustrations_build = _block_get_renderable_array(_block_render_blocks(array($illustrations_block)));
-	$illustrations = drupal_render($illustrations_build); 
-	$variables['illustrations'] = $illustrations;
-	//dsm($variables);
+	if(isset($variables['term'])){
+		$term = $variables['term'];
+		
+		switch($term->vocabulary_machine_name)
+		{
+			case 'countries':
+				$illustrations_block = block_load('views', 'countries-block_2');
+				$illustrations_build = _block_get_renderable_array(_block_render_blocks(array($illustrations_block)));
+				$illustrations = drupal_render($illustrations_build); 
+				break;
+			
+			case 'suppliers':
+				$illustrations_block = block_load('views', 'suppliers-block_3');
+				$illustrations_build = _block_get_renderable_array(_block_render_blocks(array($illustrations_block)));
+				$illustrations = drupal_render($illustrations_build); 
+				break;
+		}
+		
+		if(isset($illustrations)){
+			$variables['illustrations'] = $illustrations;
+		}
+	}
 }

@@ -43,9 +43,22 @@
 ?>
 <?php /* kpr($variables); */ ?>
 <div class="row">
-	<div class="span8">
+	<div class="span12">
 		<h2><?php print $term_name; ?></h2>
-		<?php print render($content); ?>
+	</div>
+</div>
+<div class="row">
+	<div class="span8">
+		<div class="row">
+			<?php if($illustrations) print $illustrations; ?> 
+		</div>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<div class="row">
+			<div class="span8">
+				<?php print render($content); ?>
+			</div>
+		</div>
 	</div>
 	<div class="span4">
 	  <?php //Info Menu
