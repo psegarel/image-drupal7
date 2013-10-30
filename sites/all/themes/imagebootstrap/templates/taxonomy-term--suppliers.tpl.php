@@ -48,12 +48,7 @@
 	</div>
 	<div class="span8">
 		<div class="row">
-		<?php /**	$illustrations_block = block_load('views', 'suppliers-block_3');
-				$illustrations_build = _block_get_renderable_array(_block_render_blocks(array($illustrations_block)));
-				$illustrations = drupal_render($illustrations_build); 
-				print $illustrations */ 
-		if($illustrations)	print $illustrations;
-		?> 
+		<?php if($illustrations) print $illustrations; ?> 
 		</div>
 		<p>&nbsp;</p>
 		<p>&nbsp;</p>
