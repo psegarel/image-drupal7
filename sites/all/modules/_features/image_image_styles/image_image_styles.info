@@ -4,5 +4,6 @@ package = Features
 dependencies[] = image
 features[features_api][] = api:2
 features[image][] = header_adaptive
+features[image][] = illustration_main
 features[image][] = large_adaptive
 features[image][] = medium_adaptive

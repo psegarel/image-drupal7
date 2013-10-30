@@ -281,6 +281,7 @@ function image_footer_menu_views_default_views() {
   $handler->display->display_options['fields']['field_country']['table'] = 'field_data_field_country';
   $handler->display->display_options['fields']['field_country']['field'] = 'field_country';
   $handler->display->display_options['fields']['field_country']['relationship'] = 'term_node_tid';
+  $handler->display->display_options['fields']['field_country']['exclude'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -296,6 +297,115 @@ function image_footer_menu_views_default_views() {
   $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
     'suppliers' => 'suppliers',
   );
+
+  /* Display: Illustrations */
+  $handler = $view->new_display('block', 'Illustrations', 'block_3');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'slideshow';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_options']['slideshow_type'] = 'views_slideshow_cycle';
+  $handler->display->display_options['style_options']['slideshow_skin'] = 'default';
+  $handler->display->display_options['style_options']['skin_info'] = array(
+    'class' => 'default',
+    'name' => 'Default',
+    'module' => 'views_slideshow',
+    'path' => '',
+    'stylesheets' => array(),
+  );
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
+    'field_illustration' => 0,
+    'title' => 0,
+  );
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
+  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_slide_counter']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
+    'field_illustration' => 0,
+    'title' => 0,
+  );
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_slide_counter']['weight'] = '1';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['timeout'] = '5000';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['speed'] = '700';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['delay'] = '0';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['start_paused'] = 0;
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['remember_slide_days'] = '1';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['items_per_slide'] = '1';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['wait_for_image_load_timeout'] = '3000';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartype'] = 0;
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartypenobg'] = 0;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Illustration */
+  $handler->display->display_options['fields']['field_illustration']['id'] = 'field_illustration';
+  $handler->display->display_options['fields']['field_illustration']['table'] = 'field_data_field_illustration';
+  $handler->display->display_options['fields']['field_illustration']['field'] = 'field_illustration';
+  $handler->display->display_options['fields']['field_illustration']['label'] = '';
+  $handler->display->display_options['fields']['field_illustration']['element_type'] = 'div';
+  $handler->display->display_options['fields']['field_illustration']['element_class'] = 'span8';
+  $handler->display->display_options['fields']['field_illustration']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_illustration']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_illustration']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_illustration']['settings'] = array(
+    'image_style' => 'illustration_main',
+    'image_link' => '',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Supplier (field_supplier) */
+  $handler->display->display_options['arguments']['field_supplier_tid']['id'] = 'field_supplier_tid';
+  $handler->display->display_options['arguments']['field_supplier_tid']['table'] = 'field_data_field_supplier';
+  $handler->display->display_options['arguments']['field_supplier_tid']['field'] = 'field_supplier_tid';
+  $handler->display->display_options['arguments']['field_supplier_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_supplier_tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['field_supplier_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_supplier_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_supplier_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_supplier_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_supplier_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_supplier_tid']['validate_options']['vocabularies'] = array(
+    'suppliers' => 'suppliers',
+  );
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'illustration' => 'illustration',
+  );
+  /* Filter criterion: Field: Country (field_country) */
+  $handler->display->display_options['filters']['field_country_tid']['id'] = 'field_country_tid';
+  $handler->display->display_options['filters']['field_country_tid']['table'] = 'field_data_field_country';
+  $handler->display->display_options['filters']['field_country_tid']['field'] = 'field_country_tid';
+  $handler->display->display_options['filters']['field_country_tid']['operator'] = 'empty';
+  $handler->display->display_options['filters']['field_country_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_country_tid']['vocabulary'] = 'countries';
   $export['suppliers'] = $view;
 
   return $export;

@@ -48,17 +48,20 @@ function image_service_preprocess_page(&$variables)
 
 	//Suppliers Menu
 	if(empty($variables['suppliers-menu'])){
-		$variables['suppliers-menu'] = _image_service_render_block( block_load('menu', 'menu-suppliers') );
+		$suppliers_menu = block_load('menu', 'menu-suppliers');
+		$variables['suppliers-menu'] = _image_service_render_block($suppliers_menu, $suppliers_menu->title  );
 	}
 
 	//Countries Menu
-	if(empty($variables['countries-menu'])){   
-		$variables['countries-menu'] =  _image_service_render_block( block_load('menu', 'menu-countries') );
+	if(empty($variables['countries-menu'])){
+		$countries_menu = block_load('menu', 'menu-countries');   
+		$variables['countries-menu'] =  _image_service_render_block($countries_menu, $countries_menu->title  );
 	}
 
 	//Products Menu
-	if(empty($variables['products-menu'])){    
-		$variables['products-menu'] = _image_service_render_block(block_load('menu', 'menu-products'));
+	if(empty($variables['products-menu'])){
+		$products_menu =  block_load('menu', 'menu-products');   
+		$variables['products-menu'] = _image_service_render_block( $products_menu , $products_menu->title );
 	}
 
 	//Main Menu
@@ -66,16 +69,16 @@ function image_service_preprocess_page(&$variables)
 
 	//User Menu
 	$user_menu_block = block_load('system', 'user-menu'); 
-	$variables['menu-user'] = _image_service_render_block($user_menu_block);
+	$variables['menu-user'] = _image_service_render_block($user_menu_block , $user_menu_block->title );
 
 	//Products Sub Menu
 	$products_menu_block = block_load('superfish', '1');   
-	$variables['products-submenu'] = _image_service_render_block($products_menu_block);
+	$variables['products-submenu'] = _image_service_render_block($products_menu_block , $products_menu_block->title );
 
 
 	//Info Menu
 	$info_menu_block = block_load('superfish', '7');      
-	$variables['menu-info'] = _image_service_render_block($info_menu_block);
+	$variables['menu-info'] = _image_service_render_block($info_menu_block, $info_menu_block->title );
 
 	
 	//FRONT PAGE
@@ -120,12 +123,23 @@ function image_service_preprocess_page(&$variables)
 	{
 		$variables['theme_hook_suggestions'][] = 'page__node_news';
 	}	
+	
+	if(isset($variables['page']['content']['system_main']['term_heading']['term'])){
+		$term = $variables['page']['content']['system_main']['term_heading']['term'];
+		
+		// Supplier page
+		if($term['#bundle'] == 'suppliers'){
+			$variables['theme_hook_suggestions'] = array('page__suppliers');
+		}
+	}
+	
 }
 
 function _image_service_render_block($block , $title)
 {
-	if($title)
+	if(isset($title)){
 		$block->title = $title;
+	}
 	
 	$build = _block_get_renderable_array(_block_render_blocks(array($block)));
 	$render = drupal_render($build);

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the image_illustration feature.
+ */
+
+include_once 'image_illustration.features.inc';

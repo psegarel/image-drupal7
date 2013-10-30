@@ -1,0 +1,17 @@
+name = image_illustration
+core = 7.x
+package = Features
+dependencies[] = features
+dependencies[] = i18n_taxonomy
+dependencies[] = image
+dependencies[] = image_field_bases
+dependencies[] = image_frontpage_news
+dependencies[] = node
+dependencies[] = options
+dependencies[] = text
+features[features_api][] = api:2
+features[field_instance][] = node-illustration-body
+features[field_instance][] = node-illustration-field_country
+features[field_instance][] = node-illustration-field_illustration
+features[field_instance][] = node-illustration-field_supplier
+features[node][] = illustration

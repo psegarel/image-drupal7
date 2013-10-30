@@ -43,8 +43,20 @@
 ?>
 
 <div class="row">
-	<div class="span8">
+	<div class="span12">
 		<h2><?php print $term_name; ?></h2>
+	</div>
+	<div class="span8">
+		<div class="row">
+		<?php /**	$illustrations_block = block_load('views', 'suppliers-block_3');
+				$illustrations_build = _block_get_renderable_array(_block_render_blocks(array($illustrations_block)));
+				$illustrations = drupal_render($illustrations_build); 
+				print $illustrations */ 
+		if($illustrations)	print $illustrations;
+		?> 
+		</div>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
 		<div class="row">
 		<?php 	$suppliers_products_block = block_load('views', 'suppliers-block_2');
 				$products = drupal_render(_block_get_renderable_array(_block_render_blocks(array($suppliers_products_block)))); 
