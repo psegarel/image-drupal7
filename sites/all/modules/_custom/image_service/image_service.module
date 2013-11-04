@@ -65,7 +65,8 @@ function image_service_preprocess_page(&$variables)
 	}
 
 	//Main Menu
-	$variables['menu-main'] = _image_service_render_block( block_load('system', 'main-menu') );
+	$menu_block = block_load('system', 'main-menu');
+	$variables['menu-main'] = _image_service_render_block( $menu_block , $menu_block->title );
 
 	//User Menu
 	$user_menu_block = block_load('system', 'user-menu'); 
@@ -109,10 +110,10 @@ function image_service_preprocess_page(&$variables)
 		$variables['page']['content']['system_main']['no_content']['#markup'] = '';
 	}
 
-	if(isset($variables['page']['content']['system_main']['nodes']))
-	{
-		unset($variables['page']['content']['system_main']['nodes']);
-	}	
+	// if(isset($variables['page']['content']['system_main']['nodes']))
+	// {
+	// 	unset($variables['page']['content']['system_main']['nodes']);
+	// }	
 
 	if( isset($variables['node']->type) && $variables['node']->type == 'product' )
 	{
