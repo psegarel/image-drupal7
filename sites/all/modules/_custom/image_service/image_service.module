@@ -110,10 +110,11 @@ function image_service_preprocess_page(&$variables)
 		$variables['page']['content']['system_main']['no_content']['#markup'] = '';
 	}
 
-	// if(isset($variables['page']['content']['system_main']['nodes']))
-	// {
-	// 	unset($variables['page']['content']['system_main']['nodes']);
-	// }	
+	if(isset($variables['page']['content']['system_main']['nodes']))
+	{
+		//dsm($variables);
+		//unset($variables['page']['content']['system_main']['nodes']);
+	}	
 
 	if( isset($variables['node']->type) && $variables['node']->type == 'product' )
 	{

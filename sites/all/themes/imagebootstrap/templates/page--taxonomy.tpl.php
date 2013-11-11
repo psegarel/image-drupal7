@@ -122,6 +122,7 @@
 	        <ul class="action-links"><?php print render($action_links); ?></ul>
 	      <?php endif; ?>
 	      <?php hide($page['content']['system_main']['pager']); 
+		  		hide($page['content']['system_main']['nodes']); 
 	      		print render($page['content']); 
 	      ?>
 	    </section>
