@@ -209,6 +209,11 @@ function image_countries_views_default_views() {
   $handler->display->display_options['filters']['field_supplier_tid']['operator'] = 'empty';
   $handler->display->display_options['filters']['field_supplier_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_supplier_tid']['vocabulary'] = 'suppliers';
+  /* Filter criterion: Content: Illustration (field_illustration:fid) */
+  $handler->display->display_options['filters']['field_illustration_fid']['id'] = 'field_illustration_fid';
+  $handler->display->display_options['filters']['field_illustration_fid']['table'] = 'field_data_field_illustration';
+  $handler->display->display_options['filters']['field_illustration_fid']['field'] = 'field_illustration_fid';
+  $handler->display->display_options['filters']['field_illustration_fid']['operator'] = 'not empty';
   $export['countries'] = $view;
 
   $view = new view();
