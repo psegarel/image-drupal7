@@ -549,6 +549,14 @@ h2.block-title	{	font-size: 1.4em;
 #block-views-news-block-1	{	font-family: 'Roboto', sans-serif;
 								color: #222;
 
+								.view-news {
+									display: block;
+
+									.views-row {
+										min-height: 300px;
+									}
+								}
+
 								.views-field-title	{	font-weight: 300;
 														font-size: 1em;
 														padding: 5px 0;
